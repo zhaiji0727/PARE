@@ -1,0 +1,11 @@
+{
+  "seed": 0,
+  "val_frac": 0.1,
+  "official_train": 9191,
+  "train": 9191,
+  "fit_without_validation": 8272,
+  "validation": 919,
+  "test": 3688,
+  "train_csv": "data/Text_unz/Text/Caption/train/Caption_train.csv",
+  "test_csv": "data/Text_unz/Text/Caption/test/Caption_test.csv"
+}

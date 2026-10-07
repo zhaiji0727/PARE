@@ -1,0 +1,80 @@
+[
+  {
+    "image_id": "USA_Florida_Orlando_57.png",
+    "reason": "content_already_in_official_test",
+    "rgb_content_sha256": "25f884fe72d294aa862d3ac5e56e7ec747bb8c6238c47cdb6992d77bf4a1f1cd",
+    "matching_test_ids": [
+      "USA_Minnesota_Roseville_89.png"
+    ],
+    "discarded_caption_rows": 1
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_21.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "2b5263040846616675f2975f9c376f3f032c512fd75ec159057a67c7e295921c",
+    "canonical_train_id": "USA_Florida_Orlando_41.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_91.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "4cf61a3818bd56fb95d24cf1c0c089c8ac29a9da7d22a33c640a9665c47140b4",
+    "canonical_train_id": "USA_Florida_Orlando_59.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_22.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "62cfb80b4c5cb285c24bedcccbeb6d887a49cfae3df3ef41fc6a2d0420b9edfc",
+    "canonical_train_id": "USA_Florida_Orlando_42.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Florida_Orlando_58.png",
+    "reason": "content_already_in_official_test",
+    "rgb_content_sha256": "8debc65c6447068f349283bb125ba8c96dcc310f2fba9bdfe0a70e9f9a72457f",
+    "matching_test_ids": [
+      "USA_Minnesota_Roseville_90.png"
+    ],
+    "discarded_caption_rows": 2
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_92.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "90e143b2c6d91d9323b1a99b5b2b1dddffa3f5582a39a821c0825d387302c8f9",
+    "canonical_train_id": "USA_Florida_Orlando_60.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_19.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "a6b3af2ec65bd4a003b9c7bcca05703f9402afe1cfbe5a03452c834c3ad02bb0",
+    "canonical_train_id": "USA_Florida_Orlando_39.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Minnesota_Roseville_24.png",
+    "reason": "noncanonical_training_content_duplicate",
+    "rgb_content_sha256": "c21b2d00123cffdba078fb4d6b3477b1907b91d2e42cdbbbeb1294d1f973916d",
+    "canonical_train_id": "USA_Florida_Orlando_44.png",
+    "discarded_caption_rows": 3
+  },
+  {
+    "image_id": "USA_Florida_Orlando_40.png",
+    "reason": "content_already_in_official_test",
+    "rgb_content_sha256": "c6d99692b264d874c8d1584aef2705da78e29f9affcc916233b27afb53c67616",
+    "matching_test_ids": [
+      "USA_Minnesota_Roseville_20.png"
+    ],
+    "discarded_caption_rows": 1
+  },
+  {
+    "image_id": "USA_Florida_Orlando_52.png",
+    "reason": "content_already_in_official_test",
+    "rgb_content_sha256": "f1f362ec834fd7dc0c698d77361d132f8d7239e6c3eabd001fe0e92df01bd158",
+    "matching_test_ids": [
+      "USA_Minnesota_Roseville_56.png"
+    ],
+    "discarded_caption_rows": 1
+  }
+]

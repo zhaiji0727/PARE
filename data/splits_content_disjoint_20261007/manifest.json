@@ -1,0 +1,86 @@
+{
+  "status": "complete",
+  "protocol": "content_disjoint_rgb_v1_20261007",
+  "started_utc": "2026-10-07T06:55:05.367891+00:00",
+  "finished_utc": "2026-10-07T06:55:42.326622+00:00",
+  "seed": 0,
+  "val_fraction": 0.1,
+  "workers": 4,
+  "pixel_hash_definition": "SHA256(b'RGB\\0' + big-endian uint64 width,height + PIL convert('RGB').tobytes()); dimensions and pixels included; no resize/normalization/EXIF transpose",
+  "policy": [
+    "Keep official test IDs, order and caption CSV unchanged; test captions never influence filtering or splitting.",
+    "Remove every training ID whose exact decoded RGB content occurs in official test.",
+    "For remaining training duplicate content, retain lexicographically smallest ID and only that ID's original captions; do not merge captions from other IDs.",
+    "Preserve selected IDs' official train order; random.Random(seed) shuffle, first floor(val_fraction*N) validation, remainder fit.",
+    "No original file/split/annotation is modified. This is a new evaluation protocol, not a reproduction of archived results.",
+    "Exact RGB grouping does not detect spatial overlap or near duplicates."
+  ],
+  "original_images": {
+    "train": 9191,
+    "test": 3688
+  },
+  "images_decoded": 12879,
+  "split_counts": {
+    "train": 9181,
+    "fit": 8263,
+    "val": 918,
+    "test": 3688
+  },
+  "caption_counts": {
+    "train": {
+      "rows": 31945,
+      "nonempty_rows": 31945,
+      "unique_captioned_images": 9181
+    },
+    "fit": {
+      "rows": 28759,
+      "nonempty_rows": 28759,
+      "unique_captioned_images": 8263
+    },
+    "val": {
+      "rows": 3186,
+      "nonempty_rows": 3186,
+      "unique_captioned_images": 918
+    },
+    "test": {
+      "rows": 6190,
+      "nonempty_rows": 6190,
+      "unique_captioned_images": 3688
+    }
+  },
+  "training_exclusions": {
+    "content_already_in_official_test": {
+      "images": 4,
+      "caption_rows": 5
+    },
+    "noncanonical_training_content_duplicate": {
+      "images": 6,
+      "caption_rows": 18
+    }
+  },
+  "excluded_training_caption_rows": 23,
+  "content_disjoint_train_test": true,
+  "content_disjoint_fit_val": true,
+  "official_test_duplicate_content_group_count": 0,
+  "test_relevance_policy": "Official image-ID positives retained. If test content duplicates exist, identical content under other test IDs is a potential false negative; report content-group relevance as an additional protocol before content-based claims.",
+  "input_sha256": {
+    "data/ret/train_ids.json": "a8dcfa3748b0ff93517d8cf41d6beae061276eb9f556b743f09eb51378208aba",
+    "data/ret/test_ids.json": "7e215eb34d9760a3bb723601287832d8aacfc8e05064c372e6d8fad3f2394b98",
+    "data/Text_unz/Text/Caption/train/Caption_train.csv": "2d033b0d67715388d12fa665f50d0201add37d6c5633535afd330f4ee34c9d3e",
+    "data/Text_unz/Text/Caption/test/Caption_test.csv": "7a1878610e0a5089380b2fb7fd825d43edf8682cba513a76ca36661d3094724d",
+    "scripts/prepare_content_disjoint_split.py": "9077c624e8031c6bc62c871274dd4959a4c179680346f537cd9ae74c31c84204"
+  },
+  "output_sha256": {
+    "Caption_fit.csv": "9adf83606715728139cc4b47e9cd12e443613de8cf80500c4c4ed9bc61653e38",
+    "Caption_test.csv": "7a1878610e0a5089380b2fb7fd825d43edf8682cba513a76ca36661d3094724d",
+    "Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "Caption_val.csv": "6f5386a0162d7090c3f5e1ece850ed65e75c6140fbb3aaca538f8bfebf2ff51d",
+    "excluded_training_ids.json": "8efd3bed5798479f704cb247d08dfd2730294e50f9b99ae883af73cc31a3efd0",
+    "fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+    "image_fingerprints.json": "fd9f341d90ee432d17d2148a5cc3ebd77cff18920e72ab8a40872f2ee542d940",
+    "official_test_duplicate_content_groups.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "test_ids.json": "7e215eb34d9760a3bb723601287832d8aacfc8e05064c372e6d8fad3f2394b98",
+    "train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+    "val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed"
+  }
+}

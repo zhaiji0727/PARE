@@ -1,0 +1,486 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-07T06:58:54.553355+00:00",
+  "scope": "All 919 original validation IDs for paired implementation comparison; not a leakage-clean training/evaluation run.",
+  "image_count": 919,
+  "device": "cpu",
+  "workers": 4,
+  "elapsed_seconds": 148.30728032486513,
+  "extractor_version": "2026-10-07-float64-spatial-ties",
+  "provenance": {
+    "old_extractor": {
+      "path": "diagnostics/reference/saqre_phys_before_20261007.py",
+      "sha256": "38482c06c852f1d45b985fe6b862b0ae009ec4d0d880432e1ddca2f5b655acbc"
+    },
+    "new_extractor": {
+      "path": "code/saqre_phys.py",
+      "sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6"
+    },
+    "audit_script": {
+      "path": "scripts/audit_extractor_fix.py",
+      "sha256": "a6b4a2319120d953532709ce611f864501173d5eb7addb7be932f82c6025d2d5"
+    },
+    "validation_ids": {
+      "path": "data/splits_original/val_ids.json",
+      "sha256": "a3fec386b36d932fd6600d163278e46ea915f0264607575d0e6cfb57b45dfacf"
+    }
+  },
+  "totals": {
+    "old_coarse_count": 5097,
+    "new_coarse_count": 5099,
+    "old_fine_count": 7278,
+    "new_fine_count": 7275,
+    "coarse_exact_box_set_changed": 467,
+    "fine_exact_box_set_changed": 827,
+    "precision_only_fine_box_set_changed": 7,
+    "tie_only_fine_box_set_changed": 827,
+    "old_default_detection_count": 2323250,
+    "new_default_detection_count": 2323131,
+    "default_detection_membership_changes": 4783,
+    "old_nonmonotonic_pixel_count": 409,
+    "new_nonmonotonic_pixel_count": 0,
+    "old_negative_background_count": 7235,
+    "new_negative_background_count": 0,
+    "old_default_zero_intensity_detection_count": 277,
+    "new_default_zero_intensity_detection_count": 0,
+    "old_clipped_fine_count": 894,
+    "new_clipped_fine_count": 666,
+    "direct_local_window_checks": 11028,
+    "direct_ring_checks": 10031
+  },
+  "images": {
+    "default_detection_membership_changes_positive": 620,
+    "old_nonmonotonic_pixel_count_positive": 2,
+    "new_nonmonotonic_pixel_count_positive": 0,
+    "old_negative_background_count_positive": 14,
+    "new_negative_background_count_positive": 0
+  },
+  "maximum_errors": {
+    "direct_mean_max_absolute_error": 0.0,
+    "direct_std_max_absolute_error": 4.238552517361111e-07,
+    "direct_ring_mean_max_absolute_error": 1.1102230246251565e-16
+  },
+  "mean_exact_box_set_jaccard": {
+    "coarse": 0.7813832008880963,
+    "fine": 0.3321437660393049
+  },
+  "all_new_crop_pixel_verifications_passed": true,
+  "figure_one": {
+    "metrics": {
+      "image_id": "SN6_Train_AOI_11_Rotterdam_20190804111224_20190804111453_tile_8679.png",
+      "image_sha256": "0fb94e06df0e84db986f916e32889c4d4850e292f3853550f5f112b9cadf0dc3",
+      "width": 900,
+      "height": 666,
+      "old_enl": 13.300520896911621,
+      "new_enl": 13.301001474684611,
+      "old_coarse_count": 6,
+      "new_coarse_count": 6,
+      "old_fine_count": 8,
+      "new_fine_count": 8,
+      "coarse_exact_box_set_changed": 1,
+      "fine_exact_box_set_changed": 1,
+      "coarse_exact_box_set_jaccard": 0.7142857142857143,
+      "fine_exact_box_set_jaccard": 0.06666666666666667,
+      "precision_only_fine_box_set_changed": 0,
+      "tie_only_fine_box_set_changed": 1,
+      "old_default_detection_count": 2673,
+      "new_default_detection_count": 2673,
+      "default_detection_membership_changes": 2,
+      "old_nonmonotonic_pixel_count": 0,
+      "new_nonmonotonic_pixel_count": 0,
+      "old_negative_background_count": 0,
+      "new_negative_background_count": 0,
+      "old_default_zero_intensity_detection_count": 0,
+      "new_default_zero_intensity_detection_count": 0,
+      "old_clipped_fine_count": 5,
+      "new_clipped_fine_count": 1,
+      "direct_mean_max_absolute_error": 0.0,
+      "direct_std_max_absolute_error": 3.539099568961035e-12,
+      "direct_ring_mean_max_absolute_error": 5.551115123125783e-17,
+      "direct_local_window_checks": 12,
+      "direct_ring_checks": 11,
+      "new_crop_pixel_verification_passed": true
+    },
+    "boxes_and_centers": {
+      "image_id": "SN6_Train_AOI_11_Rotterdam_20190804111224_20190804111453_tile_8679.png",
+      "old_coarse_boxes": [
+        [
+          4,
+          4,
+          882,
+          662
+        ],
+        [
+          4,
+          96,
+          194,
+          662
+        ],
+        [
+          148,
+          391,
+          338,
+          662
+        ],
+        [
+          74,
+          167,
+          247,
+          339
+        ],
+        [
+          54,
+          480,
+          173,
+          662
+        ],
+        [
+          818,
+          135,
+          896,
+          224
+        ]
+      ],
+      "new_coarse_boxes": [
+        [
+          4,
+          4,
+          882,
+          662
+        ],
+        [
+          4,
+          96,
+          193,
+          662
+        ],
+        [
+          148,
+          391,
+          338,
+          662
+        ],
+        [
+          74,
+          167,
+          247,
+          339
+        ],
+        [
+          54,
+          480,
+          173,
+          662
+        ],
+        [
+          818,
+          135,
+          896,
+          224
+        ]
+      ],
+      "old_fine_boxes": [
+        [
+          129,
+          0,
+          153,
+          20
+        ],
+        [
+          61,
+          0,
+          85,
+          21
+        ],
+        [
+          8,
+          0,
+          32,
+          22
+        ],
+        [
+          81,
+          0,
+          105,
+          22
+        ],
+        [
+          113,
+          0,
+          137,
+          22
+        ],
+        [
+          185,
+          4,
+          209,
+          28
+        ],
+        [
+          229,
+          14,
+          253,
+          38
+        ],
+        [
+          159,
+          17,
+          183,
+          41
+        ]
+      ],
+      "new_fine_boxes": [
+        [
+          366,
+          293,
+          390,
+          317
+        ],
+        [
+          871,
+          574,
+          895,
+          598
+        ],
+        [
+          848,
+          45,
+          872,
+          69
+        ],
+        [
+          8,
+          0,
+          32,
+          22
+        ],
+        [
+          14,
+          478,
+          38,
+          502
+        ],
+        [
+          715,
+          339,
+          739,
+          363
+        ],
+        [
+          348,
+          569,
+          372,
+          593
+        ],
+        [
+          109,
+          236,
+          133,
+          260
+        ]
+      ],
+      "precision_only_fine_boxes": [
+        [
+          129,
+          0,
+          153,
+          20
+        ],
+        [
+          61,
+          0,
+          85,
+          21
+        ],
+        [
+          8,
+          0,
+          32,
+          22
+        ],
+        [
+          81,
+          0,
+          105,
+          22
+        ],
+        [
+          113,
+          0,
+          137,
+          22
+        ],
+        [
+          185,
+          4,
+          209,
+          28
+        ],
+        [
+          229,
+          14,
+          253,
+          38
+        ],
+        [
+          159,
+          17,
+          183,
+          41
+        ]
+      ],
+      "tie_only_fine_boxes": [
+        [
+          366,
+          293,
+          390,
+          317
+        ],
+        [
+          871,
+          574,
+          895,
+          598
+        ],
+        [
+          848,
+          45,
+          872,
+          69
+        ],
+        [
+          8,
+          0,
+          32,
+          22
+        ],
+        [
+          14,
+          478,
+          38,
+          502
+        ],
+        [
+          715,
+          339,
+          739,
+          363
+        ],
+        [
+          348,
+          569,
+          372,
+          593
+        ],
+        [
+          109,
+          236,
+          133,
+          260
+        ]
+      ],
+      "old_fine_centers_xy_intensity": [
+        [
+          141,
+          8,
+          1.0
+        ],
+        [
+          73,
+          9,
+          1.0
+        ],
+        [
+          20,
+          10,
+          1.0
+        ],
+        [
+          93,
+          10,
+          1.0
+        ],
+        [
+          125,
+          10,
+          1.0
+        ],
+        [
+          197,
+          16,
+          1.0
+        ],
+        [
+          241,
+          26,
+          1.0
+        ],
+        [
+          171,
+          29,
+          1.0
+        ]
+      ],
+      "new_fine_centers_xy_intensity": [
+        [
+          378,
+          305,
+          1.0
+        ],
+        [
+          883,
+          586,
+          1.0
+        ],
+        [
+          860,
+          57,
+          1.0
+        ],
+        [
+          20,
+          10,
+          1.0
+        ],
+        [
+          26,
+          490,
+          1.0
+        ],
+        [
+          727,
+          351,
+          1.0
+        ],
+        [
+          360,
+          581,
+          1.0
+        ],
+        [
+          121,
+          248,
+          1.0
+        ]
+      ]
+    }
+  },
+  "limitations": [
+    "Exact box-set changes are not retrieval or detection accuracy and not semantic object coverage.",
+    "Precision-only and tie-only fine comparisons isolate implementation changes at the fixed default detector threshold, not trained ablations.",
+    "No cache embeddings, head training, retrieval accuracy, or GPU measurements were generated.",
+    "The original validation list has separately documented exact-image duplicates across the original fit/validation split; this audit does not certify split independence.",
+    "Changed extraction invalidates old embeddings and trained-head performance claims for the revised version."
+  ],
+  "files": {
+    "per_image.csv": {
+      "path": "diagnostics/extractor_919/per_image.csv",
+      "sha256": "4bbb85d5aa123b14c01ca0fd2f1909dff81be36463b4d51fa3f3ed3f37e518e1"
+    },
+    "boxes.jsonl": {
+      "path": "diagnostics/extractor_919/boxes.jsonl",
+      "sha256": "5930d9d3847614ac275c50c1e02d2f2d253fbe35cd98aa22d0732cf02be7c547"
+    }
+  },
+  "release_note": "Machine-specific paths have been replaced by repository-relative paths. Numerical results and source SHA-256 values are unchanged. The released audit script changes only the old-extractor lookup path; its original-run SHA-256 above is intentionally retained."
+}
