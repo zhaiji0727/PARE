@@ -14,6 +14,8 @@ data/Text_unz/
 data/ret/
 data/ret_clean_20261007/
 *.pt
+# Small, original PARE head checkpoints released with the November results.
+!checkpoints/revision_20261103/*/head_*.pt
 *.pth
 *.safetensors
 *.zip

@@ -1,0 +1,33 @@
+--- executed/test_stress_cache_contract.py
++++ portable/test_stress_cache_contract.py
+@@ -13,7 +13,7 @@
+ from stress_cache import helper_hashes, set_device_guard, validate_scale_cache
+ 
+ 
+-DEFAULT_CODE = Path(__file__).resolve().parents[1] / "pare_code_archive_20261008/PARE_Code_910d74d/code"
++DEFAULT_CODE = Path(__file__).resolve().parents[2] / "code"
+ CODE = Path(os.environ.get("TEST_RELEASE_CODE_ROOT", DEFAULT_CODE))
+ 
+ 
+@@ -73,15 +73,16 @@
+ 
+ class DeviceGuardTests(unittest.TestCase):
+     def test_wrong_gpu_selection_is_rejected(self):
+-        for value in ("", "0", "0,1,2,3,4,5", "4", "6"):
++        for value in ("", "-1", "0,1,2,3,4,5", " 0", "0 "):
+             with patch.dict(os.environ, {"CUDA_VISIBLE_DEVICES": value}):
+                 with self.assertRaises(ValueError):
+                     set_device_guard("cuda")
+ 
+-    def test_only_gpu5_is_allowed(self):
+-        with patch.dict(os.environ, {"CUDA_VISIBLE_DEVICES": "5"}):
+-            set_device_guard("cuda")
+-            self.assertEqual(os.environ["PARE_DEVICE"], "cuda:0")
++    def test_explicit_single_gpu_is_allowed(self):
++        for value in ("0", "5", "6", "GPU-example", "MIG-example"):
++            with patch.dict(os.environ, {"CUDA_VISIBLE_DEVICES": value}):
++                set_device_guard("cuda")
++                self.assertEqual(os.environ["PARE_DEVICE"], "cuda:0")
+ 
+ 
+ if __name__ == "__main__":

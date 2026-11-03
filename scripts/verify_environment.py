@@ -23,7 +23,7 @@ def main():
               "torch_cuda_runtime": torch.version.cuda,
               "compiled_cuda_architectures": torch.cuda.get_arch_list(),
               "cuda_available": torch.cuda.is_available(),
-              "historical_runtime": "Python 3.10 / torch 2.3.1 cu121 / A100; not identical to this host"}
+              "recorded_revision_runtime": "See provenance/20261103/environment.json; this report records the current host"}
     inventory = subprocess.run([
         "nvidia-smi", "--query-gpu=index,name,memory.total,memory.used,utilization.gpu,driver_version",
         "--format=csv,noheader"], capture_output=True, text=True, check=True)

@@ -20,6 +20,7 @@ import torch
 import torch.nn.functional as F
 import open_clip
 from saqre_phys import SAQREHead
+from batch_scoring import score_matrix, scoring_provenance
 from train_saqre import load_captions, move_docs
 from runtime import RESULTS_ROOT, create_backbone, get_device
 from artifacts import file_sha256, head_provenance, validate_cache
@@ -141,11 +142,14 @@ def main():
     vq_emb = torch.stack([cap2vec[c] for _, c in val_queries]).to(device)
     vq_gold = [vg_index[r] for r, _ in val_queries]
     provenance = head_provenance(cache, args.cache, args.captions)
+    provenance.update(scoring_provenance())
     provenance["train_ids"] = [ids[row] for row in sorted(train_rows)]
     provenance["validation_ids"] = [ids[row] for row in val_gallery]
     provenance["selection_source_sha256"] = file_sha256(__file__)
     immutable_inputs = {path: file_sha256(path) for path in
                         (args.cache, args.captions, __file__, str(Path(__file__).with_name("saqre_phys.py")))}
+    batch_scoring_path = str(Path(__file__).with_name("batch_scoring.py"))
+    immutable_inputs[batch_scoring_path] = file_sha256(batch_scoring_path)
     for path in (args.fit_ids, args.val_ids):
         if path:
             immutable_inputs[path] = file_sha256(path)
@@ -175,9 +179,7 @@ def main():
                 q = torch.stack([cap2vec[c] for _, c in batch]).to(device)
                 docs = move_docs(cache, rows, device)
                 B = len(batch)
-                S = torch.zeros(B, B, device=device)
-                for qi in range(B):
-                    S[qi] = head.fuse_batch(q[qi], docs) @ q[qi]
+                S = score_matrix(head, q, docs)
                 loss = F.cross_entropy(S / kappa, torch.arange(B, device=device))
                 if not torch.isfinite(loss):
                     raise FloatingPointError("Non-finite sweep loss")
@@ -188,17 +190,19 @@ def main():
         head.eval()
         ranks = []
         with torch.no_grad():
-            for i in range(len(val_queries)):
-                qv = vq_emb[i]
-                scores = torch.empty(Nv, device=device)
+            # Same full validation gallery, scored in query chunks.
+            for qs in range(0, len(val_queries), 16):
+                qe = min(qs + 16, len(val_queries))
+                scores = torch.empty(qe - qs, Nv, device=device)
                 for s in range(0, Nv, args.chunk):
                     e = min(s + args.chunk, Nv)
                     docs = move_docs(cache, torch.tensor(val_gallery[s:e]), device)
-                    scores[s:e] = head.fuse_batch(qv, docs) @ qv
+                    scores[:, s:e] = score_matrix(head, vq_emb[qs:qe], docs)
                 if not torch.isfinite(scores).all():
                     raise FloatingPointError("Non-finite validation scores; ranking is invalid")
-                r = (torch.argsort(scores, descending=True) == vq_gold[i]).nonzero(as_tuple=True)[0].item() + 1
-                ranks.append(r)
+                ordered = torch.argsort(scores, dim=1, descending=True)
+                gold = torch.tensor(vq_gold[qs:qe], device=device).unsqueeze(1)
+                ranks.extend((ordered == gold).nonzero(as_tuple=True)[1].add(1).tolist())
         trial_name = f"lr_{lr:g}_kappa_{kappa:g}"
         if any(file_sha256(path) != digest for path, digest in immutable_inputs.items()):
             raise RuntimeError("Sweep inputs or code changed during this run")

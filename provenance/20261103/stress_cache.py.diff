@@ -1,0 +1,14 @@
+--- executed/stress_cache.py
++++ portable/stress_cache.py
+@@ -48,8 +48,9 @@
+         os.environ["CUDA_VISIBLE_DEVICES"] = ""
+         os.environ["PARE_DEVICE"] = "cpu"
+     else:
+-        if os.environ.get("CUDA_VISIBLE_DEVICES") != "5":
+-            raise ValueError("GPU jobs require explicit CUDA_VISIBLE_DEVICES=5; GPUs 0--4 are reserved")
++        selected = os.environ.get("CUDA_VISIBLE_DEVICES", "")
++        if not selected or selected == "-1" or "," in selected or selected.strip() != selected:
++            raise ValueError("GPU jobs require one explicitly selected CUDA_VISIBLE_DEVICES entry")
+         os.environ["PARE_DEVICE"] = "cuda:0"
+ 
+ 

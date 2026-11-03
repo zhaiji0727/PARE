@@ -4,14 +4,38 @@ Research implementation accompanying *Physics-Aware Region Encoding for SAR
 Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
 historical compatibility; it implements the PARE architecture.
 
-## Release status — 7 October 2026
+## November 2026 revision
 
-This release contains the repaired extractor, content-disjoint split generator,
-training/evaluation tools, and a measured 919-image extractor diagnostic.
-**Full retraining and full-gallery retrieval benchmarks for this repaired version
-are pending.** Historical manuscript retrieval tables are not reproduced results
-of this code. No trained PARE weights, dataset images, dataset captions, or
-pretrained model weights are redistributed.
+The repaired protocol has now been run for CLIP ViT-B/32, CLIP ViT-B/16,
+RemoteCLIP, SigLIP and GeoRSCLIP: 45 ten-epoch validation trials, 20 ten-epoch
+final heads, and complete retrieval evaluation using 3,688 first-caption queries
+and the full 3,688-image test gallery. The release also includes fixed-head
+synthetic scale-sensitivity results for ViT-B/32.
+
+See the [measured results and provenance](benchmarks/revision_20261103/README.md),
+[all seven methods' full-gallery metrics](benchmarks/revision_20261103/full_gallery_summary.csv),
+and [November reproduction instructions](docs/NOVEMBER_REPRODUCTION.md).
+The public result files omit caption bodies and machine paths. Distinct hashes
+bind original results, public projections and compressed storage. The
+[20 trained PARE heads](checkpoints/revision_20261103/README.md) are included with
+their original evaluated hashes. Dataset images, captions and third-party
+pretrained backbone weights are not redistributed.
+
+Full-gallery R@10 and MRR@10 are higher for PARE than for Scene and stats-off on
+all five backbones. However, the separately trained **CFAR-strict control is
+higher than full PARE on both metrics for all five backbones**. Both variants
+retain soft reliability weighting. These results do not establish a benefit
+from the fine detector-derived inputs, or show that every proposed component is
+necessary; they also do not isolate the effect of the soft reliability weights.
+The complete control results are included in the linked tables.
+
+## Original release status — 7 October 2026
+
+The initial October release contained the repaired extractor, content-disjoint
+split generator, training/evaluation tools and a measured 919-image extractor
+diagnostic, with full retraining still pending at that date. Its historical
+manuscript retrieval tables were not reproduced results of the repaired code.
+The completed November experiments above supersede that pending status.
 
 The extractor changed to float64 local statistics and deterministic spatial
 tie-breaking for equal-intensity scatterers. Old feature caches and heads cannot
@@ -22,7 +46,7 @@ and refuses incompatible or unversioned artifacts by default.
 The source workspace completed a CPU pipeline smoke with 16 fit images,
 32 caption-image pairs per head and one epoch: four caches, four trained heads,
 and nine evaluations. This is a functional check, not a retrieval benchmark.
-See [diagnostic scope](diagnostics/README.md) and [release provenance](RELEASE_PROVENANCE.json).
+See [diagnostic scope](diagnostics/README.md) and [original release provenance](provenance/20261007/RELEASE_PROVENANCE.json).
 
 ## Installation
 
@@ -135,11 +159,12 @@ The runner refuses overwrites or reuse with different source/configuration hashe
 Select an available GPU and inspect the exact plan before a full run:
 
 ```bash
-python scripts/run_repaired_experiment.py --device cuda:0 --tag vitb32_full --dry-run
-python scripts/run_repaired_experiment.py --device cuda:0 --tag vitb32_full
+python scripts/run_repaired_experiment.py --device cuda:0 --tag vitb32_formal_20261103 --out results/vitb32 --dry-run
 ```
 
-For another backbone, set the arguments from the table and a distinct tag.
+Use the [November stage commands](docs/NOVEMBER_REPRODUCTION.md) for all five
+backbones and the independent multi-K evaluator. Those commands preserve the
+exact recorded run labels while using short backbone names for output folders.
 The formal runner performs:
 
 1. Physics and uniform-grid primitive embedding caches, using frozen encoders.

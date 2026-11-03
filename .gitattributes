@@ -1,0 +1,6 @@
+# Preserve the byte-identical exported CSV files, including their CSV line endings.
+*.csv -text whitespace=cr-at-eol
+# Unified patch context lines legitimately contain a single leading space.
+*.diff whitespace=-blank-at-eol,-blank-at-eof
+*.gz binary
+*.pt binary

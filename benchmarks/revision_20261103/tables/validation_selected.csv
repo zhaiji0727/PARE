@@ -1,0 +1,6 @@
+backbone,lr,kappa,val_R@1,val_R@5,val_R@10,val_MRR@10,selection
+vitb32,0.002,0.03,4.357298474945534,13.616557734204793,23.74727668845316,8.681614621157104,maximum val_R@10; tie-break val_MRR@10; first in grid on exact tie
+vitb16,0.002,0.05,2.832244008714597,14.161220043572984,23.420479302832245,7.660243109589514,maximum val_R@10; tie-break val_MRR@10; first in grid on exact tie
+remoteclip,0.002,0.05,1.4161220043572984,6.862745098039216,12.527233115468409,3.960905349794239,maximum val_R@10; tie-break val_MRR@10; first in grid on exact tie
+siglip,0.002,0.07,3.2679738562091507,12.745098039215685,22.33115468409586,7.458372237784003,maximum val_R@10; tie-break val_MRR@10; first in grid on exact tie
+georsclip,0.002,0.05,5.010893246187364,16.23093681917211,26.361655773420477,9.971642978178927,maximum val_R@10; tie-break val_MRR@10; first in grid on exact tie

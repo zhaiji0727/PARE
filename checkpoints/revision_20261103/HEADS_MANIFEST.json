@@ -1,0 +1,258 @@
+{
+  "status": "complete",
+  "purpose": "Exact evaluated PARE head checkpoints; no third-party backbone weights",
+  "retained_original_bytes": true,
+  "historical_execution_paths_retained": true,
+  "heads": {
+    "vitb32": {
+      "full": {
+        "path": "checkpoints/revision_20261103/vitb32/head_full.pt",
+        "sha256": "ecbc2b94f8222eb282ca055f240fc87148e1037a09b5da4ca279a6921ba4d618",
+        "bytes": 977248,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.03,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "stats_off": {
+        "path": "checkpoints/revision_20261103/vitb32/head_stats_off.pt",
+        "sha256": "3f4c15e0b81f07e28882e9d1055c87e055739c4dad3e3ef63323fa190277bee7",
+        "bytes": 977353,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.03,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "cfar_strict": {
+        "path": "checkpoints/revision_20261103/vitb32/head_cfar_strict.pt",
+        "sha256": "e200260a25ce6a1b551e5f0d5141e2be4838dab6fd325fc3b3544641e36ed3b4",
+        "bytes": 977395,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.03,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "uniform_grid": {
+        "path": "checkpoints/revision_20261103/vitb32/head_uniform_grid.pt",
+        "sha256": "c68f8e4fe8affe815f2fd279b2c8cc9474375d1b7b725bfae09baf4da669c476",
+        "bytes": 977480,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.03,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      }
+    },
+    "vitb16": {
+      "full": {
+        "path": "checkpoints/revision_20261103/vitb16/head_full.pt",
+        "sha256": "ba89c729f573e6bde43077f687ce3c2328d15f66e946f34392160d0f842ed171",
+        "bytes": 977248,
+        "model": "ViT-B-16",
+        "pretrained": "laion2b_s34b_b88k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "stats_off": {
+        "path": "checkpoints/revision_20261103/vitb16/head_stats_off.pt",
+        "sha256": "01e0d81370cfc16e31a0a5e3000d4e13b3b91c035afc2a189371df2f734b6b78",
+        "bytes": 977353,
+        "model": "ViT-B-16",
+        "pretrained": "laion2b_s34b_b88k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "cfar_strict": {
+        "path": "checkpoints/revision_20261103/vitb16/head_cfar_strict.pt",
+        "sha256": "a9ebd4f81a79a04f5687ff50d931d93907451ec999b46e7b2105b31397c0114c",
+        "bytes": 977395,
+        "model": "ViT-B-16",
+        "pretrained": "laion2b_s34b_b88k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "uniform_grid": {
+        "path": "checkpoints/revision_20261103/vitb16/head_uniform_grid.pt",
+        "sha256": "4c80c2a59c1ec6e8a62bb347be9231965f23422a4c0c3616de9dc3282d12dfa2",
+        "bytes": 977480,
+        "model": "ViT-B-16",
+        "pretrained": "laion2b_s34b_b88k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      }
+    },
+    "remoteclip": {
+      "full": {
+        "path": "checkpoints/revision_20261103/remoteclip/head_full.pt",
+        "sha256": "28be6e6e59406f6e61d9f9861ade5ce8dbb02976d19a254f028d798f38a710b6",
+        "bytes": 977440,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "stats_off": {
+        "path": "checkpoints/revision_20261103/remoteclip/head_stats_off.pt",
+        "sha256": "112ba0f32486ad6dc5a36eeeb3962af1da87ec54f7db58e79f49e300f2890754",
+        "bytes": 977609,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "cfar_strict": {
+        "path": "checkpoints/revision_20261103/remoteclip/head_cfar_strict.pt",
+        "sha256": "ea88c7badb252be4022a82b7e9c558d0b6956bb12a2799456c46c8b11b5b4520",
+        "bytes": 977587,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "uniform_grid": {
+        "path": "checkpoints/revision_20261103/remoteclip/head_uniform_grid.pt",
+        "sha256": "7dc099b362a3c84131a0ec1611e975be1ef1609ea4bc37c4c87b7c2839e23e1f",
+        "bytes": 977672,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      }
+    },
+    "siglip": {
+      "full": {
+        "path": "checkpoints/revision_20261103/siglip/head_full.pt",
+        "sha256": "b7f0d650eeaff0f7a22153451fc2a6d9f245929c537225744e6214fd2336498a",
+        "bytes": 1242400,
+        "model": "ViT-B-16-SigLIP",
+        "pretrained": "webli",
+        "lr": 0.002,
+        "kappa": 0.07,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "stats_off": {
+        "path": "checkpoints/revision_20261103/siglip/head_stats_off.pt",
+        "sha256": "bba10393e41f1b07cf8c93dc955cf6f5eea8ef05b8125ce2b9c8ac4bd70f05ff",
+        "bytes": 1242569,
+        "model": "ViT-B-16-SigLIP",
+        "pretrained": "webli",
+        "lr": 0.002,
+        "kappa": 0.07,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "cfar_strict": {
+        "path": "checkpoints/revision_20261103/siglip/head_cfar_strict.pt",
+        "sha256": "f5b7d8d458d2043d28d207aacfdd5318aebae5ab842bb5e3c56cd33668d78383",
+        "bytes": 1242611,
+        "model": "ViT-B-16-SigLIP",
+        "pretrained": "webli",
+        "lr": 0.002,
+        "kappa": 0.07,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "uniform_grid": {
+        "path": "checkpoints/revision_20261103/siglip/head_uniform_grid.pt",
+        "sha256": "fe865afc4259a16ccc3fef4778361ff3124579c928beaf78b5255e1a0c41a882",
+        "bytes": 1242632,
+        "model": "ViT-B-16-SigLIP",
+        "pretrained": "webli",
+        "lr": 0.002,
+        "kappa": 0.07,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      }
+    },
+    "georsclip": {
+      "full": {
+        "path": "checkpoints/revision_20261103/georsclip/head_full.pt",
+        "sha256": "0c03426cac175d373369e83b346bb3e3d653f944d519eb54aab13048ddb37a88",
+        "bytes": 977376,
+        "model": "ViT-B-32",
+        "pretrained": "openai",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "stats_off": {
+        "path": "checkpoints/revision_20261103/georsclip/head_stats_off.pt",
+        "sha256": "15b612a6a2f60cf98c0e86753d8b4111e4c7640e3ceae44e0ee2e7a67c15c799",
+        "bytes": 977545,
+        "model": "ViT-B-32",
+        "pretrained": "openai",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "cfar_strict": {
+        "path": "checkpoints/revision_20261103/georsclip/head_cfar_strict.pt",
+        "sha256": "da1e9e07c4d168d22c172fbdbbdf21ed698e0f8d026aac2a0c340b7b0d00402f",
+        "bytes": 977587,
+        "model": "ViT-B-32",
+        "pretrained": "openai",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      },
+      "uniform_grid": {
+        "path": "checkpoints/revision_20261103/georsclip/head_uniform_grid.pt",
+        "sha256": "dd003ea80bfe56332cf4f1a5efa9b92d50a668b567843ce87fec6ae5a6b2f74c",
+        "bytes": 977608,
+        "model": "ViT-B-32",
+        "pretrained": "openai",
+        "lr": 0.002,
+        "kappa": 0.05,
+        "n_images": 9181,
+        "n_pairs": 31945,
+        "epochs": 10
+      }
+    }
+  }
+}

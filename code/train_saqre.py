@@ -12,6 +12,7 @@ import torch
 import torch.nn.functional as F
 import open_clip
 from saqre_phys import SAQREHead
+from batch_scoring import score_matrix, scoring_provenance
 from runtime import create_backbone, get_device
 from artifacts import head_provenance, parse_ablation_flags, validate_cache
 
@@ -80,6 +81,7 @@ def main():
     cache = torch.load(args.cache, map_location="cpu", weights_only=True)
     validate_cache(cache, args.model, args.pretrained, args.remoteclip, args.allow_legacy_artifacts)
     provenance = head_provenance(cache, args.cache, args.captions)
+    provenance.update(scoring_provenance())
     ablation_flags = parse_ablation_flags(args.ablate, cache)
     ids = cache["ids"]; D = cache["D"]
     id2row = {b: i for i, b in enumerate(ids)}
@@ -150,10 +152,7 @@ def main():
             docs = move_docs(cache, rows, device)
             B = len(batch)
             # score matrix S[i,j] = q_i . fuse(q_i, doc_j)
-            S = torch.zeros(B, B, device=device)
-            for qi in range(B):
-                fused = head.fuse_batch(q[qi], docs)        # (B,D)
-                S[qi] = fused @ q[qi]
+            S = score_matrix(head, q, docs)
             target = torch.arange(B, device=device)
             loss = F.cross_entropy(S / args.kappa, target)
             if not torch.isfinite(loss):
@@ -169,6 +168,7 @@ def main():
     if any(not torch.isfinite(value).all() for value in head.state_dict().values()):
         raise FloatingPointError("Non-finite head weights; no checkpoint will be saved")
     current = head_provenance(cache, args.cache, args.captions)
+    current.update(scoring_provenance())
     if any(provenance[key] != current[key] for key in provenance if key != "created_utc"):
         raise RuntimeError("Training inputs or code changed during this run")
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)

@@ -19,10 +19,11 @@ VARIANTS = {"full": ("physics", ""), "stats_off": ("physics", "sr,ty"),
             "cfar_strict": ("physics", "cfar_strict"),
             "uniform_grid": ("uniform_grid", "sr,ty")}
 STAGES = ("cache", "sweep", "train", "eval")
+COMPLETED_STATUSES = {"complete", "imported_verified_cache"}
 SOURCE_FILES = ("cache_primitives.py", "train_saqre.py", "sweep_hparams.py",
                 "eval_retrieval_phys.py", "eval_retrieval_baselines.py",
                 "retrieval_queries.py", "runtime.py", "artifacts.py",
-                "primitive_controls.py", "saqre_phys.py")
+                "primitive_controls.py", "saqre_phys.py", "batch_scoring.py")
 
 
 def now():
@@ -123,10 +124,23 @@ def artifact_hashes(outputs):
 
 
 def verify_completed(step):
-    if step.get("status") != "complete":
+    if step.get("status") not in COMPLETED_STATUSES:
         raise ValueError(f"Prerequisite step is not complete: {step['name']}")
     if artifact_hashes(step["outputs"]) != step.get("artifact_sha256"):
         raise ValueError(f"Completed output changed: {step['name']}")
+    if step.get("status") == "imported_verified_cache":
+        if step.get("stage") != "cache":
+            raise ValueError("Only cache steps may carry imported_verified_cache status")
+        origin = step.get("import_provenance", {})
+        source = origin.get("source_run_manifest")
+        if not source or sha256(source) != origin.get("source_run_manifest_sha256"):
+            raise ValueError("Imported cache source manifest changed or is missing")
+        original = json.loads(Path(source).read_text())
+        matches = [item for item in original.get("steps", [])
+                   if item.get("name") == origin.get("source_step_name")]
+        if len(matches) != 1 or matches[0].get("status") != "complete" or matches[0].get("stage") != "cache":
+            raise ValueError("Imported cache is not bound to a completed original cache step")
+
 
 
 def selected_parameters(output, steps):
@@ -303,7 +317,7 @@ def main():
                     continue
                 if config["source_sha256"] != {name: sha256(workspace / "code" / name) for name in SOURCE_FILES}:
                     raise RuntimeError("Experiment source changed during execution; refusing mixed-version artifacts")
-                if step["status"] == "complete":
+                if step["status"] in COMPLETED_STATUSES:
                     verify_completed(step)
                     print(f"Verified existing completed step {step['name']}; not overwritten", flush=True)
                     continue
@@ -332,12 +346,12 @@ def main():
                 step["status"] = "complete"
                 write_json(manifest_path, manifest)
                 print(f"Verified {step['name']}", flush=True)
-            complete = all(step["status"] == "complete" for step in manifest["steps"])
+            complete = all(step["status"] in COMPLETED_STATUSES for step in manifest["steps"])
             manifest.update(status="complete" if complete else "partial", updated_utc=now(),
                             all_required_steps_complete=complete)
             write_json(manifest_path, manifest)
             print(json.dumps({"status": manifest["status"], "manifest": str(manifest_path),
-                              "purpose": manifest["purpose"], "completed_steps": sum(step["status"] == "complete" for step in manifest["steps"]),
+                              "purpose": manifest["purpose"], "completed_steps": sum(step["status"] in COMPLETED_STATUSES for step in manifest["steps"]),
                               "total_steps": len(manifest["steps"])}, indent=2), flush=True)
         except BaseException as error:
             for step in manifest["steps"]:

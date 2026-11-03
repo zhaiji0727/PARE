@@ -1,0 +1,17 @@
+{
+  "source": "Completed strict five-backbone plus synthetic-scale numeric export",
+  "original_export_manifest_sha256": "09a5b59465e7b72c4545ac865f4008d75e688286095c16d55a9566a28822eca3",
+  "copy_policy": "Only numeric tables, byte-identical; original machine-path manifests are excluded.",
+  "files": {
+    "appendix_controlled100.csv": "bddf630de4cd1364c05305f257ee9aab9923d826a397ed16c7ba8909cea57338",
+    "appendix_hard50.csv": "cc464a44abccaa4863e4eaeb776b2bd873a476003074c309289b4670b46e2912",
+    "appendix_natural_k.csv": "0d61dc04057ea158af46281870fbd1925cf0d7578c660cf99265f2bbbf62b7cd",
+    "appendix_validation_grid.csv": "1e907f013cabd71d05d24d22efe3d5da5c3b88e0c4669dbe021598ef7946092c",
+    "pare_differences.csv": "c7b6c903bc610400bdb0f2402c8ae76b1d3fbd2c8d69ed2e405eedb944dca31e",
+    "synthetic_scale_sensitivity.csv": "2780e81717864bdb9a1f8a1fb665488a042c471ff8e71419b5e9e78ecb9225ec",
+    "table_i_full_gallery.csv": "2e2d973a59ad7c61773d28cbb9f5630cc8b32bc7518663252b3d2338ea1cc6c5",
+    "table_ii_vitb32_controls.csv": "93d10adea8d3d0a244c478c82f0f157af14ac8fdb5033403eb091e46fdd43c9d",
+    "validation_selected.csv": "d209e7b94a67c474cb113622cb6925d26775db1e5977e4c59e168715e6b2b52f",
+    "paper_results.json": "b072cdf9d7b55ecad173080970e4d70c2b88f44e4fff09c414d97ecaa2decf91"
+  }
+}
