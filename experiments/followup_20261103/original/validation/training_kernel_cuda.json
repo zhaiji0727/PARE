@@ -1,0 +1,582 @@
+{
+  "all_passed": true,
+  "device": "cuda:0",
+  "cases": [
+    {
+      "seed": 0,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 0,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "2346876c5529e8df85972fa310b170c22d998c868187f48d0a0ebc2d9eb3d5f7",
+        "7939a4b16349ed5eb90cc79a6cb21019be98011c804b16b9f2d7cf892308ed35"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 1,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "dd0268e750cb205d916cc95ac57257aa0ed8bd74f962a4ad7d9aca4219402c10",
+        "6ab35a30c5067eba61f8b0761bbfb7f6a27174e54466e69e8d2adfd422a48b5f"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    },
+    {
+      "seed": 2,
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "max_parameter_error": 0.0,
+      "losses_exact": true,
+      "pair_order_sha256": [
+        "796a74e2696fe7de254866bd6018f84fcd23270074c54f367731f70f12918a1f",
+        "9a307b242488c250736c7f3ae1d3f078b6a919482f7ed122e4243ae5172844b2"
+      ]
+    }
+  ]
+}

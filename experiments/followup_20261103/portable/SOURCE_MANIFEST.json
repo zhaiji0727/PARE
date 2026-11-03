@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "code/factorial_head.py": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+    "scripts/aggregate_reproduction.py": "51f5299fe2bcf19b1b35135304478f9673568c23afe81cbfdbf11b03f6ff4671",
+    "scripts/prepare_reproduction.py": "0a6034ea0fef7d8c8a10f57b449c83e6ad69beaafcef567f8228706651a37597",
+    "scripts/protocol_adapter.py": "215e9e37e292dc278121ca5f6cac74bc5f4df5104805be8b3b9f3aae1c22e9c0",
+    "scripts/run_factorial_fitval.py": "bc16450bf772e7466dfe176dbe2067e1150aa206ac19d79b6dc2dcb43a519ca2",
+    "tests/test_aggregate_reproduction.py": "4117e6a411fa4c23471f7b226fd77ce9794592a693c1197374335a735cd1b9ed",
+    "tests/test_portability.py": "1c4a0102b8cb9c2e9ce20bbe799bf49f2e11917d643422f8f91f6110711f1590"
+  },
+  "original_runner_sha256": "bb9a3e1d6a7c19c541ef79366b28427a7feae2062a9f3d3d9ff893fed21d78e4",
+  "original_factor_adapter_sha256": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+  "reference_aggregator_sha256": "b132087d63dac8d3b476749e1c89cf1a62336b6257d4962da51bfe9590287fcb",
+  "portable_diff_sha256": "cc9b224fb531a705d71927d871cb24575311d5d87582802e98fc90d478bcb8fc"
+}

@@ -1,0 +1,4233 @@
+{
+  "all_passed": true,
+  "device": "cuda:0",
+  "tolerance_absolute": 1e-07,
+  "cases": [
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 512,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "full",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "mixed",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_c",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_f",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar_strict",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar_strict"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "sr",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar",
+        "sr"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      },
+      "reference_flags": [
+        "cfar",
+        "ty"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "weighted_score",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    },
+    {
+      "D": 768,
+      "masks": "empty_both",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      },
+      "reference_flags": [
+        "cfar"
+      ],
+      "loss": "contrastive",
+      "max_score_error": 0.0,
+      "max_parameter_gradient_error": 0.0
+    }
+  ],
+  "source_sha256": {
+    "base_saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+    "batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "factorial_head.py": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+    "checker": "68fa3da70f4286e8d803abe369e4252d6c22b8c494c80c0525fe2831e55fbee6"
+  }
+}

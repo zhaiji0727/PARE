@@ -24,10 +24,32 @@ pretrained backbone weights are not redistributed.
 Full-gallery R@10 and MRR@10 are higher for PARE than for Scene and stats-off on
 all five backbones. However, the separately trained **CFAR-strict control is
 higher than full PARE on both metrics for all five backbones**. Both variants
-retain soft reliability weighting. These results do not establish a benefit
-from the fine detector-derived inputs, or show that every proposed component is
-necessary; they also do not isolate the effect of the soft reliability weights.
-The complete control results are included in the linked tables.
+retain soft reliability weighting. CFAR-strict jointly changes the fine attended vector, the fine-to-gate input
+and the coarse detector-fraction descriptor. This comparison does not isolate
+any one of those paths or the soft reliability weights. The complete control
+results are included in the linked tables; the follow-up below separates them.
+
+## Exploratory factorial follow-up — 42 fit-only runs
+
+The [complete follow-up](benchmarks/followup_20261103/README.md) separates three
+previously combined detector/fine paths and tests reliability and learned tokens
+at both full and strict endpoints for ViT-B/32: 14 configurations × three seeds, each trained
+on 8,263 fit images and evaluated on the existing 918-image validation gallery.
+This study was motivated by the already observed test results, and this validation
+set previously supported hyperparameter selection. It is **post-hoc exploratory
+analysis, not a new blinded test**. The original full method and its test results
+remain unchanged; no winning follow-up cell replaces them.
+
+With reliability held on, learned descriptor tokens improve R@10 at both full
+and strict endpoints: **+12.200 ± 1.284** and **+17.393 ± 3.587 pp**, respectively
+(mean ± sample SD over three paired seeds). The current soft reliability has no
+stable independent positive gain. Fine-to-gate input is negative in all three
+seeds at the full setting (**−3.268 ± 1.365 pp**); the isolated fine attended-vector
+effect is small and variable (**+0.182 ± 0.926 pp**). These observations do not
+show that every component helps. All 42 runs, 36 contrasts, negative effects,
+[ranks and evidence](benchmarks/followup_20261103/), and
+[42 fit-only trained heads](checkpoints/followup_20261103/README.md) are retained.
+See the [exact execution source and portable reproduction guide](experiments/followup_20261103/README.md).
 
 ## Original release status — 7 October 2026
 

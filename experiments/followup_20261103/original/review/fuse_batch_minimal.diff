@@ -1,0 +1,101 @@
+--- published_6e4/SAQREHead.fuse_batch
++++ independent/FactorialHead.fuse_batch
+@@ -1,64 +1,53 @@
+     def fuse_batch(self, q, docs):
+-        """Query-aligned fused embeddings for a batch of docs against one query.
+-
+-        q: (D). docs: dict with batched tensors on device:
+-          g (B,D), agg (B,D), nu (B,);
+-          c_emb (B,Mc,D), c_mu (B,Mc), c_t (B,Mc), c_tf (B,Mc,4), c_mask (B,Mc);
+-          f_emb (B,Mf,D), f_mu (B,Mf), f_t (B,Mf), f_tf (B,Mf,4), f_mask (B,Mf)
+-        Returns (B,D) normalized fused embeddings.
+-        """
+-        B = docs["g"].shape[0]
+-        ablate = self._ablation_set()
+-        strict_cfar = "cfar_strict" in ablate
+-        nu = docs["nu"].unsqueeze(-1)                     # (B,1)
++        if self._ablation_set():
++            raise ValueError('Use explicit A/B/C/R/T factors; do not combine legacy ablation flags')
++        B = docs['g'].shape[0]
++        factors = self.factors
++        nu = docs['nu'].unsqueeze(-1)
+         beta = torch.exp(self.log_beta)
+         s = torch.exp(self.log_s).clamp(1e-3, 1.0)
+         rho_min = torch.sigmoid(self.logit_rho_min)
+ 
+-        if "ty" in ablate:
+-            c_aug = torch.nan_to_num(F.normalize(docs["c_emb"], dim=-1))
++        if not factors.T:
++            c_aug = torch.nan_to_num(F.normalize(docs['c_emb'], dim=-1))
+         else:
+-            c_tf = docs["c_tf"]
+-            if strict_cfar:
++            c_tf = docs['c_tf']
++            if not factors.C:
+                 c_tf = c_tf.clone()
+                 c_tf[..., 3] = 0.0
+-            c_aug, _ = self._augment_b(docs["c_emb"], c_tf)
+-        c_soft = torch.sigmoid((docs["c_mu"] - nu) / s)
+-        c_rho = rho_min + (1.0 - rho_min) * c_soft * (1.0 - torch.exp(-beta * docs["c_t"] ** 2))
+-        if "sr" in ablate:
++            c_aug, _ = self._augment_b(docs['c_emb'], c_tf)
++        c_soft = torch.sigmoid((docs['c_mu'] - nu) / s)
++        c_rho = rho_min + (1.0 - rho_min) * c_soft * (1.0 - torch.exp(-beta * docs['c_t'] ** 2))
++        if not factors.R:
+             c_rho = torch.ones_like(c_rho)
+-        c_rho = c_rho * docs["c_mask"].float()
+-        c_att = self._attend_b(q, c_aug, c_rho, docs["c_mask"])
++        c_rho = c_rho * docs['c_mask'].float()
++        c_att = self._attend_b(q, c_aug, c_rho, docs['c_mask'])
+ 
+-        if strict_cfar:
+-            f_att = docs["g"]
++        if not factors.A:
++            f_att = docs['g']
+         else:
+-            if "ty" in ablate:
+-                f_aug = torch.nan_to_num(F.normalize(docs["f_emb"], dim=-1))
++            if not factors.T:
++                f_aug = torch.nan_to_num(F.normalize(docs['f_emb'], dim=-1))
+             else:
+-                f_aug, _ = self._augment_b(docs["f_emb"], docs["f_tf"])
+-            f_soft = torch.sigmoid((docs["f_mu"] - nu) / s)
+-            f_rho = rho_min + (1.0 - rho_min) * f_soft * (1.0 - torch.exp(-beta * docs["f_t"] ** 2))
+-            if "sr" in ablate:
++                f_aug, _ = self._augment_b(docs['f_emb'], docs['f_tf'])
++            f_soft = torch.sigmoid((docs['f_mu'] - nu) / s)
++            f_rho = rho_min + (1.0 - rho_min) * f_soft * (1.0 - torch.exp(-beta * docs['f_t'] ** 2))
++            if not factors.R:
+                 f_rho = torch.ones_like(f_rho)
+-            f_rho = f_rho * docs["f_mask"].float()
+-            f_att = self._attend_b(q, f_aug, f_rho, docs["f_mask"])
+-            f_att = torch.where(docs["f_mask"].any(1, keepdim=True), f_att, docs["g"])
++            f_rho = f_rho * docs['f_mask'].float()
++            f_att = self._attend_b(q, f_aug, f_rho, docs['f_mask'])
++            f_att = torch.where(docs['f_mask'].any(1, keepdim=True), f_att, docs['g'])
+ 
+-        # if a doc has no regions/scatterers, fall back to scene
+-        c_att = torch.where(docs["c_mask"].any(1, keepdim=True), c_att, docs["g"])
+-        if "cfar" in ablate:
+-            f_att = docs["g"]
+-
++        c_att = torch.where(docs['c_mask'].any(1, keepdim=True), c_att, docs['g'])
+         qrep = q.unsqueeze(0).expand(B, -1)
+-        if strict_cfar:
+-            # Remove the fine-to-gate path as well as the attended branch.
+-            coarse = docs["c_emb"].masked_fill(~docs["c_mask"].unsqueeze(-1), 0.0)
+-            agg = (docs["g"] + coarse.sum(1)) / (1 + docs["c_mask"].sum(1, keepdim=True))
++        if not factors.B:
++            coarse = docs['c_emb'].masked_fill(~docs['c_mask'].unsqueeze(-1), 0.0)
++            agg = (docs['g'] + coarse.sum(1)) / (1 + docs['c_mask'].sum(1, keepdim=True))
+         else:
+-            agg = docs["agg"]
++            agg = docs['agg']
+         gates = torch.sigmoid(self.gate(torch.cat([qrep, agg], dim=-1)))
+-        g_c = gates[:, :1]; g_f = gates[:, 1:2]
++        g_c = gates[:, :1]
++        g_f = gates[:, 1:2]
+         rest = (1.0 - g_c - g_f).clamp(min=0.0)
+-        fused = g_c * c_att + g_f * f_att + rest * docs["g"]
++        fused = g_c * c_att + g_f * f_att + rest * docs['g']
+         return F.normalize(fused, dim=-1)

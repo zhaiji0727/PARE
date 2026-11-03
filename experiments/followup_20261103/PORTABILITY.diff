@@ -1,0 +1,751 @@
+--- original/scripts/run_factorial_fitval.py
++++ portable/scripts/run_factorial_fitval.py
+@@ -20,8 +20,11 @@
+ import time
+ import traceback
+ 
++from protocol_adapter import validate_reproduction_protocol
++
+ PROTOCOL_SHA256 = '42789ee8793b7c5bd59bf950dd8deefe8bf1c3caa2e9be2d54143630f63bf288'
+ ROOT = Path(__file__).resolve().parents[1]
++ORIGINAL_ROOT = ROOT.parent / 'original'
+ 
+ 
+ def sha(path):
+@@ -48,8 +51,7 @@
+ 
+ 
+ def validate_protocol(path):
+-    if sha(path) != PROTOCOL_SHA256:
+-        raise ValueError('Protocol differs from the reviewed pre-result revision 2')
++    validate_reproduction_protocol(path, PROTOCOL_SHA256, ORIGINAL_ROOT)
+     plan = json.loads(Path(path).read_text())
+     if sha(Path(path).with_suffix('.md')) != plan['protocol_markdown_sha256']:
+         raise ValueError('Protocol markdown differs from its recorded hash')
+@@ -154,8 +156,11 @@
+ 
+ 
+ def main():
++    global PROTOCOL_SHA256
+     ap = argparse.ArgumentParser(description=__doc__)
+     ap.add_argument('--protocol', required=True, type=Path)
++    ap.add_argument('--expected-protocol-sha256', default=PROTOCOL_SHA256,
++                    help='explicit digest emitted by prepare_reproduction.py')
+     ap.add_argument('--base-code', required=True, type=Path)
+     ap.add_argument('--cache', required=True, type=Path)
+     ap.add_argument('--captions', required=True, type=Path)
+@@ -166,6 +171,7 @@
+     ap.add_argument('--resume', action='store_true')
+     ap.add_argument('--retry-incomplete', action='store_true')
+     args = ap.parse_args()
++    PROTOCOL_SHA256 = args.expected_protocol_sha256
+     plan = validate_protocol(args.protocol)
+     sys.path[:0] = [str(args.base_code.resolve()), str(ROOT / 'code')]
+     os.environ['HF_HUB_OFFLINE'] = '1'
+@@ -183,6 +189,7 @@
+     source_paths = {f'base_code/{p.name}': p for p in args.base_code.glob('*.py')}
+     source_paths.update({f'code/{p.name}': p for p in (ROOT / 'code').glob('*.py')})
+     source_paths['scripts/run_factorial_fitval.py'] = Path(__file__)
++    source_paths['scripts/protocol_adapter.py'] = Path(__file__).with_name('protocol_adapter.py')
+     source_sha = {name: sha(path) for name, path in source_paths.items()}
+     for name, digest in bindings['frozen_source_sha256'].items():
+         if source_sha.get(f'base_code/{name}') != digest:
+--- /dev/null
++++ portable/scripts/protocol_adapter.py
+@@ -0,0 +1,114 @@
++"""Narrow portability boundary around the immutable exploratory protocol.
++
++Only cache serialization and local split-metadata byte hashes can be rebound.
++All scientific fields remain exactly equal to the original executed protocol.
++"""
++from copy import deepcopy
++from datetime import datetime
++import hashlib
++import json
++from pathlib import Path
++
++ORIGINAL_PROTOCOL_SHA256 = '42789ee8793b7c5bd59bf950dd8deefe8bf1c3caa2e9be2d54143630f63bf288'
++ORIGINAL_FREEZE_SHA256 = '3ebc187c1f9b67256747bc46e5383d43a166fdb11cb5441aea2660a937aa011a'
++REBOUND_FIELDS = ['input_bindings.training_cache_sha256',
++                  'input_bindings.original_split_manifest_sha256']
++
++
++def sha(path):
++    digest = hashlib.sha256()
++    with Path(path).open('rb') as stream:
++        for block in iter(lambda: stream.read(1048576), b''):
++            digest.update(block)
++    return digest.hexdigest()
++
++
++def is_sha(value):
++    return isinstance(value, str) and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
++
++
++def load_original(original_root):
++    root = Path(original_root)
++    path = root / 'plans/protocol.json'
++    if sha(path) != ORIGINAL_PROTOCOL_SHA256:
++        raise ValueError('Bundled original protocol is not the executed revision 2')
++    plan = json.loads(path.read_text())
++    if sha(root / 'plans/protocol.md') != plan['protocol_markdown_sha256']:
++        raise ValueError('Bundled original protocol markdown changed')
++    freeze_path = root / 'FOLLOWUP_SOURCE_FROZEN.json'
++    if sha(freeze_path) != ORIGINAL_FREEZE_SHA256:
++        raise ValueError('Original executed source manifest changed')
++    for relative, digest in json.loads(freeze_path.read_text())['file_sha256'].items():
++        if sha(root / relative) != digest:
++            raise ValueError('Original executed source changed: ' + relative)
++    return plan
++
++
++def check_scientific_identity(plan, original):
++    """Reject every amendment except the two bindings and declared metadata."""
++    if plan == original:
++        return
++    candidate = deepcopy(plan)
++    meta = candidate.pop('reproduction', None)
++    keys = {'schema', 'parent_protocol_sha256', 'created_utc',
++            'scientific_design_unchanged', 'rebound_fields'}
++    if not isinstance(meta, dict) or set(meta) != keys:
++        raise ValueError('Expected explicit, narrowly defined reproduction metadata')
++    if (meta['schema'] != 'pare.portable-reproduction.v1'
++            or meta['parent_protocol_sha256'] != ORIGINAL_PROTOCOL_SHA256
++            or meta['scientific_design_unchanged'] is not True
++            or meta['rebound_fields'] != REBOUND_FIELDS):
++        raise ValueError('Invalid reproduction-parent declaration')
++    try:
++        date = datetime.fromisoformat(meta['created_utc'])
++        if date.tzinfo is None:
++            raise ValueError('missing timezone')
++    except (ValueError, TypeError):
++        raise ValueError('Reproduction timestamp must be a timezone-aware ISO datetime')
++    for field in ('training_cache_sha256', 'original_split_manifest_sha256'):
++        if not is_sha(candidate.get('input_bindings', {}).get(field)):
++            raise ValueError('Invalid rebound file digest: ' + field)
++        candidate['input_bindings'][field] = original['input_bindings'][field]
++    if candidate != original:
++        raise ValueError('Scientific protocol changed outside the two allowed byte bindings')
++
++
++def make_reproduction_protocol(original, cache_sha256, split_manifest_sha256, created_utc):
++    result = deepcopy(original)
++    result['input_bindings']['training_cache_sha256'] = cache_sha256
++    result['input_bindings']['original_split_manifest_sha256'] = split_manifest_sha256
++    result['reproduction'] = {'schema': 'pare.portable-reproduction.v1',
++                              'parent_protocol_sha256': ORIGINAL_PROTOCOL_SHA256,
++                              'created_utc': created_utc,
++                              'scientific_design_unchanged': True,
++                              'rebound_fields': REBOUND_FIELDS[:]}
++    check_scientific_identity(result, original)
++    return result
++
++
++def validate_reproduction_protocol(path, expected_sha256, original_root):
++    if not is_sha(expected_sha256) or sha(path) != expected_sha256:
++        raise ValueError('Protocol does not match the explicitly supplied SHA-256')
++    original = load_original(original_root)
++    plan = json.loads(Path(path).read_text())
++    if 'reproduction' not in plan and expected_sha256 != ORIGINAL_PROTOCOL_SHA256:
++        raise ValueError('Unmodified original protocol must retain its exact original bytes')
++    check_scientific_identity(plan, original)
++    if sha(Path(path).with_suffix('.md')) != original['protocol_markdown_sha256']:
++        raise ValueError('Reproduction must use the unmodified original protocol markdown')
++    return plan
++
++
++def check_cache_contract(cache, signature, original, train_ids):
++    """Additional fixed-study checks after the original validate_cache succeeds."""
++    if (cache.get('D'), cache.get('Mc'), cache.get('Mf')) != (512, 6, 8):
++        raise ValueError('Expected original B32 dimension and region capacities: 512/6/8')
++    if (signature.get('primitive_mode') != 'physics'
++            or signature.get('model') != original['backbone']['model']
++            or signature.get('pretrained') != original['backbone']['pretrained']
++            or signature.get('pretrained_weight_sha256') != original['backbone']['pretrained_weight_sha256']
++            or signature.get('external_checkpoint_sha256') is not None):
++        raise ValueError('Cache does not implement the fixed physics/B32 backbone contract')
++    ids = cache.get('ids', [])
++    if len(ids) != 9181 or len(set(ids)) != 9181 or set(ids) != set(train_ids) or len(train_ids) != 9181:
++        raise ValueError('Cache must contain exactly the original 9181 training IDs')
+--- /dev/null
++++ portable/scripts/prepare_reproduction.py
+@@ -0,0 +1,120 @@
++#!/usr/bin/env python3
++"""Validate local inputs, then create a narrowly rebound reproduction protocol.
++
++This does not train, download weights, access test data, or change the original
++executed protocol. Use a fresh output directory for each independent reproduction.
++"""
++import argparse
++from datetime import datetime, timezone
++import json
++import os
++from pathlib import Path
++import shlex
++import shutil
++import sys
++
++from protocol_adapter import (ORIGINAL_PROTOCOL_SHA256, check_cache_contract,
++                              load_original, make_reproduction_protocol, sha)
++
++ROOT = Path(__file__).resolve().parents[1]
++ORIGINAL = ROOT.parent / 'original'
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--cache', type=Path, required=True, help='new compatible physics training cache')
++    parser.add_argument('--captions', type=Path, required=True, help='clean Caption_train.csv, exact original bytes')
++    parser.add_argument('--split-dir', type=Path, required=True, help='fixed fit/val/train IDs and local manifest.json')
++    parser.add_argument('--model-root', type=Path, required=True, help='prepared offline OpenCLIP weights directory')
++    parser.add_argument('--out', type=Path, required=True, help='new protocol/preparation output directory')
++    args = parser.parse_args()
++    if args.out.exists():
++        raise FileExistsError('Use a fresh reproduction output directory')
++    original = load_original(ORIGINAL)
++    bindings = original['input_bindings']
++    base = ORIGINAL / 'base_code'
++    for name, digest in bindings['frozen_source_sha256'].items():
++        if sha(base / name) != digest:
++            raise ValueError('Original scientific implementation changed: ' + name)
++    if sha(ROOT / 'code/factorial_head.py') != sha(ORIGINAL / 'code/factorial_head.py'):
++        raise ValueError('Portable factor adapter must have the original executed bytes')
++    paths = {'training_cache': args.cache, 'training_captions': args.captions,
++             'local_split_manifest': args.split_dir / 'manifest.json',
++             **{name: args.split_dir / name for name in bindings['split_file_sha256']}}
++    hashes = {name: sha(path) for name, path in paths.items()}
++    if hashes['training_captions'] != bindings['clean_training_captions_sha256']:
++        raise ValueError('Clean training captions differ from the original fixed input')
++    for name, digest in bindings['split_file_sha256'].items():
++        if hashes[name] != digest:
++            raise ValueError('Fixed split IDs changed: ' + name)
++    if not isinstance(json.loads(paths['local_split_manifest'].read_text()), dict):
++        raise ValueError('Local split metadata must be a JSON object')
++    train = json.loads((args.split_dir / 'train_ids.json').read_text())
++    fit = json.loads((args.split_dir / 'fit_ids.json').read_text())
++    val = json.loads((args.split_dir / 'val_ids.json').read_text())
++    if len(fit) != 8263 or len(set(fit)) != 8263 or len(val) != 918 or len(set(val)) != 918:
++        raise ValueError('Expected 8263 distinct fit IDs and 918 distinct validation IDs')
++    if set(fit) & set(val) or set(fit) | set(val) != set(train):
++        raise ValueError('Fit/validation must disjointly partition the fixed training IDs')
++    os.environ['RS_RAG_MODEL_ROOT'] = str(args.model_root.resolve())
++    os.environ['HF_HUB_OFFLINE'] = '1'
++    os.environ['TRANSFORMERS_OFFLINE'] = '1'
++    sys.path.insert(0, str(base))
++    import torch
++    from artifacts import validate_cache, resolve_pretrained_path
++    from train_saqre import load_captions
++    cache = torch.load(args.cache, map_location='cpu', weights_only=True)
++    signature = validate_cache(cache, original['backbone']['model'], original['backbone']['pretrained'])
++    check_cache_contract(cache, signature, original, train)
++    weights = resolve_pretrained_path(original['backbone']['model'], original['backbone']['pretrained'])
++    paths['pretrained_weight'] = weights
++    hashes['pretrained_weight'] = sha(weights)
++    if hashes['pretrained_weight'] != original['backbone']['pretrained_weight_sha256']:
++        raise ValueError('Backbone weights differ from the original fixed input')
++    caps = load_captions(args.captions)
++    fit_set, val_set = set(fit), set(val)
++    if sum(len(captions) for name, captions in caps.items() if name in fit_set) != 28759:
++        raise ValueError('Expected all 28759 fit caption pairs')
++    if {name for name in caps if name in fit_set} != fit_set or {name for name in caps if name in val_set} != val_set:
++        raise ValueError('Every fit and validation image must have a caption')
++    if any(sha(path) != hashes[name] for name, path in paths.items()):
++        raise RuntimeError('An input file changed during preparation')
++    created = datetime.now(timezone.utc).isoformat()
++    plan = make_reproduction_protocol(original, hashes['training_cache'], hashes['local_split_manifest'], created)
++    args.out.mkdir(parents=True)
++    protocol = args.out / 'protocol.json'
++    protocol.write_text(json.dumps(plan, indent=2) + '\n')
++    shutil.copyfile(ORIGINAL / 'plans/protocol.md', args.out / 'protocol.md')
++    protocol_sha = sha(protocol)
++    commands = []
++    for seed in original['seeds']:
++        command = [sys.executable, str(ROOT / 'scripts/run_factorial_fitval.py'),
++                   '--protocol', str(protocol.resolve()), '--expected-protocol-sha256', protocol_sha,
++                   '--base-code', str(base), '--cache', str(args.cache.resolve()),
++                   '--captions', str(args.captions.resolve()), '--split-dir', str(args.split_dir.resolve()),
++                   '--out', str((args.out / 'results' / f'seed_{seed}').resolve()), '--seed', str(seed)]
++        commands.append(command)
++    manifest = {'schema': 'pare.portable-preparation.v1', 'created_utc': created,
++                'parent_protocol_sha256': ORIGINAL_PROTOCOL_SHA256, 'protocol_sha256': protocol_sha,
++                'input_sha256': hashes, 'cache_signature': signature,
++                'counts': {'cache_images': 9181, 'fit_images': 8263, 'fit_caption_pairs': 28759,
++                           'validation_images': 918, 'configurations': 14, 'seeds': 3},
++                'portable_source_sha256': {str(path.relative_to(ROOT)): sha(path)
++                                          for path in [ROOT / 'scripts/protocol_adapter.py',
++                                                       ROOT / 'scripts/prepare_reproduction.py',
++                                                       ROOT / 'scripts/run_factorial_fitval.py',
++                                                       ROOT / 'code/factorial_head.py']},
++                'scientific_design_unchanged': True, 'training_started': False,
++                'run_commands': commands}
++    (args.out / 'preparation_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
++    print('Validated local inputs; no training started.')
++    print('Protocol SHA-256:', protocol_sha)
++    print('Set RS_RAG_MODEL_ROOT to', shlex.quote(str(args.model_root.resolve())))
++    print('Choose an available physical CUDA GPU using CUDA_VISIBLE_DEVICES and PARE_DEVICE=cuda:0.')
++    print('Preflight each command first by adding --preflight-only and a separate --out directory.')
++    for command in commands:
++        print(shlex.join(command))
++
++
++if __name__ == '__main__':
++    main()
+--- /dev/null
++++ portable/scripts/aggregate_reproduction.py
+@@ -0,0 +1,178 @@
++#!/usr/bin/env python3
++"""Summarize all 42 portable runs after byte-hash and exported-rank checks.
++
++This does not load torch tensors or recompute scores/rankings from score matrices.
++It verifies stored artifact bytes and recomputes metrics from exported ranks.
++"""
++import argparse
++import importlib.util
++import json
++from pathlib import Path
++import sys
++
++from protocol_adapter import ORIGINAL_PROTOCOL_SHA256, sha, validate_reproduction_protocol
++
++ROOT = Path(__file__).resolve().parents[1]
++ORIGINAL = ROOT.parent / 'original'
++REFERENCE_SHA = 'b132087d63dac8d3b476749e1c89cf1a62336b6257d4962da51bfe9590287fcb'
++
++
++def reference_module():
++    path = ORIGINAL / 'analysis/aggregate_followup.py'
++    if sha(path) != REFERENCE_SHA:
++        raise ValueError('Original aggregation arithmetic changed')
++    spec = importlib.util.spec_from_file_location('pare_original_aggregation', path)
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    return module
++
++
++def expected_sources():
++    paths = {f'base_code/{p.name}': p for p in (ORIGINAL / 'base_code').glob('*.py')}
++    paths.update({f'code/{p.name}': p for p in (ROOT / 'code').glob('*.py')})
++    paths.update({f'scripts/{name}': ROOT / 'scripts' / name
++                  for name in ['run_factorial_fitval.py', 'protocol_adapter.py']})
++    return {name: sha(path) for name, path in paths.items()}
++
++
++def load_complete(protocol, expected_sha, runs, split_dir):
++    protocol, runs, split_dir = Path(protocol), Path(runs), Path(split_dir)
++    plan = validate_reproduction_protocol(protocol, expected_sha, ORIGINAL)
++    ref = reference_module()
++    require = ref.require
++    configs = {item['id']: item for item in plan['configurations']}
++    require(len(configs) == 14 and plan['seeds'] == [0, 1, 2], 'Expected the complete 42-run design')
++    bindings = plan['input_bindings']
++    stable = {protocol: sha(protocol), protocol.with_suffix('.md'): sha(protocol.with_suffix('.md'))}
++    for name, digest in bindings['split_file_sha256'].items():
++        require(sha(split_dir / name) == digest, 'Fixed split changed: ' + name)
++        stable[split_dir / name] = digest
++    fit, val = set(ref.read(split_dir / 'fit_ids.json')), set(ref.read(split_dir / 'val_ids.json'))
++    require(len(fit) == 8263 and len(val) == 918 and not fit & val, 'Invalid fixed populations')
++    sources = expected_sources()
++    inputs = {'training_cache': bindings['training_cache_sha256'],
++              'training_captions': bindings['clean_training_captions_sha256'],
++              **bindings['split_file_sha256'], 'original_split_manifest': bindings['original_split_manifest_sha256'],
++              'pretrained_weight': plan['backbone']['pretrained_weight_sha256']}
++    complete, records, initial_states, query_identity = {}, [], [], None
++    common_pairs, common_embeddings = None, None
++    for seed in plan['seeds']:
++        directory = runs / f'seed_{seed}'
++        path = directory / 'manifest.json'
++        manifest = ref.read(path)
++        stable[path] = sha(path)
++        require(manifest.get('status') == 'complete_all_14_configurations'
++                and manifest.get('active_configuration') is None, 'A seed is incomplete')
++        require(set(manifest['runs']) == set(configs), 'A planned configuration is missing or duplicated')
++        require(manifest['settings'] == plan['training'], 'Training settings changed')
++        require(manifest.get('posthoc_exploratory') is True and manifest.get('uses_official_test') is False,
++                'Expected exploratory validation without official test access')
++        require((manifest['n_fit_images'], manifest['n_fit_pairs'], manifest['n_validation_queries'],
++                 manifest['n_validation_gallery'], manifest['cache_contains_images']) == (8263, 28759, 918, 918, 9181),
++                'Incorrect training or validation counts')
++        require(len(manifest['train_ids']) == 8263 and set(manifest['train_ids']) == fit
++                and len(manifest['validation_ids']) == 918 and set(manifest['validation_ids']) == val,
++                'Fit or validation IDs differ')
++        ident = manifest['identity']
++        require(ident['protocol_sha256'] == expected_sha and ident['seed'] == seed, 'Seed/protocol mismatch')
++        require(ident['configuration_ids'] == list(configs), 'Configuration order changed')
++        require(ident['source_sha256'] == sources and ident['input_sha256'] == inputs, 'Source/input bindings differ')
++        orders = ref.shuffled_orders(seed)
++        require(ident['epoch_order_sha256'] == orders, 'Wrong seeded shuffle stream')
++        require(ref.digest_string(manifest['initial_state_sha256']) and ref.digest_string(manifest['text_embeddings_sha256']),
++                'Invalid initialization/embedding digest')
++        initial_states.append(manifest['initial_state_sha256'])
++        if common_pairs is None:
++            common_pairs, common_embeddings = ident['initial_pairs_sha256'], manifest['text_embeddings_sha256']
++        require(ident['initial_pairs_sha256'] == common_pairs and manifest['text_embeddings_sha256'] == common_embeddings,
++                'Seeds did not use identical pairs and frozen text embeddings')
++        for name, config in configs.items():
++            run = manifest['runs'][name]
++            require(run['status'] == 'complete' and run['configuration'] == config and run['seed'] == seed,
++                    'Incomplete or mislabelled run')
++            require(run['initial_state_sha256'] == manifest['initial_state_sha256']
++                    and run['text_embeddings_sha256'] == common_embeddings
++                    and run['initial_pairs_sha256'] == common_pairs, 'Within-seed pairing changed')
++            require(run['epoch_order_sha256'] == orders and run['epochs'] == 10 and run['batches'] == 4500,
++                    'Training extent or shuffle changed')
++            require(set(run['artifacts_sha256']) == ref.ARTIFACTS, 'Unexpected run artifact set')
++            run_dir = directory / name
++            for filename, digest in run['artifacts_sha256'].items():
++                require(sha(run_dir / filename) == digest, 'Stored artifact changed: ' + filename)
++                stable[run_dir / filename] = digest
++            history = ref.read(run_dir / 'training_progress.json')['history']
++            require(len(history) == 10, 'Expected all ten epoch records')
++            for epoch, row in enumerate(history):
++                require((row['epoch'], row['batches'], row['pairs'], row['tail_batch_pairs']) == (epoch + 1, 450, 28759, 23)
++                        and row['pair_order_sha256'] == orders[epoch], 'Epoch record differs')
++            result = ref.read(run_dir / 'validation.json')
++            require(result['configuration'] == config and result['seed'] == seed
++                    and result['protocol_sha256'] == expected_sha, 'Exported result identity differs')
++            require(result['posthoc_exploratory'] is True and result['official_test_accessed'] is False,
++                    'Wrong evidence label')
++            require(result['n_queries'] == result['n_gallery'] == 918, 'Wrong validation size')
++            require(result['checkpoint_sha256'] == run['artifacts_sha256']['head.pt'], 'Result/head binding differs')
++            query = {key: result[key] for key in ['query_ids', 'gallery_ids', 'query_caption_sha256', 'gold_gallery_index']}
++            require(len(query['query_ids']) == len(set(query['query_ids'])) == 918 and set(query['query_ids']) == val
++                    and len(query['gallery_ids']) == len(set(query['gallery_ids'])) == 918 and set(query['gallery_ids']) == val,
++                    'Incomplete query/gallery identities')
++            require(len(query['query_caption_sha256']) == 918 and all(ref.digest_string(x) for x in query['query_caption_sha256']),
++                    'Invalid caption hashes')
++            require(len(query['gold_gallery_index']) == 918 and all(type(g) is int and 0 <= g < 918
++                    and query['gallery_ids'][g] == q for q, g in zip(query['query_ids'], query['gold_gallery_index'])),
++                    'Incorrect relevant-image mapping')
++            if query_identity is None:
++                query_identity = query
++            require(query == query_identity, 'Query identity differs between configurations/seeds')
++            metrics = ref.from_ranks(result['ranks'])
++            ref.check_metrics(result['metrics_percent'], metrics, name)
++            ref.check_metrics(run['metrics_percent'], metrics, name)
++            complete[seed, name] = metrics
++            records.append({'seed': seed, 'configuration': name,
++                            'artifacts_sha256': run['artifacts_sha256'], 'manifest_sha256': stable[path]})
++    require(len(complete) == 42 and len(set(initial_states)) == 3, 'Expected all runs with three distinct seeded initializations')
++    require(all(sha(path) == digest for path, digest in stable.items()), 'An input changed during aggregation')
++    provenance = {'execution_kind': 'portable_reproduction', 'protocol_sha256': expected_sha,
++                  'parent_protocol_sha256': ORIGINAL_PROTOCOL_SHA256, 'runs': records,
++                  'validation_scope': {'artifact_bytes_checked': True, 'metrics_recomputed_from_exported_ranks': True,
++                                       'torch_checkpoint_semantics_checked': False, 'scores_recomputed': False,
++                                       'score_matrix_ranks_replayed': False},
++                  'portable_aggregator_sha256': sha(__file__), 'reference_aggregator_sha256': REFERENCE_SHA}
++    return plan, complete, provenance
++
++
++def run(protocol, expected_sha, runs, split_dir, out):
++    plan, complete, provenance = load_complete(protocol, expected_sha, runs, split_dir)
++    ref = reference_module()
++    tables = ref.summarize(plan, complete)
++    manifest = ref.write_outputs(out, plan, tables, provenance)
++    out = Path(out)
++    document = ref.read(out / 'summary.json')
++    document['execution_kind'] = 'portable_reproduction'
++    document['validation_scope'] = provenance['validation_scope']
++    (out / 'summary.json').write_text(json.dumps(document, indent=2, allow_nan=False) + '\n')
++    (out / 'README.txt').write_text(
++        'Portable reproduction of the fixed exploratory 42-run design, not the original historical execution.\n'
++        'All 42 run artifact byte hashes were checked. Metrics were recomputed from exported query ranks.\n'
++        'This tool did not load torch checkpoints, recompute scores, or replay rankings from score matrices.\n'
++        'Aggregation and table arithmetic use the original unchanged summarize/write_outputs implementation.\n'
++        'All 14 configurations and 36 contrasts are retained; no winner, p-value, or test replacement is selected.\n'
++        'CSV/JSON retain unrounded values. TeX requires longtable, booktabs and amsmath.\n')
++    manifest['execution_kind'] = 'portable_reproduction'
++    manifest['portable_aggregator_sha256'] = sha(__file__)
++    manifest['outputs'] = {p.name: {'sha256': sha(p), 'bytes': p.stat().st_size}
++                           for p in sorted(out.iterdir()) if p.name != 'summary_manifest.json'}
++    (out / 'summary_manifest.json').write_text(json.dumps(manifest, indent=2, allow_nan=False) + '\n')
++    return manifest
++
++
++if __name__ == '__main__':
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--protocol', type=Path, required=True)
++    parser.add_argument('--expected-protocol-sha256', required=True)
++    parser.add_argument('--runs', type=Path, required=True, help='directory containing seed_0, seed_1 and seed_2')
++    parser.add_argument('--split-dir', type=Path, required=True)
++    parser.add_argument('--out', type=Path, required=True)
++    args = parser.parse_args()
++    output = run(args.protocol, args.expected_protocol_sha256, args.runs, args.split_dir, args.out)
++    print(json.dumps({'status': 'complete', 'execution_kind': 'portable_reproduction', 'row_counts': output['row_counts']}))
+--- /dev/null
++++ portable/tests/test_portability.py
+@@ -0,0 +1,120 @@
++import ast
++from copy import deepcopy
++import hashlib
++import json
++import os
++from pathlib import Path
++import shutil
++import sys
++import tempfile
++import unittest
++
++ROOT = Path(__file__).resolve().parents[1]
++ORIGINAL = Path(os.environ.get('PARE_ORIGINAL_ROOT', ROOT.parent / 'original'))
++sys.path.insert(0, str(ROOT / 'scripts'))
++from protocol_adapter import (ORIGINAL_PROTOCOL_SHA256, check_cache_contract,
++                              check_scientific_identity, load_original,
++                              make_reproduction_protocol, sha, validate_reproduction_protocol)
++
++
++class PortabilityTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.original = load_original(ORIGINAL)
++
++    def make(self):
++        return make_reproduction_protocol(self.original, 'a' * 64, 'b' * 64,
++                                          '2026-11-03T04:00:00+00:00')
++
++    def test_original_protocol_is_exact_and_accepted(self):
++        plan = validate_reproduction_protocol(ORIGINAL / 'plans/protocol.json',
++                                               ORIGINAL_PROTOCOL_SHA256, ORIGINAL)
++        self.assertEqual(plan, self.original)
++
++    def test_only_byte_bindings_and_new_metadata_change(self):
++        plan = self.make()
++        self.assertEqual(plan['fixed_utc'], self.original['fixed_utc'])
++        check_scientific_identity(plan, self.original)
++        with tempfile.TemporaryDirectory() as directory:
++            path = Path(directory) / 'protocol.json'
++            path.write_text(json.dumps(plan, indent=2) + '\n')
++            shutil.copyfile(ORIGINAL / 'plans/protocol.md', path.with_suffix('.md'))
++            self.assertEqual(validate_reproduction_protocol(path, sha(path), ORIGINAL), plan)
++
++    def test_rejects_scientific_and_reporting_amendments(self):
++        mutations = [
++            lambda p: p['training'].__setitem__('lr', .003),
++            lambda p: p['training'].__setitem__('epochs', 5),
++            lambda p: p['seeds'].__setitem__(0, 5),
++            lambda p: p['configurations'].pop(),
++            lambda p: p['paired_contrasts'][0]['terms'][0].__setitem__('coefficient', 2),
++            lambda p: p['input_bindings'].__setitem__('clean_training_captions_sha256', 'c' * 64),
++            lambda p: p['input_bindings']['split_file_sha256'].__setitem__('fit_ids.json', 'c' * 64),
++            lambda p: p['backbone'].__setitem__('pretrained_weight_sha256', 'c' * 64),
++            lambda p: p['evidence_status'].__setitem__('new_blinded_confirmatory_test', True),
++            lambda p: p.__setitem__('fixed_utc', '2026-11-03T04:00:00+00:00'),
++        ]
++        for mutate in mutations:
++            plan = self.make()
++            mutate(plan)
++            with self.assertRaises(ValueError):
++                check_scientific_identity(plan, self.original)
++
++    def test_rejects_forged_parent_or_extra_metadata(self):
++        for key, value in [('parent_protocol_sha256', 'c' * 64),
++                           ('scientific_design_unchanged', False),
++                           ('unreviewed_override', True), ('created_utc', 'undated')]:
++            plan = self.make()
++            plan['reproduction'][key] = value
++            with self.assertRaises(ValueError):
++                check_scientific_identity(plan, self.original)
++
++    def test_rejects_wrong_expected_hash_and_modified_markdown(self):
++        with tempfile.TemporaryDirectory() as directory:
++            path = Path(directory) / 'protocol.json'
++            path.write_text(json.dumps(self.make()))
++            shutil.copyfile(ORIGINAL / 'plans/protocol.md', path.with_suffix('.md'))
++            with self.assertRaises(ValueError):
++                validate_reproduction_protocol(path, '0' * 64, ORIGINAL)
++            path.with_suffix('.md').write_text('Different protocol')
++            with self.assertRaises(ValueError):
++                validate_reproduction_protocol(path, sha(path), ORIGINAL)
++
++    def test_rejects_unlabelled_reformatted_original(self):
++        with tempfile.TemporaryDirectory() as directory:
++            path = Path(directory) / 'protocol.json'
++            path.write_text(json.dumps(self.original))
++            shutil.copyfile(ORIGINAL / 'plans/protocol.md', path.with_suffix('.md'))
++            with self.assertRaises(ValueError):
++                validate_reproduction_protocol(path, sha(path), ORIGINAL)
++
++    def test_cache_contract_keeps_fixed_population_and_backbone(self):
++        ids = [str(i) for i in range(9181)]
++        cache = {'D': 512, 'Mc': 6, 'Mf': 8, 'ids': ids}
++        signature = {'primitive_mode': 'physics', 'model': self.original['backbone']['model'],
++                     'pretrained': self.original['backbone']['pretrained'],
++                     'pretrained_weight_sha256': self.original['backbone']['pretrained_weight_sha256'],
++                     'external_checkpoint_sha256': None}
++        check_cache_contract(cache, signature, self.original, ids)
++        for key, value in [('D', 768), ('Mc', 5), ('Mf', 7), ('ids', ids[:-1] + [ids[0]])]:
++            changed = dict(cache, **{key: value})
++            with self.assertRaises(ValueError):
++                check_cache_contract(changed, signature, self.original, ids)
++        for key, value in [('primitive_mode', 'uniform_grid'), ('model', 'ViT-B-16'),
++                           ('pretrained_weight_sha256', 'c' * 64), ('external_checkpoint_sha256', 'c' * 64)]:
++            changed = dict(signature, **{key: value})
++            with self.assertRaises(ValueError):
++                check_cache_contract(cache, changed, self.original, ids)
++
++    def test_factor_adapter_and_math_functions_are_unchanged(self):
++        self.assertEqual(sha(ROOT / 'code/factorial_head.py'), sha(ORIGINAL / 'code/factorial_head.py'))
++        original = ast.parse((ORIGINAL / 'scripts/run_factorial_fitval.py').read_text())
++        portable = ast.parse((ROOT / 'scripts/run_factorial_fitval.py').read_text())
++        for function in ['train_one', 'validate_one', 'state_sha']:
++            before = next(x for x in original.body if isinstance(x, ast.FunctionDef) and x.name == function)
++            after = next(x for x in portable.body if isinstance(x, ast.FunctionDef) and x.name == function)
++            self.assertEqual(ast.dump(before), ast.dump(after), function)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- /dev/null
++++ portable/tests/test_aggregate_reproduction.py
+@@ -0,0 +1,152 @@
++from copy import deepcopy
++import hashlib
++import json
++from pathlib import Path
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / 'scripts'))
++import aggregate_reproduction as aggregate
++from protocol_adapter import load_original, sha
++
++
++def write(path, value):
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_text(json.dumps(value, indent=2) + '\n')
++
++
++class AggregateTests(unittest.TestCase):
++    def setUp(self):
++        self.temp = tempfile.TemporaryDirectory()
++        self.addCleanup(self.temp.cleanup)
++        self.root = Path(self.temp.name)
++        self.runs = self.root / 'runs'
++        self.split = self.root / 'split'
++        self.plan = deepcopy(load_original(ROOT.parent / 'original'))
++        self.reference = aggregate.reference_module()
++        fit = [f'fit_{i}' for i in range(8263)]
++        val = [f'val_{i}' for i in range(918)]
++        for name, value in [('fit_ids.json', fit), ('val_ids.json', val), ('train_ids.json', fit + val)]:
++            write(self.split / name, value)
++            self.plan['input_bindings']['split_file_sha256'][name] = sha(self.split / name)
++        self.protocol = self.root / 'protocol.json'
++        write(self.protocol, self.plan)
++        self.protocol.with_suffix('.md').write_text('Synthetic fixture only; no scientific run.\n')
++        self.protocol_sha = sha(self.protocol)
++        self.patch = patch.object(aggregate, 'validate_reproduction_protocol', return_value=self.plan)
++        self.patch.start()
++        self.addCleanup(self.patch.stop)
++        # The immutable protocol adapter is tested separately. These synthetic
++        # files test the complete-run/identity/hash/rank boundary without torch.
++        bindings = self.plan['input_bindings']
++        inputs = {'training_cache': bindings['training_cache_sha256'],
++                  'training_captions': bindings['clean_training_captions_sha256'],
++                  **bindings['split_file_sha256'], 'original_split_manifest': bindings['original_split_manifest_sha256'],
++                  'pretrained_weight': self.plan['backbone']['pretrained_weight_sha256']}
++        pairs = 'c' * 64
++        embed = 'd' * 64
++        self.expected = {}
++        self.first_name = self.plan['configurations'][0]['id']
++        for seed in self.plan['seeds']:
++            initial = hashlib.sha256(str(seed).encode()).hexdigest()
++            orders = self.reference.shuffled_orders(seed)
++            manifest = {'status': 'complete_all_14_configurations', 'active_configuration': None,
++                        'posthoc_exploratory': True, 'uses_official_test': False, 'settings': self.plan['training'],
++                        'n_fit_images': 8263, 'n_fit_pairs': 28759, 'n_validation_queries': 918,
++                        'n_validation_gallery': 918, 'cache_contains_images': 9181,
++                        'train_ids': fit, 'validation_ids': val,
++                        'initial_state_sha256': initial, 'text_embeddings_sha256': embed,
++                        'identity': {'protocol_sha256': self.protocol_sha, 'seed': seed,
++                                     'configuration_ids': [x['id'] for x in self.plan['configurations']],
++                                     'source_sha256': aggregate.expected_sources(), 'input_sha256': inputs,
++                                     'epoch_order_sha256': orders, 'initial_pairs_sha256': pairs}, 'runs': {}}
++            for index, config in enumerate(self.plan['configurations']):
++                name = config['id']
++                d = self.runs / f'seed_{seed}' / name
++                d.mkdir(parents=True)
++                (d / 'head.pt').write_bytes(f'SYNTHETIC NON-TORCH HEAD {seed} {name}'.encode())
++                (d / 'validation_scores.pt').write_bytes(f'SYNTHETIC NON-TORCH SCORES {seed} {name}'.encode())
++                history = [{'epoch': ep + 1, 'batches': 450, 'pairs': 28759, 'tail_batch_pairs': 23,
++                            'pair_order_sha256': orders[ep]} for ep in range(10)]
++                write(d / 'training_progress.json', {'history': history})
++                ranks = [1 + ((i * 3 + seed * 7 + index * 11) % 71) for i in range(918)]
++                metrics = self.reference.from_ranks(ranks)
++                self.expected[seed, name] = metrics
++                result = {'configuration': config, 'seed': seed, 'protocol_sha256': self.protocol_sha,
++                          'posthoc_exploratory': True, 'official_test_accessed': False,
++                          'n_queries': 918, 'n_gallery': 918, 'checkpoint_sha256': sha(d / 'head.pt'),
++                          'query_ids': val, 'gallery_ids': val, 'query_caption_sha256': ['e' * 64] * 918,
++                          'gold_gallery_index': list(range(918)), 'ranks': ranks, 'metrics_percent': metrics}
++                write(d / 'validation.json', result)
++                manifest['runs'][name] = {'status': 'complete', 'configuration': config, 'seed': seed,
++                                         'initial_state_sha256': initial, 'text_embeddings_sha256': embed,
++                                         'initial_pairs_sha256': pairs, 'epoch_order_sha256': orders,
++                                         'epochs': 10, 'batches': 4500, 'metrics_percent': metrics,
++                                         'artifacts_sha256': {p.name: sha(p) for p in d.iterdir()}}
++            write(self.runs / f'seed_{seed}' / 'manifest.json', manifest)
++
++    def load(self):
++        return aggregate.load_complete(self.protocol, self.protocol_sha, self.runs, self.split)
++
++    def amend_manifest(self, mutator):
++        path = self.runs / 'seed_0/manifest.json'
++        value = json.loads(path.read_text())
++        mutator(value)
++        write(path, value)
++
++    def test_all_tables_match_original_arithmetic_and_do_not_claim_tensor_replay(self):
++        out = self.root / 'summary'
++        result = aggregate.run(self.protocol, self.protocol_sha, self.runs, self.split, out)
++        summary = json.loads((out / 'summary.json').read_text())
++        self.assertEqual(summary['tables'], self.reference.summarize(self.plan, self.expected))
++        self.assertEqual(result['row_counts'], {'run_metrics': 42, 'configuration_summary': 14,
++                                               'paired_contrasts_by_seed': 108, 'contrast_summary': 36,
++                                               'primary_contrast_summary': 9})
++        self.assertEqual(summary['execution_kind'], 'portable_reproduction')
++        self.assertFalse(summary['validation_scope']['score_matrix_ranks_replayed'])
++        for name, meta in result['outputs'].items():
++            self.assertEqual(sha(out / name), meta['sha256'])
++
++    def test_rejects_incomplete_seed_or_missing_configuration(self):
++        self.amend_manifest(lambda m: m.__setitem__('status', 'running'))
++        with self.assertRaises(ValueError):
++            self.load()
++        self.amend_manifest(lambda m: (m.__setitem__('status', 'complete_all_14_configurations'),
++                                       m['runs'].pop(self.first_name)))
++        with self.assertRaises(ValueError):
++            self.load()
++
++    def test_rejects_artifact_byte_change(self):
++        (self.runs / 'seed_0' / self.first_name / 'head.pt').write_bytes(b'changed')
++        with self.assertRaises(ValueError):
++            self.load()
++
++    def test_rejects_within_seed_initialization_change(self):
++        self.amend_manifest(lambda m: m['runs'][self.first_name].__setitem__('initial_state_sha256', 'f' * 64))
++        with self.assertRaises(ValueError):
++            self.load()
++
++    def test_rejects_exported_metric_inconsistent_with_ranks(self):
++        d = self.runs / 'seed_0' / self.first_name
++        result = json.loads((d / 'validation.json').read_text())
++        result['metrics_percent']['R@10'] += 1
++        write(d / 'validation.json', result)
++        self.amend_manifest(lambda m: m['runs'][self.first_name]['artifacts_sha256'].__setitem__('validation.json', sha(d / 'validation.json')))
++        with self.assertRaises(ValueError):
++            self.load()
++
++    def test_rejects_query_identity_change_despite_updated_file_hash(self):
++        d = self.runs / 'seed_0' / self.first_name
++        result = json.loads((d / 'validation.json').read_text())
++        result['query_ids'][0], result['query_ids'][1] = result['query_ids'][1], result['query_ids'][0]
++        write(d / 'validation.json', result)
++        self.amend_manifest(lambda m: m['runs'][self.first_name]['artifacts_sha256'].__setitem__('validation.json', sha(d / 'validation.json')))
++        with self.assertRaises(ValueError):
++            self.load()
++
++
++if __name__ == '__main__':
++    unittest.main()

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "tests": 14,
+  "test_type": "stdlib allowlist/cache-contract guards; unchanged training/evaluation AST and adapter bytes; complete synthetic 42-run aggregate and rejection fixtures",
+  "actual_training_started": false,
+  "original_protocol_sha256": "42789ee8793b7c5bd59bf950dd8deefe8bf1c3caa2e9be2d54143630f63bf288",
+  "source_manifest_sha256": "7a0ebceca827fab1bd0c76e05672a80dd8028cc8216d5f31fdf60ef5f8f9d1f6"
+}

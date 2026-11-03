@@ -1,0 +1,1315 @@
+{
+  "schema": "pare.exploratory-factorial-protocol.v1",
+  "status": "fixed_before_followup_training",
+  "fixed_utc": "2026-11-03T03:59:47.275530+00:00",
+  "background_commit": "6e4ed9a600e78b800e5c4f61e5516d90a017266d",
+  "purpose": "Separate previously confounded CFAR pathways and reliability/token contributions at both full and strict endpoints.",
+  "evidence_status": {
+    "hypothesis_is_post_hoc": true,
+    "motivated_by_previously_observed_test_results": true,
+    "validation_previously_used_for_hyperparameter_selection": true,
+    "new_blinded_confirmatory_test": false,
+    "new_test_access_or_test_selection_allowed": false,
+    "original_test_results_and_full_method_definition_must_be_retained": true
+  },
+  "backbone": {
+    "model": "ViT-B-32",
+    "pretrained": "laion2b_s34b_b79k",
+    "embedding_dimension": 512,
+    "frozen": true,
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "configurations": [
+    {
+      "id": "ABC000_R1T1",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC001_R1T1",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC010_R1T1",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC011_R1T1",
+      "factors": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC100_R1T1",
+      "factors": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC101_R1T1",
+      "factors": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC110_R1T1",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC111_R1T1",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC000_R0T0",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 0
+      }
+    },
+    {
+      "id": "ABC000_R0T1",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 0,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC000_R1T0",
+      "factors": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "R": 1,
+        "T": 0
+      }
+    },
+    {
+      "id": "ABC111_R0T0",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 0
+      }
+    },
+    {
+      "id": "ABC111_R0T1",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 0,
+        "T": 1
+      }
+    },
+    {
+      "id": "ABC111_R1T0",
+      "factors": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "R": 1,
+        "T": 0
+      }
+    }
+  ],
+  "expected_configurations": 14,
+  "expected_runs": 42,
+  "training": {
+    "lr": 0.002,
+    "kappa": 0.03,
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "amp": false,
+    "n_fit_images": 8263,
+    "n_fit_caption_pairs": 28759,
+    "batches_per_epoch": 450,
+    "tail_batch_pairs": 23,
+    "loss": "one-direction caption-to-image cross entropy with diagonal targets; unchanged duplicate-image behavior",
+    "early_stopping": false,
+    "new_hyperparameter_search": false,
+    "same_initial_parameters_and_pair_order_within_seed": true,
+    "independent_seeded_shuffle_stream_per_run": true
+  },
+  "validation": {
+    "n_queries": 918,
+    "n_gallery": 918,
+    "query_protocol": "first caption per validation image in clean caption-loader first-occurrence order",
+    "gallery_order": "sorted original cache row indices of the fixed validation image IDs",
+    "relevant_images_per_query": 1,
+    "full_score_matrix_shape": [
+      918,
+      918
+    ],
+    "candidate_shortlisting": false,
+    "positive_insertion": false,
+    "epoch": "final epoch 10 only",
+    "tie_handling": "reference torch.argsort(descending=True), unchanged backend recorded",
+    "primary_metric": "R@10",
+    "mandatory_secondary_metrics": [
+      "R@1",
+      "R@5",
+      "MRR@10"
+    ],
+    "mrr_zero_after_rank": 10,
+    "units": "percent; contrasts in percentage points"
+  },
+  "factors": {
+    "A": {
+      "one": "original fine attended vector",
+      "zero": "fine output = scene embedding, retaining g_f and both gate outputs"
+    },
+    "B": {
+      "one": "original cache aggregate over scene+valid coarse+valid fine embeddings",
+      "zero": "(scene + sum(valid unaugmented coarse))/(1 + valid coarse count), not normalized"
+    },
+    "C": {
+      "one": "retain coarse descriptor detector fraction",
+      "zero": "clone c_tf and set only c_tf[...,3]=0; no fine descriptor/cache/statistic changes"
+    },
+    "R": {
+      "one": "original learned soft reliability",
+      "zero": "ones_like(mu) followed by original valid mask, exactly legacy sr"
+    },
+    "T": {
+      "one": "original learned radiometric token augmentation",
+      "zero": "normalize original embeddings, exactly legacy ty"
+    }
+  },
+  "endpoint_equivalence": {
+    "ABC111_R1T1": [],
+    "ABC000_R1T1": [
+      "cfar_strict"
+    ],
+    "ABC011_R1T1": [
+      "cfar"
+    ],
+    "RT00": [
+      "sr",
+      "ty"
+    ],
+    "RT01": [
+      "sr"
+    ],
+    "RT10": [
+      "ty"
+    ],
+    "RT_endpoint_note": "RT flags combine with cfar_strict at ABC000; full endpoint has no base ablation flag"
+  },
+  "input_bindings": {
+    "training_cache_basename": "cache_physics_train.pt",
+    "training_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "clean_training_captions_sha256": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "cache_image_count": 9181,
+    "split_file_sha256": {
+      "fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+      "val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+      "train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557"
+    },
+    "frozen_source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "train_saqre.py": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "sweep_hparams.py": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350"
+    },
+    "forbidden_inputs": [
+      "official test cache",
+      "official test captions",
+      "formal heads trained on all 9181 retained images"
+    ],
+    "published_split_metadata_sha256": "461fca5236f854ea7e7b8fbc6d54e3116af894b589658720c283204294ef6c04",
+    "original_split_manifest_sha256": "b6141bc8f384b21b75ca0318fdedf9cc58c756a4ca8450d05b2d3246de1794e1"
+  },
+  "logical_run_order": [
+    {
+      "run_id": "ABC000_R1T1_seed0",
+      "configuration_id": "ABC000_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC001_R1T1_seed0",
+      "configuration_id": "ABC001_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC010_R1T1_seed0",
+      "configuration_id": "ABC010_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC011_R1T1_seed0",
+      "configuration_id": "ABC011_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC100_R1T1_seed0",
+      "configuration_id": "ABC100_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC101_R1T1_seed0",
+      "configuration_id": "ABC101_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC110_R1T1_seed0",
+      "configuration_id": "ABC110_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC111_R1T1_seed0",
+      "configuration_id": "ABC111_R1T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC000_R0T0_seed0",
+      "configuration_id": "ABC000_R0T0",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC000_R0T1_seed0",
+      "configuration_id": "ABC000_R0T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC000_R1T0_seed0",
+      "configuration_id": "ABC000_R1T0",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC111_R0T0_seed0",
+      "configuration_id": "ABC111_R0T0",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC111_R0T1_seed0",
+      "configuration_id": "ABC111_R0T1",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC111_R1T0_seed0",
+      "configuration_id": "ABC111_R1T0",
+      "seed": 0
+    },
+    {
+      "run_id": "ABC000_R1T1_seed1",
+      "configuration_id": "ABC000_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC001_R1T1_seed1",
+      "configuration_id": "ABC001_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC010_R1T1_seed1",
+      "configuration_id": "ABC010_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC011_R1T1_seed1",
+      "configuration_id": "ABC011_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC100_R1T1_seed1",
+      "configuration_id": "ABC100_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC101_R1T1_seed1",
+      "configuration_id": "ABC101_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC110_R1T1_seed1",
+      "configuration_id": "ABC110_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC111_R1T1_seed1",
+      "configuration_id": "ABC111_R1T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC000_R0T0_seed1",
+      "configuration_id": "ABC000_R0T0",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC000_R0T1_seed1",
+      "configuration_id": "ABC000_R0T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC000_R1T0_seed1",
+      "configuration_id": "ABC000_R1T0",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC111_R0T0_seed1",
+      "configuration_id": "ABC111_R0T0",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC111_R0T1_seed1",
+      "configuration_id": "ABC111_R0T1",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC111_R1T0_seed1",
+      "configuration_id": "ABC111_R1T0",
+      "seed": 1
+    },
+    {
+      "run_id": "ABC000_R1T1_seed2",
+      "configuration_id": "ABC000_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC001_R1T1_seed2",
+      "configuration_id": "ABC001_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC010_R1T1_seed2",
+      "configuration_id": "ABC010_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC011_R1T1_seed2",
+      "configuration_id": "ABC011_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC100_R1T1_seed2",
+      "configuration_id": "ABC100_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC101_R1T1_seed2",
+      "configuration_id": "ABC101_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC110_R1T1_seed2",
+      "configuration_id": "ABC110_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC111_R1T1_seed2",
+      "configuration_id": "ABC111_R1T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC000_R0T0_seed2",
+      "configuration_id": "ABC000_R0T0",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC000_R0T1_seed2",
+      "configuration_id": "ABC000_R0T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC000_R1T0_seed2",
+      "configuration_id": "ABC000_R1T0",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC111_R0T0_seed2",
+      "configuration_id": "ABC111_R0T0",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC111_R0T1_seed2",
+      "configuration_id": "ABC111_R0T1",
+      "seed": 2
+    },
+    {
+      "run_id": "ABC111_R1T0_seed2",
+      "configuration_id": "ABC111_R1T0",
+      "seed": 2
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "id": "A_given_B0C0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "A_given_B0C1",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "A_given_B1C0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "A_given_B1C1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "A_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": -0.25
+        }
+      ],
+      "description": "Average of the four within-seed conditional effects; no outcome-dependent weighting."
+    },
+    {
+      "id": "B_given_A0C0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "B_given_A0C1",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "B_given_A1C0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "B_given_A1C1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "B_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": -0.25
+        }
+      ],
+      "description": "Average of the four within-seed conditional effects; no outcome-dependent weighting."
+    },
+    {
+      "id": "C_given_A0B0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "C_given_A0B1",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "C_given_A1B0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "C_given_A1B1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Factor 1 minus factor 0, holding the other two factors and R=T=1 fixed."
+    },
+    {
+      "id": "C_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -0.25
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.25
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": -0.25
+        }
+      ],
+      "description": "Average of the four within-seed conditional effects; no outcome-dependent weighting."
+    },
+    {
+      "id": "interaction_AB",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.5
+        }
+      ],
+      "description": "Difference-in-differences averaged over the third factor, with R=T=1."
+    },
+    {
+      "id": "interaction_AC",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.5
+        }
+      ],
+      "description": "Difference-in-differences averaged over the third factor, with R=T=1."
+    },
+    {
+      "id": "interaction_BC",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.5
+        }
+      ],
+      "description": "Difference-in-differences averaged over the third factor, with R=T=1."
+    },
+    {
+      "id": "interaction_ABC",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC010_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC011_R1T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC100_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_R1T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC110_R1T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        }
+      ],
+      "description": "Three-way difference-in-differences, with R=T=1."
+    },
+    {
+      "id": "full_minus_strict_RT11",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Combined pathway contrast; not an isolated effect of the fine attended vector."
+    },
+    {
+      "id": "ABC000_R_given_T0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T0",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Current soft reliability versus constant reliability, tokens held fixed."
+    },
+    {
+      "id": "ABC000_R_given_T1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R0T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Current soft reliability versus constant reliability, tokens held fixed."
+    },
+    {
+      "id": "ABC000_T_given_R0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R0T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Learned latent radiometric token versus no token, reliability held fixed."
+    },
+    {
+      "id": "ABC000_T_given_R1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Learned latent radiometric token versus no token, reliability held fixed."
+    },
+    {
+      "id": "ABC000_R_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T0",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC000_R0T1",
+          "coefficient": -0.5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "ABC000_T_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R0T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC000_R1T0",
+          "coefficient": -0.5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "ABC000_interaction_RT",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R1T0",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC000_R0T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": 1
+        }
+      ],
+      "description": "Joint effect beyond additive conditional effects on the reported metric scale."
+    },
+    {
+      "id": "ABC000_joint_RT11_minus_RT00",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC000_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Joint reliability and token contribution under this fixed ABC endpoint."
+    },
+    {
+      "id": "ABC111_R_given_T0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T0",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Current soft reliability versus constant reliability, tokens held fixed."
+    },
+    {
+      "id": "ABC111_R_given_T1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R0T1",
+          "coefficient": -1
+        }
+      ],
+      "description": "Current soft reliability versus constant reliability, tokens held fixed."
+    },
+    {
+      "id": "ABC111_T_given_R0",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R0T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Learned latent radiometric token versus no token, reliability held fixed."
+    },
+    {
+      "id": "ABC111_T_given_R1",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R1T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Learned latent radiometric token versus no token, reliability held fixed."
+    },
+    {
+      "id": "ABC111_R_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T0",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC111_R0T1",
+          "coefficient": -0.5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "ABC111_T_average_effect",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R0T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": -0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 0.5
+        },
+        {
+          "configuration_id": "ABC111_R1T0",
+          "coefficient": -0.5
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "ABC111_interaction_RT",
+      "primary_descriptive_contrast": false,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R1T0",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC111_R0T1",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": 1
+        }
+      ],
+      "description": "Joint effect beyond additive conditional effects on the reported metric scale."
+    },
+    {
+      "id": "ABC111_joint_RT11_minus_RT00",
+      "primary_descriptive_contrast": true,
+      "terms": [
+        {
+          "configuration_id": "ABC111_R1T1",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_R0T0",
+          "coefficient": -1
+        }
+      ],
+      "description": "Joint reliability and token contribution under this fixed ABC endpoint."
+    }
+  ],
+  "aggregation": {
+    "pair_within_seed_first": true,
+    "seed_summary": [
+      "arithmetic_mean",
+      "sample_standard_deviation_ddof_1"
+    ],
+    "retain_each_seed_value": true,
+    "outcome_dependent_weighting_or_selection": false,
+    "significance_claim_from_three_seeds": false,
+    "planned_hypothesis_tests": []
+  },
+  "prelaunch_gates": {
+    "root_review_required": true,
+    "endpoint_equivalence_atol": 1e-06,
+    "endpoint_equivalence_rtol": 1e-05,
+    "equivalence_dimensions": [
+      512,
+      768
+    ],
+    "equivalence_cases": [
+      "empty and populated crops",
+      "padding",
+      "high gate sum",
+      "all applicable RT endpoint combinations"
+    ],
+    "preserve_base_parameter_schema": true,
+    "input_mutation_forbidden": true,
+    "frozen_source_mutation_forbidden": true,
+    "record_final_protocol_and_implementation_hashes": true
+  },
+  "required_run_artifacts": [
+    "protocol/source/input hashes",
+    "factor tuple and seed",
+    "initial state hash",
+    "initial pair-order hash",
+    "per-epoch shuffle hashes",
+    "optimizer configuration",
+    "epoch/batch/pair counts",
+    "loss history",
+    "final checkpoint",
+    "full validation score matrix",
+    "ordered query/gallery IDs",
+    "caption hashes",
+    "per-query ranks",
+    "failure/retry history"
+  ],
+  "completion_and_reporting": {
+    "all_42_runs_accounted_for": true,
+    "all_valid_results_reported": true,
+    "unresolved_failures_explicit": true,
+    "no_seed_replacement": true,
+    "no_favorable_cell_filtering": true,
+    "public_protocol_and_all_metrics_required": true,
+    "public_caption_text_images_and_machine_paths_excluded": true,
+    "no_original_test_result_replacement": true
+  },
+  "protocol_markdown_sha256": "cb4349e4efb9e4570963486a53f7518dc6d7a9fee68295765592bc045fc4bcf1",
+  "protocol_revision": 2,
+  "amendment": {
+    "previous_protocol_sha256": "8f7e3914338cf2b9b295892210ae861c426211122fa4adb314c1680493852789",
+    "amended_utc": "2026-11-03T04:00:24.714222+00:00",
+    "reason": "Before any follow-up training: distinguish public sanitized split metadata from the original split manifest; bind the original pretrained weight hash. No factor, population, hyperparameter, seed, endpoint or contrast changes.",
+    "scientific_design_changed": false,
+    "followup_results_observed": false
+  }
+}

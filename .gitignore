@@ -16,6 +16,8 @@ data/ret_clean_20261007/
 *.pt
 # Small, original PARE head checkpoints released with the November results.
 !checkpoints/revision_20261103/*/head_*.pt
+# Exact fit-only heads from the complete exploratory factorial follow-up.
+!checkpoints/followup_20261103/*/*/head.pt
 *.pth
 *.safetensors
 *.zip

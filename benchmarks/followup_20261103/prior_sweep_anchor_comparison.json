@@ -1,0 +1,43 @@
+{
+  "comparison": "fit-only sweep vs new factorial full endpoint, identical split and seed",
+  "prior_head_sha256": "8602bd849be31c93a5c9456664fb1f4082e78d1aeadadab6b29c830bc722a856",
+  "new_head_sha256": "4d9828b7cf2beb8d3bf4bd0488cd5432b1f66d50a1c00ccedccd2a5d66f862b8",
+  "prior_ranks_sha256": "aa2b430281ac2d7d8def13945b15d14085e9b02a2e59ba1657b5e8f8ef627c7a",
+  "new_ranks_sha256": "047db95c374ad1c670e3ee4749ccf84092d8d7bed510240cbd77cf70a508e069",
+  "all_parameters_bitwise_equal": true,
+  "parameter_max_abs_errors": {
+    "U": 0.0,
+    "log_beta": 0.0,
+    "log_tau": 0.0,
+    "log_s": 0.0,
+    "logit_rho_min": 0.0,
+    "log_lambda_rel": 0.0,
+    "type_scale": 0.0,
+    "h_psi.0.weight": 0.0,
+    "h_psi.0.bias": 0.0,
+    "h_psi.2.weight": 0.0,
+    "h_psi.2.bias": 0.0,
+    "gate.0.weight": 0.0,
+    "gate.0.bias": 0.0,
+    "gate.2.weight": 0.0,
+    "gate.2.bias": 0.0
+  },
+  "max_parameter_abs_error": 0.0,
+  "rank_disagreement_count": 0,
+  "n_queries": 918,
+  "prior_metrics_percent": {
+    "R@1": 4.357298474945534,
+    "R@5": 13.616557734204793,
+    "R@10": 23.74727668845316,
+    "MRR@10": 8.681614621157113
+  },
+  "new_metrics_percent": {
+    "R@1": 4.357298474945534,
+    "R@5": 13.616557734204793,
+    "R@10": 23.74727668845316,
+    "MRR@10": 8.681614621157113
+  },
+  "fit_only_group_verified": true,
+  "official_test_accessed": false,
+  "checker_sha256": "e104c937a5bd4dad0879ad6902017c3756806e8ae94aff6cdbc0644c61b4cac2"
+}

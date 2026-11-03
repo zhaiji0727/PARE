@@ -1,0 +1,11 @@
+{
+  "tests_passed": 8,
+  "fixture_scope": "temporary synthetic only; no formal experimental outputs read",
+  "source_sha256": {
+    "aggregate_followup.py": "b132087d63dac8d3b476749e1c89cf1a62336b6257d4962da51bfe9590287fcb",
+    "test_aggregate_followup.py": "673ff49672906b13260d28e3cc389538a202b9ceca3259ca457858f14f588d87"
+  },
+  "protocol_sha256": "42789ee8793b7c5bd59bf950dd8deefe8bf1c3caa2e9be2d54143630f63bf288",
+  "source_freeze_sha256": "3ebc187c1f9b67256747bc46e5383d43a166fdb11cb5441aea2660a937aa011a",
+  "independent_verifier_sha256": "117ddbccaaf2802951aa149a105f08e0ca595b1054b20c4b65515a2d308e0045"
+}
