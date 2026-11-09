@@ -1,0 +1,191 @@
+{
+  "status": "pass",
+  "heads": 15,
+  "evaluations": [
+    {
+      "seed": 0,
+      "variant": "conditional",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 0,
+      "variant": "conditional",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 0,
+      "variant": "constant_descriptor",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 0,
+      "variant": "constant_descriptor",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 0,
+      "variant": "token_off",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 0,
+      "variant": "token_off",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 1,
+      "variant": "conditional",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 1,
+      "variant": "conditional",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 1,
+      "variant": "constant_descriptor",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 1,
+      "variant": "constant_descriptor",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 1,
+      "variant": "token_off",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 1,
+      "variant": "token_off",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 2,
+      "variant": "conditional",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 2,
+      "variant": "conditional",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 2,
+      "variant": "constant_descriptor",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 2,
+      "variant": "constant_descriptor",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 2,
+      "variant": "token_off",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 2,
+      "variant": "token_off",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 3,
+      "variant": "conditional",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 3,
+      "variant": "conditional",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 3,
+      "variant": "constant_descriptor",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 3,
+      "variant": "constant_descriptor",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 3,
+      "variant": "token_off",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 3,
+      "variant": "token_off",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 4,
+      "variant": "conditional",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 4,
+      "variant": "conditional",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 4,
+      "variant": "constant_descriptor",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 4,
+      "variant": "constant_descriptor",
+      "split": "internal_check",
+      "queries": 1653
+    },
+    {
+      "seed": 4,
+      "variant": "token_off",
+      "split": "development",
+      "queries": 918
+    },
+    {
+      "seed": 4,
+      "variant": "token_off",
+      "split": "internal_check",
+      "queries": 1653
+    }
+  ],
+  "no_selection": true,
+  "official_test_accessed": false,
+  "protocol_sha256": "112ce7fc49a3f9a27e3c905c1dfdcbbd7d620a7f88b11af823ea7512c5998fe0",
+  "freeze_sha256": "81c6c8e7b8da0d0aeb3fcab684c2a9c18cb9921fd4e47bfdc2d276bd23560540",
+  "completed_utc": "2026-11-09T14:57:15.713107+00:00"
+}

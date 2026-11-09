@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "backbone": "georsclip",
+  "heads": 15,
+  "protocol_sha256": "b010416246ce7d91390bc3c490eccf5bbfcc748e08f71292f4f6c93376f4bac8",
+  "freeze_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3"
+}

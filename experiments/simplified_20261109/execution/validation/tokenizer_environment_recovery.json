@@ -1,0 +1,40 @@
+{
+  "schema": "pare.environment-recovery.v1",
+  "started_utc": "2026-11-09T15:16:25.651449+00:00",
+  "original_pid": 1778568,
+  "original_exit_code": 1,
+  "original_failure": "SigLIP tokenizer failed before training because HF_HOME was not inherited; the default cache lacks the offline tokenizer. Restored original07 HF_HOME without code or data changes.",
+  "original_shared_directory_empty": true,
+  "original_siglip_heads": 0,
+  "archive": "<PRIVATE_PATH>",
+  "original_log_sha256": "3290ef5eb0cb6c09eee436c5ed4a32ca0173d163ff87ee0981aaa912a8bbe27e",
+  "source_freeze_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3",
+  "source_freeze_unchanged": true,
+  "HF_HOME": "<PRIVATE_PATH>",
+  "HF_HUB_OFFLINE": "1",
+  "TRANSFORMERS_OFFLINE": "1",
+  "tokenizer_snapshot": "<PRIVATE_PATH>",
+  "tokenizer_file_sha256": {
+    "tokenizer_config.json": "8571e0cf70f7ae095c5c544ab94b7967e94c79262202d61604da10cbe426cecb",
+    "tokenizer.json": "83051c8005acc696637fe0c62c711ecee4b59083b4cf07ff9ad5f637eb2a3d2a",
+    "special_tokens_map.json": "3a60d3bb0808e7e629845031c2d720d33c2aceee1a6c535255de15d45b9f1ac7",
+    "open_clip_config.json": "e96434a839915fd38980a009ec47cfebda2422700273c0d455e52817047ebb0f"
+  },
+  "retry_scope": "Only SigLIP seed0 full/strict anchor; no other stages",
+  "status": "complete",
+  "pid": 1801469,
+  "command": [
+    "<PRIVATE_PATH>",
+    "-u",
+    "<PRIVATE_PATH>",
+    "anchor",
+    "--tag",
+    "siglip",
+    "--gpu",
+    "4"
+  ],
+  "log": "<PRIVATE_PATH>",
+  "exit_code": 0,
+  "finished_utc": "2026-11-09T15:18:06.057859+00:00",
+  "recovery_log_sha256": "af7d56228b3de442025eb14cc16ff122b2ffbac9ec1ee0d3f91e105c35180ab8"
+}

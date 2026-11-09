@@ -1,0 +1,105 @@
+{
+  "records": [
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/eval_retrieval_phys.py",
+      "sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/sweep_hparams.py",
+      "sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/make_ids.py",
+      "sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/train_saqre.py",
+      "sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/retrieval_queries.py",
+      "sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/eval_retrieval_baselines.py",
+      "sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/bench_efficiency.py",
+      "sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/runtime.py",
+      "sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/primitive_controls.py",
+      "sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/artifacts.py",
+      "sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/cache_primitives.py",
+      "sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/saqre_phys.py",
+      "sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "base_code/batch_scoring.py",
+      "sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "reference/repair_head.py",
+      "sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "reference/reference_kernels.py",
+      "sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "reference/repair_runner_original.py",
+      "sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "reference/REFERENCE_KERNEL_PROVENANCE.json",
+      "sha256": "9cb9a7832beffb19c6a746501b7af54e497ae526bed8e3563491a25900c4968f"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "plans/splits/internal_check_ids.json",
+      "sha256": "153432797cad768345738b5aaeef65bc6a93bffd909b25bf451c9b39f1b328be"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "plans/splits/development_ids.json",
+      "sha256": "6fa6e97171a42527c31f0e50ea32f75a26462ab66ed872506dc97cffe22bf7f9"
+    },
+    {
+      "source": "<PRIVATE_PATH>",
+      "destination": "plans/splits/train_ids.json",
+      "sha256": "f67eff7ee49a4ae998d5ce36e5e8977add3ed4b23aea50b570fbbad7d7d6c044"
+    }
+  ],
+  "scientific_changes": "None in copied files."
+}

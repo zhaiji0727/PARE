@@ -1,0 +1,137 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "abf03def8b5972d1428b888be7c2891121bfd19b57656c0962c93ced1aa319ff",
+      "mean_batch_loss": 3.67316602063179,
+      "elapsed_seconds": 3.0899952350300737
+    },
+    {
+      "epoch": 2,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "af0437449c746fdf40524c5ef6b7831bee152cc17c122c5a446d81b641c67409",
+      "mean_batch_loss": 3.2939829330444335,
+      "elapsed_seconds": 6.214934349991381
+    },
+    {
+      "epoch": 3,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "72d09cf8d364c6a22ddddb994db3641c0ed5f6943b55b6d9a9f7e710a2b1c8ab",
+      "mean_batch_loss": 3.1155827164649965,
+      "elapsed_seconds": 9.307833371974993
+    },
+    {
+      "epoch": 4,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "e8dda54f92ac3751a5863e3dcec3ac2e6d30e7fa35c7b9fe7777fcd7302a6711",
+      "mean_batch_loss": 2.9929862859249114,
+      "elapsed_seconds": 12.33281791000627
+    },
+    {
+      "epoch": 5,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "761af8e5c021ca600556cbe2d251e1cbb6365a02ca690715392772cf08589fea",
+      "mean_batch_loss": 2.870639820098877,
+      "elapsed_seconds": 15.398604600981344
+    },
+    {
+      "epoch": 6,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "478bf0a57024bde82ec89fc87f4781da7b24dcd3cecd70e4ce99d2e3ed83c235",
+      "mean_batch_loss": 2.7117311797738077,
+      "elapsed_seconds": 18.431590536027215
+    },
+    {
+      "epoch": 7,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "f86acc76c31e2ef73530c5c793210997117f5c6da110aa3a63e9039c973b8c09",
+      "mean_batch_loss": 2.6015462312698365,
+      "elapsed_seconds": 21.481919055979233
+    },
+    {
+      "epoch": 8,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "1e4c2eacf7ed5842dec306be0683063f73274f19f242c955cc3fdcdcf3120028",
+      "mean_batch_loss": 2.5245425230264664,
+      "elapsed_seconds": 24.543150639976375
+    },
+    {
+      "epoch": 9,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "eb40e0a8d781b392ba573225f1937171a4c94f1c342e5a4bd9811ef450dd649f",
+      "mean_batch_loss": 2.461278962135315,
+      "elapsed_seconds": 27.606622651976068
+    },
+    {
+      "epoch": 10,
+      "batches": 500,
+      "pairs": 31945,
+      "tail_batch_pairs": 9,
+      "pair_order_sha256": "9371102e6e58bf6db73b81a08d60356855ec488a6fdb6ceba3789546ed734497",
+      "mean_batch_loss": 2.413542533636093,
+      "elapsed_seconds": 30.72737421601778
+    }
+  ],
+  "epoch_parameter_states": [
+    {
+      "epoch": 1,
+      "parameter_state_sha256": "573893ed86a4033873c6ee272f441f55200fc49725d19759c76d79b821044187"
+    },
+    {
+      "epoch": 2,
+      "parameter_state_sha256": "c3aeabdcf2545490971669a6bfb3d3e6ab9bde21e95632c79fc5199f71ff47e3"
+    },
+    {
+      "epoch": 3,
+      "parameter_state_sha256": "cf899e3f204ad530885d84a3eb12adbb03f533a2c5b97ba82939b01405e047ac"
+    },
+    {
+      "epoch": 4,
+      "parameter_state_sha256": "830e945c8e422d8ba7dfc033efc7dd8f5764ab44c42dc34f80bed35c43ed24b2"
+    },
+    {
+      "epoch": 5,
+      "parameter_state_sha256": "81eb9ea09e2da6517d886dd9038df3b082a4d934ce1d2d03cdd2750df021f912"
+    },
+    {
+      "epoch": 6,
+      "parameter_state_sha256": "098eaade7b31d9f2c5e100a25446cc87b3003c2a0de70653cb188ec542898acf"
+    },
+    {
+      "epoch": 7,
+      "parameter_state_sha256": "a07cec1b7426311eef91f697242aa47be2b3a0f879503a79d700e49994d4705e"
+    },
+    {
+      "epoch": 8,
+      "parameter_state_sha256": "73d87a04b9f1009e23bb697a3349d5050538e67ff1b60e7491bc14776fc15207"
+    },
+    {
+      "epoch": 9,
+      "parameter_state_sha256": "b392a5d84087be9637d4ab43612cc3605748d8daef5dd5deafa75a45d82c2a1e"
+    },
+    {
+      "epoch": 10,
+      "parameter_state_sha256": "04108fbfe61ff06a88fa2e0bfdf828d339381372bd619c51e8de78b2324fcdda"
+    }
+  ],
+  "updated_utc": "2026-11-09T15:16:24.017660+00:00"
+}

@@ -1,0 +1,7 @@
+<PRIVATE_PATH> FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"preflight_tag_passed": "vitb32", "D": 512}
+{"preflight_tag_passed": "vitb16", "D": 512}
+{"preflight_tag_passed": "remoteclip", "D": 512}
+{"preflight_tag_passed": "siglip", "D": 768}
+{"preflight_tag_passed": "georsclip", "D": 512}

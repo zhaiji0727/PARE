@@ -1,0 +1,13 @@
+75头/105评估：固定简化方案匹配验证
+数据已用于此前研究，本轮不构成新的独立盲测。
+
+vitb32 strict_minus_full: ΔR@10=+1.5293±1.1412pp; 调整区间[-1.3274,+4.3860]; 稳定正向条件=False
+vitb32 strict_minus_strict_token_off: ΔR@10=+7.8145±0.9000pp; 调整区间[+5.5616,+10.0675]; 稳定正向条件=True
+vitb16 strict_minus_full: ΔR@10=+0.8514±0.3866pp; 调整区间[-0.1164,+1.8192]; 稳定正向条件=False
+vitb16 strict_minus_strict_token_off: ΔR@10=+7.3753±0.3315pp; 调整区间[+6.5453,+8.2052]; 稳定正向条件=True
+remoteclip strict_minus_full: ΔR@10=+1.5835±2.8697pp; 调整区间[-5.6003,+8.7674]; 稳定正向条件=False
+remoteclip strict_minus_strict_token_off: ΔR@10=+4.0889±2.8672pp; 调整区间[-3.0886,+11.2665]; 稳定正向条件=False
+siglip strict_minus_full: ΔR@10=+1.5130±0.3884pp; 调整区间[+0.5407,+2.4853]; 稳定正向条件=True
+siglip strict_minus_strict_token_off: ΔR@10=+8.0098±0.5225pp; 调整区间[+6.7018,+9.3177]; 稳定正向条件=True
+georsclip strict_minus_full: ΔR@10=+0.7755±2.2758pp; 调整区间[-4.9215,+6.4724]; 稳定正向条件=False
+georsclip strict_minus_strict_token_off: ΔR@10=+7.3536±2.4939pp; 调整区间[+1.1105,+13.5967]; 稳定正向条件=True

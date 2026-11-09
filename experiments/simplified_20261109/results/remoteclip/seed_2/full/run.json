@@ -1,0 +1,40 @@
+{
+  "schema": "pare.simplified-run.v1",
+  "identity": {
+    "backbone": "remoteclip",
+    "seed": 2,
+    "variant": "full",
+    "protocol_sha256": "b010416246ce7d91390bc3c490eccf5bbfcc748e08f71292f4f6c93376f4bac8",
+    "freeze_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3"
+  },
+  "training_status": "complete",
+  "started_utc": "2026-11-09T15:20:34.795364+00:00",
+  "evaluations": {
+    "test": {
+      "artifacts_sha256": {
+        "test.json": "f87c9240102b03fd5da842b6d6eb4ca2e92210830e12f73b7db8fe00059eb72b",
+        "test_scores.pt": "00027c1222b793d397b963a40067a9a30957c1db407f8a6b2bb1e5ae4521bb4c"
+      }
+    }
+  },
+  "completed_utc": "2026-11-09T15:21:12.263411+00:00",
+  "initial_state_sha256": "6986b7ba04da48e996b797af1a47ab6bb95aa6af7daf62dd457b16f5ad2f6270",
+  "final_parameter_sha256": "b03fd817d06af5b55d626c124938b7fa7e4b99085ac1ee153b0ad9c59c220e1e",
+  "expected_pair_order_sha256": [
+    "c730a43c73adec75c2cf1a24b69878b3d499b62f5aa26eae7a0f359029ea9566",
+    "adeace399496c6c0c5ceb1c1afd548c5e5b731754f947137c3c65d96cf8cc2b1",
+    "b3714d7ca85520b3e9d9018f14cae4eac269d3293144e9500d381a636226a420",
+    "74aa1c65ff9cf83fd759eb509c7ce462dd04705b08325d8420beff0c945551ee",
+    "45b14545b46af2f4885b08552a41cb387fdd4376243689ac2ed973aecb242b3c",
+    "0a608dd10b45fdfdc78d5d48961fdc3b811e6edd3368c80bc670b3244c95f6d0",
+    "302e1c780241342c6be154aca6145ac73a446ac44429354acb58fea41243e55e",
+    "7437de1c13f7776946573ffa3715674710f44ab03bb52226e82d64c16ea17501",
+    "30124d1d05526af1a5c14daff182523571045fda97ee8c7be8e812984edeb8f8",
+    "9e7d5f938e3d06ecb16dd4f4b7fa4cd0d8087f1828b9f505e9b5cdc3595c223d"
+  ],
+  "text_embeddings_sha256": "a669615373468222f6a615de4cbb2b2bdfced33c10810dbfaecf8abee27da346",
+  "training_artifacts_sha256": {
+    "head.pt": "95ba0bea0e1ff40d8f54430f444a8784a8ad80281902056c99417ba080bdc7e7",
+    "training_progress.json": "ea5cb441d68a6fca0e5be40c54b991418bdc3d669a6c73640685278ff6298c21"
+  }
+}

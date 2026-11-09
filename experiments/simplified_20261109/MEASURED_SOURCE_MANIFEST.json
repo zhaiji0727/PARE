@@ -1,0 +1,208 @@
+{
+  "status": "frozen_source_staged_results_pending",
+  "freeze_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3",
+  "expected_heads": 75,
+  "expected_evaluations": 105,
+  "source_files_frozen": 29,
+  "files": {
+    "measured_source/REFERENCE_COPY_PROVENANCE.json": {
+      "original_sha256": "cd817d0f4c35b63b5bbaa39d0b768af467e69f12a9d7cdf87cc033e3cfd79acc",
+      "public_sha256": "3c4e82cf4d0260f7fc16b910e03497f343eda074412ce8f62525d7aa5b948cff",
+      "path_or_host_redactions": 17,
+      "byte_identical": false
+    },
+    "measured_source/analysis_inputs/cache_spacing_1.5.pt.manifest.json": {
+      "original_sha256": "d48ffd42304299aae3af16a5d7dabc99566e0a1bc7bc285ebb09615df2b783d7",
+      "public_sha256": "d48ffd42304299aae3af16a5d7dabc99566e0a1bc7bc285ebb09615df2b783d7",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/analysis_inputs/cache_spacing_2.pt.manifest.json": {
+      "original_sha256": "fba617941e14d3e8d7ad61b90e40757d25e6f2379fdd76c88ca706abd4de6190",
+      "public_sha256": "fba617941e14d3e8d7ad61b90e40757d25e6f2379fdd76c88ca706abd4de6190",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/analysis_inputs/raster_spacing_audit.json": {
+      "original_sha256": "dd4128376d1e816bc43f33bbd8af83f74024372ab0bad81efcb55bf3a564ac89",
+      "public_sha256": "dd4128376d1e816bc43f33bbd8af83f74024372ab0bad81efcb55bf3a564ac89",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/analysis_inputs/raster_spacing_audit_provenance.json": {
+      "original_sha256": "60f65d49fe6aa795a4d2b64861b244bdb07bec1fbf489757b6c9160156e8e508",
+      "public_sha256": "cc9c0861fb45f93bd58c265df6b6b3f2d7941b8b51bf9be9c54a3a2d11f52120",
+      "path_or_host_redactions": 3,
+      "byte_identical": false
+    },
+    "measured_source/analysis_inputs/spacing_groups.json": {
+      "original_sha256": "f01000ed9015696a80442c7e35f466ab3209b9413b0e4f49385c687b21364555",
+      "public_sha256": "f01000ed9015696a80442c7e35f466ab3209b9413b0e4f49385c687b21364555",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/analysis_scripts/analyze.py": {
+      "original_sha256": "7a3a23f8aef267f343462362aa5b8a418916ee4fd2268198b0a10f6d1f87d532",
+      "public_sha256": "7a3a23f8aef267f343462362aa5b8a418916ee4fd2268198b0a10f6d1f87d532",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/analysis_scripts/test_analyze.py": {
+      "original_sha256": "6f8e34d7a3d8d0f980c81728c7a2fda541551da126224d56d3eabd154f903ac4",
+      "public_sha256": "6f8e34d7a3d8d0f980c81728c7a2fda541551da126224d56d3eabd154f903ac4",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/artifacts.py": {
+      "original_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "public_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/batch_scoring.py": {
+      "original_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "public_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/bench_efficiency.py": {
+      "original_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "public_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/cache_primitives.py": {
+      "original_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "public_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/eval_retrieval_baselines.py": {
+      "original_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "public_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/eval_retrieval_phys.py": {
+      "original_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "public_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/make_ids.py": {
+      "original_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "public_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/primitive_controls.py": {
+      "original_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "public_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/retrieval_queries.py": {
+      "original_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "public_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/runtime.py": {
+      "original_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "public_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/saqre_phys.py": {
+      "original_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "public_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/sweep_hparams.py": {
+      "original_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "public_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/base_code/train_saqre.py": {
+      "original_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "public_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/code/study_core.py": {
+      "original_sha256": "d15eae6d22d6640a5d9b2a46ef5abe1a0cfe80de334576bd20d932372e83e579",
+      "public_sha256": "d15eae6d22d6640a5d9b2a46ef5abe1a0cfe80de334576bd20d932372e83e579",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/reference/evaluate_multik.py": {
+      "original_sha256": "9b08150a28035876307fc7ee225df7e87756c220005ed42f56beacfee69ea33d",
+      "public_sha256": "9b08150a28035876307fc7ee225df7e87756c220005ed42f56beacfee69ea33d",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/reference/reference_kernels.py": {
+      "original_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "public_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/reference/scale_contract.py": {
+      "original_sha256": "215844f8e176291272682bb052819b7bc0628eef89d383da3b580908ce0c6a4b",
+      "public_sha256": "215844f8e176291272682bb052819b7bc0628eef89d383da3b580908ce0c6a4b",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/reference/stress_cache.py": {
+      "original_sha256": "9a04052620535131baefc2fc5b886ed42ba5ed7349ad5a44edf31dab94eed30c",
+      "public_sha256": "9a04052620535131baefc2fc5b886ed42ba5ed7349ad5a44edf31dab94eed30c",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/scripts/run_study.py": {
+      "original_sha256": "7caccd6140b53c6306455c26e3924bf17408ee27d7d537a7d66f7c650721b824",
+      "public_sha256": "1c9aa0d317dc601a90b69a28d4f4fa7435c1f57608b0832c8844fe55b3b10064",
+      "path_or_host_redactions": 1,
+      "byte_identical": false
+    },
+    "measured_source/tests/test_contract.py": {
+      "original_sha256": "cd0d0701d8c374cb6bf15dfae404378bfc9386d07fd4200f9fede975f0746844",
+      "public_sha256": "cd0d0701d8c374cb6bf15dfae404378bfc9386d07fd4200f9fede975f0746844",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/tests/test_numerics.py": {
+      "original_sha256": "93fce7431ee4fcd6da747521803b9c52c1df879b20ec60f9e1bd09dd6cd150ff",
+      "public_sha256": "93fce7431ee4fcd6da747521803b9c52c1df879b20ec60f9e1bd09dd6cd150ff",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/protocol.json": {
+      "original_sha256": "b010416246ce7d91390bc3c490eccf5bbfcc748e08f71292f4f6c93376f4bac8",
+      "public_sha256": "d7d0d0f8dd086ba5c288f5bc36c4c7f5834ee5c27be78f2f270bba72a81dc7bf",
+      "path_or_host_redactions": 10,
+      "byte_identical": false
+    },
+    "measured_source/PROTOCOL.md": {
+      "original_sha256": "42420cea7a949957d26c4ae078c35551aeaebd9e2a95defe334154dd6c667d65",
+      "public_sha256": "42420cea7a949957d26c4ae078c35551aeaebd9e2a95defe334154dd6c667d65",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    },
+    "measured_source/INPUTS_BOUND.json": {
+      "original_sha256": "f4a229b95d0074f509c07b90992fa279d0e79fa5935e23bba4a3c17c5d575970",
+      "public_sha256": "dfb05f3f037a49976b62544a1eef9bde9bfe9d95fc77ea9fd25440f0b01ea439",
+      "path_or_host_redactions": 74,
+      "byte_identical": false
+    },
+    "measured_source/SOURCE_FROZEN.json": {
+      "original_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3",
+      "public_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3",
+      "path_or_host_redactions": 0,
+      "byte_identical": true
+    }
+  },
+  "note": "No numerical results are released by this source-only staging step. Path-redacted sources retain original and public hashes. Portable entry is separately authored."
+}

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<PRIVATE_PATH>", line 42, in <module>
+    for name in ('anchor','train-all','evaluate'):stage(name)
+  File "<PRIVATE_PATH>", line 31, in stage
+    if state['status']!='complete':raise RuntimeError('Stage failed; all logs preserved: '+name)
+RuntimeError: Stage failed; all logs preserved: anchor

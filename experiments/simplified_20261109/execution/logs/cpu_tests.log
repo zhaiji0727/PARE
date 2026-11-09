@@ -1,0 +1,22 @@
+<PRIVATE_PATH> FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test_fixed_grid_has_75_heads_and_105_evaluations (test_contract.ContractTests) ... ok
+test_no_variant_seed_or_hyperparameter_drift (test_contract.ContractTests) ... ok
+test_original_caption_order_and_repeated_in_place_shuffles (test_contract.ContractTests) ... ok
+test_copied_kernel_matches_original_loop_two_epochs_with_tail (test_numerics.NumericalTests) ... {"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 9.08439040184021, "elapsed_seconds": 0.009352305030915886}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 6.328931927680969, "elapsed_seconds": 0.018529226013924927}}
+{"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 8.538276195526123, "elapsed_seconds": 0.0071938810287974775}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 4.836684703826904, "elapsed_seconds": 0.014287763042375445}}
+{"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 8.537084579467773, "elapsed_seconds": 0.005530382972210646}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 4.8369460105896, "elapsed_seconds": 0.01114266598597169}}
+ok
+test_full_score_kernel_matches_query_loop_and_empty_masks (test_numerics.NumericalTests) ... ok
+test_same_15_parameter_initialization_and_rng_512_768 (test_numerics.NumericalTests) ... ok
+test_strict_removes_all_fine_paths_and_detector_coordinate (test_numerics.NumericalTests) ... ok
+test_ties_keep_legacy_scene_order_then_one_dimensional_sort (test_numerics.NumericalTests) ... ok
+test_token_off_only_has_no_token_gradients_reliability_remains (test_numerics.NumericalTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.351s
+
+OK

@@ -1,0 +1,40 @@
+<PRIVATE_PATH> FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "<PRIVATE_PATH>", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "<PRIVATE_PATH>", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "<PRIVATE_PATH>", line 1007, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "<PRIVATE_PATH>", line 1114, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "<PRIVATE_PATH>", line 1646, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<PRIVATE_PATH>", line 525, in <module>
+    if __name__=='__main__':main()
+  File "<PRIVATE_PATH>", line 503, in main
+    train,test,pairs,records,cap2vec,vectors,tm=shared_text(torch,plan,args.tag,bound)
+  File "<PRIVATE_PATH>", line 251, in shared_text
+    tokenizer = open_clip.get_tokenizer(b['model'])
+  File "<PRIVATE_PATH>", line 114, in get_tokenizer
+    tokenizer = HFTokenizer(
+  File "<PRIVATE_PATH>", line 416, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, **kwargs)
+  File "<PRIVATE_PATH>", line 864, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "<PRIVATE_PATH>", line 1006, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "<PRIVATE_PATH>", line 570, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "<PRIVATE_PATH>", line 629, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "<PRIVATE_PATH>", line 446, in cached_file
+    raise EnvironmentError(
+OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like timm/ViT-B-16-SigLIP is not the path to a directory containing a file named config.json.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.

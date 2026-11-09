@@ -1,0 +1,59 @@
+{
+  "schema": "pare.token-mechanism-run.v1",
+  "identity": {
+    "seed": 1,
+    "variant": "constant_descriptor",
+    "protocol_sha256": "112ce7fc49a3f9a27e3c905c1dfdcbbd7d620a7f88b11af823ea7512c5998fe0",
+    "freeze_sha256": "81c6c8e7b8da0d0aeb3fcab684c2a9c18cb9921fd4e47bfdc2d276bd23560540",
+    "means_sha256": "5773374cdcfbf022d6bf482e9f7006c6a1cee10dd2b58d7fd27f22b14f8585a1"
+  },
+  "training_status": "complete",
+  "started_utc": "2026-11-09T14:50:13.332763+00:00",
+  "evaluations": {
+    "development": {
+      "metrics_percent": {
+        "R@1": 4.248366013071895,
+        "R@5": 14.923747276688454,
+        "R@10": 25.49019607843137,
+        "MRR@10": 9.373162845385066
+      },
+      "artifacts_sha256": {
+        "development.json": "05bee20a798c1b9d7992c30294258a57dd5ce5d6b1f6b280461fcbf6e08eb3bb",
+        "development_scores.pt": "a2435cab39fbbd026d436d81e2c1f5c33560db30489e0a6a23e94b00de93f433"
+      }
+    },
+    "internal_check": {
+      "metrics_percent": {
+        "R@1": 2.722323049001815,
+        "R@5": 10.344827586206897,
+        "R@10": 17.664851784634,
+        "MRR@10": 6.232415329511523
+      },
+      "artifacts_sha256": {
+        "internal_check.json": "63796a56ad8805dd30899fb66d8c413a8ac125a2cc56ac41041789142d95cec4",
+        "internal_check_scores.pt": "1a4733f8aafa7dc3a498398ea3711b46334d6f0b0f91719117c470e6595e2f6d"
+      }
+    }
+  },
+  "completed_utc": "2026-11-09T14:50:43.714169+00:00",
+  "base_initial_state_sha256": "469816767a91201d931de6ba01e8b47c78e7f1c6e5e1c5be888ecb5a339dc347",
+  "legacy_initial_parameter_sha256": "ef6c07f83f61a57e50f01f7cecbe96cc425a44845b2608c5fbffb1f803fab481",
+  "final_parameter_sha256": "d286e7ddc7017162c5d94e4dfe6c4fa6cff70a2a1023ba6f09b37937c0e3929c",
+  "text_embeddings_sha256": "3825c66a5df9c295e64146a34a03e85b601093d4ecf0aa23f72fd73192cc7eb2",
+  "expected_pair_order_sha256": [
+    "bf8105f04513fe9a738c112d9eb45f9861bedbcaa27403d7cbcddbbf6ad827ac",
+    "34f1c3dce05ae49eafeef962350545a35a3678c1c7a940ff608c10f1d5f2eefe",
+    "34db0c525743c0288efbabb3de91025bb2925d96a933ccead844b06617aa337f",
+    "0a857aaa29dea30242bd507590dac401e8fa8f9b2cff807bc29cac57132e241d",
+    "26c5e1f12c666f18c8d058e367a790a770a6618caea5f8a7e8a4d54306961fe1",
+    "4a3a9c5e417bca056987ff9ee182f1830993c4fbacc9c43d49de3d086911e1b4",
+    "6bc2a1a17a76d641902673f912fe01689405fbd32437f6e1142d63833538bc63",
+    "b308865430d536492d557c30a0bd40374c17741c6a5c6eac6d41630a7e5e0d51",
+    "28e6f48d710da16b0143d0b190690164ec8473f32d07442f1e387b9e7a47b463",
+    "1179497cbfe679123b77bac96fa3539525af2f428bcf1b3c9d88dcb80d6d63fb"
+  ],
+  "training_artifacts_sha256": {
+    "head.pt": "bcb8da9d76c5a0dcf4c60481a3061100b4d323ffe3f8c00dddecb7e1bb08387f",
+    "training_progress.json": "ba28c123164902129a57399e066db0c9757054bf209e8f0f07dd6cae02668381"
+  }
+}

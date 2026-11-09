@@ -1,0 +1,88 @@
+{
+  "stage": "train-all",
+  "started_utc": "2026-11-09T15:18:27.730420+00:00",
+  "status": "complete",
+  "jobs": {
+    "vitb32": {
+      "pid": 1827165,
+      "gpu": 2,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "train-all",
+        "--tag",
+        "vitb32",
+        "--gpu",
+        "2"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "vitb16": {
+      "pid": 1827166,
+      "gpu": 0,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "train-all",
+        "--tag",
+        "vitb16",
+        "--gpu",
+        "0"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "remoteclip": {
+      "pid": 1827167,
+      "gpu": 3,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "train-all",
+        "--tag",
+        "remoteclip",
+        "--gpu",
+        "3"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "siglip": {
+      "pid": 1827168,
+      "gpu": 4,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "train-all",
+        "--tag",
+        "siglip",
+        "--gpu",
+        "4"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "georsclip": {
+      "pid": 1827169,
+      "gpu": 5,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "train-all",
+        "--tag",
+        "georsclip",
+        "--gpu",
+        "5"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    }
+  },
+  "completed_utc": "2026-11-09T15:25:59.658533+00:00"
+}

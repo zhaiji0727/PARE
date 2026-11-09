@@ -1,0 +1,401 @@
+{
+  "schema": "pare.simplified-matched-study.v1",
+  "date": "2026-11-09",
+  "status": "planned_before_new_training",
+  "purpose": "Matched multi-seed assessment of the existing CFAR-strict simplified candidate; not a new blind test or a search for favorable configurations.",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": {
+    "full": [],
+    "strict": [
+      "cfar_strict"
+    ],
+    "strict_token_off": [
+      "cfar_strict",
+      "ty"
+    ]
+  },
+  "expected_heads": 75,
+  "backbones": {
+    "vitb32": {
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "lr": 0.002,
+      "kappa": 0.03,
+      "cache_signature": {
+        "schema_version": 2,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+        "external_checkpoint_sha256": null,
+        "primitive_mode": "physics",
+        "max_regions": 6,
+        "max_sc": 8,
+        "source_sha256": {
+          "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+          "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+          "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+          "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+          "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+        },
+        "packages": {
+          "torch": "2.9.1+cu128",
+          "open_clip_torch": "2.26.1",
+          "numpy": "1.26.4",
+          "Pillow": "10.4.0",
+          "scipy": "1.13.1"
+        }
+      },
+      "legacy_heads": {
+        "full": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "ecbc2b94f8222eb282ca055f240fc87148e1037a09b5da4ca279a6921ba4d618"
+        },
+        "cfar_strict": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "e200260a25ce6a1b551e5f0d5141e2be4838dab6fd325fc3b3544641e36ed3b4"
+        }
+      }
+    },
+    "vitb16": {
+      "model": "ViT-B-16",
+      "pretrained": "laion2b_s34b_b88k",
+      "lr": 0.002,
+      "kappa": 0.05,
+      "cache_signature": {
+        "schema_version": 2,
+        "model": "ViT-B-16",
+        "pretrained": "laion2b_s34b_b88k",
+        "pretrained_weight_sha256": "1f16b1274ca25493b1f36225efe81d05f66a3f33c487acd1a07c5ba87920de6f",
+        "external_checkpoint_sha256": null,
+        "primitive_mode": "physics",
+        "max_regions": 6,
+        "max_sc": 8,
+        "source_sha256": {
+          "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+          "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+          "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+          "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+          "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+        },
+        "packages": {
+          "torch": "2.9.1+cu128",
+          "open_clip_torch": "2.26.1",
+          "numpy": "1.26.4",
+          "Pillow": "10.4.0",
+          "scipy": "1.13.1"
+        }
+      },
+      "legacy_heads": {
+        "full": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "ba89c729f573e6bde43077f687ce3c2328d15f66e946f34392160d0f842ed171"
+        },
+        "cfar_strict": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "a9ebd4f81a79a04f5687ff50d931d93907451ec999b46e7b2105b31397c0114c"
+        }
+      }
+    },
+    "remoteclip": {
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "lr": 0.002,
+      "kappa": 0.05,
+      "cache_signature": {
+        "schema_version": 2,
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+        "external_checkpoint_sha256": "60014e395d930a3f2963d1d89c8522bf4ad56775571e4356e866864789af85c4",
+        "primitive_mode": "physics",
+        "max_regions": 6,
+        "max_sc": 8,
+        "source_sha256": {
+          "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+          "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+          "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+          "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+          "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+        },
+        "packages": {
+          "torch": "2.9.1+cu128",
+          "open_clip_torch": "2.26.1",
+          "numpy": "1.26.4",
+          "Pillow": "10.4.0",
+          "scipy": "1.13.1"
+        }
+      },
+      "legacy_heads": {
+        "full": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "28be6e6e59406f6e61d9f9861ade5ce8dbb02976d19a254f028d798f38a710b6"
+        },
+        "cfar_strict": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "ea88c7badb252be4022a82b7e9c558d0b6956bb12a2799456c46c8b11b5b4520"
+        }
+      }
+    },
+    "siglip": {
+      "model": "ViT-B-16-SigLIP",
+      "pretrained": "webli",
+      "lr": 0.002,
+      "kappa": 0.07,
+      "cache_signature": {
+        "schema_version": 2,
+        "model": "ViT-B-16-SigLIP",
+        "pretrained": "webli",
+        "pretrained_weight_sha256": "a604948f7bb8788e4652f6ec7b7bd792dd63f55f849fa3e5fbf8b462353b9934",
+        "external_checkpoint_sha256": null,
+        "primitive_mode": "physics",
+        "max_regions": 6,
+        "max_sc": 8,
+        "source_sha256": {
+          "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+          "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+          "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+          "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+          "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+        },
+        "packages": {
+          "torch": "2.9.1+cu128",
+          "open_clip_torch": "2.26.1",
+          "numpy": "1.26.4",
+          "Pillow": "10.4.0",
+          "scipy": "1.13.1"
+        }
+      },
+      "legacy_heads": {
+        "full": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "b7f0d650eeaff0f7a22153451fc2a6d9f245929c537225744e6214fd2336498a"
+        },
+        "cfar_strict": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "f5b7d8d458d2043d28d207aacfdd5318aebae5ab842bb5e3c56cd33668d78383"
+        }
+      }
+    },
+    "georsclip": {
+      "model": "ViT-B-32",
+      "pretrained": "openai",
+      "lr": 0.002,
+      "kappa": 0.05,
+      "cache_signature": {
+        "schema_version": 2,
+        "model": "ViT-B-32",
+        "pretrained": "openai",
+        "pretrained_weight_sha256": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+        "external_checkpoint_sha256": "129bafaa6a097b8be52e2babf27d24f0a934dae919201e538dc698611bd1ea01",
+        "primitive_mode": "physics",
+        "max_regions": 6,
+        "max_sc": 8,
+        "source_sha256": {
+          "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+          "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+          "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+          "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+          "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+        },
+        "packages": {
+          "torch": "2.9.1+cu128",
+          "open_clip_torch": "2.26.1",
+          "numpy": "1.26.4",
+          "Pillow": "10.4.0",
+          "scipy": "1.13.1"
+        }
+      },
+      "legacy_heads": {
+        "full": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "0c03426cac175d373369e83b346bb3e3d653f944d519eb54aab13048ddb37a88"
+        },
+        "cfar_strict": {
+          "path": "<PRIVATE_PATH>",
+          "sha256": "da1e9e07c4d168d22c172fbdbbdf21ed698e0f8d026aac2a0c340b7b0d00402f"
+        }
+      }
+    }
+  },
+  "training": {
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "amp": false,
+    "n_train_images": 9181,
+    "n_train_pairs": 31945,
+    "batches_per_epoch": 500,
+    "tail_batch_pairs": 9,
+    "early_stopping": false,
+    "warm_start": false,
+    "new_hyperparameter_search": false,
+    "loss": "original one-direction diagonal caption-to-image cross entropy, including original duplicate-image batch behavior"
+  },
+  "candidate": {
+    "fine_attention": false,
+    "fine_gate_input": false,
+    "coarse_detector_fraction": false,
+    "reliability": "original",
+    "token": "original regional descriptors with detector coordinate fixed at zero",
+    "gate": "original two-sigmoid gate; fine output aliases scene",
+    "fusion": "normalize(gc*coarse + (gf+max(1-gc-gf,0))*scene); preserve original operation ordering",
+    "other_changes": false,
+    "fine_crop_pixels_in_legacy_full": 24,
+    "no_48px": true
+  },
+  "pairing": {
+    "initialization": "same SAQREHead initialization for all variants within backbone and seed; reset PyTorch RNG after text embedding",
+    "minibatches": "same first-appearance caption/image order and random.Random(seed) in-place shuffles across variants",
+    "hyperparameters": "reuse each backbone original validation-selected learning rate and temperature for all variants, with no new selection",
+    "weights": "frozen image/text backbone; fresh head for every seed and variant"
+  },
+  "evaluation": {
+    "query_policy": "original first caption per image",
+    "n_queries": 3688,
+    "n_gallery": 3688,
+    "gallery": "full within original official-test split; no ground-truth injection",
+    "main_evaluations": 75,
+    "scale_backbone": "vitb32",
+    "scale_factors": [
+      1.5,
+      2.0
+    ],
+    "scale_variants": [
+      "full",
+      "strict",
+      "strict_token_off"
+    ],
+    "scale_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "additional_scale_evaluations": 30,
+    "baseline": "scene-only frozen embeddings, computed once per backbone/scale; no training seeds implied"
+  },
+  "data_history": {
+    "original_test_previously_seen": true,
+    "candidate_chosen_after_prior_results": true,
+    "interpretation": "post hoc design revision with prospective fixed computational protocol on reused data; multiseed reproducibility, not independent external confirmation",
+    "old_development_data_in_final_train": true
+  },
+  "metrics": {
+    "primary": "R@10",
+    "secondary": [
+      "R@1",
+      "R@5",
+      "MRR@10"
+    ],
+    "unit": "percentage points"
+  },
+  "primary_contrasts": [
+    {
+      "backbone": "vitb32",
+      "left": "strict",
+      "right": "full"
+    },
+    {
+      "backbone": "vitb32",
+      "left": "strict",
+      "right": "strict_token_off"
+    },
+    {
+      "backbone": "vitb16",
+      "left": "strict",
+      "right": "full"
+    },
+    {
+      "backbone": "vitb16",
+      "left": "strict",
+      "right": "strict_token_off"
+    },
+    {
+      "backbone": "remoteclip",
+      "left": "strict",
+      "right": "full"
+    },
+    {
+      "backbone": "remoteclip",
+      "left": "strict",
+      "right": "strict_token_off"
+    },
+    {
+      "backbone": "siglip",
+      "left": "strict",
+      "right": "full"
+    },
+    {
+      "backbone": "siglip",
+      "left": "strict",
+      "right": "strict_token_off"
+    },
+    {
+      "backbone": "georsclip",
+      "left": "strict",
+      "right": "full"
+    },
+    {
+      "backbone": "georsclip",
+      "left": "strict",
+      "right": "strict_token_off"
+    }
+  ],
+  "statistics": {
+    "unit": "paired training seed on a fixed dataset, n=5",
+    "family_size": 10,
+    "interval": "two-sided Student-t df4; ordinary95% and Bonferroni simultaneous-family95% (each99.5%)",
+    "limitations": "normality approximation for five seeds; repeated dataset use remains; backbones are not independent external datasets; no equivalence/noninferiority inferred from crossing zero",
+    "report_all_seeds": true,
+    "stable_positive_evidence": {
+      "all_5_R10_differences_strictly_positive": true,
+      "bonferroni_lower_above_zero": true,
+      "mean_MRR10_delta_nonnegative": true
+    },
+    "across_backbone_claim": "Only say stable improvement across all five backbones for a named contrast when all five separately meet the rule. Otherwise report each result and narrow the claim.",
+    "secondary_scale_and_subgroups": "descriptive paired mean/SD across seeds; report all fixed scales and groups; no post hoc thresholds or independence claims"
+  },
+  "execution_rules": [
+    "Complete all75 fresh heads and105 model evaluations, irrespective of metric signs. Preserve all failures/retries with reasons.",
+    "Freeze protocol, numerical code, tests, analysis and exact input hashes after review and before first new training.",
+    "Run ten seed0 full/strict anchors first; compare every original model parameter with corresponding07 checkpoint. Investigate numerical discrepancies before launching other seeds.",
+    "Do not choose seeds, epochs, scales, metrics or method variants from new outcomes.",
+    "Do not change gate algebra, reliability or token parameterization as part of simplification.",
+    "Do not splice09 B0-mechanism numbers into this strict candidate table.",
+    "If a claim is unsupported, narrow it and preserve the result; do not launch an open-ended search.",
+    "Manuscript must disclose design selection after prior test use; newly frozen protocol does not erase reuse.",
+    "No final journal submission."
+  ],
+  "delivery": "Separate new research and manuscript version, retain07/08/09 records and all originals.",
+  "r2_bindings": {
+    "groups_file": "analysis_inputs/spacing_groups.json",
+    "groups_sha256": "f01000ed9015696a80442c7e35f466ab3209b9413b0e4f49385c687b21364555",
+    "counts": {
+      "lt_0.30": 760,
+      "0.30_to_lt_0.45": 238,
+      "ge_0.45": 188,
+      "unavailable": 2502
+    },
+    "rule": "Round each stored axis to 0.01m using Decimal(str(value)).quantize(0.01, ROUND_HALF_UP); require equal rounded axes",
+    "bins": [
+      "<0.30",
+      "0.30<=s<0.45",
+      "s>=0.45"
+    ],
+    "scale_manifests": {
+      "analysis_inputs/cache_spacing_1.5.pt.manifest.json": "d48ffd42304299aae3af16a5d7dabc99566e0a1bc7bc285ebb09615df2b783d7",
+      "analysis_inputs/cache_spacing_2.pt.manifest.json": "fba617941e14d3e8d7ad61b90e40757d25e6f2379fdd76c88ca706abd4de6190"
+    },
+    "transform": "PIL RGB, LANCZOS to round_half_up(width/s) by round_half_up(height/s), no resize back to original raster; unchanged per-crop backbone preprocessing",
+    "interpretation": "Synthetic raster spacing, not a controlled acquisition-GSD intervention"
+  }
+}

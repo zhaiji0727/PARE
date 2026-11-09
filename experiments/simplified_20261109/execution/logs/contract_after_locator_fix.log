@@ -1,0 +1,8 @@
+test_fixed_grid_has_75_heads_and_105_evaluations (test_contract.ContractTests) ... ok
+test_no_variant_seed_or_hyperparameter_drift (test_contract.ContractTests) ... ok
+test_original_caption_order_and_repeated_in_place_shuffles (test_contract.ContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

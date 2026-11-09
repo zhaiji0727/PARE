@@ -1,0 +1,353 @@
+{
+  "status": "all_30_rank_vectors_verified",
+  "n_heads": 15,
+  "n_evaluations": 30,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "posthoc_exploratory": true,
+  "official_test_accessed": false,
+  "source_sha256": "7c5caf4d78b79dc45df06162b7ca471517cafa46d4b0c0968b9ab1527b8a768b",
+  "bindings": {
+    "protocol_sha256": "112ce7fc49a3f9a27e3c905c1dfdcbbd7d620a7f88b11af823ea7512c5998fe0",
+    "freeze_sha256": "81c6c8e7b8da0d0aeb3fcab684c2a9c18cb9921fd4e47bfdc2d276bd23560540",
+    "means_sha256": "5773374cdcfbf022d6bf482e9f7006c6a1cee10dd2b58d7fd27f22b14f8585a1"
+  },
+  "summaries": [
+    {
+      "split": "development",
+      "variant": "conditional",
+      "R@1_mean": 4.400871459694989,
+      "R@1_sample_sd": 0.5639293727906224,
+      "R@5_mean": 14.85838779956427,
+      "R@5_sample_sd": 0.5996234834214763,
+      "R@10_mean": 25.076252723311548,
+      "R@10_sample_sd": 0.7201086658404535,
+      "MRR@10_mean": 9.274034305080056,
+      "MRR@10_sample_sd": 0.4216611936102501
+    },
+    {
+      "split": "development",
+      "variant": "constant_descriptor",
+      "R@1_mean": 4.183006535947713,
+      "R@1_sample_sd": 0.23865906645105275,
+      "R@5_mean": 14.989106753812637,
+      "R@5_sample_sd": 0.3972675932202714,
+      "R@10_mean": 25.381263616557735,
+      "R@10_sample_sd": 0.5866192600364388,
+      "MRR@10_mean": 9.148519901787875,
+      "MRR@10_sample_sd": 0.2122960818900545
+    },
+    {
+      "split": "development",
+      "variant": "token_off",
+      "R@1_mean": 1.4161220043572984,
+      "R@1_sample_sd": 0.13341447400779835,
+      "R@5_mean": 6.906318082788671,
+      "R@5_sample_sd": 0.5639293727906223,
+      "R@10_mean": 12.70152505446623,
+      "R@10_sample_sd": 0.9100914411418485,
+      "MRR@10_mean": 3.9462167583082612,
+      "MRR@10_sample_sd": 0.22658508582973785
+    },
+    {
+      "split": "internal_check",
+      "variant": "conditional",
+      "R@1_mean": 2.6497277676951,
+      "R@1_sample_sd": 0.18841393227341127,
+      "R@5_mean": 10.272232304900182,
+      "R@5_sample_sd": 0.4751926651338288,
+      "R@10_mean": 17.592256503327285,
+      "R@10_sample_sd": 0.9588197341153756,
+      "MRR@10_mean": 6.154562651840329,
+      "MRR@10_sample_sd": 0.2826194873155573
+    },
+    {
+      "split": "internal_check",
+      "variant": "constant_descriptor",
+      "R@1_mean": 2.637628554143981,
+      "R@1_sample_sd": 0.2078108171484292,
+      "R@5_mean": 10.223835450695704,
+      "R@5_sample_sd": 0.32857775230490704,
+      "R@10_mean": 17.374470659407137,
+      "R@10_sample_sd": 1.0189592457407193,
+      "MRR@10_mean": 6.137393291658264,
+      "MRR@10_sample_sd": 0.2846070125995627
+    },
+    {
+      "split": "internal_check",
+      "variant": "token_off",
+      "R@1_mean": 0.8953418027828192,
+      "R@1_sample_sd": 0.11636650974997782,
+      "R@5_mean": 3.908045977011494,
+      "R@5_sample_sd": 0.2552331894704051,
+      "R@10_mean": 6.993345432546884,
+      "R@10_sample_sd": 0.3768278645468225,
+      "MRR@10_mean": 2.2322808938053944,
+      "MRR@10_sample_sd": 0.18832151398675998
+    }
+  ],
+  "contrasts": [
+    {
+      "split": "development",
+      "comparison": "conditional_minus_constant_descriptor",
+      "seed_deltas_R10_pp": [
+        -0.10893246187363559,
+        -0.435729847494553,
+        -0.21786492374727473,
+        -0.6535947712418313,
+        -0.10893246187363914
+      ],
+      "mean_R10_delta_pp": -0.30501089324618674,
+      "sample_sd_R10_pp": 0.2361599497677439,
+      "t95_interval_pp": [
+        -0.5982422006904038,
+        -0.01177958580196975
+      ],
+      "bonferroni_family95_interval_pp": [
+        -0.7606987193870991,
+        0.15067693289472556
+      ],
+      "mean_MRR10_delta_pp": 0.1255144032921809,
+      "all_seeds_R10_positive": false,
+      "predeclared_stronger_within_dataset_evidence": false,
+      "all_metric_paired_differences_pp": {
+        "R@1": [
+          0.9803921568627452,
+          0.10893246187363825,
+          -0.2178649237472765,
+          0.2178649237472765,
+          0.0
+        ],
+        "R@5": [
+          -0.2178649237472765,
+          0.5446623093681904,
+          -0.871459694989106,
+          -0.10893246187363914,
+          0.0
+        ],
+        "R@10": [
+          -0.10893246187363559,
+          -0.435729847494553,
+          -0.21786492374727473,
+          -0.6535947712418313,
+          -0.10893246187363914
+        ],
+        "MRR@10": [
+          0.7775702873742087,
+          -0.06566206729605639,
+          -0.06700210948577023,
+          -0.06773697133174217,
+          0.050402877200264484
+        ]
+      }
+    },
+    {
+      "split": "development",
+      "comparison": "conditional_minus_token_off",
+      "seed_deltas_R10_pp": [
+        12.52723311546841,
+        13.0718954248366,
+        10.675381263616558,
+        11.328976034858387,
+        14.270152505446623
+      ],
+      "mean_R10_delta_pp": 12.374727668845315,
+      "sample_sd_R10_pp": 1.4215581932688295,
+      "t95_interval_pp": [
+        10.60963003891182,
+        14.13982529877881
+      ],
+      "bonferroni_family95_interval_pp": [
+        9.631727581571608,
+        15.117727756119022
+      ],
+      "mean_MRR10_delta_pp": 5.327817546771795,
+      "all_seeds_R10_positive": true,
+      "predeclared_stronger_within_dataset_evidence": true,
+      "all_metric_paired_differences_pp": {
+        "R@1": [
+          3.703703703703704,
+          2.7233115468409586,
+          2.287581699346405,
+          3.3769063180827885,
+          2.8322440087145972
+        ],
+        "R@5": [
+          8.49673202614379,
+          9.15032679738562,
+          6.318082788671025,
+          7.516339869281046,
+          8.278867102396514
+        ],
+        "R@10": [
+          12.52723311546841,
+          13.0718954248366,
+          10.675381263616558,
+          11.328976034858387,
+          14.270152505446623
+        ],
+        "MRR@10": [
+          5.952164816543901,
+          5.589964380814054,
+          4.444660580281495,
+          5.128341460040806,
+          5.5239564961787195
+        ]
+      }
+    },
+    {
+      "split": "internal_check",
+      "comparison": "conditional_minus_constant_descriptor",
+      "seed_deltas_R10_pp": [
+        1.0889292196007254,
+        -0.3024803387779791,
+        -0.12099213551119092,
+        -0.12099213551119448,
+        0.5444646098003609
+      ],
+      "mean_R10_delta_pp": 0.21778584392014438,
+      "sample_sd_R10_pp": 0.5843431647207862,
+      "t95_interval_pp": [
+        -0.5077720263101078,
+        0.9433437141503964
+      ],
+      "bonferroni_family95_interval_pp": [
+        -0.9097468588679127,
+        1.3453185467082014
+      ],
+      "mean_MRR10_delta_pp": 0.017169360182064074,
+      "all_seeds_R10_positive": false,
+      "predeclared_stronger_within_dataset_evidence": false,
+      "all_metric_paired_differences_pp": {
+        "R@1": [
+          0.30248033877797953,
+          -0.060496067755595906,
+          -0.18148820326678772,
+          0.12099213551119181,
+          -0.12099213551119181
+        ],
+        "R@5": [
+          -0.12099213551119092,
+          0.12099213551119092,
+          -0.12099213551119092,
+          0.1209921355111927,
+          0.24198427102238362
+        ],
+        "R@10": [
+          1.0889292196007254,
+          -0.3024803387779791,
+          -0.12099213551119092,
+          -0.12099213551119448,
+          0.5444646098003609
+        ],
+        "MRR@10": [
+          0.2582846003898638,
+          -0.01680446326544338,
+          -0.23266979709810975,
+          0.059943921105445774,
+          0.017092539778563953
+        ]
+      }
+    },
+    {
+      "split": "internal_check",
+      "comparison": "conditional_minus_token_off",
+      "seed_deltas_R10_pp": [
+        9.921355111917723,
+        10.647307924984876,
+        8.95341802782819,
+        11.191772534785237,
+        12.280701754385964
+      ],
+      "mean_R10_delta_pp": 10.598911070780398,
+      "sample_sd_R10_pp": 1.2598587526242537,
+      "t95_interval_pp": [
+        9.03458981482496,
+        12.163232326735836
+      ],
+      "bonferroni_family95_interval_pp": [
+        8.167921833221024,
+        13.029900308339771
+      ],
+      "mean_MRR10_delta_pp": 3.922281758034934,
+      "all_seeds_R10_positive": true,
+      "predeclared_stronger_within_dataset_evidence": true,
+      "all_metric_paired_differences_pp": {
+        "R@1": [
+          1.9358741681790683,
+          1.8148820326678765,
+          1.2704174228675136,
+          1.8148820326678765,
+          1.9358741681790685
+        ],
+        "R@5": [
+          5.868118572292801,
+          6.654567453115547,
+          5.686630369026014,
+          6.473079249848761,
+          7.138535995160314
+        ],
+        "R@10": [
+          9.921355111917723,
+          10.647307924984876,
+          8.95341802782819,
+          11.191772534785237,
+          12.280701754385964
+        ],
+        "MRR@10": [
+          3.7931274546519558,
+          4.017635083878278,
+          3.2533921009420106,
+          4.210310258404633,
+          4.336943892297793
+        ]
+      }
+    }
+  ],
+  "stronger_evidence_on_both_splits": {
+    "constant_descriptor": false,
+    "token_off": true
+  },
+  "interpretation": {
+    "constant_descriptor": "Tests regional conditioning beyond branch-constant trainable augmentation within this recipe. Not physical scattering identification.",
+    "token_off": "Tests token module aggregate effect with original reliability retained.",
+    "limits": "Five seed pairs on fixed previously used data; Student-t normality approximation, not distribution-free confirmation or new-data generalization. No inference of independent fine-branch effect."
+  },
+  "result_input_sha256": {
+    "results/seed_0/conditional/development.json": "1125990bb72e3953df6e27d2113fed52efeb4b9696ecbc6e50a675fbb8f9be47",
+    "results/seed_0/constant_descriptor/development.json": "625d22fb252db160bc3f4fde76bb2f84130dd343e04b7408d22b497b56c1693f",
+    "results/seed_0/token_off/development.json": "077c58851f2b9dc797f25d12799bdac98ce06f78359a45568c370f715a67d6cd",
+    "results/seed_1/conditional/development.json": "dd19bd599bc6444bebde89e259adb11fb3dcbacbc0f3fb727ca13e51e3be3b24",
+    "results/seed_1/constant_descriptor/development.json": "05bee20a798c1b9d7992c30294258a57dd5ce5d6b1f6b280461fcbf6e08eb3bb",
+    "results/seed_1/token_off/development.json": "e5e20daff291be3a1eb21dbb17ae420d29a973875ced8e332dce51ee068cd5af",
+    "results/seed_2/conditional/development.json": "4226bc015304b9d9bf8e7ac345c657aadc92bcbf4da5270e54dc20dcbce8bb9b",
+    "results/seed_2/constant_descriptor/development.json": "4489db8798c1689d0b67976ef13e2c61254ea30f2bf102d9f42a845bfff7c5fa",
+    "results/seed_2/token_off/development.json": "dc351ba20562e8ed98a385fcad38acd1be8bc81a8619b88928efaef2e93c522f",
+    "results/seed_3/conditional/development.json": "c712ce81682ca1ff171379fa2c96670d037f133f681190b70f72b52ed6ff651f",
+    "results/seed_3/constant_descriptor/development.json": "dcb992fe04f7dbb82635b0685ff8fe1dc9e6a319dfa941bac1410cb38844cc35",
+    "results/seed_3/token_off/development.json": "7a3b0bafb9a517655aa19a3d2c6bfa48e9d757a86694050b9e04ad98e92c7c32",
+    "results/seed_4/conditional/development.json": "7c4aae05f16a44a45ffa8265488acfaea3449577d2ae047073aadbd5c2aa3c81",
+    "results/seed_4/constant_descriptor/development.json": "64d91b9ef438fc6f6066bf39de77731b97c2f81fb59d7ac3ae4fa36cf6d7779d",
+    "results/seed_4/token_off/development.json": "65e6119efbf2c41c3a5355b429363f0e0609d3c46e528bc7a2694ad834fc03cc",
+    "results/seed_0/conditional/internal_check.json": "e509448b40c72dcc19b5264e07eac664639bc9156b567dc52c2be170b3781bed",
+    "results/seed_0/constant_descriptor/internal_check.json": "05b486ef57dee5f313cf17270b33511b52278a340882e4787822f498ad7145e4",
+    "results/seed_0/token_off/internal_check.json": "f952c0475315d65acd7adb301d644ff3a496b20e2579aadfc8ec81fbb9a3e455",
+    "results/seed_1/conditional/internal_check.json": "64cb62ea0a8ca724d22a7ccdebb5a5c1c9ed1814d51c85c06f6134c66268abfa",
+    "results/seed_1/constant_descriptor/internal_check.json": "63796a56ad8805dd30899fb66d8c413a8ac125a2cc56ac41041789142d95cec4",
+    "results/seed_1/token_off/internal_check.json": "e7e70123773909c856e5ef7888b19c004197446d731409807a60357400b29c89",
+    "results/seed_2/conditional/internal_check.json": "7796f0a5c0b30a8cc5ad3ffc3a70aa23dc2a0edce73cc728886c2ed748887a29",
+    "results/seed_2/constant_descriptor/internal_check.json": "01ce68439cd640221dda137c123c0c7d13b0f5eafa7b62c3ad053bdf96578734",
+    "results/seed_2/token_off/internal_check.json": "6774948c31022c1704ade2e03c71de0ae93fba597cd0151df845f44bbd2716fc",
+    "results/seed_3/conditional/internal_check.json": "73f8b281031cfff721a9b9e602d4e183dd155b5cffbbc29d7a1f7bda691e2f74",
+    "results/seed_3/constant_descriptor/internal_check.json": "5be6f31b1921b36e4137ea013f8acf0d8dc3519d468b39ab6f816ad8d9227a5c",
+    "results/seed_3/token_off/internal_check.json": "dca916c63d33bdf63da3cac94192d77c54d249f96f94b750be8bea28a8090a43",
+    "results/seed_4/conditional/internal_check.json": "53a4f90f2b6f33e8489fceb09ab91c8c0bf058c1a03e1ce62cfb99f399cf1db7",
+    "results/seed_4/constant_descriptor/internal_check.json": "b7104926d5f9b151177ccf6ea3d97a826101cc09d3195cf8526a7b0f251bb5ea",
+    "results/seed_4/token_off/internal_check.json": "17f11d703b09a677bbd009aed232c189a9219994a04a0b4413da3c75251061cf"
+  }
+}

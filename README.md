@@ -4,6 +4,32 @@ Research implementation accompanying *Physics-Aware Region Encoding for SAR
 Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
 historical compatibility; it implements the PARE architecture.
 
+## 9 November 2026: simplified matched study and mechanism archive
+
+The [PARE-S study](experiments/simplified_20261109/README.txt) includes all
+75 heads and 105 evaluations from five backbones, five paired training seeds,
+and three fixed variants. PARE-S has higher mean R@10 than prior full PARE-F on
+all five backbones (23/25 positive paired differences), but only SigLIP meets
+the prespecified simultaneous-interval evidence rule. Against its token-off
+control, all 25 paired differences are positive; four backbones meet the rule,
+with RemoteCLIP the exception. All values and uncertainty intervals are retained.
+The candidate followed earlier test results; this is reused-data evidence, not
+an independent blind test or proof that every component provides a gain.
+
+The [separate 15-head, 30-evaluation mechanism archive](experiments/token_mechanism_20261109/README.txt)
+retains conditional, constant-descriptor, and token-off results, including
+negative and inconclusive differences. It uses a different full-branch recipe
+and does not establish equivalence or a PARE-S-specific conditioning benefit.
+
+[All 75 measured PARE-S study heads](checkpoints/simplified_20261109/README.md)
+are included as metadata-path-only projections with verified identical parameter
+bytes. The [portable entry](experiments/simplified_20261109/portable/README.txt)
+uses the original trainer and fixed protocol. Scoring six original seed0 heads
+(ViT-B/32 and SigLIP, three variants each) reproduces complete score matrices
+and all ranks exactly; this is not a claim of portable end-to-end retraining.
+Execution archives preserve the initial tokenizer-cache failure and its
+unchanged-source recovery. Historical releases below remain intact.
+
 ## November 2026 revision
 
 The repaired protocol has now been run for CLIP ViT-B/32, CLIP ViT-B/16,

@@ -1,0 +1,93 @@
+{
+  "stage": "anchor",
+  "started_utc": "2026-11-09T15:15:00.238987+00:00",
+  "status": "failed",
+  "jobs": {
+    "vitb32": {
+      "pid": 1778565,
+      "gpu": 2,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "anchor",
+        "--tag",
+        "vitb32",
+        "--gpu",
+        "2"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "vitb16": {
+      "pid": 1778566,
+      "gpu": 0,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "anchor",
+        "--tag",
+        "vitb16",
+        "--gpu",
+        "0"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "remoteclip": {
+      "pid": 1778567,
+      "gpu": 3,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "anchor",
+        "--tag",
+        "remoteclip",
+        "--gpu",
+        "3"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    },
+    "siglip": {
+      "pid": 1778568,
+      "gpu": 4,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "anchor",
+        "--tag",
+        "siglip",
+        "--gpu",
+        "4"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 1
+    },
+    "georsclip": {
+      "pid": 1778569,
+      "gpu": 5,
+      "command": [
+        "<PRIVATE_PATH>",
+        "-u",
+        "<PRIVATE_PATH>",
+        "anchor",
+        "--tag",
+        "georsclip",
+        "--gpu",
+        "5"
+      ],
+      "log": "<PRIVATE_PATH>",
+      "exit_code": 0
+    }
+  },
+  "completed_utc": "2026-11-09T15:16:40.711660+00:00",
+  "failure": {
+    "type": "RuntimeError",
+    "message": "Stage failed; all logs preserved: anchor",
+    "time": "2026-11-09T15:16:40.713568+00:00"
+  }
+}

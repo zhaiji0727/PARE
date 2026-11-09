@@ -1,0 +1,179 @@
+{
+  "status": "preserved_final_execution_records",
+  "original_anchor_stage_status": "failed",
+  "note": "Original failed SigLIP tokenizer attempt was before training. Restoring the original offline cache changed no frozen numerical source. No failure was deleted. Process-ID locator files are omitted.",
+  "files": {
+    "validation/anchor_georsclip.json": {
+      "bytes": 3700,
+      "original_sha256": "7098690ba41aba5a8c5c7aa769d05332dad589fa6cc9f80247ce9e8bac48ee28"
+    },
+    "validation/anchor_remoteclip.json": {
+      "bytes": 3710,
+      "original_sha256": "3da1bb45e7ba2b0253a3137d7dc9fc83a514180698e1da8ff5d366014c872154"
+    },
+    "validation/anchor_siglip.json": {
+      "bytes": 3670,
+      "original_sha256": "d93b23d1b65a999b04aeb2f23daf5f4f9a376c9c621189a3d735ae153e0a80e5"
+    },
+    "validation/anchor_vitb16.json": {
+      "bytes": 3670,
+      "original_sha256": "6f92a899f3621feff69828c32cb7f33409abb3011c5c6c8d6c9b659d123faabf"
+    },
+    "validation/anchor_vitb32.json": {
+      "bytes": 3670,
+      "original_sha256": "8e7458b0655323c397bec09f7b2ba58a69371004becfa616736cef86c06789ef"
+    },
+    "validation/completed_verification.json": {
+      "bytes": 65490,
+      "original_sha256": "9d96943e1531fb3bd3b6a77fb1718e914b3f324b63094ce051852f550e6c9945"
+    },
+    "validation/stage_anchor.json": {
+      "bytes": 2915,
+      "original_sha256": "540c366d9d756eb0424cbd191ff16a17b7570799108492fc6275e7339e904ce4"
+    },
+    "validation/stage_audit.json": {
+      "bytes": 207,
+      "original_sha256": "eca6dee9b2b70126c4c1c8141a0cb3951fd1ab47d5337664900d84049cdae89a"
+    },
+    "validation/stage_evaluate.json": {
+      "bytes": 2785,
+      "original_sha256": "e98952feb38afb93ecfc45f48ff57d6618704792460a846b7af8e5242e845a17"
+    },
+    "validation/stage_train-all.json": {
+      "bytes": 2796,
+      "original_sha256": "f74a2b208bc93f129cc67d2afdb7569bfb1406686ab24258592fb9bc3e9cf755"
+    },
+    "validation/tokenizer_environment_recovery.json": {
+      "bytes": 2214,
+      "original_sha256": "ad6f58c8bc33568cdfaed5f078afd30a768ee790420056e3b0fa564a47fb0bfd"
+    },
+    "validation/training_complete_georsclip.json": {
+      "bytes": 245,
+      "original_sha256": "25e9a83c1340ed12b4cbeb65e7c3699e472274169c652cfc3b6234cc81118f5a"
+    },
+    "validation/training_complete_remoteclip.json": {
+      "bytes": 246,
+      "original_sha256": "f84039390c8f0939d8a769bbe9b16302ae228759bf67a133d133705f67931e02"
+    },
+    "validation/training_complete_siglip.json": {
+      "bytes": 242,
+      "original_sha256": "0f664d15d22761fe780497cbfb8b80660e46913d44384cd79c2190ccb51a2fc6"
+    },
+    "validation/training_complete_vitb16.json": {
+      "bytes": 242,
+      "original_sha256": "0a1db442f9eddd1bb09e183ad69806b0b3451b7c1adf27d390958e3c904d0db9"
+    },
+    "validation/training_complete_vitb32.json": {
+      "bytes": 242,
+      "original_sha256": "ab4403064c358d8ad3fe662eb58ce59f0c1d81a2aa5a5c15cc818a566d3e1cc7"
+    },
+    "logs/analysis_tests.log": {
+      "bytes": 410,
+      "original_sha256": "8c58fc2b160789b38fec05901e91ce9a6139065ce0aa036b290b662880a1cc7a"
+    },
+    "logs/anchor_georsclip.log": {
+      "bytes": 5710,
+      "original_sha256": "7f0c41e235d8097e200a455519314efd5744f1b5721560380cdd5a04fae7bb2b"
+    },
+    "logs/anchor_remoteclip.log": {
+      "bytes": 5719,
+      "original_sha256": "3cac7bd7bd0cbf89e15f8dd65e20e1ab854d3db6fa4cd9157c6b0cd6386dfa05"
+    },
+    "logs/anchor_siglip.log": {
+      "bytes": 4138,
+      "original_sha256": "3290ef5eb0cb6c09eee436c5ed4a32ca0173d163ff87ee0981aaa912a8bbe27e"
+    },
+    "logs/anchor_siglip_env_recovery.log": {
+      "bytes": 5699,
+      "original_sha256": "af7d56228b3de442025eb14cc16ff122b2ffbac9ec1ee0d3f91e105c35180ab8"
+    },
+    "logs/anchor_vitb16.log": {
+      "bytes": 5702,
+      "original_sha256": "9ec13df41da008444088345f31a24645677dc95cca91813e7537331dbe6be81d"
+    },
+    "logs/anchor_vitb32.log": {
+      "bytes": 5695,
+      "original_sha256": "1c709fe8a2fc90bdb06c7566c8b23f0c7bb761111630368abb6679ce3d122e8a"
+    },
+    "logs/audit.log": {
+      "bytes": 56,
+      "original_sha256": "2be2c05d0cb8646859d798cd350b9327ea78128ff04839ad1ea29cc4851f9d4b"
+    },
+    "logs/contract_after_locator_fix.log": {
+      "bytes": 362,
+      "original_sha256": "842bd2e566a3debdf88d81947d5be0e1c6b0bc70cde39d649dfa581343b2373b"
+    },
+    "logs/controller.log": {
+      "bytes": 564,
+      "original_sha256": "9fd5f03f92a9cd4aeed148a41a21c0f36031d3b160b14aa03839cb5ec238aa02"
+    },
+    "logs/controller_remaining.log": {
+      "bytes": 26,
+      "original_sha256": "6b8980c0da15c9b908a04fde916a5efda6052a52173b59c275bf77a5428172db"
+    },
+    "logs/cpu_tests.log": {
+      "bytes": 2762,
+      "original_sha256": "eacbe73acdf1f041954804f75afa8e2591df02f091795a46c271a39ee8d6cc2c"
+    },
+    "logs/evaluate_georsclip.log": {
+      "bytes": 1531,
+      "original_sha256": "6395294c45e96bddda57b79e9ae3a3450335fb42648fcb6c8f25ea42c574e421"
+    },
+    "logs/evaluate_remoteclip.log": {
+      "bytes": 1544,
+      "original_sha256": "251317ea327a26dda59d03f91876b3435d2802f4a16c64a912b4c0752f567004"
+    },
+    "logs/evaluate_siglip.log": {
+      "bytes": 1492,
+      "original_sha256": "a3dd0b0b64cc6ceae52f466402427bdf32ab138605769a414a4db5ac8bf001a0"
+    },
+    "logs/evaluate_vitb16.log": {
+      "bytes": 1492,
+      "original_sha256": "179745658a1bc61d301de65ac515d0f2969f17d804deda9af1df4515f11a9de8"
+    },
+    "logs/evaluate_vitb32.log": {
+      "bytes": 4362,
+      "original_sha256": "0992d88468870b679e8fec42b61bbe418f350c3563ab270fd38ae595d819dac1"
+    },
+    "logs/freeze.log": {
+      "bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/gpu_tests.log": {
+      "bytes": 1922,
+      "original_sha256": "223a0621f3e623f008a29c8f3b248de2a2acd2da95df529d62723aaaf834dc97"
+    },
+    "logs/preflight.log": {
+      "bytes": 551,
+      "original_sha256": "4e7f84226b123f001a407e29374b4e6475b225268863e752f6420069fdb5fba4"
+    },
+    "logs/preflight_attempt1_missing_historical_audit.log": {
+      "bytes": 1324,
+      "original_sha256": "4c591df05e07d8087fd298ea6b166d1d7949fcd401f3b90580a4f006a262a451"
+    },
+    "logs/train-all_georsclip.log": {
+      "bytes": 34270,
+      "original_sha256": "8363c16c6c7e2a5512f6c17aeb109bf607ee832616265e716197746ade0ad9cc"
+    },
+    "logs/train-all_remoteclip.log": {
+      "bytes": 34254,
+      "original_sha256": "91f63dfe6c3e5be256b635e57074d468d1f32e30e659c30921af948f33dc01bd"
+    },
+    "logs/train-all_siglip.log": {
+      "bytes": 34210,
+      "original_sha256": "ccbb51100f8b072a055163d2f582151bc0081b6ecc136a044530501de87353ca"
+    },
+    "logs/train-all_vitb16.log": {
+      "bytes": 34212,
+      "original_sha256": "82b02de5b50dc083fe759067782dea7b064605994e6130c2968089c7089b12b4"
+    },
+    "logs/train-all_vitb32.log": {
+      "bytes": 34210,
+      "original_sha256": "840a02d8aa33e01718770f5c2edb3a5d40f2b049d617205f03b90ec5da454427"
+    },
+    "failed_attempts/siglip_tokenizer_env_20261109/anchor_siglip.log": {
+      "bytes": 4138,
+      "original_sha256": "3290ef5eb0cb6c09eee436c5ed4a32ca0173d163ff87ee0981aaa912a8bbe27e"
+    }
+  }
+}

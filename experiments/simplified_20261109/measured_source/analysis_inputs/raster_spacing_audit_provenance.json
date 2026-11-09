@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-03T02:55:36.564504+00:00",
+  "reader_sha256": "4f6cf1b6fc08092cf99d5bb87772578d839f54529601b2833b95c31416be714c",
+  "audit_sha256": "dd4128376d1e816bc43f33bbd8af83f74024372ab0bad81efcb55bf3a564ac89",
+  "remote_host": "<PRIVATE_HOST>",
+  "image_root": "<PRIVATE_PATH>",
+  "split_root": "<PRIVATE_PATH>",
+  "operation": "Read existing primary image header and existing split IDs only; no source writes, pixel decoding, archive extraction or GPU use",
+  "parser_validation": "4 independent Pillow-written TIFF/PNG cases passed; projected metre values accepted, geographic/nonmetre/missing-tie/conflicting-matrix cases refused"
+}

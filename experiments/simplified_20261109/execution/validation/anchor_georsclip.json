@@ -1,0 +1,80 @@
+{
+  "status": "pass",
+  "backbone": "georsclip",
+  "protocol_sha256": "b010416246ce7d91390bc3c490eccf5bbfcc748e08f71292f4f6c93376f4bac8",
+  "freeze_sha256": "fb39609b2d5cdedff24ffcfe4db3c1f16a3d7b2159dc4c46195f942f8ab585f3",
+  "checks": {
+    "full": {
+      "same_parameter_keys": true,
+      "different_parameters": [],
+      "parameter_count": 15,
+      "max_absolute_parameter_difference": 0.0,
+      "epoch_losses_exact": true,
+      "scores_exact": true,
+      "max_absolute_score_difference": 0.0,
+      "ranks_exact": true,
+      "passed": true
+    },
+    "strict": {
+      "same_parameter_keys": true,
+      "different_parameters": [],
+      "parameter_count": 15,
+      "max_absolute_parameter_difference": 0.0,
+      "epoch_losses_exact": true,
+      "scores_exact": true,
+      "max_absolute_score_difference": 0.0,
+      "ranks_exact": true,
+      "passed": true
+    }
+  },
+  "new_artifacts_sha256": {
+    "full": {
+      "head.pt": "e8d37aa9eccf37f34b146450610306c81fbf77775e2318b44741ffacbfc1048c",
+      "test.json": "2d71affbf724e680736f11ce69124cedef6c4c6a7b3b849b97d44bdef7e391f5",
+      "test_scores.pt": "84f4a00e76ea0d52d58cd11a8ea34f0d8896dad53604506ab08511290b23cff9"
+    },
+    "strict": {
+      "head.pt": "d1b52b61929e5cdd36d684df2d7e88632ba4443a7a6da164327b22bfbf09472f",
+      "test.json": "2d0ed0ec743fb39b44a4679717c65fac3d1f716bc0cd2b2dd0a24fbd9653cd0e",
+      "test_scores.pt": "65543b66acc87ef9aa1467b35002444a54e22c0d0dc0bce6ceb27d94e79302f3"
+    }
+  },
+  "reference_files": {
+    "legacy_queries": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "0b251017e1b3769226de2e92a80cfb9455b5318e59bc0f4b4b5d006f121c2f43"
+    },
+    "legacy_text": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "20a8760687df4c51b519dd852951d581842cd32aa69abd0471214209dc1e6a02"
+    },
+    "legacy_scene": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "24eff926f84317227e4ac4602bce426db2f2d489e88f172cd8c0a5a4948d66a9"
+    },
+    "legacy_head_full": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "0c03426cac175d373369e83b346bb3e3d653f944d519eb54aab13048ddb37a88"
+    },
+    "legacy_scores_full": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "687e268fc179054f8b26bb4265056e634b573612221e76a4e287981e10411887"
+    },
+    "legacy_result_full": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "1129c43532d66627a4ea4b8b9dec05ee07cfc61b88386ae6ae3bd08d159122b1"
+    },
+    "legacy_head_strict": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "da1e9e07c4d168d22c172fbdbbdf21ed698e0f8d026aac2a0c340b7b0d00402f"
+    },
+    "legacy_scores_strict": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "cda996ed95934518f48bebfa646669dca86ad324c1328ea9f0a46f3870125876"
+    },
+    "legacy_result_strict": {
+      "path": "<PRIVATE_PATH>",
+      "sha256": "f41ad6466bf4ef5551844f92c5b346d2674b704cebc84a9560847f33c0817f2b"
+    }
+  }
+}

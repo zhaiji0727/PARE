@@ -1,0 +1,39 @@
+{
+  "n_training_images": 6610,
+  "arithmetic": "CPU float64 sum/count; cast once to float32",
+  "crop_weighting": "one equal weight per valid crop",
+  "branches": {
+    "coarse": {
+      "n_valid_crops": 36887,
+      "mean_float64": [
+        1.2288799991006432,
+        0.8283497248260314,
+        1.084825802082697,
+        0.002163603134406852
+      ],
+      "mean_float32": [
+        1.2288800477981567,
+        0.8283497095108032,
+        1.0848257541656494,
+        0.002163603203371167
+      ]
+    },
+    "fine": {
+      "n_valid_crops": 52333,
+      "mean_float64": [
+        1.3805588498719275,
+        0.8993748290651817,
+        1.2934427808321651,
+        0.021201698955097492
+      ],
+      "mean_float32": [
+        1.3805588483810425,
+        0.8993748426437378,
+        1.293442726135254,
+        0.02120169810950756
+      ]
+    }
+  },
+  "training_ids_sha256": "67b7d5c2bc8b0282bfa857b823d8ca597f1e3a3b90502f2b929ce93ec46b1797",
+  "training_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83"
+}

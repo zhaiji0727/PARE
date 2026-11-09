@@ -1,0 +1,23 @@
+{
+  "original": "followup_ablation_20261103/scripts/run_factorial_fitval.py",
+  "source_sha256": "bb9a3e1d6a7c19c541ef79366b28427a7feae2062a9f3d3d9ff893fed21d78e4",
+  "copied_functions": {
+    "object_sha": {
+      "start": 35,
+      "end": 36,
+      "sha256": "48339135bc7c5c63ae3c65761f314a69a2889464bc604bf7343dd560eb230840"
+    },
+    "train_one": {
+      "start": 81,
+      "end": 121,
+      "sha256": "f3c1da091a6ab17bb44ad1364fd30725f9208a752dc4e9cb54b20dd9e8711d76"
+    },
+    "validate_one": {
+      "start": 124,
+      "end": 153,
+      "sha256": "4d02fa516bf08ddb2b88be07c2e3768d057857711aad9265689296b17b27df63"
+    }
+  },
+  "copy_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+  "scientific_changes": "None. Exact function text; settings supply the new fixed train count/batch count."
+}

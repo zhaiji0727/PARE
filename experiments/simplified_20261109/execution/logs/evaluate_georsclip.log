@@ -1,0 +1,15 @@
+<PRIVATE_PATH> FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"evaluation_complete": "georsclip", "seed": 0, "variant": "strict_token_off", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 1, "variant": "full", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 1, "variant": "strict", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 1, "variant": "strict_token_off", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 2, "variant": "full", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 2, "variant": "strict", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 2, "variant": "strict_token_off", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 3, "variant": "full", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 3, "variant": "strict", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 3, "variant": "strict_token_off", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 4, "variant": "full", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 4, "variant": "strict", "condition": "test"}
+{"evaluation_complete": "georsclip", "seed": 4, "variant": "strict_token_off", "condition": "test"}

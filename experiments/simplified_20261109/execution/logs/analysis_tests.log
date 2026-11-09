@@ -1,0 +1,11 @@
+test_bad_ranks (test_analyze.Checks) ... ok
+test_complete_fixed_matrix (test_analyze.Checks) ... ok
+test_family_interval_wider (test_analyze.Checks) ... ok
+test_fixed_pairs_required (test_analyze.Checks) ... ok
+test_rank_math (test_analyze.Checks) ... ok
+test_stable_and_mixed_cases (test_analyze.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+OK

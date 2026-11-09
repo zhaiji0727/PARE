@@ -1,0 +1,10 @@
+15次匹配训练：区域条件token机制诊断
+完整核验30个排名向量，全部种子与预定比较保留。
+
+development | conditional_minus_constant_descriptor: R@10差值 -0.3050 ± 0.2362 百分点；多重比较校正区间 [-0.7607,+0.1507]；预定证据条件 False
+development | conditional_minus_token_off: R@10差值 +12.3747 ± 1.4216 百分点；多重比较校正区间 [+9.6317,+15.1177]；预定证据条件 True
+internal_check | conditional_minus_constant_descriptor: R@10差值 +0.2178 ± 0.5843 百分点；多重比较校正区间 [-0.9097,+1.3453]；预定证据条件 False
+internal_check | conditional_minus_token_off: R@10差值 +10.5989 ± 1.2599 百分点；多重比较校正区间 [+8.1679,+13.0299]；预定证据条件 True
+
+未通过预定条件表示证据不足，并不等于证明没有效应。
+两套数据均曾使用；结果是探索性匹配训练证据，不是独立新数据验证，也不证明真实散射类别或细粒度分支独立有益。

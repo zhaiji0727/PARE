@@ -1,0 +1,164 @@
+{
+  "schema": "pare.token-mechanism-study.v1",
+  "date": "2026-11-09",
+  "status": "protocol_before_new_training_source_freeze_to_follow",
+  "purpose": "Test whether regional radiometric conditioning adds value beyond the same trainable head supplied constant per-branch training descriptors, and beyond removing token augmentation.",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "conditional",
+    "constant_descriptor",
+    "token_off"
+  ],
+  "expected_heads": 15,
+  "backbone": {
+    "model": "ViT-B-32",
+    "pretrained": "laion2b_s34b_b79k",
+    "embedding_dimension": 512,
+    "frozen": true,
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad"
+  },
+  "constant_descriptor": {
+    "estimate_split": "train6610 only",
+    "unit": "each valid crop equal weight, per coarse/fine branch separately",
+    "statistic": "four-dimensional arithmetic mean accumulated in float64 then cast to float32",
+    "intervention": "replace ONLY h_psi input; keep same network, prototypes, token scaling, original reliability inputs, gate, crop extraction and training",
+    "used_at": "all training and evaluation calls; no evaluation-dependent statistics",
+    "new_trainable_parameters": 0
+  },
+  "initialization": "All variants share exactly the same base initialization and minibatch ordering within each seed. Any constant buffers are fixed, initialized without RNG, and excluded when comparing active-parameter state hashes.",
+  "training": {
+    "lr": 0.002,
+    "kappa": 0.03,
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "amp": false,
+    "n_train_images": 6610,
+    "n_train_pairs": 23016,
+    "batches_per_epoch": 360,
+    "tail_batch_pairs": 40,
+    "early_stopping": false,
+    "new_hyperparameter_search": false,
+    "warm_start": false,
+    "loss": "original one-direction diagonal caption-to-image cross entropy; duplicate-image behavior unchanged",
+    "pair_order": "frozen load_captions ordering: images in first-appearance order, then captions per image in original order, filtered to train IDs (not raw interleaved CSV row order)",
+    "shuffle": "independent Python random.Random(seed) stream per run; in-place epoch shuffle of same starting pair order",
+    "paired_initial_base_parameters": true
+  },
+  "splits": {
+    "train_images": 6610,
+    "train_pairs": 23016,
+    "development_images": 918,
+    "internal_check_images": 1653,
+    "evaluation_query": "one original first caption per image; full within-split gallery",
+    "status": "Both evaluation sets have been used historically and informed this question. This is exploratory mechanistic retraining, not unseen test validation."
+  },
+  "input_bindings": {
+    "training_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "training_cache_basename": "cache_physics_train.pt",
+    "cache_image_count": 9181,
+    "clean_training_captions_sha256": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "original_split_file_sha256": {
+      "fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+      "val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+      "train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557"
+    },
+    "repair_split_file_sha256": {
+      "development_ids.json": "6fa6e97171a42527c31f0e50ea32f75a26462ab66ed872506dc97cffe22bf7f9",
+      "internal_check_ids.json": "153432797cad768345738b5aaeef65bc6a93bffd909b25bf451c9b39f1b328be",
+      "train_ids.json": "f67eff7ee49a4ae998d5ce36e5e8977add3ed4b23aea50b570fbbad7d7d6c044"
+    },
+    "repair_split_directory": "plans/splits",
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "reference_source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "train_saqre.py": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "sweep_hparams.py": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350"
+    },
+    "forbidden_inputs": [
+      "official test cache",
+      "official test captions",
+      "old fitted head as performance substitute or warm start"
+    ]
+  },
+  "prior_protocol_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+  "primary_metric": "R@10 in percentage points",
+  "secondary_metrics": [
+    "R@1",
+    "R@5",
+    "MRR@10"
+  ],
+  "primary_contrasts": [
+    {
+      "name": "conditional_minus_constant_descriptor_development",
+      "left": "conditional",
+      "right": "constant_descriptor",
+      "split": "development"
+    },
+    {
+      "name": "conditional_minus_constant_descriptor_internal_check",
+      "left": "conditional",
+      "right": "constant_descriptor",
+      "split": "internal_check"
+    },
+    {
+      "name": "conditional_minus_token_off_development",
+      "left": "conditional",
+      "right": "token_off",
+      "split": "development"
+    },
+    {
+      "name": "conditional_minus_token_off_internal_check",
+      "left": "conditional",
+      "right": "token_off",
+      "split": "internal_check"
+    }
+  ],
+  "inference": {
+    "unit": "matched training seed, n=5; fixed datasets",
+    "report": [
+      "all five per-seed metric differences",
+      "paired mean difference",
+      "sample SD ddof1",
+      "two-sided95percent Student-t CI df4",
+      "family-wise95percent Bonferroni intervals over4primary contrasts: each98.75percent Student-t CI df4"
+    ],
+    "limitations": "Small-sample normality approximation; not image-sampling or external generalization inference. Shared splits/contrasts are not independent replications. No p-value-driven model selection. Seeds0-2 conditional heads have previous anchor histories. These post hoc intervals are not preregistered confirmatory or distribution-free proof; n5 cannot validate normality.",
+    "evidence_flag": {
+      "mean_R10_delta_at_least_pp": 0.5,
+      "all5_R10_deltas_strictly_positive": true,
+      "familywise_interval_lower_above_zero": true,
+      "mean_MRR10_delta_nonnegative": true
+    },
+    "claim_requires": "A named control comparison passes on BOTH evaluation sets. Failure means insufficient evidence under this rule, not proof of zero effect."
+  },
+  "execution_rules": [
+    "No configuration selection, hyperparameter sweep, early stopping, additional seeds or retrial based on metric sign.",
+    "Freeze all new source and exact input/source hashes after independent code review and meaningful tests but before first new training.",
+    "First run seed0 conditional as a compatibility anchor and require old corresponding head parameters and ranks to match; investigate implementation differences before other training.",
+    "Once anchored, complete all15heads and both evaluations, retain all results including negative values.",
+    "Do not load official test images, caches or captions.",
+    "No manuscript or public code changes in this diagnostic.",
+    "Do not infer independent fine-branch value: no A0 comparison in this study.",
+    "Further formal multi-backbone assessment is a separate decision, not automatically triggered by a favorable metric."
+  ],
+  "fixed_model": {
+    "A": 1,
+    "B": 0,
+    "C": 1,
+    "fine_crop_pixels": 24,
+    "fusion": "original",
+    "reliability": "original",
+    "token_mode": "original"
+  }
+}

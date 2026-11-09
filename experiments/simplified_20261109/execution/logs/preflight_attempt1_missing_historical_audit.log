@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<PRIVATE_PATH>", line 521, in <module>
+    if __name__=='__main__':main()
+  File "<PRIVATE_PATH>", line 485, in main
+    if args.command=='preflight':preflight(args,plan,torch);return
+  File "<PRIVATE_PATH>", line 173, in preflight
+    'common':{k:{'path':str(v.resolve()),'sha256':sha(v)} for k,v in common.items()},'backbones':{}}
+  File "<PRIVATE_PATH>", line 173, in <dictcomp>
+    'common':{k:{'path':str(v.resolve()),'sha256':sha(v)} for k,v in common.items()},'backbones':{}}
+  File "<PRIVATE_PATH>", line 17, in sha
+    with Path(path).open('rb') as stream:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '<PRIVATE_PATH>'

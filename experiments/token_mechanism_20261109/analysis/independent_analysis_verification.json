@@ -1,0 +1,102 @@
+{
+  "status": "independent_analysis_verified",
+  "comparisons": [
+    {
+      "split": "development",
+      "comparison": "conditional_minus_constant_descriptor",
+      "delta_R10": [
+        -0.10893246187363559,
+        -0.435729847494553,
+        -0.21786492374727473,
+        -0.6535947712418313,
+        -0.10893246187363914
+      ],
+      "mean_R10": -0.30501089324618674,
+      "sd_R10": 0.2361599497677439,
+      "t95_interval": [
+        -0.5982422006904038,
+        -0.011779585801969694
+      ],
+      "bonferroni_family95_interval": [
+        -0.7606987193870985,
+        0.15067693289472506
+      ],
+      "MRR_mean": 0.12551440329218372,
+      "evidence_flag": false
+    },
+    {
+      "split": "development",
+      "comparison": "conditional_minus_token_off",
+      "delta_R10": [
+        12.52723311546841,
+        13.0718954248366,
+        10.675381263616558,
+        11.328976034858387,
+        14.270152505446623
+      ],
+      "mean_R10": 12.374727668845315,
+      "sd_R10": 1.4215581932688295,
+      "t95_interval": [
+        10.60963003891182,
+        14.13982529877881
+      ],
+      "bonferroni_family95_interval": [
+        9.63172758157161,
+        15.11772775611902
+      ],
+      "MRR_mean": 5.327817546771799,
+      "evidence_flag": true
+    },
+    {
+      "split": "internal_check",
+      "comparison": "conditional_minus_constant_descriptor",
+      "delta_R10": [
+        1.0889292196007254,
+        -0.3024803387779791,
+        -0.12099213551119092,
+        -0.12099213551119448,
+        0.5444646098003609
+      ],
+      "mean_R10": 0.21778584392014438,
+      "sd_R10": 0.5843431647207862,
+      "t95_interval": [
+        -0.507772026310108,
+        0.9433437141503966
+      ],
+      "bonferroni_family95_interval": [
+        -0.9097468588679116,
+        1.3453185467082003
+      ],
+      "MRR_mean": 0.017169360182064254,
+      "evidence_flag": false
+    },
+    {
+      "split": "internal_check",
+      "comparison": "conditional_minus_token_off",
+      "delta_R10": [
+        9.921355111917723,
+        10.647307924984876,
+        8.95341802782819,
+        11.191772534785237,
+        12.280701754385964
+      ],
+      "mean_R10": 10.598911070780398,
+      "sd_R10": 1.2598587526242537,
+      "t95_interval": [
+        9.03458981482496,
+        12.163232326735836
+      ],
+      "bonferroni_family95_interval": [
+        8.167921833221028,
+        13.029900308339768
+      ],
+      "MRR_mean": 3.9222817580349365,
+      "evidence_flag": true
+    }
+  ],
+  "verification_sha256": "90a25e9a06f738c26ed8f8d34c5d72367c433eefe68cb75e7754c75def99b914",
+  "analysis_sha256": "6cb6d455b3763047b8f3b175fc8d56e7621780b39a23c80a912f229af762851a",
+  "audit_source_sha256": "3f9e5007fd389087cd5b99e2cdb7bcfdc14390f51a85c356fec627f4e6873404",
+  "selection_performed": false,
+  "interpretation": "Training-seed uncertainty conditional on the fixed previously used data; normality approximation; no fine-branch or new-data generalization inference."
+}

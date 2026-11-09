@@ -1,0 +1,13 @@
+<PRIVATE_PATH> FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 9.084370851516724, "elapsed_seconds": 0.016238067008089274}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 6.329049587249756, "elapsed_seconds": 0.03275661001680419}}
+{"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 8.537943124771118, "elapsed_seconds": 0.011892366979736835}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 4.836735844612122, "elapsed_seconds": 0.023402653983794153}}
+{"epoch_progress": {"epoch": 1, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "2032584a1d7f1583f090b612c2753868a4bd5b50c430dc7d93f189a9268905b0", "mean_batch_loss": 8.536749601364136, "elapsed_seconds": 0.009500134037807584}}
+{"epoch_progress": {"epoch": 2, "batches": 2, "pairs": 5, "tail_batch_pairs": 2, "pair_order_sha256": "af2396c60da5aa214e0079fb1740d30b376fd1b7d2462db5616e92aa02a99246", "mean_batch_loss": 4.836997866630554, "elapsed_seconds": 0.018859936040826142}}
+......
+----------------------------------------------------------------------
+Ran 6 tests in 1.062s
+
+OK

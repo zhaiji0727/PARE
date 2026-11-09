@@ -1,0 +1,59 @@
+{
+  "schema": "pare.token-mechanism-run.v1",
+  "identity": {
+    "seed": 3,
+    "variant": "conditional",
+    "protocol_sha256": "112ce7fc49a3f9a27e3c905c1dfdcbbd7d620a7f88b11af823ea7512c5998fe0",
+    "freeze_sha256": "81c6c8e7b8da0d0aeb3fcab684c2a9c18cb9921fd4e47bfdc2d276bd23560540",
+    "means_sha256": "5773374cdcfbf022d6bf482e9f7006c6a1cee10dd2b58d7fd27f22b14f8585a1"
+  },
+  "training_status": "complete",
+  "started_utc": "2026-11-09T14:52:31.957774+00:00",
+  "evaluations": {
+    "development": {
+      "metrics_percent": {
+        "R@1": 4.684095860566448,
+        "R@5": 14.270152505446623,
+        "R@10": 24.29193899782135,
+        "MRR@10": 9.123136909084632
+      },
+      "artifacts_sha256": {
+        "development.json": "c712ce81682ca1ff171379fa2c96670d037f133f681190b70f72b52ed6ff651f",
+        "development_scores.pt": "1908df7a81c62b2b3e7b8e107b240b98ded96a6cd9852850318e6afef84652e9"
+      }
+    },
+    "internal_check": {
+      "metrics_percent": {
+        "R@1": 2.601330913490623,
+        "R@5": 10.344827586206897,
+        "R@10": 17.90683605565638,
+        "MRR@10": 6.214434553817494
+      },
+      "artifacts_sha256": {
+        "internal_check.json": "73f8b281031cfff721a9b9e602d4e183dd155b5cffbbc29d7a1f7bda691e2f74",
+        "internal_check_scores.pt": "6df919c529f5daaad9af50be4b3b77569fba1242ad0bdd83992ef63f4dc50573"
+      }
+    }
+  },
+  "completed_utc": "2026-11-09T14:53:02.087814+00:00",
+  "base_initial_state_sha256": "34e690375f14c172c975cc8fde13411895030f34c1693d68460446b2fd2036c2",
+  "legacy_initial_parameter_sha256": "9c7ae86f2da1f4e39a46bd450ecaff9c83914982adcdfdb26a51804aeda93994",
+  "final_parameter_sha256": "5e9b3713f1e32cedf179e47fb1e3d2f472aee09c0f0f5b64a9c7cdbbc1687de2",
+  "text_embeddings_sha256": "3825c66a5df9c295e64146a34a03e85b601093d4ecf0aa23f72fd73192cc7eb2",
+  "expected_pair_order_sha256": [
+    "fd2c6566b246c0447b6b4fa329aac0ef9689f33bf35da3dde3ce4843380b1eda",
+    "437efe4a9bede642ecd857dd2c01e9deb37bccc3f3a1a890e7d3ed338f027263",
+    "7e84f270aa6dc381c43330e07c2e49d52ba116bfccac8bbc43e26e5fe6d71a34",
+    "05d6197fbac76486f183dd895fec0fdf7bfe7ee0ea05d93b00e5805cc2482dec",
+    "e4eb9a317de3e1262e9bcadd8fcad6700b0dd0c14bffbf62ba34a5f0d60136c0",
+    "8438e1e1f4f1ecfd67a2b98be6b36c2c08d759c155b00b421e4bf94fa7f939eb",
+    "6baff956f12b424952c7a52301574988a1b283586b5cb9721476dfeb8c3b52e4",
+    "4dc3d7f59cf4ae6a3bbd12a0b17e863480b821791ad13191f0261a5cc5e35d9f",
+    "f3b00d5a06f3abd28713b26c06d58235b0f8eefcb983ea286db81eb61cef8e69",
+    "0809778efacefc3f90157bd0c07894891905ad37b5060ce360c50f8de894b1c3"
+  ],
+  "training_artifacts_sha256": {
+    "head.pt": "c4d35bf9d47acb17f58612b9d72ba55d3f696a19697a8a6a81e7a7aa46070c49",
+    "training_progress.json": "8b82b9253b2eb52c4f6d175b61e8702a36a24064412e4ee5d82cdfcad0e08971"
+  }
+}
