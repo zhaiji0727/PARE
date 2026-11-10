@@ -1,0 +1,55 @@
+{
+  "backbone": "georsclip",
+  "all_3688_original_embeddings_equal": false,
+  "minimum_original_cosine_float64": 0.9999999999992991,
+  "mean_original_abs_error": 7.975439197949186e-10,
+  "first_caption_rank_checks": {
+    "scene": {
+      "n_checked": 3688,
+      "rank_disagreements": 0,
+      "R10_hit_disagreements": 0
+    },
+    "full_seed0": {
+      "n_checked": 3688,
+      "rank_disagreements": 0,
+      "R10_hit_disagreements": 0
+    },
+    "strict_seed0": {
+      "n_checked": 3688,
+      "rank_disagreements": 0,
+      "R10_hit_disagreements": 0
+    },
+    "strict_token_off_seed0": {
+      "n_checked": 3688,
+      "rank_disagreements": 0,
+      "R10_hit_disagreements": 0
+    }
+  },
+  "tolerance_note": "Same validated files and backbone. Floating-point check uses max abs <1e-5 and float64 cosine >1-1e-10; seed0 all3 model variants plus Scene are scored independently with freshly encoded first captions.",
+  "max_original_embedding_error": 2.980232238769531e-07,
+  "all_2502_extra_embeddings_equal": true,
+  "max_extra_embedding_error": 0.0,
+  "source_file_sha256": {
+    "train_captions": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "test_captions": "7a1878610e0a5089380b2fb7fd825d43edf8682cba513a76ca36661d3094724d",
+    "train_ids": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+    "test_ids": "7e215eb34d9760a3bb723601287832d8aacfc8e05064c372e6d8fad3f2394b98",
+    "train_cache": "bbd71131c0446a2f60ad384d3a1d6c678b24a925511ceebebba46411096876b0",
+    "test_cache": "f97b43d83462b7a3ac19e69fa36f7ae641f98ee9869de2b31fec7fe78fd12a51",
+    "pretrained_weight": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+    "external_checkpoint": "129bafaa6a097b8be52e2babf27d24f0a934dae919201e538dc698611bd1ea01"
+  },
+  "script_sha256": "4d185c01d39656e9f1f5a3ea4f6ba2536022a768de6f858eba4440de8acbf6ce",
+  "eval_preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_to_rgb at 0x13b0b053d6c0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "packages": {
+    "torch": "2.9.1+cu128",
+    "open_clip_torch": "2.26.1",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0",
+    "scipy": "1.13.1",
+    "transformers": "4.45.2"
+  },
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "cuda": "12.8",
+  "tf32": false
+}

@@ -1,0 +1,37 @@
+{
+  "study": "20261111 post-hoc constant-input token control",
+  "backbone": "siglip",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "settings": {
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "n_train_images": 9181,
+    "n_train_pairs": 31945,
+    "batches_per_epoch": 500,
+    "tail_batch_pairs": 9,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "lr": 0.002,
+    "kappa": 0.07
+  },
+  "intervention": "Every valid coarse region uses the same train-only mean descriptor; coordinate 4 is zero. Existing h_psi, U, type_scale, reliability, scene/coarse gate, regions and all parameter shapes remain unchanged. Fine branch excluded exactly as in PARE-S.",
+  "constant_descriptor": [
+    1.2296251058578491,
+    0.8284691572189331,
+    1.0851738452911377,
+    0.0
+  ],
+  "n_valid_train_regions": 51290,
+  "train_cache_sha256": "c1a0f8cc5abbf43cc7a2cdce40393b989f117e9f6d7337a6a94a4041070be9c7",
+  "test_cache_sha256": "d44148254ca3d4271a346ff609d5bfec832d2ec07c3f53efdac8b42d81c3e964",
+  "script_sha256": "b4851bff06d98822ebd836491f29997b2f5171c43970649d88f1ce52fc1ef1b9",
+  "original_protocol_sha256": "b010416246ce7d91390bc3c490eccf5bbfcc748e08f71292f4f6c93376f4bac8",
+  "selection": "No search, seed selection, epoch selection or outcome-triggered extension; evaluate all 25 heads. Exploratory reused benchmark; not a new unseen test."
+}

@@ -4,6 +4,32 @@ Research implementation accompanying *Physics-Aware Region Encoding for SAR
 Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
 historical compatibility; it implements the PARE architecture.
 
+## 11 November 2026: full-caption evaluation and matched token controls
+
+The [review addendum](experiments/review_20261111/README_new_diagnostics.md)
+contains all 25 new constant-descriptor heads, 25 frozen-head posterior probes,
+and full-gallery evaluation of every original model on all 6,190 caption rows.
+The [result summary](experiments/review_20261111/new_diagnostics_summary.json)
+retains per-seed values, uncertainty and explicit numerical-validation status;
+[full ranks and source artifacts](experiments/review_20261111/)
+are bound by a [file manifest](experiments/review_20261111/COMPLETE_RESULTS_MANIFEST.json).
+
+PARE-S retains higher mean full-caption R@10 than PARE-F on all five backbones.
+The matched constant-descriptor controls do not establish a stable extra gain
+from region-varying descriptors on any backbone: all five ordinary and
+family-adjusted paired intervals include zero. This narrows attribution of the
+learned-token benefit; it does not establish equivalence or absence of an effect.
+All new comparisons are exploratory on the previously inspected benchmark.
+
+The addendum preserves failed verification attempts, the final
+[numerical input checks](experiments/review_20261111/input_verification/),
+[separately written audits](experiments/review_20261111/independent_audit/),
+and [exact-text overlap diagnostics](experiments/review_20261111/caption_overlap.json).
+Use the [dedicated constant-descriptor loader](experiments/review_20261111/constant_descriptor_head.py)
+for the new heads; loading their weights into an unmodified SAQREHead omits the
+required constant-input intervention. The measured scripts and original
+November 9 code and artifacts remain unchanged.
+
 ## 11 November 2026: documentation corrections and historical record
 
 The [historical supplement and reading corrections](docs/review_20261111/README.md)

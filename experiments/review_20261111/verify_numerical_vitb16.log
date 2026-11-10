@@ -1,0 +1,6 @@
+/home/coder/my_workspace/rs_paper/pare_workspace/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+vitb16 first_max_abs_error 5.364418029785156e-07 first_min_cos_float64 0.999999999998616
+vitb16 extra_error 0.0
+vitb16 {'scene': {'n_checked': 3688, 'rank_disagreements': 0, 'R10_hit_disagreements': 0}, 'full_seed0': {'n_checked': 3688, 'rank_disagreements': 0, 'R10_hit_disagreements': 0}, 'strict_seed0': {'n_checked': 3688, 'rank_disagreements': 0, 'R10_hit_disagreements': 0}, 'strict_token_off_seed0': {'n_checked': 3688, 'rank_disagreements': 0, 'R10_hit_disagreements': 0}}
+vitb16 input verification complete; first-caption equivalence is numerical, not bitwise

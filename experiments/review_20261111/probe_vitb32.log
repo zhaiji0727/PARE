@@ -1,0 +1,7 @@
+/home/coder/my_workspace/rs_paper/pare_workspace/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+vitb32 0 -0.27114967462039097
+vitb32 1 0.0
+vitb32 2 -0.2440347071583524
+vitb32 3 0.0
+vitb32 4 -0.40672451193058734

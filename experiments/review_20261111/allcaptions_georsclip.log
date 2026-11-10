@@ -1,0 +1,17 @@
+/home/coder/my_workspace/rs_paper/pare_workspace/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+georsclip full 0 10.597738287560581
+georsclip strict 0 11.890145395799676
+georsclip strict_token_off 0 2.5848142164781907
+georsclip full 1 5.024232633279483
+georsclip strict 1 7.172859450726979
+georsclip strict_token_off 1 2.617124394184168
+georsclip full 2 10.840064620355411
+georsclip strict 2 7.092084006462035
+georsclip strict_token_off 2 2.5848142164781907
+georsclip full 3 10.48465266558966
+georsclip strict 3 11.873990306946688
+georsclip strict_token_off 3 2.5848142164781907
+georsclip full 4 10.72697899838449
+georsclip strict 4 11.324717285945072
+georsclip strict_token_off 4 2.600969305331179

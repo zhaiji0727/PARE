@@ -1,0 +1,6 @@
+/home/coder/my_workspace/rs_paper/pare_workspace/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "/home/coder/my_workspace/rs_paper/pare_workspace/report_revision_diagnostics_20261111/verify_text_inputs.py", line 33, in <module>
+    old=torch.load(S/f'shared/{tag}/text_embeddings.pt',map_location='cpu',weights_only=True)['test'];new=encode(first);err=float((old-new).abs().max());assert torch.equal(old,new),'First captions differ from original vectors'
+AssertionError: First captions differ from original vectors

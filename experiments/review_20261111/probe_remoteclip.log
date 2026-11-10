@@ -1,0 +1,7 @@
+/home/coder/my_workspace/rs_paper/pare_workspace/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+remoteclip 0 -0.3253796095444681
+remoteclip 1 0.13557483731019593
+remoteclip 2 -0.02711496746204034
+remoteclip 3 -0.46095444685466447
+remoteclip 4 0.21691973969631206
