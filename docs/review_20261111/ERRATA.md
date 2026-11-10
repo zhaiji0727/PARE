@@ -17,6 +17,38 @@ new experiment results or the current submission's short supplement.
 | S9, conditional-token diagnostic | Compares conditional and constant descriptors with another full-branch recipe. It does not isolate descriptor conditioning in the final PARE-S configuration. Its negative and inconclusive differences remain part of the evidence. |
 | S10, matched simplified study | 75 executed trainings include ten F/S seed-0 reproductions of outcomes known before choosing PARE-S. They are not 75 wholly new independent observations. Shared seeds across backbones and reused test data limit interpretation of the intervals. |
 
+## Historical method labels
+
+These definitions follow `code/eval_retrieval_baselines.py`,
+`code/primitive_controls.py` and the explicit variant map in
+`tools/evaluation/evaluate_multik.py`.
+
+- **Scene-CLIP / Scene:** dot product of the unit-normalized text vector with
+  the unit-normalized whole-image embedding; no trained retrieval head.
+- **Mean-pool:** unit-normalize each valid scene/coarse/fine embedding, average
+  the scene plus all valid coarse and fine embeddings with equal weight per
+  primitive, normalize that average, then take its dot product with the unit
+  query vector. Padded embeddings are excluded. This is query-agnostic pooling.
+- **MaxSim:** maximum query cosine similarity across the whole image and every
+  valid coarse and fine embedding. This is a single-vector query maximum, not a
+  sum over text-token similarities. Padded primitives are excluded.
+- **Stats-off:** retrained full-geometry PARE with `sr,ty` disabled. Reliability
+  is set to one and token augmentation is bypassed; the CV/CFAR-derived crops,
+  scene/coarse/fine fusion and trainable gate remain. It is different from the
+  simplified model's token-only ablation, which retains reliability.
+- **Uniform grid:** replace intensity-derived proposals with a 2-row by 3-column
+  coarse partition (six tiles) and a 2-row by 4-column fine partition (eight
+  tiles), retaining the scene. The control requires both `sr` and `ty` disabled;
+  its placeholder statistics are unused. It is compared with Stats-off to
+  examine proposal geometry under the same disabled reliability/token settings.
+  It does not isolate proposal geometry with token augmentation active.
+
+These historical Mean-pool/MaxSim rows belong to the candidate-pool diagnostics.
+The current revision does not supply a separate full-gallery Mean-pool/MaxSim
+experiment or claim that their candidate-pool values are full-gallery scores.
+The evaluator's ability to produce such scores is not evidence that a reported
+run was performed.
+
 ## Development work not fully represented in that PDF
 
 The 3 November repair exploration considered gate inputs, several reliability

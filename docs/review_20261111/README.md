@@ -5,6 +5,8 @@ unchanged 24-page supplement prepared before the 11 November review. Its
 [provenance](HISTORICAL_PDF_PROVENANCE.json) identifies its exact bytes. It is an
 extended historical record, not the short supplement for the current submission.
 
+See [section corrections and precise historical method definitions](ERRATA.md).
+
 ## Reading the historical record
 
 - PARE-F denotes the full configuration. Historical `PARE` or `full` rows refer
