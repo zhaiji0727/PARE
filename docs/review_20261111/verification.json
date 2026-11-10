@@ -1,0 +1,12 @@
+{
+  "saqre_phys.py": {
+    "before_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+    "after_sha256": "3e9f368f91d397155797617c077de87504c1a585f08d6e279522393124a07c78",
+    "AST_equal_after_docstring_removal": true
+  },
+  "bench_efficiency.py": {
+    "before_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+    "after_sha256": "1decbd244e159fd96b4109bffcc643725e71d9c335e7d1dd2a52a997e56bdbe0",
+    "AST_equal_after_docstring_removal": true
+  }
+}

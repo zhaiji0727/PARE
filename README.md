@@ -4,6 +4,29 @@ Research implementation accompanying *Physics-Aware Region Encoding for SAR
 Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
 historical compatibility; it implements the PARE architecture.
 
+## 11 November 2026: documentation corrections and historical record
+
+The [historical supplement and reading corrections](docs/review_20261111/README.md)
+separate the unchanged pre-review PDF from the current short submission supplement.
+The [section-by-section errata](docs/review_20261111/ERRATA.md) identify obsolete
+future-tense statements, known seed-0 outcomes, source/spacing distinctions and
+additional exploratory development history. Earlier sections below are dated
+records; the strict control was subsequently recommended as PARE-S.
+
+The two current `code/` documentation updates remove unsupported scattering-class
+and calibrated-noise terminology and describe the timing tool's scope. They do
+not change executable numerical logic, and they do not constitute a new benchmark
+run. Verification hashes and an AST comparison are recorded in
+[verification.json](docs/review_20261111/verification.json).
+
+Historical artifact contracts bind raw source bytes, including comments. For
+exact reproduction of the measured November study, use its pinned experimental
+commit `b174e52fa987085f09b2c75ca173fa0ca042c484` or the matching archived measured
+source, following that study's instructions. Do not replace archived
+`SOURCE_REQUIREMENTS` or measured-source hashes with the documentation update's
+hashes, and do not bypass compatibility checks. The new documentation is not the
+source version that produced the old artifacts.
+
 ## 9 November 2026: simplified matched study and mechanism archive
 
 The [PARE-S study](experiments/simplified_20261109/README.txt) includes all

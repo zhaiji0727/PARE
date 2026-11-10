@@ -1,0 +1,9 @@
+{
+  "artifact_role": "immutable pre-review historical supplement; not current submission supplement",
+  "source_file_name": "Supplementary_Diagnostics.pdf",
+  "archived_file_name": "Historical_Supplement_20261110.pdf",
+  "sha256": "839e7f894a08f173c34ba71c2ce8c864018c4b87f471784a39daa4638e78246e",
+  "byte_size": 184230,
+  "copied_without_changes": true,
+  "experimental_release": "b174e52fa987085f09b2c75ca173fa0ca042c484"
+}

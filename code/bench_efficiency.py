@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Efficiency benchmark for PARE (the analysis the paper promises but
-never delivered: parameters, offline indexing cost, online rerank latency).
+"""Measure PARE parameter counts, offline feature cost and online rerank latency.
 
-All numbers are measured end-to-end on the same hardware and the SAME cached
-primitives / trained head used by the retrieval tables. Nothing is interpolated.
+Measurements use the supplied cache, head and local hardware. To associate
+a run with a retrieval table, provide the corresponding artifacts and keep
+the emitted settings and hashes with the timing results.
 
 Reports, as JSON + a console table:
   (A) Parameter budget: trainable PARE-head params vs frozen CLIP backbone

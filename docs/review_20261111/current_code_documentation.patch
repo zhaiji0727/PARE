@@ -1,0 +1,210 @@
+--- a/code/saqre_phys.py
++++ b/code/saqre_phys.py
+@@ -1,24 +1,27 @@
+ #!/usr/bin/env python3
+-"""SA-QRE with full SAR-physical modules (Speckle-Aware Query-Aligned Region Encoder).
+-
+-Implements, faithfully to Sec. III of the paper:
+-  - ENL estimation (Eq. enl):    Lhat = median over homogeneous windows of (mu/sigma)^2
+-  - speckle floor:               c* = 1/sqrt(Lhat)
+-  - excess-structure (Eq. struct): t_r = [cv_r - c*]_+
+-  - ENL-calibrated reliability (Eq. reliability): a differentiable soft
+-    intensity gate with a non-zero floor, so informative radar shadow is not
+-    discarded by a hard threshold
+-  - scattering-regime region proposals (CV-vs-floor connected components)
+-  - CFAR dominant point scatterers (cell-averaging CFAR)
+-  - scattering-type semantic prior (Eq. type): pi_r = softmax h_psi(feat_r) in Delta^2
+-                                 over {point/double-bounce, surface, shadow/low}
+-  - type token  e_type = sum_k pi_{r,k} u_k  (learnable prototypes)
+-  - query-aligned reliability-modulated attention (Eq. attn) + gated fusion (Eq. fusion)
++"""PARE full head and image-relative grayscale feature extraction.
++
++The frozen-backbone retrieval implementation provides:
++  - a clipped local mean/standard-deviation proxy Lhat from low-CV windows;
++  - an image-relative CV reference c_star = 1/sqrt(Lhat);
++  - nonnegative excess CV t_r = max(cv_r - c_star, 0);
++  - a learned soft reliability weight based on relative brightness and t_r;
++  - connected-component proposals above 1.3*c_star, with a 2x2 fallback;
++  - CFAR-inspired bright-center crops for the full-model comparison;
++  - a learned three-prototype token mixed by softmax h_psi(feat_r);
++  - query-conditioned region attention and scene/region/fine fusion.
++
++These display-domain statistics are radiometry-inspired design features.
++Lhat and the fifth-percentile brightness reference are not calibrated
++sensor looks or a noise-equivalent floor. The learned token channels have
++no assigned scattering classes. Function and checkpoint names containing
++"physics", "type" or "scatterer" are retained for artifact compatibility.
+ 
+ Two parts:
+-  * physics functions + primitive extraction (numpy / PIL) -- backbone-agnostic
+-  * SAQREHead (torch.nn.Module) -- the *trainable* lightweight head that consumes
+-    cached primitive embeddings + physical features. The CLIP backbone is frozen.
++  * grayscale statistics and primitive extraction (numpy / PIL);
++  * SAQREHead (torch.nn.Module), trained on cached embeddings and features.
++The strict simplified configuration is selected by the existing ablation
++interface; removing fine crops alone is not its complete definition.
+ """
+ import numpy as np
+ import torch
+@@ -30,10 +33,10 @@
+ 
+ 
+ # =====================================================================
+-#  PHYSICS  (numpy)
++#  IMAGE-RELATIVE GRAYSCALE STATISTICS  (numpy)
+ # =====================================================================
+ def to_intensity(img: Image.Image) -> np.ndarray:
+-    """Grayscale intensity in [0,1] (proxy for SAR amplitude)."""
++    """Pillow L-mode display values in [0,1]; not calibrated SAR amplitude."""
+     g = np.asarray(img.convert("L"), dtype=np.float32) / 255.0
+     return g
+ 
+@@ -66,13 +69,14 @@
+ def estimate_enl(g: np.ndarray, win: int = 16, homog_frac: float = 0.2) -> float:
+     """Eq. enl: Lhat = median_{homogeneous w} (mu_w/sigma_w)^2.
+ 
+-    Homogeneous windows = those with the lowest coefficient of variation
+-    (purest speckle). Returns clipped Lhat in [1, 64].
++    Eligible windows have mean > 0.02; select their lowest-CV quantile,
++    including ties. This texture proxy is clipped to [1, 64], with fallback
++    4 when fewer than eight windows are eligible; it is not sensor ENL.
+     """
+     mu, sig = local_mean_std(g, win)
+     eps = 1e-4
+     cv = sig / (mu + eps)
+-    valid = mu > 0.02  # ignore near-shadow windows
++    valid = mu > 0.02  # exclude low display-domain means
+     cvv = cv[valid]
+     muv = mu[valid]
+     sigv = sig[valid]
+@@ -138,7 +142,7 @@
+ 
+ 
+ def type_features(patch_g: np.ndarray, cfar_frac: float) -> np.ndarray:
+-    """Amplitude-domain descriptors for the scattering-type head (Eq. type).
++    """Display-domain descriptors for the learned token mixture.
+ 
+     [peak-to-mean ratio, normalized 2nd moment, normalized 3rd moment, CFAR-positive fraction].
+     """
+@@ -153,10 +157,11 @@
+ 
+ def region_proposals(g: np.ndarray, c_star: float, max_regions: int = 6,
+                      win: int = 9):
+-    """Scattering-regime region proposals: connected components of the
+-    map where local CV exceeds the ENL-implied speckle floor c_star
+-    (heterogeneous/structured scattering), plus the complementary
+-    homogeneous component. Returns list of bbox.
++    """Connected boxes where local CV exceeds 1.3*c_star.
++
++    Keep the largest eligible boxes; if none survive, partition the image
++    into four cells. No complementary homogeneous component is added.
++    These boxes do not have semantic or scattering-class labels.
+     """
+     cvm, mu = cv_map(g, win)
+     H, W = g.shape
+@@ -164,7 +169,7 @@
+     pad = win // 2
+     full_cv = np.zeros((H, W), dtype=cvm.dtype)
+     full_cv[pad:pad + cvm.shape[0], pad:pad + cvm.shape[1]] = cvm
+-    hetero = full_cv > (1.3 * c_star)      # structured scattering
++    hetero = full_cv > (1.3 * c_star)      # image-relative high-CV mask
+     boxes = connected_components(hetero, min_area=max(64, (H * W) // 200))
+     # rank by area, keep top
+     boxes = sorted(boxes, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]), reverse=True)
+@@ -213,23 +218,23 @@
+ 
+ 
+ # =====================================================================
+-#  Primitive extraction (per image) -> dict of crops + physical features
++#  Primitive extraction (per image) -> dict of crops + grayscale features
+ # =====================================================================
+ def extract_primitives(img: Image.Image, max_regions=6, max_sc=8):
+-    """Return scene + region + scatterer crops with per-primitive physics.
++    """Return scene, region and CFAR-inspired crops with grayscale features.
+ 
+     Output dict:
+-      scene: PIL, phys scene dict
++      scene: PIL, feature dict
+       regions: list of (PIL crop, feat dict)
+       scatterers: list of (PIL crop, feat dict)
+-    feat dict per primitive: mu, cv, t (excess struct), typefeat(4)
++    feat dict per primitive: mu, cv, t (excess CV), typefeat(4)
+     image-level: L, c_star, nu
+     """
+     img = img.convert("RGB")
+     g = to_intensity(img)
+     L = estimate_enl(g)
+     c_star = 1.0 / np.sqrt(L)
+-    nu = float(np.quantile(g, 0.05))         # noise-equivalent floor
++    nu = float(np.quantile(g, 0.05))         # image-relative brightness reference
+     det = ca_cfar(g)
+     cfar_frac_global = float(det.mean())
+ 
+@@ -269,14 +274,14 @@
+     """Lightweight trainable head over cached primitive embeddings.
+ 
+     Learnable params (Eqs. type/reliability/attn/gates):
+-      - h_psi: scattering-type head (4 -> 3 logits)
+-      - U:     3 type prototypes in R^D  (type token)
+-      - log_beta: ENL-reliability scale  (Eq. reliability)
++      - h_psi: token-mixture head (4 -> 32 -> 3 logits)
++      - U:     3 learned prototypes in R^D, without scattering labels
++      - log_beta: excess-CV reliability scale (Eq. reliability)
+       - log_tau:  attention temperature  (Eq. attn)
+       - log_s, logit_rho_min, log_lambda_rel: soft reliability sharpness,
+         floor, and attention strength (Eqs. reliability/attn)
+       - gate MLP: [q; agg] -> [g_c, g_f]  (Eq. gates)
+-      - type_scale: scalar on the type token contribution
++      - type_scale: scalar on the learned-token contribution
+     The CLIP backbone is frozen; only this head is trained with Eq. contrastive.
+     """
+     def __init__(self, dim, hidden=128):
+@@ -300,10 +305,10 @@
+         return getattr(self, "ablate", set())
+ 
+     def reliability(self, mu, t, nu):
+-        """Soft ENL-calibrated reliability.
+-
+-        ``mu``, ``t``, and ``nu`` are measured on the [0,1] grayscale proxy;
+-        the soft gate and non-zero floor preserve shadow/low-return cues.
++        """Learned soft weight from image-relative grayscale statistics.
++
++        ``mu``, ``t``, and ``nu`` use display-domain values. The positive
++        floor avoids zero weights; no calibrated reliability is implied.
+         """
+         beta = torch.exp(self.log_beta)
+         s = torch.exp(self.log_s).clamp(1e-3, 1.0)
+@@ -317,14 +322,14 @@
+         return torch.softmax(self.h_psi(typefeat), dim=-1)
+ 
+     def _augment(self, emb, typefeat):
+-        """Add scattering-type token to region embeddings."""
++        """Add a learned prototype-mixture token to region embeddings."""
+         pi = self.type_posterior(typefeat)            # (M,3)
+         etype = pi @ self.U                            # (M,D)
+         out = emb + self.type_scale * etype
+         return F.normalize(out, dim=-1), pi
+ 
+     def attend(self, q, emb, rho):
+-        """Eq. attn: speckle-modulated query attention. q:(D), emb:(M,D), rho:(M)."""
++        """Eq. attn: reliability-weighted query attention. q:(D), emb:(M,D), rho:(M)."""
+         tau = torch.exp(self.log_tau).clamp(1e-3, 1.0)
+         lam = torch.exp(self.log_lambda_rel)
+         logits = (emb @ q) / tau + lam * torch.log(rho + 1e-6)
+--- a/code/bench_efficiency.py
++++ b/code/bench_efficiency.py
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+-"""Efficiency benchmark for PARE (the analysis the paper promises but
+-never delivered: parameters, offline indexing cost, online rerank latency).
+-
+-All numbers are measured end-to-end on the same hardware and the SAME cached
+-primitives / trained head used by the retrieval tables. Nothing is interpolated.
++"""Measure PARE parameter counts, offline feature cost and online rerank latency.
++
++Measurements use the supplied cache, head and local hardware. To associate
++a run with a retrieval table, provide the corresponding artifacts and keep
++the emitted settings and hashes with the timing results.
+ 
+ Reports, as JSON + a console table:
+   (A) Parameter budget: trainable PARE-head params vs frozen CLIP backbone
