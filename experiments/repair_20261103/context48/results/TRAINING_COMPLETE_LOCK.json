@@ -1,0 +1,71 @@
+{
+  "training_manifest_sha256": {
+    "0": "df509cdeee5be5ddef719f2ff38fd89b1b838ba987179b3c5a61c9d58ef7d263",
+    "1": "6b91f67b9e069ed225b305d67763e2a653d41c2e83526c5aeb9e5242deb339d3",
+    "2": "927cc3ea440f74ed20ada4d7089f25f80f3e45723bafe7402b6f2f7c211724da"
+  },
+  "all_training_artifacts_sha256": {
+    "0/context48_A1T1": {
+      "head.pt": "540bed93a9906bde974e3a737583933c0b2cc8e10e5f2bd7c9ed42045961311f",
+      "development.json": "0d2d705e8615f8ab7cdaac0c8efa4a0aa6be4a2680bb245c3669b7f168b74070",
+      "development_scores.pt": "a5459aa97232f01bc1a5563fa0d216384537cf44dfe823a8aa83b3b2f8f17fea",
+      "training_progress.json": "0c547a821bd26b7620c0e96796a826ea0e99e29b1cffc0f5f9ac036a3b6f8840"
+    },
+    "0/context48_A0T1": {
+      "head.pt": "44fae27db85c987ada77531709af2abad674b9e9acebed766dcb9c3a863022f5",
+      "development.json": "c83103e81783b91b1a0db5e57fe2490a2854f7ce0ec9d8edce011f64bc750d38",
+      "development_scores.pt": "10ae24b5b78c9b6b8bfd23dd686a9e5f47eb8cead6d509ae57aa1cf5cb1b9e3d",
+      "training_progress.json": "eefee7d22ba5d9b59939c9b282e5c25f7711b7a93c61965a14de11fa15ab5ca6",
+      "parent_A0_anchor.json": "5256796a2eb73dc3907b709e54cf52d29002e702a86c4686fb3f8f97082c812f"
+    },
+    "0/context48_A1T0": {
+      "head.pt": "66c64648c716caf83e5b7a0079a6c6e8f6c1341fd2c1f74dac8d853940a1d243",
+      "development.json": "b6013582912dd35c4a049dde0769fd9ccd8e6e64d513168692de6bef81b3289c",
+      "development_scores.pt": "a9f14f6aa24dc941b2d72c548ecab03b23306993e96ecd027f427e198240018c",
+      "training_progress.json": "05d78b4831274c8ac3a7b212aef6a70a4439c27bef47f365d4c55f6866e053b2"
+    },
+    "1/context48_A1T1": {
+      "head.pt": "65780647ffc8c516f58cdf6849e56e6c0179d3a1cca0e62426c14931992cd560",
+      "development.json": "d7174d822b42bc24df1577bd5f1d7a74018591e811cb7ea81d9d6fcd45a609bf",
+      "development_scores.pt": "4e3826312c9f83b2c5dd96eeb4aacfa913ddd05ab013a39ac89b27aad60e7b1e",
+      "training_progress.json": "1795ca9d34983be28bfc086514ffcd52e98bdc8f1c6e43f77e4c1e0bf16e2eee"
+    },
+    "1/context48_A0T1": {
+      "head.pt": "9dce0ea84dbe82263b6e46c2b86bdbd6b372df74dbe61227bc5a174076911fed",
+      "development.json": "36719f0eb82abc52068b7c20fcab82429dbbf90f48dbb15875600e23d2154a4f",
+      "development_scores.pt": "5e5c732fcc620f480b6c0c42fec7182862ead128eb9a74d531a7cb350c3e0dda",
+      "training_progress.json": "cf1a1e48c863279c8928053c11cbd16b33b5cc20e2efaf426f91495c8b4e570d",
+      "parent_A0_anchor.json": "f6fd70d799d439fc67af698107039b7803f4666b9921ffba12f78187ad7d8916"
+    },
+    "1/context48_A1T0": {
+      "head.pt": "d92eac3273ec06dbf2046c62a269adcf7e7a3a1ef0f398b47bf0a5aacc0ec83d",
+      "development.json": "22f30452449931f77bebbeb4ef55c4c3b893d73ecf1c9c512aed3be9c661172d",
+      "development_scores.pt": "4fdc011de3bbe370d6b9d1391937c421a2d58aa18a2ca7082cfd432ca97b6694",
+      "training_progress.json": "4f5f113e8eb0b0c4fa829432e9377dd39d3dbbfa93efd78a797b3dd9c2fd53e5"
+    },
+    "2/context48_A1T1": {
+      "head.pt": "d5316794ba05e87240f9612d8cbcf62ecc2d5fab5ad1f8f17c1beb5fd34a727c",
+      "development.json": "309257bb7a806ecf1b4c7b193aed90e08665193b2f098efe816ba76c5c127352",
+      "development_scores.pt": "bbd29f9b375e1520c1e2395bd8b9f60a417f18b6560c71ad2b99e777c85b6d90",
+      "training_progress.json": "ae738344728f9756c9249eca6c4fd2b989ba433e15533cddbe288e478b0186f1"
+    },
+    "2/context48_A0T1": {
+      "head.pt": "b5b23cf5f296ff0dcd9caab638912eacb4bae8524f80641d2d321572d50a2be0",
+      "development.json": "37dbcf925afb41af0e679dd7d943e7843925037a5dbdb5f90d9cc3fb57b436d8",
+      "development_scores.pt": "78b3e9523d628c1f8f768f53879c8c28f2f9296a72f3c6a4dbea0db48c6eb575",
+      "training_progress.json": "4f225e58d77695b59d7186dfe01067aeb9dd1780d14e042870ea93c54074e44f",
+      "parent_A0_anchor.json": "73e8e6f9bdc009cd2ddecd1df25be15b55352d2aae0a40e25a07293111553c79"
+    },
+    "2/context48_A1T0": {
+      "head.pt": "b46fea204ebb50f7241b797ce6481452c715ea4b551779f998d85e5698f3832f",
+      "development.json": "eddf9b7c0f5281a6d8b3dd78f442ff732c4b42e170f88058958d6cfe7b21a20a",
+      "development_scores.pt": "98817b8ecaa909fdc3a0075248bac52b6e4bdf9306efb4eb771c60def09c99ee",
+      "training_progress.json": "1d99699c798ca7bbdfd4a0d146472cf09bb71103d42817b6de25b49ffccf6dd5"
+    }
+  },
+  "protocol_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+  "freeze_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29",
+  "input_bindings_sha256": "77128b08d6758bb00a52b16bdea3a9287173882c6c74b16a3a39cdba972aaa80",
+  "locked_utc": "2026-11-03T05:55:03.731273+00:00",
+  "selection_performed": false
+}

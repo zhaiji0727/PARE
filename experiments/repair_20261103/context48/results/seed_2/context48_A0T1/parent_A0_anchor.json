@@ -1,0 +1,6 @@
+{
+  "all_parameter_tensors_bitwise_equal": true,
+  "development_ranks_identical": true,
+  "parent_head_sha256": "67ad85f600594c4749546171430148dd3f5ed9ad1d7c7ef08dc2db534c79bdf3",
+  "parent_development_sha256": "e3784dd4a5b1b3942a15cf312e2f50204cad3eb400c52ed04c84a1a84cdfebeb"
+}
