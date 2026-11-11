@@ -1,11 +1,17 @@
-New portable reproduction entry (not the measured executor)
+Portable reproduction of the fixed matched study
 
-Use repository revision cc7875120524f2e9665cc69c9a795b13e1077b69 as the
-compatible base, plus this additive experiment directory. SOURCE_REQUIREMENTS
-checks all required original code and tool hashes. Install the recorded
-repository environment and prepare the retained dataset and frozen backbones
-using its documented preparation tools. Existing extracted data can be reused;
-this launcher does not extract or download archives.
+Recommended from the current repository: use scripts/reproduce_matched.py.
+It creates a detached source worktree at b174e52fa987085f09b2c75ca173fa0ca042c484
+and runs this unmodified entry there. Current code comments differ from the
+historical byte hashes; direct use with --repo pointing to current main is
+intentionally rejected by SOURCE_REQUIREMENTS. Do not change or bypass those
+checks. Alternatively, check out b174e52 explicitly in a separate clone and use
+the historical direct commands below. That commit includes this experiment
+folder and all required compatible source; no manual additive copy is needed.
+
+The pinned launcher and a clean b174e52 checkout have passed real dataset,
+caption-byte and offline-tokenizer preflight. That preflight is not a claim of
+retraining all 75 heads or end-to-end score equivalence for newly trained heads.
 
 The retained data layout is DATA/ret_clean_20261007/{train_ids.json,
 test_ids.json,Caption_train.csv,Caption_test.csv} and DATA/SARimages_pre/.

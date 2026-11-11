@@ -1,0 +1,185 @@
+{
+  "schema": "pare.fixed-context48-study.v1",
+  "status": "scientific_hypothesis_fixed_before_context_data_and_internal_evaluation",
+  "fixed_utc": "2026-11-03T05:10:32.418062+00:00",
+  "motivation": "Initial repair development results improve global score but all3 selected A differences remainnegative; tiny24px support is plausible missing-context mechanism. New study, not modification/reselection of first fixed45-head study.",
+  "parent_protocol_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+  "parent_selection_lock_sha256": "2f0df93aa09b0af7a88d064a7675f3a4ed3f2a4a316c2035f5f3da5250489f07",
+  "forbidden": "Do not use parent or new internal-check results to alter this48px choice, formulas, hyperparameters, seeds or outcomes. No official-test inputs.",
+  "scope": {
+    "same_center_selection": true,
+    "suppression_half_pixels": 12,
+    "crop_half_pixels": 24,
+    "nominal_context_pixels": 48,
+    "boundary": "clip to image; identical original coordinate convention",
+    "max_fine_crops": 8,
+    "fine_statistics": "new support with original frozen grayscale/statistics code and per-image global ENL/c_star/nu",
+    "global_coarse_fields": "reuse original physical training cache exactly",
+    "encoder_preprocessing": "exact original recorded ViT-B32 evaluation transform and original frozen weights",
+    "storage": "separate fine overlay binds original cache and explicit new provenance; do not falsely relabel original signature"
+  },
+  "training": {
+    "lr": 0.002,
+    "kappa": 0.03,
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "amp": false,
+    "n_train_images": 6610,
+    "n_train_pairs": 23016,
+    "batches_per_epoch": 360,
+    "tail_batch_pairs": 40,
+    "early_stopping": false,
+    "new_hyperparameter_search": false,
+    "warm_start": false,
+    "loss": "original one-direction diagonal caption-to-image cross entropy; duplicate-image behavior unchanged",
+    "pair_order": "frozen load_captions ordering: images in first-appearance order, then captions per image in original order, filtered to train IDs (not raw interleaved CSV row order)",
+    "shuffle": "independent Python random.Random(seed) stream per run; in-place epoch shuffle of same starting pair order",
+    "paired_initial_base_parameters": true
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "configurations": [
+    {
+      "id": "context48_A1T1",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "original"
+      }
+    },
+    {
+      "id": "context48_A0T1",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "original"
+      }
+    },
+    {
+      "id": "context48_A1T0",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 0,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "original"
+      }
+    }
+  ],
+  "new_heads": 9,
+  "development": {
+    "n_images": 918,
+    "n_caption_rows": 3186,
+    "n_queries": 918,
+    "n_gallery": 918,
+    "first_caption_only": true
+  },
+  "internal_check": {
+    "n_images": 1653,
+    "n_caption_rows": 5743,
+    "n_queries": 1653,
+    "n_gallery": 1653,
+    "first_caption_only": true,
+    "available_only_after_all_nine_heads_and_development_results_complete": true
+  },
+  "split_source": "../pare_repair_20261103/plans/splits",
+  "input_bindings": {
+    "training_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "training_cache_basename": "cache_physics_train.pt",
+    "cache_image_count": 9181,
+    "clean_training_captions_sha256": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "original_split_file_sha256": {
+      "fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+      "val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+      "train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557"
+    },
+    "repair_split_file_sha256": {
+      "development_ids.json": "6fa6e97171a42527c31f0e50ea32f75a26462ab66ed872506dc97cffe22bf7f9",
+      "internal_check_ids.json": "153432797cad768345738b5aaeef65bc6a93bffd909b25bf451c9b39f1b328be",
+      "train_ids.json": "f67eff7ee49a4ae998d5ce36e5e8977add3ed4b23aea50b570fbbad7d7d6c044"
+    },
+    "repair_split_directory": "plans/splits",
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "reference_source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "train_saqre.py": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "sweep_hparams.py": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350"
+    },
+    "forbidden_inputs": [
+      "official test cache",
+      "official test captions",
+      "old fitted head as performance substitute or warm start"
+    ]
+  },
+  "selection": "None; exactly one fixed proposed A1T1 context48 design withtwo matchedcontrols. Keep all nine results and existing24px comparators.",
+  "acceptance": {
+    "units": "percentage points",
+    "mean_delta_R10_minimum": 0.5,
+    "each_seed_delta_R10_minimum": 0.0,
+    "minimum_strictly_positive_R10_seeds": 2,
+    "mean_delta_MRR10_minimum": 0.0,
+    "uses_unrounded_values": true,
+    "statistical_significance_claim": false,
+    "evaluate_for_every_contrast": true,
+    "must_pass_on": [
+      "development",
+      "internal_check"
+    ],
+    "specific_mechanism_claims_require_corresponding_matched_contrasts": true,
+    "failure_action": "retain all results; no threshold, seed, split, formula or candidate change within this protocol",
+    "primary_checks": [
+      "context48_A1T1 minus parent24px selected A1T1",
+      "context48_A1T1 minus context48_A0T1",
+      "context48_A1T1 minus context48_A1T0"
+    ]
+  },
+  "verification": [
+    "Original24px extraction boxes/counts/statistics for every9181 image match frozen implementation/cache",
+    "Original24px embeddings on16 deterministic images agree with existingcache at frozen precision tolerance (report maximum differences)",
+    "New48px boxes contain original selected centers andfollowclipping geometry; <=8, orderedidentitiespreserved",
+    "All g/c/nu fields andcoarseCFARdescriptors identical",
+    "Allthree A0 head parameter tensors anddevelopmentranks reproduceparentcorrespondingA0 baseline aftermatched training",
+    "Allninehead trainIDs/pairs/shuffle/init/source signatures andallranks independently verified"
+  ],
+  "reporting": "Explicitly exploratory after firststudydevelopment. Internal set withheldfromallnewtraining buthistorically usedbyoldermodels; no externalblindclaim. Original45-study andthis9-study reported separately. No originalpaper/results overwritten.",
+  "clarification_history": [
+    {
+      "parent_specification_sha256": "37afeef25a341bf201897bb826b79c6ab4c1a249987e322535f3109dca89c2f8",
+      "utc": "2026-11-03T05:11:03.391124+00:00",
+      "description": "Remove inherited parent-study selection labels; same fixed48px hypothesis,9heads,splits,training and threshold. Primary contrasts already listed remain unchanged."
+    }
+  ],
+  "primary_contrasts": [
+    "context48_A1T1 minus parent24px selected A1T1",
+    "context48_A1T1 minus context48_A0T1",
+    "context48_A1T1 minus context48_A1T0"
+  ],
+  "parent_comparator_configuration": {
+    "A": 1,
+    "B": 0,
+    "C": 1,
+    "T": 1,
+    "fusion": "original",
+    "reliability": "constant",
+    "token_mode": "original"
+  },
+  "parent_comparator_id": "ABC101_T1_Rconstant_Tokoriginal"
+}

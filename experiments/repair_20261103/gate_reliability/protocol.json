@@ -1,0 +1,1460 @@
+{
+  "schema": "pare.repair-development-protocol.v1",
+  "status": "fixed_before_training",
+  "protocol_revision": 1,
+  "purpose": "Bounded development study of fine routing, reliability and token amplitude; preserve all prior records; no official-test tuning.",
+  "evidence_status": {
+    "posthoc": true,
+    "original_validation_is_development": true,
+    "internal_check_reuses_former_fit_data": true,
+    "new_external_blind_test": false,
+    "official_test_access_permitted": false
+  },
+  "backbone": {
+    "model": "ViT-B-32",
+    "pretrained": "laion2b_s34b_b79k",
+    "embedding_dimension": 512,
+    "frozen": true,
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "configurations": [
+    {
+      "id": "ABC001_T1_Rconstant_Tokoriginal",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC001_T1_Rconstant_Tokbounded",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC001_T1_Roriginal_Tokoriginal",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC001_T1_Roriginal_Tokbounded",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC001_T1_Rbounded_Tokoriginal",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "bounded",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC001_T1_Rbounded_Tokbounded",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "bounded",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokoriginal",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokbounded",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "constant",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokoriginal",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokbounded",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokoriginal",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "bounded",
+        "token_mode": "original"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokbounded",
+      "config": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "bounded",
+        "token_mode": "bounded"
+      },
+      "role": "development_grid"
+    },
+    {
+      "id": "ABC111_T1_Roriginal_Tokoriginal",
+      "config": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "original"
+      },
+      "role": "reference_anchor"
+    },
+    {
+      "id": "ABC000_T1_Roriginal_Tokoriginal",
+      "config": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "T": 1,
+        "fusion": "original",
+        "reliability": "original",
+        "token_mode": "original"
+      },
+      "role": "reference_anchor"
+    }
+  ],
+  "expected_initial_configurations": 14,
+  "expected_initial_runs": 42,
+  "maximum_total_new_heads": 45,
+  "training": {
+    "lr": 0.002,
+    "kappa": 0.03,
+    "epochs": 10,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "amp": false,
+    "n_train_images": 6610,
+    "n_train_pairs": 23016,
+    "batches_per_epoch": 360,
+    "tail_batch_pairs": 40,
+    "early_stopping": false,
+    "new_hyperparameter_search": false,
+    "warm_start": false,
+    "loss": "original one-direction diagonal caption-to-image cross entropy; duplicate-image behavior unchanged",
+    "pair_order": "frozen load_captions ordering: images in first-appearance order, then captions per image in original order, filtered to train IDs (not raw interleaved CSV row order)",
+    "shuffle": "independent Python random.Random(seed) stream per run; in-place epoch shuffle of same starting pair order",
+    "paired_initial_base_parameters": true
+  },
+  "development": {
+    "n_images": 918,
+    "n_caption_rows": 3186,
+    "n_queries": 918,
+    "n_gallery": 918,
+    "first_caption_only": true
+  },
+  "internal_check": {
+    "n_images": 1653,
+    "n_caption_rows": 5743,
+    "n_queries": 1653,
+    "n_gallery": 1653,
+    "first_caption_only": true,
+    "available_only_after_selection_lock_and_selected_controls_complete": true
+  },
+  "query_order": "one first caption for each image, in frozen load_captions first-image-appearance order after split-ID filtering",
+  "gallery_order": "original physics cache row order after filtering to split IDs",
+  "ranking": "float32 scores and reference descending torch.argsort tie handling; full gallery; no positive insertion",
+  "split_derivation": {
+    "prefix": "pare-repair-internal-check-v1|",
+    "population": "original 8263 fit image IDs",
+    "ordering": "SHA256((prefix + exact_ID).encode(UTF-8)).hexdigest(), then exact_ID",
+    "internal_check_selection": "first 1653 IDs",
+    "training_selection": "remaining 6610 IDs",
+    "persisted_list_order": "lexical",
+    "development": "original 918 val IDs unchanged",
+    "geographic_independence_asserted": false,
+    "derivation_file": "plans/split_derivation.json",
+    "derivation_sha256": "10a517593b73f1234cb8947e12dbfe270e628a96356f0ff4d19941d4fd3aca6c"
+  },
+  "input_bindings": {
+    "training_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "training_cache_basename": "cache_physics_train.pt",
+    "cache_image_count": 9181,
+    "clean_training_captions_sha256": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "original_split_file_sha256": {
+      "fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+      "val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+      "train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557"
+    },
+    "repair_split_file_sha256": {
+      "development_ids.json": "6fa6e97171a42527c31f0e50ea32f75a26462ab66ed872506dc97cffe22bf7f9",
+      "internal_check_ids.json": "153432797cad768345738b5aaeef65bc6a93bffd909b25bf451c9b39f1b328be",
+      "train_ids.json": "f67eff7ee49a4ae998d5ce36e5e8977add3ed4b23aea50b570fbbad7d7d6c044"
+    },
+    "repair_split_directory": "plans/splits",
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "reference_source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "train_saqre.py": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "sweep_hparams.py": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350"
+    },
+    "forbidden_inputs": [
+      "official test cache",
+      "official test captions",
+      "old fitted head as performance substitute or warm start"
+    ]
+  },
+  "bounded_reliability": {
+    "formula": "alpha=(1-eta_s)*softmax(semantic_logits)+eta_s*softmax(semantic_logits+lambda*log(rho+eps))",
+    "eta": "0.5*sigmoid(a_s)",
+    "initial_eta": 0.05,
+    "initial_logit": "log(1/9)",
+    "branches": [
+      "coarse",
+      "fine"
+    ],
+    "parameters": [
+      "prior_mix_coarse_logit",
+      "prior_mix_fine_logit"
+    ],
+    "maximum_eta": 0.5,
+    "same_original_rho_tau_lambda": true,
+    "rng_consumption_by_new_scalar_initialization": false
+  },
+  "bounded_token": {
+    "formula": "delta=type_scale*(pi U); delta_cap=delta/(1+norm(delta)/0.5); augmented=normalize(raw_embedding+delta_cap)",
+    "maximum_delta_norm": 0.5,
+    "new_parameters": false,
+    "preserves_delta_direction": true,
+    "for_unit_raw_minimum_augmented_raw_cosine": "sqrt(0.75)",
+    "hyperparameter_sweep_permitted": false
+  },
+  "selection": {
+    "eligible_configuration_ids": [
+      "ABC101_T1_Rconstant_Tokoriginal",
+      "ABC101_T1_Rconstant_Tokbounded",
+      "ABC101_T1_Roriginal_Tokoriginal",
+      "ABC101_T1_Roriginal_Tokbounded",
+      "ABC101_T1_Rbounded_Tokoriginal",
+      "ABC101_T1_Rbounded_Tokbounded"
+    ],
+    "priority_order": [
+      "ABC101_T1_Rconstant_Tokoriginal",
+      "ABC101_T1_Rconstant_Tokbounded",
+      "ABC101_T1_Roriginal_Tokoriginal",
+      "ABC101_T1_Roriginal_Tokbounded",
+      "ABC101_T1_Rbounded_Tokoriginal",
+      "ABC101_T1_Rbounded_Tokbounded"
+    ],
+    "primary_metric": "R@10",
+    "secondary_metric": "MRR@10",
+    "aggregation": "arithmetic mean over all three matched seeds, unrounded",
+    "sort": "descending primary, descending secondary, ascending exact priority index",
+    "best_seed_selection_permitted": false,
+    "lock_even_if_development_acceptance_fails": true,
+    "required_before_any_internal_check_text_encoding": true,
+    "lock_binds": [
+      "complete 42-run development table and manifest hashes",
+      "selected configuration",
+      "all three selected checkpoint hashes",
+      "protocol/source/input hashes",
+      "complete development metrics/ranks sufficient to reproduce all acceptance diagnostics"
+    ],
+    "reselection_after_lock_permitted": false,
+    "separate_acceptance_report_required_before_lock": false,
+    "acceptance_decisions_reported_by": "independent final verified summary; no filtering of six eligible candidates before selection"
+  },
+  "selected_control": {
+    "when": "only after immutable global selection lock",
+    "expected_configurations": 1,
+    "expected_runs": 3,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "base_configuration": "locked selected A1/B0/C1 configuration",
+    "config_overrides": {
+      "T": 0
+    },
+    "id_rule": "replace the selected ID substring _T1_ with _T0_",
+    "same_training_recipe_and_initialization": true,
+    "new_fit_from_scratch": true,
+    "bind_selection_lock_sha256": true,
+    "may_influence_selection": false,
+    "T0_semantics": "normalize raw crop embeddings; bypass h_psi/U/type_scale and token cap; retain selected reliability and all other paths"
+  },
+  "stages": [
+    "train all initial 42 on 6610 and evaluate development only",
+    "verify all initial artifacts and globally lock one of six candidates",
+    "train exactly three selected T0 controls; evaluate development without reselection",
+    "verify controls and lock binding; evaluate all 45 on internal check; report all"
+  ],
+  "paired_contrasts": [
+    {
+      "id": "A_given_Rconstant_Tokoriginal",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_given_Rconstant_Tokbounded",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_given_Roriginal_Tokoriginal",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_given_Roriginal_Tokbounded",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_given_Rbounded_Tokoriginal",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_given_Rbounded_Tokbounded",
+      "kind": "matched_fine_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A0_Rconstant",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A0_Roriginal",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A0_Rbounded",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A1_Rconstant",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A1_Roriginal",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "TokenBound_given_A1_Rbounded",
+      "kind": "matched_token_cap_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_given_A0_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_given_A0_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_given_A0_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_given_A0_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_given_A0_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_given_A0_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_given_A1_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_given_A1_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_given_A1_Tokoriginal",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_given_A1_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_given_A1_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_given_A1_Tokbounded",
+      "kind": "matched_reliability_effect",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Roriginal_minus_constant_Tokoriginal",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_constant_Tokoriginal",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_original_Tokoriginal",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Roriginal_minus_constant_Tokbounded",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_constant_Tokbounded",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_original_Tokbounded",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_TokenBound_Rconstant",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_TokenBound_Roriginal",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_TokenBound_Rbounded",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_by_TokenBound_A0",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_by_TokenBound_A0",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_by_TokenBound_A0",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Roriginal_minus_constant_by_TokenBound_A1",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_constant_by_TokenBound_A1",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "Rbounded_minus_original_by_TokenBound_A1",
+      "kind": "difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Roriginal_minus_constant_by_TokenBound",
+      "kind": "difference_in_difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_constant_by_TokenBound",
+      "kind": "difference_in_difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "A_by_Rbounded_minus_original_by_TokenBound",
+      "kind": "difference_in_difference_in_differences",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC001_T1_Rbounded_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": -1
+        },
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "id": "B0_minus_B1_given_A1_C1_originalR_Token",
+      "kind": "isolated_original_gate_context",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "C1_minus_C0_given_A0_B0_originalR_Token",
+      "kind": "isolated_original_coarse_detector_fraction",
+      "terms": [
+        {
+          "configuration_id": "ABC001_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "original_full_minus_original_strict",
+      "kind": "historical_anchor_comparison",
+      "terms": [
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokoriginal_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokoriginal_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokbounded_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rconstant_Tokbounded_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rconstant_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokoriginal_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokoriginal_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokbounded_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Roriginal_Tokbounded_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Roriginal_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokoriginal_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokoriginal_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokoriginal",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokbounded_minus_original_full",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC111_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "id": "ABC101_T1_Rbounded_Tokbounded_minus_original_strict",
+      "kind": "candidate_vs_anchor",
+      "terms": [
+        {
+          "configuration_id": "ABC101_T1_Rbounded_Tokbounded",
+          "coefficient": 1
+        },
+        {
+          "configuration_id": "ABC000_T1_Roriginal_Tokoriginal",
+          "coefficient": -1
+        }
+      ]
+    }
+  ],
+  "post_selection_contrasts": [
+    {
+      "id": "selected_T1_minus_matched_T0",
+      "positive": "locked selected T1 configuration",
+      "negative": "selected_control T0 configuration",
+      "paired_by": "same seed",
+      "required_on": [
+        "development",
+        "internal_check"
+      ]
+    }
+  ],
+  "acceptance": {
+    "units": "percentage points",
+    "mean_delta_R10_minimum": 0.5,
+    "each_seed_delta_R10_minimum": 0.0,
+    "minimum_strictly_positive_R10_seeds": 2,
+    "mean_delta_MRR10_minimum": 0.0,
+    "uses_unrounded_values": true,
+    "statistical_significance_claim": false,
+    "evaluate_for_every_contrast": true,
+    "selected_primary_checks": [
+      "selected minus original full",
+      "selected A1 minus exactly matched A0",
+      "selected T1 minus matched post-lock T0"
+    ],
+    "must_pass_on": [
+      "development",
+      "internal_check"
+    ],
+    "specific_mechanism_claims_require_corresponding_matched_contrasts": true,
+    "failure_action": "retain all results; no threshold, seed, split, formula or candidate change within this protocol"
+  },
+  "aggregation": {
+    "metrics": [
+      "R@1",
+      "R@5",
+      "R@10",
+      "MRR@10"
+    ],
+    "metric_units": "percent",
+    "MRR_truncation": 10,
+    "contrast_calculation": "within seed before mean and sample SD",
+    "sample_SD_ddof": 1,
+    "confidence_intervals": false,
+    "p_values": false,
+    "interaction_coefficients": "explicit terms; no rescaling",
+    "descriptive_contrasts_can_be_algebraically_overlapping": true
+  },
+  "fixed_head_probes": {
+    "selection_input": false,
+    "acceptance_input": false,
+    "population": "all 42 initial T1 heads; selected T0 excluded",
+    "evaluation_split": "development only",
+    "prototype_mean_source": "all valid crops of 6610 actual training images, separate coarse/fine mean pi, equal weight per valid crop, padding excluded",
+    "intervention": "replace per-crop pi with frozen training branch mean; retain U/type_scale/token_mode/reliability/gate/other inputs",
+    "report": [
+      "original and substituted four metrics plus signed changes for all heads",
+      "mean per-crop entropy",
+      "entropy of mean pi",
+      "prototype occupancy"
+    ],
+    "scope": "input-dependence intervention, not physical identification; not a substitute for selected T0 retraining"
+  },
+  "prelaunch_gates": [
+    "root approval of protocol",
+    "final head/runner diff review",
+    "all source/input hashes frozen",
+    "all original endpoint equivalence checks pass",
+    "T0 bypass and reliability invariance pass",
+    "bounded attention and token norm/cosine bounds pass",
+    "empty-mask fallback and finite gradients pass",
+    "same base parameter initialization and shuffle identities pass",
+    "split counts and no ID overlap pass"
+  ],
+  "required_artifacts": [
+    "per-run trained heads and final score matrices",
+    "all per-query ranks and IDs",
+    "source/input/environment/protocol hashes",
+    "per-epoch shuffle hashes and training history",
+    "immutable global selection lock",
+    "T0 selection binding",
+    "all 45 run results and all signed contrasts",
+    "all fixed-head probe results"
+  ],
+  "complete_reporting": "No running/partial or missing-seed results accepted as complete; preserve original five-backbone and earlier 42-run records.",
+  "protocol_markdown_sha256": "5ba226728f9730ba6723dabebd6b07b8d215d4fccf7d5990405bd7507ea7e0ed",
+  "fixed_utc": "2026-11-03T04:59:59Z",
+  "approval_scope": "scientific protocol approved by root before new training; implementation/source freeze pending tests and preflight"
+}

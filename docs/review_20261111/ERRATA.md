@@ -1,78 +1,113 @@
-# Reading corrections for the pre-review supplement
+# Corrections for the historical technical record
 
-These notes accompany the immutable `Historical_Supplement_20261110.pdf`.
-They correct interpretation of that snapshot, not its bytes, and do not replace
-new experiment results or the current submission's short supplement.
+These notes apply to [the technical record](Historical_Technical_Record_20261110.pdf).
+Scientific contents retain their historical state; the title-area change is
+recorded in [provenance](HISTORICAL_PDF_PROVENANCE.json). This document corrects
+interpretation and omitted context, not historical measured numbers.
 
-| Historical section | Scope and current reading |
-| --- | --- |
-| S1, extraction audit | Measures extraction sensitivity only. The statement that retrieval-level threshold sensitivity still requires new caches and matched training remains a limitation; the matched five-seed study did not sweep those thresholds. |
-| S2, paired implementation check | Compares implementations on the historical image list. Future-tense instructions to use the content-disjoint protocol have since been fulfilled by the November retrieval runs; the check itself is not a retrieval experiment. |
-| S3, training-pair simulation | Historical simulation of the pair objective. It is not a substitute for trained full-gallery results and does not show test generalization. |
-| S4, tensor storage and evidence | Describes historical representation/storage checks. The reference to the main paper's fit/validation grid belongs to that version; the nine-trial grid was used for PARE-F, with its settings reused for the controls. |
-| S5, spatial metadata | The 0.15–0.60 m/pixel range applies only to files with supporting projected-metre tags. It is stored-grid spacing, not a verified range of every image's sensor GSD. Historical `PARE` results in this section refer to PARE-F, not the later PARE-S mean. |
-| S6, preceding single-seed protocol | The cited release `6e4ed9a` is a historical release, not the latest repository commit. Use this section's hashes for its own runs; do not substitute the five-seed release's source hashes. |
-| S7, preceding single-seed retrieval | `PARE` denotes PARE-F; `CFAR-strict` denotes PARE-S. Controlled positive-inserted pools, natural shortlists and full-gallery ranks answer different questions. They are single-seed diagnostics, not new five-seed estimates. |
-| S8, exploratory factorial follow-up | Uses a previously used validation set and is exploratory. Its statement that no configuration was promoted describes that experiment's original scope; later selection of PARE-S occurred and must be disclosed. It does not establish that the architecture was fixed before any test results were inspected. |
-| S9, conditional-token diagnostic | Compares conditional and constant descriptors with another full-branch recipe. It does not isolate descriptor conditioning in the final PARE-S configuration. Its negative and inconclusive differences remain part of the evidence. |
-| S10, matched simplified study | 75 executed trainings include ten F/S seed-0 reproductions of outcomes known before choosing PARE-S. They are not 75 wholly new independent observations. Shared seeds across backbones and reused test data limit interpretation of the intervals. |
+| Section | Correct scope |
+|---|---|
+| S1–S2 | Extraction and implementation audits, not retrieval experiments. The old 919-image audit is not the new 918-image validation split. |
+| S3 | Simulation of duplicate-image batch behavior, not a trained retrieval result. |
+| S4 | Storage arithmetic and evidence inventory; not inference latency. |
+| S5 | Stored raster spacing where tags exist, not measured acquisition GSD for every image; PARE denotes the earlier full model. |
+| S6–S7 | Earlier single-seed trained models. Positive-inserted pools, natural shortlists and full-gallery results have different denominators. |
+| S8 | Post-hoc three-seed validation factorial experiment on previously used data. Its original non-promotion statement does not erase the subsequent choice of PARE-S. |
+| S9 | Five-seed A1B0C1 experiment: fine attention on, fine embeddings excluded from gate mean, original detector-fraction descriptor on. It is neither full A1B1C1 nor PARE-S A0B0C0. |
+| S10 | Matched 75-head study; ten F/S seed-0 runs reproduce known results. Shared seeds and benchmark reuse limit inference. |
 
-## Historical method labels
+## Method names
 
-These definitions follow `code/eval_retrieval_baselines.py`,
-`code/primitive_controls.py` and the explicit variant map in
-`tools/evaluation/evaluate_multik.py`.
+`full` is PARE-F; `strict` and `cfar_strict` are PARE-S; `strict_token_off`
+is PARE-S without token augmentation; `strict_constant_descriptor` is the
+PARE-S constant-descriptor control in the later addendum. In the factorial
+notation, A enables the fine attended vector, B includes fine embeddings in
+the gate mean, and C includes detector fraction in the coarse descriptor.
+Thus A0B0C0 names geometry-path settings only; reliability/token settings must
+also be stated.
 
-- **Scene-CLIP / Scene:** dot product of the unit-normalized text vector with
-  the unit-normalized whole-image embedding; no trained retrieval head.
-- **Mean-pool:** unit-normalize each valid scene/coarse/fine embedding, average
-  the scene plus all valid coarse and fine embeddings with equal weight per
-  primitive, normalize that average, then take its dot product with the unit
-  query vector. Padded embeddings are excluded. This is query-agnostic pooling.
-- **MaxSim:** maximum query cosine similarity across the whole image and every
-  valid coarse and fine embedding. This is a single-vector query maximum, not a
-  sum over text-token similarities. Padded primitives are excluded.
-- **Stats-off:** retrained full-geometry PARE with `sr,ty` disabled. Reliability
-  is set to one and token augmentation is bypassed; the CV/CFAR-derived crops,
-  scene/coarse/fine fusion and trainable gate remain. It is different from the
-  simplified model's token-only ablation, which retains reliability.
-- **Uniform grid:** replace intensity-derived proposals with a 2-row by 3-column
-  coarse partition (six tiles) and a 2-row by 4-column fine partition (eight
-  tiles), retaining the scene. The control requires both `sr` and `ty` disabled;
-  its placeholder statistics are unused. It is compared with Stats-off to
-  examine proposal geometry under the same disabled reliability/token settings.
-  It does not isolate proposal geometry with token augmentation active.
+Scene uses whole-image cosine similarity. Mean-pool normalizes the average of
+the normalized scene and valid coarse/fine vectors. MaxSim takes the largest
+query cosine across these valid vectors. Stats-off means `--ablate sr,ty`:
+those flags **disable reliability and token augmentation**; the full geometry
+and trainable gate remain. The uniform-grid control uses six coarse (2×3) and
+eight fine (2×4) tiles with the same `sr,ty` ablations. It is not a token-on
+PARE-S region replacement.
 
-These historical Mean-pool/MaxSim rows belong to the candidate-pool diagnostics.
-The current revision does not supply a separate full-gallery Mean-pool/MaxSim
-experiment or claim that their candidate-pool values are full-gallery scores.
-The evaluator's ability to produce such scores is not evidence that a reported
-run was performed.
+Full-gallery Mean-pool and MaxSim results already exist in
+`benchmarks/revision_20261103/full_gallery_summary.csv`, with original per-query
+records in each backbone's `eval_baselines.json.gz`. The earlier erratum that
+no full-gallery experiment was supplied was incorrect. These are frozen,
+training-free baselines; they are not a trained generic-adapter comparison.
 
-## Development work not fully represented in that PDF
+## Missing numeric context
 
-The 3 November repair exploration considered gate inputs, several reliability
-rules, token-magnitude limits and a 24-to-48-pixel crop expansion with centers
-fixed. Its record reports 54 trainings, 108 development/internal-check evaluations
-and 42 fixed-model probes. It found no stable isolated fine-branch benefit; the
-48-pixel replacement was not adopted. Its internal-check data came from previously
-used material, not a new external blind set. Those trials are distinct from the
-42-run factorial follow-up and the later 15-head token mechanism study.
+All values below were recomputed from original per-query ranks, and are
+available without rounding in [historical_scope_addendum.json](historical_scope_addendum.json).
 
-Statements such as “all outcomes are retained” apply only to the explicitly
-identified study and its archived files. The unchanged PDF is not a complete
-record of every development experiment. The current revision index should link
-any additional released records separately and preserve unsuccessful outcomes.
+### S9: all seed differences and ordinary intervals
 
-## Source descriptions and metadata
+The historical table already reports the four-comparison adjusted intervals.
+The ordinary intervals below do not replace them. Development conditioning
+minus constant is negative at every seed and its ordinary interval excludes
+zero; the adjusted interval crosses zero. Neither interval establishes
+statistical equivalence.
 
-The nominal source specifications are heterogeneous: SpaceNet6's airborne SAR
-was orthorectified and resampled to 0.5 m pixels; OpenEarthMap-SAR describes Umbra
-Spotlight data at 0.15–0.5 m; DFC2023 describes Gaofen-3 SAR at nominal 1 m.
-The DFC2023 0.5 m and 0.8 m specifications refer to optical sensors and its 2 m
-specification to nDSM. These literature values must not be imputed as measured
-spacing for individual files lacking metadata.
+| Split / contrast | Seed 0–4 R@10 differences (pp) | Ordinary 95% t interval |
+|---|---|---|
+| development / conditional_minus_constant_descriptor | -0.1089, -0.4357, -0.2179, -0.6536, -0.1089 | [-0.5982, -0.0118] |
+| development / conditional_minus_token_off | +12.5272, +13.0719, +10.6754, +11.3290, +14.2702 | [+10.6096, +14.1398] |
+| internal_check / conditional_minus_constant_descriptor | +1.0889, -0.3025, -0.1210, -0.1210, +0.5445 | [-0.5078, +0.9433] |
+| internal_check / conditional_minus_token_off | +9.9214, +10.6473, +8.9534, +11.1918, +12.2807 | [+9.0346, +12.1632] |
 
-The source literature is [SpaceNet6](https://doi.org/10.1109/CVPRW50498.2020.00106),
-[OpenEarthMap-SAR](https://doi.org/10.1109/MGRS.2025.3599512), and the
-[official DFC2023 data description](https://www.grss-ieee.org/community/technical-committees/2023-ieee-grss-data-fusion-contest/).
+### Table S27: omitted PARE-F minus CFAR-strict differences
+
+| Backbone | R@1 | R@5 | R@10 | MRR@10 |
+|---|---:|---:|---:|---:|
+| vitb32 | -0.3254 | -0.7050 | -0.3796 | -0.4072 |
+| vitb16 | -0.1085 | -0.8406 | -1.0846 | -0.4892 |
+| remoteclip | -0.2983 | -0.2983 | -1.0304 | -0.4434 |
+| siglip | -0.2983 | -0.5423 | -1.2202 | -0.4972 |
+| georsclip | -0.4881 | -1.0575 | -2.3048 | -0.7548 |
+
+### Table S4: omitted unavailable-spacing row
+
+The unavailable group contains 2,502 queries: France 0, Japan 0, USA 0;
+other literal prefixes are GF2 287, P 467, SN6 966 and SV 782. No GSD is
+inferred from these prefixes. The following Table S5 already gives this
+group's retrieval metrics.
+
+### S7: GeoRSCLIP Stats-off and Scene
+
+For the historical single-seed full-gallery study the two rows have exactly
+matching aggregate R@1/5/10 and MRR@10: 0.32538, 1.35575, 2.90130 and 0.87256%.
+Their top-ten memberships agree, but 14 of the 3,688 full ranks differ. Thus
+identical aggregate metrics are a real recorded result, not evidence of
+identical complete rankings or a proven implementation fault.
+
+## Repair exploration and timing of selection
+
+The [separate repair archive](../../experiments/repair_20261103/README.md) now
+supplies the numerical outcomes of all 54 trainings, 108 evaluations and 42
+probes. It includes unsuccessful reliability/token-limit/crop changes.
+The scene/coarse gate mean examined in that exploration is also used by
+PARE-S; saying none of the alternative gate ideas was adopted is inaccurate.
+PARE-S does not adopt the locked repair candidate's reliability variant,
+token cap or 48-pixel crop expansion. These exploratory data were already
+used material, not a blind test, and are not inside the 24-page PDF.
+
+## Source metadata and terminology
+
+SpaceNet6 reports a 0.5 m resampled raster grid; OpenEarthMap-SAR describes
+0.15–0.5 m Umbra Spotlight imagery; DFC2023 describes nominal 1 m Gaofen-3 SAR.
+The DFC2023 0.5/0.8 m values are optical and 2 m is nDSM. Do not impute these
+heterogeneous source values as verified per-image GSD. References:
+[SpaceNet6](https://doi.org/10.1109/CVPRW50498.2020.00106),
+[OpenEarthMap-SAR](https://doi.org/10.1109/MGRS.2025.3599512),
+[official DFC2023 description](https://www.grss-ieee.org/community/technical-committees/2023-ieee-grss-data-fusion-contest/).
+
+All uses of “independent verification” in the historical PDF and legacy
+`independent_audit` file titles mean separately written internal checks,
+not an external third-party replication. Historical code/JSON retain their
+original byte-hash contracts. Use the pinned launcher rather than changing
+source hashes to accept a newer, differently documented checkout.

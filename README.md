@@ -4,6 +4,32 @@ Research implementation accompanying *Physics-Aware Region Encoding for SAR
 Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
 historical compatibility; it implements the PARE architecture.
 
+## Exact source for the matched study
+
+The current checkout contains later documentation corrections. Its raw source
+hashes therefore differ from those that generated the archived measurements.
+Use this explicit pinned launcher after installing the recorded environment
+and preparing the data/models:
+
+```bash
+export CUDA_VISIBLE_DEVICES=0
+python scripts/reproduce_matched.py --data "$PWD/data" --models "$PWD/models" \
+  --out "$PWD/results/matched_reproduction" --stage preflight
+```
+
+Then use the same arguments with `--stage cache`, `train`, `evaluate`,
+`scale-cache` and `evaluate-scales` in order. `--stage plan` prints the jobs.
+The launcher creates a detached source worktree at
+`b174e52fa987085f09b2c75ca173fa0ca042c484`; original source, dataset and tokenizer
+checks remain mandatory. It does not silently use current code with old caches.
+The old direct portable command deliberately fails in an incompatible checkout.
+A clean pinned worktree and this launcher passed real data/offline-tokenizer
+preflight; this is not a claim that all 75 heads were retrained by the launcher.
+
+The [historical technical record and errata](docs/review_20261111/README.md)
+now link the [complete earlier repair outcome archive](experiments/repair_20261103/README.md).
+The record is not a submitted supplement or an authorship declaration.
+
 ## 11 November 2026: full-caption evaluation and matched token controls
 
 The [review addendum](experiments/review_20261111/README_new_diagnostics.md)
@@ -23,7 +49,7 @@ All new comparisons are exploratory on the previously inspected benchmark.
 
 The addendum preserves failed verification attempts, the final
 [numerical input checks](experiments/review_20261111/input_verification/),
-[separately written audits](experiments/review_20261111/independent_audit/),
+[internal verification checks](experiments/review_20261111/independent_audit/),
 and [exact-text overlap diagnostics](experiments/review_20261111/caption_overlap.json).
 Use the [dedicated constant-descriptor loader](experiments/review_20261111/constant_descriptor_head.py)
 for the new heads; loading their weights into an unmodified SAQREHead omits the
@@ -32,8 +58,8 @@ November 9 code and artifacts remain unchanged.
 
 ## 11 November 2026: documentation corrections and historical record
 
-The [historical supplement and reading corrections](docs/review_20261111/README.md)
-separate the unchanged pre-review PDF from the current short submission supplement.
+The [historical technical record and reading corrections](docs/review_20261111/README.md)
+identify the historical technical record and its corrected scope.
 The [section-by-section errata](docs/review_20261111/ERRATA.md) identify obsolete
 future-tense statements, known seed-0 outcomes, source/spacing distinctions and
 additional exploratory development history. Earlier sections below are dated
@@ -67,7 +93,7 @@ an independent blind test or proof that every component provides a gain.
 
 The [separate 15-head, 30-evaluation mechanism archive](experiments/token_mechanism_20261109/README.txt)
 retains conditional, constant-descriptor, and token-off results, including
-negative and inconclusive differences. It uses a different full-branch recipe
+negative and inconclusive differences. It uses the distinct A1B0C1 recipe (fine attention on, fine-to-gate off)
 and does not establish equivalence or a PARE-S-specific conditioning benefit.
 
 [All 75 measured PARE-S study heads](checkpoints/simplified_20261109/README.md)

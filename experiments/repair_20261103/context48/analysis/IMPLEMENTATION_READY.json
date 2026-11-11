@@ -1,0 +1,14 @@
+{
+  "status": "implementation_and_synthetic_checks_complete",
+  "created_utc": "2026-11-03T05:15:41.936558+00:00",
+  "scientific_protocol_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+  "source_sha256": {
+    "analyze_context48.py": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+    "README.md": "0ebf9cc1a3b796b697db237b60326acc2bb1e09538700fd5d93d4b348f99ef42",
+    "test_analyze_context48.py": "c993144da492446f84b5b6d86f5557474df33583aa36e592a5b0b7cc6164f57a"
+  },
+  "synthetic_tests_passed": 9,
+  "new_context_results_read": false,
+  "peer_review": "inspect_package read-only review passed for paired mean/sample SD, exact four engineering conditions, both-split primary acceptance, signed effects retained and schema",
+  "context_auditor_sha256": "9f0820afe31cd2b958a2e3f698b292c61c62135aef77596bfc8f495427fce335"
+}

@@ -1,0 +1,61 @@
+# PARE repair development protocol — fixed before training
+
+The scientific protocol was approved and fixed on 3 November 2026 at 04:59:59 UTC, before any new repair training. It replaces the earlier considered simplex-fusion axis after the existing-head audit found scene-clamp events below 0.7% but token perturbations larger than the unit raw embeddings. The method, grid, selection rule, thresholds, and reporting contract are fixed. The implementation/source freeze follows successful GPU equivalence checks and preflight; it must not change this scientific specification. No official-test inputs are permitted.
+
+## Evidence status and scope
+
+The design is post hoc: the five-backbone test results, the completed 42-run exploratory validation study, and the existing-head audit informed it. The 918-image validation set is now explicitly a development set. The new internal check is drawn from the former fit set, which earlier models used for fitting; it is not external data or a historically untouched blind test. It is excluded from every new head's loss and evaluated only after candidate lock. Original five-backbone results and all earlier 42 runs remain unchanged.
+
+The present experiment asks whether separate routing of fine evidence, a bounded reliability intervention, and a bounded token perturbation improve retrieval under one fixed recipe. It does not establish calibrated SAR reliability, identified scattering classes, or acquisition-GSD invariance.
+
+## Exact interventions
+
+All configurations use the original two sigmoid gate outputs and scene coefficient `[1-g_c-g_f]_+`. No simplex fusion experiment is run.
+
+- A=1 retains the original fine attended vector; A=0 replaces it by the scene vector and retains g_f. The empty-fine fallback and all masks are unchanged.
+- B=0 uses `(scene + sum(valid coarse))/(1+n_coarse)` for the unaugmented gate input, without normalization. B=1 is the original scene/coarse/fine mean.
+- C=1 retains the coarse descriptor's detector fraction; C=0 zeros only that fourth coarse entry. T=1 in every initial-grid configuration; all other descriptors, prototypes and crop extraction remain unchanged.
+- `reliability=constant` uses the semantic attention distribution p with no nonconstant reliability bias. `original` uses the old attention p_r. `bounded` uses `(1-eta_s)*p + eta_s*p_r`, independently per nonempty coarse/fine branch. Here p=softmax(semantic_logits), p_r=softmax(semantic_logits+lambda*log(rho+eps)), and eta_s=0.5*sigmoid(a_s). Two new scalars `prior_mix_coarse_logit` and `prior_mix_fine_logit` initialize to log(1/9), giving eta=0.05, without consuming RNG. The same augmented embeddings, temperature, masks and rho are used on both paths. The mixture assigns every valid crop at least half its semantic-only probability, and its total variation from p is at most 0.5. This protects semantic attention from being completely overridden; it does not guarantee higher retrieval accuracy or calibrate rho.
+- `token_mode=original` uses delta=type_scale*(pi U) and norm(e+delta). `bounded` replaces delta by delta/(1+||delta||_2/0.5) before normalization. This preserves the learned token's direction and fixes its norm below 0.5. For a unit raw embedding, the augmented/raw cosine is at least sqrt(0.75), so the token cannot reverse the raw direction. This changes optimization as well as the forward map; no fixed-head causal interpretation is implied. The cap and reliability-mix maximum are fixed, not searched.
+
+T is enabled in the initial selection grid. A cap benefit alone is evidence for bounding this token design, not a matched-training proof that tokens outperform no tokens. Therefore exactly one matched T0 configuration is trained after selection lock, as specified below. The old T0/T1 evidence remains specific to the old family.
+
+## Grid and training
+
+Twelve main configurations cross A={0,1}, reliability={constant,original,bounded}, token_mode={original,bounded}, with B=0,C=1,T=1. Two anchors are original full (ABC111) and original strict (ABC000), both original reliability, original token mode and original fusion. Fourteen configurations use seeds [0,1,2]: exactly 42 initial runs. After selection lock, one matched T0 configuration uses the same three seeds: exactly 45 new heads in total. No other candidates or controls are added. The JSON lists every initial configuration, the conditional T0 rule, and every signed contrast explicitly.
+
+Backbone: frozen ViT-B-32, laion2b_s34b_b79k, D=512. Training: AdamW, lr=0.002, kappa=0.03, weight decay=0.0001, batch size=64, 10 epochs, float32, no AMP, no early stopping or additional sweep. Every run uses 6,610 images and 23,016 caption pairs: 360 batches per epoch including a tail of 40. Retain the original diagonal caption-to-image contrastive loss and duplicate-image behavior. All configurations within a seed share the initial base parameters, frozen caption-loader pair order and per-epoch shuffle stream. All anchors are newly fit on these same 6,610 images; old checkpoints cannot substitute for them.
+
+## Splits and stage boundary
+
+The original 8,263 fit IDs are sorted by `(SHA256('pare-repair-internal-check-v1|' + exact_ID), exact_ID)`. The first 1,653 form the internal check; the remaining 6,610 train. Persist all lists lexically sorted, but filter pairs in the frozen loader order: images in first-appearance order, then each image's captions in their original order. Development IDs are the unchanged original 918 validation IDs. The root-created split files and hashes are authoritative; do not regenerate a more favorable split. Their populations are train 6,610/23,016 pairs, development 918/3,186 captions, internal check 1,653/5,743 captions. IDs are disjoint. This does not rule out geographic overlap or near duplicates.
+
+Stage 1 trains all 42 heads and evaluates only development: one first caption per image in the frozen caption loader against all 918 development images. Gallery order is the original cache row order after ID filtering; reference descending torch.argsort tie handling is retained. Do not encode internal-check text or calculate its scores/ranks/metrics in this stage.
+
+Stage 2 is a global selection-lock operation after all three seeds and all 14 configurations are complete and artifacts verified. Eligible candidates are the six A1/B0/C1 heads. Rank configurations by descending three-seed mean development R@10, then mean MRR@10; exact ties use this order: constant/original-token, constant/bounded-token, original-reliability/original-token, original-reliability/bounded-token, bounded-reliability/original-token, bounded-reliability/bounded-token. No best-seed selection occurs. Lock the single configuration, all three checkpoint hashes, source/protocol/input hashes, the complete development score/rank table, which suffices to reconstruct every acceptance diagnostic. The independent final summary reports the acceptance decisions; a separate acceptance report is not a prerequisite for locking. Lock a candidate even if it fails the development improvement criterion; mark it ineligible for a success claim rather than silently changing the rule.
+
+Stage 3 trains exactly three matched selected-control heads after the immutable global lock: the selected A1/B0/C1 configuration with T changed from 1 to 0, one for each seed. Reset to the same initial base parameters and pair/shuffle sequence; do not warm-start from the selected learned head. T0 uses normalized raw coarse/fine embeddings without h_psi/U/type_scale augmentation or a token cap, while retaining the selected reliability and all other settings. Bind these heads to the selection-lock hash. Their development results do not permit reselection.
+
+Stage 4 begins only after the lock and all three selected controls complete. Encode one first-occurrence caption per internal-check image and evaluate every one of the 45 heads against the entire 1,653-image internal-check gallery. Report all results, including losing candidates, anchors and T0. Do not reselect the candidate or alter its formula after seeing this check. Further use for tuning would turn this set into development data and require an explicit new protocol.
+
+## Metrics, contrasts, acceptance
+
+Every run reports R@1, R@5, R@10 and MRR@10 in percent; reciprocal rank is zero beyond rank 10. Calculate contrasts within matched seed first, then their mean and sample SD (ddof=1). SD is not a confidence interval. Do not perform or imply significance tests.
+
+The JSON explicitly enumerates all six matched A effects; all six token-cap effects; all 12 pairwise reliability effects in A×token contexts; their specified interactions; the original full/strict difference and isolated B/C anchor comparisons; and each of six eligible candidates versus both anchors. These are descriptive, overlapping contrasts, not independent replications. All signs and all four metrics are retained.
+
+An engineering improvement criterion for a signed comparison is mean delta R@10 >=0.5 pp, all three per-seed R@10 deltas >=0, at least two >0, and mean delta MRR@10 >=0, using unrounded values. The threshold is a fixed practical margin, not statistical evidence. Report the criterion for every contrast.
+
+For the locked candidate, report three primary acceptance checks on both development and internal-check sets: candidate minus newly trained original full, A1 minus the exactly matched A0 configuration, and selected T1 minus its post-lock matched T0. All three must pass on both sets to claim an overall gain with useful fine-attention and token paths under this internal protocol. An improvement over full without an A effect does not establish a fine-attention repair; a cap effect without a T1–T0 effect does not establish a useful token contribution. The strict anchor remains visible even when stronger.
+
+Any more specific mechanism claim also needs its matched contrast: bounded reliability versus constant (and report versus original); bounded token versus original token at identical A/R; B0 versus B1 with original R/token. Do not describe a jointly changed candidate-versus-full comparison as isolating all its components. Failure stops the success claim; it does not authorize changing thresholds, seeds, the split or the locked candidate.
+
+## Fixed-head mechanism probes (development only)
+
+These probes do not affect selection or acceptance and create no new trained configurations. For each of the 42 initial T1 heads and each coarse/fine branch, compute mean pi over all valid crops of the actual 6,610 training images (each valid crop has equal weight; exclude padding). Replace every development crop's pi by that frozen branch mean while retaining U, type_scale, token cap, reliability, gate and all other inputs. Report all 42 heads, all four development metrics and the change versus their unmodified head. The three T0 heads have no active token-mixture probe. Do not compute the mean on development or internal-check crops. Do not run this probe on the official test.
+
+Also report mean per-crop entropy, entropy of mean pi and prototype occupancy, separately per branch and split. Low per-crop entropy alone is confident assignment, not necessarily collapse; low marginal entropy / near-one prototype use is needed for a collapse description. Existing audits show collapse in some, not all, old heads. If train-mean substitution preserves performance, input-dependent radiometric mixtures have not been established for that head; a loss supports dependence under this intervention, not physical identification. The probe does not replace a T0 retraining comparison.
+
+## Verification and reporting
+
+Before execution, verify all split/count/source/backbone/cache hashes; original-mode endpoints against the reference; mask/empty-branch fallbacks; finite forward/gradients; the token cap and semantic-probability lower bound; eta=0 and eta=1 diagnostic endpoints; T0 bypass semantics; and unchanged base initialization. Freeze all source, protocol and environment records. Preserve per-run heads, final score matrices, ranks, IDs, epoch order hashes and stage status. A partial run or missing seed cannot support a completed result. Complete reports must include all 45 outcomes, all contrasts, the global selection lock and all fixed probes. No paper result is overwritten in place.

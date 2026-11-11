@@ -1,0 +1,26 @@
+{
+  "status": "deployed_and_verified_no_experimental_results_read",
+  "created_utc": "2026-11-03T05:40:21.729567+00:00",
+  "python_executable": "<PARE_WORKSPACE>/.venv/bin/python",
+  "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "bundle_sha256": "c68ac312ac1a88b967383cb94a826c058b89afa6a72730719c8f585a1f7f7eae",
+  "file_sha256": {
+    "IMPLEMENTATION_READY.json": "619172f86c68971f8a229e11b54fad37cbcd451c168662d4b37cba7ce82eeffa",
+    "README.md": "0ebf9cc1a3b796b697db237b60326acc2bb1e09538700fd5d93d4b348f99ef42",
+    "analyze_context48.py": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+    "test_analyze_context48.py": "c993144da492446f84b5b6d86f5557474df33583aa36e592a5b0b7cc6164f57a"
+  },
+  "stdlib_imports_verified": [
+    "argparse",
+    "csv",
+    "hashlib",
+    "json",
+    "math",
+    "pathlib",
+    "statistics"
+  ],
+  "synthetic_tests_passed": 9,
+  "test_output": "test_all_results_and_signed_effects_retained (test_analyze_context48.AnalysisTests) ... ok\ntest_artifact_escape_or_mutation_rejected (test_analyze_context48.AnalysisTests) ... ok\ntest_both_splits_required (test_analyze_context48.AnalysisTests) ... ok\ntest_missing_or_extra_run_rejected (test_analyze_context48.AnalysisTests) ... ok\ntest_output_refuses_overwrite_and_contains_all_comparisons (test_analyze_context48.AnalysisTests) ... ok\ntest_paired_mean_and_sample_sd_not_pooled_sd (test_analyze_context48.AnalysisTests) ... ok\ntest_partial_or_wrong_count_audit_rejected (test_analyze_context48.AnalysisTests) ... ok\ntest_query_identity_and_metric_mutation_rejected (test_analyze_context48.AnalysisTests) ... ok\ntest_thresholds_exact_and_all_conditions_needed (test_analyze_context48.AnalysisTests) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.017s\n\nOK\n",
+  "analysis_executed": false,
+  "experimental_results_read": false
+}

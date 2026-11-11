@@ -1,0 +1,18 @@
+{
+  "schema": "pare.constant-token-probe-source.v1",
+  "created_utc": "2026-11-03T05:01:37.248522+00:00",
+  "status": "source_prepared_synthetic_tests_passed_not_executed_on_formal_data",
+  "file_sha256": {
+    "run_constant_token_probe.py": "cda4ad3c15fb637df9a14d759a0719ff162da18eb78ff0b2ea6f1109d0f3ae4b",
+    "test_constant_token_probe.py": "affe218d82bf05def6aa9c151113ff2252e0d6dcedb1d7695d92e25083b266a5",
+    "CONSTANT_TOKEN_PROBE_README.txt": "9e296482e5b67577019a2a19f8d247da6533e374af7e78f663f33be0631f8aa4"
+  },
+  "synthetic_validation": {
+    "path": "constant_probe_synthetic_validation.json",
+    "sha256": "cb54dddfe90315dc2945e6666e0ed184bf7c7661d76ac83bf05ff4461e13c6c1",
+    "tests_passed": 9
+  },
+  "scientific_protocol_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+  "formal_execution_requires": "All 42 stage-one runs complete and immutable global selection lock; separate new output directory; root-assigned GPU.",
+  "peer_review": "Formula/scope review passed; persistent cache count-to-mask issue fixed and covered by dedicated regression."
+}

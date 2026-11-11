@@ -1,0 +1,156 @@
+{
+  "protocol_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+  "freeze_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29",
+  "input_sha256": {
+    "training_cache": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "training_captions": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "original/fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+    "original/val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+    "original/train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+    "repair/development_ids.json": "6fa6e97171a42527c31f0e50ea32f75a26462ab66ed872506dc97cffe22bf7f9",
+    "repair/internal_check_ids.json": "153432797cad768345738b5aaeef65bc6a93bffd909b25bf451c9b39f1b328be",
+    "repair/train_ids.json": "f67eff7ee49a4ae998d5ce36e5e8977add3ed4b23aea50b570fbbad7d7d6c044",
+    "pretrained_weight": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "fine_overlay": "af80fec12fcf3c13aa228667def786f84896429f0562282a2f3457cb304074a3"
+  },
+  "parent_comparators": {
+    "0/manifest.json": "8c601d8822b43f4956d6d2b2f6f9164d3ad4d68976dbd4d1557f013563dabb82",
+    "0/A1T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/ABC101_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "a7056d9fe072cdb4501568c0440dfe7cb88295360f598ef5525dfbb0cde82874"
+    },
+    "0/A1T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/ABC101_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "ad32a6ea645b6f9ea431fcac5e3a4d85153948b24c12f0a4f344b43d3632e0ff"
+    },
+    "0/A0T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/ABC001_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "735633242e1ae9afa937b50b4e33ddaf83e2ae4cd4a99b228a23dd5bfd6170a6"
+    },
+    "0/A0T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/ABC001_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "642c9536e6c2e337bea702ba094b2b8e9ff12fd29aa898c3ec42d8afc6153922"
+    },
+    "0/A1T0/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/selected_control/ABC101_T0_Rconstant_Tokoriginal/head.pt",
+      "sha256": "f3c2e66ef7e095fd31576a421e26b326e334879d3c93011584e2ae7daaf6f2b2"
+    },
+    "0/A1T0/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_0/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json",
+      "sha256": "87124b0de642e160fe3f4f44195538797684e6ede422f978f8ed4ccfec3abaab"
+    },
+    "1/manifest.json": "b65201c73f425e953c1eec14d1211122efb09110bf8bd5fccfa59dd0cdc717c9",
+    "1/A1T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/ABC101_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "4ab562505a9c26db27081fcb2ebd2aeaaaa9393ed75269f651d93964ada235e9"
+    },
+    "1/A1T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/ABC101_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "d3121804b97bc0c098f218c14713a9918907d95b404832a4b95fa1e7248591c2"
+    },
+    "1/A0T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/ABC001_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "4e6ec5cb2f62d9ffe27b53f62593488ed4c5c7e3db9939daab3d669b3f0c2869"
+    },
+    "1/A0T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/ABC001_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "7beb6cb3b0cb55e5a48913ae813e8cb4a6cd3c622d8340874eaa70e6f13eced6"
+    },
+    "1/A1T0/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/selected_control/ABC101_T0_Rconstant_Tokoriginal/head.pt",
+      "sha256": "057199219ad58f38bf26087f520c4e90f5caba95bc62db66ecadb452bfa44b11"
+    },
+    "1/A1T0/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_1/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json",
+      "sha256": "d863697d25186eff030e56c374656646325c95a7d9aadb661c15811fa820dadd"
+    },
+    "2/manifest.json": "87193eda7ca91d99cc7cfd392c4ec14490391c93568c20dd95b2f89fbc537180",
+    "2/A1T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/ABC101_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "0b4fd2e317ab49bc1ab4f4c12b63cf8022c5fc3a7628d395cc36453967839136"
+    },
+    "2/A1T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/ABC101_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "b098155eb79e648e8a43c24c11e2b810226191136cc69b5276bd72905a18b106"
+    },
+    "2/A0T1/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/ABC001_T1_Rconstant_Tokoriginal/head.pt",
+      "sha256": "67ad85f600594c4749546171430148dd3f5ed9ad1d7c7ef08dc2db534c79bdf3"
+    },
+    "2/A0T1/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/ABC001_T1_Rconstant_Tokoriginal/development.json",
+      "sha256": "e3784dd4a5b1b3942a15cf312e2f50204cad3eb400c52ed04c84a1a84cdfebeb"
+    },
+    "2/A1T0/head.pt": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/selected_control/ABC101_T0_Rconstant_Tokoriginal/head.pt",
+      "sha256": "115845a45f105339656291fde80a1142c48ef0a5e1821df05b3a474af35a99e3"
+    },
+    "2/A1T0/development.json": {
+      "path": "<PARE_WORKSPACE>/repair_experiments_20261103_v1/results/seed_2/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json",
+      "sha256": "de932a9ae51f3ae6a451a05a0a3033458992863e606c492cb8b55ed20f1e6c83"
+    }
+  },
+  "overlay_contract": {
+    "base_cache_sha256": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "base_signature": {
+      "schema_version": 2,
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+      "external_checkpoint_sha256": null,
+      "primitive_mode": "physics",
+      "max_regions": 6,
+      "max_sc": 8,
+      "source_sha256": {
+        "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+        "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+        "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+        "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+        "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+      },
+      "packages": {
+        "torch": "2.9.1+cu128",
+        "open_clip_torch": "2.26.1",
+        "numpy": "1.26.4",
+        "Pillow": "10.4.0",
+        "scipy": "1.13.1"
+      }
+    },
+    "base_signature_sha256": "ce7a5b5ca7178e01db37e9f63b5ea2f180e5ec4b3f6147b84b8d14f5d2fc0a10",
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "eval_transform": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_to_rgb at 0xc9cdb3a7d90>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "current_eval_transform_repr": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_to_rgb at 0xab3fbc411b0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "canonical_eval_transform": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_to_rgb at <process-address>>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "canonical_transform_rule": "replace only hex memory address in <function NAME at 0x...>",
+    "source_sha256": {
+      "code/fine_context.py": "62552ab73e2345d013d7121f0b5c3fc758c88c593c2e2776b4cac1956be9ab21",
+      "base_code/saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "base_code/runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "base_code/cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "base_code/artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+    },
+    "builder_sha256": "1474c7d277eb7e05190b8c7b12021c0ed4b504a6b9d9010f278ee504ed3512f5",
+    "protocol_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+    "crop_half": 24,
+    "suppression_half": 12,
+    "max_fine_crops": 8,
+    "encoder_batch_policy": "original scene and coarse crops precede context fine crops, capacity128",
+    "transform_implementation_files": {
+      "torchvision.transforms.transforms": "b0d9742f64140b4f40a23e343ef28734c32f0fc38bc4d153403bc9d6ac553402",
+      "open_clip.transform": "11c80cb26058a9e6b6af0169d9655ba3a6a704420082f4d789fd3371b4a75eb8"
+    },
+    "backend": {
+      "matmul_allow_tf32": false,
+      "cudnn_allow_tf32": true,
+      "torch": "2.9.1+cu128",
+      "cuda": "12.8",
+      "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    "created_utc": "2026-11-03T05:17:49.383667+00:00",
+    "geometry_sha256": "5fa6eb4c5ac479ff2e3ad406e89d65236741ce9194e616ce769c9ba2f03d06d9",
+    "metadata_report_sha256": "17436d3f1174c8221caa3e2cbf25cb29bcf7dddea36c7d4398cb32159273e942",
+    "smoke_report_sha256": "79062c116cf0525809ec2eddf63828919f21bf58de3088659949d5490f2908e9",
+    "source_freeze_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29"
+  },
+  "bound_utc": "2026-11-03T05:53:02.462660+00:00"
+}

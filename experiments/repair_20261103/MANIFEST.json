@@ -1,0 +1,2083 @@
+{
+  "schema": "pare.historical-repair-public-projection.v1",
+  "scope_counts": {
+    "trained_progress": 54,
+    "retrieval_evaluations": 108,
+    "frozen_probes": 42
+  },
+  "numeric_data_modified": false,
+  "files": {
+    "gate_reliability/protocol.json": {
+      "original_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "projected_content_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "file_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "bytes": 41783,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/protocol.md": {
+      "original_sha256": "5ba226728f9730ba6723dabebd6b07b8d215d4fccf7d5990405bd7507ea7e0ed",
+      "projected_content_sha256": "5ba226728f9730ba6723dabebd6b07b8d215d4fccf7d5990405bd7507ea7e0ed",
+      "file_sha256": "5ba226728f9730ba6723dabebd6b07b8d215d4fccf7d5990405bd7507ea7e0ed",
+      "bytes": 12313,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/REPAIR_SOURCE_FROZEN.json": {
+      "original_sha256": "ad9154998d1040260f1a8edf80d0cdffa469812d0080b1eb436b1c6206df3a74",
+      "projected_content_sha256": "ad9154998d1040260f1a8edf80d0cdffa469812d0080b1eb436b1c6206df3a74",
+      "file_sha256": "ad9154998d1040260f1a8edf80d0cdffa469812d0080b1eb436b1c6206df3a74",
+      "bytes": 2992,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/SELECTION_LOCK.json": {
+      "original_sha256": "2f0df93aa09b0af7a88d064a7675f3a4ed3f2a4a316c2035f5f3da5250489f07",
+      "projected_content_sha256": "2f0df93aa09b0af7a88d064a7675f3a4ed3f2a4a316c2035f5f3da5250489f07",
+      "file_sha256": "2f0df93aa09b0af7a88d064a7675f3a4ed3f2a4a316c2035f5f3da5250489f07",
+      "bytes": 22937,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC000_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "dcb9e5076e806bbce9110e62923c9f45807828d641c37575417b334c00d04973",
+      "projected_content_sha256": "dcb9e5076e806bbce9110e62923c9f45807828d641c37575417b334c00d04973",
+      "file_sha256": "13016a13cbf188ca543c5fa58d648123a8f14b1fc72f96b93dc6839c8d5a4334",
+      "bytes": 52805,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC000_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "559cc177443112421712a53780b865ce7bd23322f9a943f1e15b7b02fa9f52ba",
+      "projected_content_sha256": "559cc177443112421712a53780b865ce7bd23322f9a943f1e15b7b02fa9f52ba",
+      "file_sha256": "559cc177443112421712a53780b865ce7bd23322f9a943f1e15b7b02fa9f52ba",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "67aab061dea83d7112cdb0645f1e44e0677dfa56062d12f389b8746a94e8cd10",
+      "projected_content_sha256": "67aab061dea83d7112cdb0645f1e44e0677dfa56062d12f389b8746a94e8cd10",
+      "file_sha256": "8ca20e76079f881e8a9c626b524eb600c3318b290851636d2f1ba81721581ccf",
+      "bytes": 52842,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "dad482abb5493c9266645385583660127ed0779f1e4410341e796159ad849900",
+      "projected_content_sha256": "dad482abb5493c9266645385583660127ed0779f1e4410341e796159ad849900",
+      "file_sha256": "dad482abb5493c9266645385583660127ed0779f1e4410341e796159ad849900",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "f4c957c997bf7c9e5efe5be8f5c2ed9372feab88738aac71ec6d702dad5af644",
+      "projected_content_sha256": "f4c957c997bf7c9e5efe5be8f5c2ed9372feab88738aac71ec6d702dad5af644",
+      "file_sha256": "26b6a4cd1bedab9c5a6029762dccd879dbb1b81083082e4209d5457fe17bde0c",
+      "bytes": 52804,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "1f68fe4f9d8ed73d24f3a4827580d849dc297817c9f5d5471651457ded95f2c4",
+      "projected_content_sha256": "1f68fe4f9d8ed73d24f3a4827580d849dc297817c9f5d5471651457ded95f2c4",
+      "file_sha256": "1f68fe4f9d8ed73d24f3a4827580d849dc297817c9f5d5471651457ded95f2c4",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "1a44b2f1514b933eafbd077ac57406bfc2d133b292338b2b18e302fc43d1d5b9",
+      "projected_content_sha256": "1a44b2f1514b933eafbd077ac57406bfc2d133b292338b2b18e302fc43d1d5b9",
+      "file_sha256": "8bb5435a72bc18777aae4505dcbf3c10a4ba240559951c6a45919d165729d15b",
+      "bytes": 52846,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "69cb0549d4c56abd97ec4588f6dea67eccd8a880be5f3bdf177e05c3a22cafba",
+      "projected_content_sha256": "69cb0549d4c56abd97ec4588f6dea67eccd8a880be5f3bdf177e05c3a22cafba",
+      "file_sha256": "69cb0549d4c56abd97ec4588f6dea67eccd8a880be5f3bdf177e05c3a22cafba",
+      "bytes": 2950,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "642c9536e6c2e337bea702ba094b2b8e9ff12fd29aa898c3ec42d8afc6153922",
+      "projected_content_sha256": "642c9536e6c2e337bea702ba094b2b8e9ff12fd29aa898c3ec42d8afc6153922",
+      "file_sha256": "e74dfe206f0b3fd5b3dd9d998b9fdd9e874fbc0707105c563eac59da95b08ca1",
+      "bytes": 52810,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "75749f01d142132a47b6c3305ddd52fb75d2f65e536478baf4d90f1d387b4b91",
+      "projected_content_sha256": "75749f01d142132a47b6c3305ddd52fb75d2f65e536478baf4d90f1d387b4b91",
+      "file_sha256": "75749f01d142132a47b6c3305ddd52fb75d2f65e536478baf4d90f1d387b4b91",
+      "bytes": 2955,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "1e8a1c77060de0941d1e98d189b517e8ea8a24275b54cc016fe73a990a79af87",
+      "projected_content_sha256": "1e8a1c77060de0941d1e98d189b517e8ea8a24275b54cc016fe73a990a79af87",
+      "file_sha256": "c3e3277a65be57f1a6ce72bd7e42548926f7d8d1f40b44a2c66eb8e2b3a1a60f",
+      "bytes": 52837,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "8625889e3ebd5429a34639b290c406bf8aa1c95a8df2c96804ed67ce9a886c24",
+      "projected_content_sha256": "8625889e3ebd5429a34639b290c406bf8aa1c95a8df2c96804ed67ce9a886c24",
+      "file_sha256": "8625889e3ebd5429a34639b290c406bf8aa1c95a8df2c96804ed67ce9a886c24",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "f9cc4bde100d0c42392e2333c9653e88e2b0776fe5af15f865ad96ceb65dfcf4",
+      "projected_content_sha256": "f9cc4bde100d0c42392e2333c9653e88e2b0776fe5af15f865ad96ceb65dfcf4",
+      "file_sha256": "d38a648e82781cfe11e022fde48d103017ec4431f5c4bd98a0d798aa02b212d5",
+      "bytes": 52813,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC001_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "44899cd669ae1c96cf5764a0b7c92bced48f1c4bcce6743c3f0e35916b60c37f",
+      "projected_content_sha256": "44899cd669ae1c96cf5764a0b7c92bced48f1c4bcce6743c3f0e35916b60c37f",
+      "file_sha256": "44899cd669ae1c96cf5764a0b7c92bced48f1c4bcce6743c3f0e35916b60c37f",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "061b9c0ff4baaa52b1402e98b776f03f04ae25dbae0c3824ba04eab88a51e6b9",
+      "projected_content_sha256": "061b9c0ff4baaa52b1402e98b776f03f04ae25dbae0c3824ba04eab88a51e6b9",
+      "file_sha256": "b7a042e7a2708a2957a68ead4c03f988f9dd85bb8a5906c501239fc6b75a0179",
+      "bytes": 52858,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "9b9f855169c6d5c3b5ff52cab4611354e8423b75ca8df23d489a8c942d36907c",
+      "projected_content_sha256": "9b9f855169c6d5c3b5ff52cab4611354e8423b75ca8df23d489a8c942d36907c",
+      "file_sha256": "9b9f855169c6d5c3b5ff52cab4611354e8423b75ca8df23d489a8c942d36907c",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "e6f57c1a37089711b78f3a805e9d610003ee80e20963e3d8c66d9dd0e6d4d0b4",
+      "projected_content_sha256": "e6f57c1a37089711b78f3a805e9d610003ee80e20963e3d8c66d9dd0e6d4d0b4",
+      "file_sha256": "e21d166c184677e0d6aad373ce6971237ed38eef0a3358b1edc6a973c05fd36a",
+      "bytes": 52845,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "8bba056cad759277e5b088836a21d1d577c447489f3c9a4f1550f3189a5ec557",
+      "projected_content_sha256": "8bba056cad759277e5b088836a21d1d577c447489f3c9a4f1550f3189a5ec557",
+      "file_sha256": "8bba056cad759277e5b088836a21d1d577c447489f3c9a4f1550f3189a5ec557",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "cd4aa10a91387af70d5fc9809deb04eb6f6fc40f017e2f8a11bbb362b4603eb8",
+      "projected_content_sha256": "cd4aa10a91387af70d5fc9809deb04eb6f6fc40f017e2f8a11bbb362b4603eb8",
+      "file_sha256": "8fceb7dfa7971a19d3650aa19ebbc9b27edb9e0e08014fbd533811bdc2053a1e",
+      "bytes": 52848,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "dcf78616e4ff0fb33e460e97f994ea6744dd6ba7703adb33f0bce4666e1b498f",
+      "projected_content_sha256": "dcf78616e4ff0fb33e460e97f994ea6744dd6ba7703adb33f0bce4666e1b498f",
+      "file_sha256": "dcf78616e4ff0fb33e460e97f994ea6744dd6ba7703adb33f0bce4666e1b498f",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "ad32a6ea645b6f9ea431fcac5e3a4d85153948b24c12f0a4f344b43d3632e0ff",
+      "projected_content_sha256": "ad32a6ea645b6f9ea431fcac5e3a4d85153948b24c12f0a4f344b43d3632e0ff",
+      "file_sha256": "cb5a68a832225d9f8c6deea1881a4f67325535c5725ddc28af303cdd7e676a1b",
+      "bytes": 52827,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "2d433e95f6ffb8e85451fd6345581a93b72e4529d89e3890c6596f3da9be6ec2",
+      "projected_content_sha256": "2d433e95f6ffb8e85451fd6345581a93b72e4529d89e3890c6596f3da9be6ec2",
+      "file_sha256": "2d433e95f6ffb8e85451fd6345581a93b72e4529d89e3890c6596f3da9be6ec2",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "5775375515ee9cd4aa4fcce4e63886405a9aadcfa87cdb3a9861e912a8230172",
+      "projected_content_sha256": "5775375515ee9cd4aa4fcce4e63886405a9aadcfa87cdb3a9861e912a8230172",
+      "file_sha256": "f89b754ee506edd87e4d8f8bd6187caeff20badc6a1aef4356951cf19f5c2fc3",
+      "bytes": 52828,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "c48b295efc54232fe3aa676c0a6b87a110c3ee9b25bda23d90af47e5a4b9bf65",
+      "projected_content_sha256": "c48b295efc54232fe3aa676c0a6b87a110c3ee9b25bda23d90af47e5a4b9bf65",
+      "file_sha256": "c48b295efc54232fe3aa676c0a6b87a110c3ee9b25bda23d90af47e5a4b9bf65",
+      "bytes": 2959,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "a8a3ddf679cb8edb0115990cf2d060a0f5eb2ea84cf72c7a27927966de881278",
+      "projected_content_sha256": "a8a3ddf679cb8edb0115990cf2d060a0f5eb2ea84cf72c7a27927966de881278",
+      "file_sha256": "2f874c92f35490f40116d318568d7520ca61f54b6987090d8778de8a25c57268",
+      "bytes": 52807,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC101_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "706b7cca2965c9b8c30d3f61c28eb6857282981a17ecc9aa961bd31639d0df48",
+      "projected_content_sha256": "706b7cca2965c9b8c30d3f61c28eb6857282981a17ecc9aa961bd31639d0df48",
+      "file_sha256": "706b7cca2965c9b8c30d3f61c28eb6857282981a17ecc9aa961bd31639d0df48",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC111_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "f5b5fc8e162acc68ec3ef5fe2acb1990f11c8e6cfee56f029060b87db72365b8",
+      "projected_content_sha256": "f5b5fc8e162acc68ec3ef5fe2acb1990f11c8e6cfee56f029060b87db72365b8",
+      "file_sha256": "44b51b43e46d4701c04a7273e38f963d1d292dc44e1d10411326a624fb96546a",
+      "bytes": 52837,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/ABC111_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "e3787831a7be2c281942e3ab8950fc0571a976ee17328a4e104e5891378f2e05",
+      "projected_content_sha256": "e3787831a7be2c281942e3ab8950fc0571a976ee17328a4e104e5891378f2e05",
+      "file_sha256": "e3787831a7be2c281942e3ab8950fc0571a976ee17328a4e104e5891378f2e05",
+      "bytes": 2959,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC000_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "c793a70b82195c99d7a9bbfad961fe4d704e555753cc48fe5073ab3a5067ff27",
+      "projected_content_sha256": "c793a70b82195c99d7a9bbfad961fe4d704e555753cc48fe5073ab3a5067ff27",
+      "file_sha256": "09154412b875ce9c681a9b1538ea259c8e88707b23959ffaedd3e20550aa9f15",
+      "bytes": 89309,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "810db803cc4abfac38d80e762933b480e760367c55049cb962bc521f76202aa6",
+      "projected_content_sha256": "810db803cc4abfac38d80e762933b480e760367c55049cb962bc521f76202aa6",
+      "file_sha256": "cf21214e6a93f308cd8ab3ba6777353082a18e61772695a93ea8ff21edb64003",
+      "bytes": 89356,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "7fe1fdd9758b9e9a820ecf76df8256f456c0fe0e8fcf9f256a1c439809840f7e",
+      "projected_content_sha256": "7fe1fdd9758b9e9a820ecf76df8256f456c0fe0e8fcf9f256a1c439809840f7e",
+      "file_sha256": "1245f270de64469db53e0b01b88322ef6414e1e42c7ce3f087a064086f183200",
+      "bytes": 89321,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "6ebe574b95a98c4c523ade3ef1da9d978dabab276c88cdfb7dfcfa754a9a2099",
+      "projected_content_sha256": "6ebe574b95a98c4c523ade3ef1da9d978dabab276c88cdfb7dfcfa754a9a2099",
+      "file_sha256": "209e1ae0943949ded72587c86c69d6f733cfb9f0bed89abeef1a89f129105612",
+      "bytes": 89358,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "0a1fd11e4a2aac4322525b9738711e88e9774101873cc81c8d21cc877038a90c",
+      "projected_content_sha256": "0a1fd11e4a2aac4322525b9738711e88e9774101873cc81c8d21cc877038a90c",
+      "file_sha256": "8aa76b0e4aec08a7ddd965c3d62bb7bb200b8d7f3b69ff6546491621e1fd4cd2",
+      "bytes": 89304,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "64ea0c4ab4936a5b0344d251e0d2abd84f6d7625860de22e64d3cdacd7a34982",
+      "projected_content_sha256": "64ea0c4ab4936a5b0344d251e0d2abd84f6d7625860de22e64d3cdacd7a34982",
+      "file_sha256": "1c06b1ec46a0db0f0fa840debf0376a595fb7ae4f9a32ab1b157a886ad11c35f",
+      "bytes": 89351,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC001_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "e64ac4d9cf7ba7835db0023879646687aaf4ffaa9af36201ff73e6f280c67912",
+      "projected_content_sha256": "e64ac4d9cf7ba7835db0023879646687aaf4ffaa9af36201ff73e6f280c67912",
+      "file_sha256": "f7c9a9609d3054b5b6a416d5c379f37e522fd28f3bd25703fd2cd0f8dbcbd961",
+      "bytes": 89319,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T0_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "7d6be5e0becc5d40a6d61b31c0240864a6645f49b4150f2b165286854d203ced",
+      "projected_content_sha256": "7d6be5e0becc5d40a6d61b31c0240864a6645f49b4150f2b165286854d203ced",
+      "file_sha256": "791c57965cf66b6f3f7ae79c3f178353876f6c1e0bc0926267879a80cf1debe1",
+      "bytes": 89713,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "8394ba18a675dcc8961ce394ff5f88abd6fe43fbfd10e94d1d2bddd89937b39f",
+      "projected_content_sha256": "8394ba18a675dcc8961ce394ff5f88abd6fe43fbfd10e94d1d2bddd89937b39f",
+      "file_sha256": "42b3503f5dd461b49ed28e981b645164bd90579e4a53ccc8ea69a0643a61bb72",
+      "bytes": 89336,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "a801ebe5e17a1fb0f4b75739ed4147bb2075a6aacf2f947a423e2e88eab86467",
+      "projected_content_sha256": "a801ebe5e17a1fb0f4b75739ed4147bb2075a6aacf2f947a423e2e88eab86467",
+      "file_sha256": "5e7e7272590c6cc1bcf6841dcca4ea4d95c0bc6b0345c0e0c8909e92e13d7c71",
+      "bytes": 89344,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "569750b01c474c64ee291f46e7bfc82f94491e7fb445e8efd9476de262050c46",
+      "projected_content_sha256": "569750b01c474c64ee291f46e7bfc82f94491e7fb445e8efd9476de262050c46",
+      "file_sha256": "ce4cfdc30c426b5d118b0f6456e190ffaf2e5341d09ee507ad956add3aff158a",
+      "bytes": 89329,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "0fe48630b28c0c24da035396adfd4a9c9f6a5c866241efefcc2050ff9f98e868",
+      "projected_content_sha256": "0fe48630b28c0c24da035396adfd4a9c9f6a5c866241efefcc2050ff9f98e868",
+      "file_sha256": "97b30cb70346630e78ca2c92c8b49a2380b6766913cf2af5cdaf4879c34508b2",
+      "bytes": 89311,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "2264c24af38e085aee0fde443e580e1f96ce8b089c788ba4983fd22948b9a489",
+      "projected_content_sha256": "2264c24af38e085aee0fde443e580e1f96ce8b089c788ba4983fd22948b9a489",
+      "file_sha256": "0fd4977ae755e9b4f0ecc041f75e38131eb25b70d61081717033ae5675fbb04e",
+      "bytes": 89341,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC101_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "8bb50376c363e709eb549bb3c65f01403e75781a809993d6f202f4d514770cb7",
+      "projected_content_sha256": "8bb50376c363e709eb549bb3c65f01403e75781a809993d6f202f4d514770cb7",
+      "file_sha256": "3672c67c23986e531fc6d38bb5a158e2ff51e34c3faa160e0a095c2c6584f2fe",
+      "bytes": 89314,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/ABC111_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "4b85538cca51d91baf400849c4b1f634de1b008806cc604044058c42277b1c08",
+      "projected_content_sha256": "4b85538cca51d91baf400849c4b1f634de1b008806cc604044058c42277b1c08",
+      "file_sha256": "a295073b44aa5a86e6d30305159fd34f5752458e0da4205a889bfbe043f93f63",
+      "bytes": 89329,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/internal_check/manifest.json.gz": {
+      "original_sha256": "161bc2f9ab11c470fc71287ff4e2be7769e10e475e9bc3f8bcc035f95039094d",
+      "projected_content_sha256": "161bc2f9ab11c470fc71287ff4e2be7769e10e475e9bc3f8bcc035f95039094d",
+      "file_sha256": "a18ffb628be5113d90892b59e6b3bc5af550582f45e5b445a8a965e164c38532",
+      "bytes": 47014,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/manifest.json.gz": {
+      "original_sha256": "8c601d8822b43f4956d6d2b2f6f9164d3ad4d68976dbd4d1557f013563dabb82",
+      "projected_content_sha256": "8c601d8822b43f4956d6d2b2f6f9164d3ad4d68976dbd4d1557f013563dabb82",
+      "file_sha256": "2636d738911ac937ff04d7dda12573b8edd51d5716c9023f5287e68b22ba72ab",
+      "bytes": 46733,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "87124b0de642e160fe3f4f44195538797684e6ede422f978f8ed4ccfec3abaab",
+      "projected_content_sha256": "87124b0de642e160fe3f4f44195538797684e6ede422f978f8ed4ccfec3abaab",
+      "file_sha256": "fe55546e3233f5569af5de5ee9778d3d21b3e9c75fcaa162521b3f5d6fbdcc86",
+      "bytes": 53020,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/selected_control/ABC101_T0_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "2c304204429489f16fb00b35c7b58dd29e19d181a5a5a9ac02a4be0bab294d33",
+      "projected_content_sha256": "2c304204429489f16fb00b35c7b58dd29e19d181a5a5a9ac02a4be0bab294d33",
+      "file_sha256": "2c304204429489f16fb00b35c7b58dd29e19d181a5a5a9ac02a4be0bab294d33",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_0/selected_control/manifest.json.gz": {
+      "original_sha256": "1976ebf1e3b24164984a5041438420f349e8347057ab655007cfed2c9c041af8",
+      "projected_content_sha256": "1976ebf1e3b24164984a5041438420f349e8347057ab655007cfed2c9c041af8",
+      "file_sha256": "c9c9ddf6f3e463eaa4ae35be70580beadda64e0db7b3fa9d5ffa78f5aaf87eee",
+      "bytes": 43375,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC000_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "58ce932b8f75e16567babd0f92ffac0d3a85838d2eed68cb08dd7ca1d45c66bc",
+      "projected_content_sha256": "58ce932b8f75e16567babd0f92ffac0d3a85838d2eed68cb08dd7ca1d45c66bc",
+      "file_sha256": "ae55f05ba4d17e48d7433b1ba69607562cebd84f0ec18fc818a60651cea93fdf",
+      "bytes": 52806,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC000_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "10e5961becaa2205f16d2a6e3031b42ee66e07953eebb7320e95aef6e30d087a",
+      "projected_content_sha256": "10e5961becaa2205f16d2a6e3031b42ee66e07953eebb7320e95aef6e30d087a",
+      "file_sha256": "10e5961becaa2205f16d2a6e3031b42ee66e07953eebb7320e95aef6e30d087a",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "e99166ba83847d70a913b33ea93b6d2e0a72c294cf6467af2518e29ddbae856b",
+      "projected_content_sha256": "e99166ba83847d70a913b33ea93b6d2e0a72c294cf6467af2518e29ddbae856b",
+      "file_sha256": "fa081bd38aa65f828eb67f72ccd6a8c57dcd9740d8efc2e9a8edc30a77e775a6",
+      "bytes": 52836,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "afdb4925b7d1182d0457a0f8f269bd6d525aa64f94c8b2a0d81b358c6a3f0ce2",
+      "projected_content_sha256": "afdb4925b7d1182d0457a0f8f269bd6d525aa64f94c8b2a0d81b358c6a3f0ce2",
+      "file_sha256": "afdb4925b7d1182d0457a0f8f269bd6d525aa64f94c8b2a0d81b358c6a3f0ce2",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "e26394b22324842b4ccc5ce444e61d11d9576bc84a44b2054374de8d1e3b1347",
+      "projected_content_sha256": "e26394b22324842b4ccc5ce444e61d11d9576bc84a44b2054374de8d1e3b1347",
+      "file_sha256": "d9512f595ac43c9ff328b68232c59490ec9eca4d35edf30af3589abfe40fbdec",
+      "bytes": 52869,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "5334d25f9e946c2f35f193468a03595280ef03c02b9803424d842c22d9995c02",
+      "projected_content_sha256": "5334d25f9e946c2f35f193468a03595280ef03c02b9803424d842c22d9995c02",
+      "file_sha256": "5334d25f9e946c2f35f193468a03595280ef03c02b9803424d842c22d9995c02",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "c42c2839602b0ff8335a1b34f760cf7d50fa51f357451b9670917b2ea6260c3a",
+      "projected_content_sha256": "c42c2839602b0ff8335a1b34f760cf7d50fa51f357451b9670917b2ea6260c3a",
+      "file_sha256": "afbb03c74554714fef5b4773bb61c7a4e5d4747bf04ffc2f83db408051c75b4a",
+      "bytes": 52854,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "f66470539c5f37a87271e09ab301eeebc48f0ee10cd5e8d8ab5cfff2c529f8e5",
+      "projected_content_sha256": "f66470539c5f37a87271e09ab301eeebc48f0ee10cd5e8d8ab5cfff2c529f8e5",
+      "file_sha256": "f66470539c5f37a87271e09ab301eeebc48f0ee10cd5e8d8ab5cfff2c529f8e5",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "7beb6cb3b0cb55e5a48913ae813e8cb4a6cd3c622d8340874eaa70e6f13eced6",
+      "projected_content_sha256": "7beb6cb3b0cb55e5a48913ae813e8cb4a6cd3c622d8340874eaa70e6f13eced6",
+      "file_sha256": "1e5b92fd679b21aae5ced40730473eaf0b21bbccb33d24ab7535e5b80865486e",
+      "bytes": 52825,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "7ccb903a0352ea1c23dda26ea414910026c2596b8783c472c124fce8080348fd",
+      "projected_content_sha256": "7ccb903a0352ea1c23dda26ea414910026c2596b8783c472c124fce8080348fd",
+      "file_sha256": "7ccb903a0352ea1c23dda26ea414910026c2596b8783c472c124fce8080348fd",
+      "bytes": 2960,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "1a52067f6d59031a652a568110a66a7315cb160b37d5990f62dede730f0210e8",
+      "projected_content_sha256": "1a52067f6d59031a652a568110a66a7315cb160b37d5990f62dede730f0210e8",
+      "file_sha256": "6f3011153d8fba952eb2f3058c8240169e20aff698da2ca9d103090b3996d577",
+      "bytes": 52841,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "9169ce80925341ee7cfd81a89ad415773d849393f743296af77182369d89d854",
+      "projected_content_sha256": "9169ce80925341ee7cfd81a89ad415773d849393f743296af77182369d89d854",
+      "file_sha256": "9169ce80925341ee7cfd81a89ad415773d849393f743296af77182369d89d854",
+      "bytes": 2953,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "771e8c9a5195ea2bf449132bd87008334a47f98a912605843fafc7260055432f",
+      "projected_content_sha256": "771e8c9a5195ea2bf449132bd87008334a47f98a912605843fafc7260055432f",
+      "file_sha256": "c1a3d48b4d02b50bbce6e40df88843c7f89c535a8b508338b0fbab8a3cc9a1b9",
+      "bytes": 52815,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC001_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "9be6f5081e9a0adfbab7783a9fcc5d3f48edcd44cd11540f86092794e644c665",
+      "projected_content_sha256": "9be6f5081e9a0adfbab7783a9fcc5d3f48edcd44cd11540f86092794e644c665",
+      "file_sha256": "9be6f5081e9a0adfbab7783a9fcc5d3f48edcd44cd11540f86092794e644c665",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "466c738270fa803f5492c9b0a1cb91eda96bd046c8eb96bf6d134f461a1e1aac",
+      "projected_content_sha256": "466c738270fa803f5492c9b0a1cb91eda96bd046c8eb96bf6d134f461a1e1aac",
+      "file_sha256": "e75bcffbb2ede52acc0690a4711b740e5d5b11064167d920ab2f7ca149985086",
+      "bytes": 52841,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "9081a2257c47471641bd7285045aa202fe47ed2cd7a0eea65971aec475e8f9d7",
+      "projected_content_sha256": "9081a2257c47471641bd7285045aa202fe47ed2cd7a0eea65971aec475e8f9d7",
+      "file_sha256": "9081a2257c47471641bd7285045aa202fe47ed2cd7a0eea65971aec475e8f9d7",
+      "bytes": 2955,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "6a9d7987cdd6b3c16923ed30d39a922791ce3ace235422fef6145fd96c3c6650",
+      "projected_content_sha256": "6a9d7987cdd6b3c16923ed30d39a922791ce3ace235422fef6145fd96c3c6650",
+      "file_sha256": "3f0e1c9b32d339ec0d23baeeb5dbf395ac5c8bbb704b9c6c44b29f925640b6be",
+      "bytes": 52822,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "9ed490ef02b8d539889b3971b501fcadbc34ca69f3afdcaca003dad7b8ed7239",
+      "projected_content_sha256": "9ed490ef02b8d539889b3971b501fcadbc34ca69f3afdcaca003dad7b8ed7239",
+      "file_sha256": "9ed490ef02b8d539889b3971b501fcadbc34ca69f3afdcaca003dad7b8ed7239",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "cffebeb2224e7a5d059649d4f202d5f0202d710fe363e01698d02de9dca9a1bf",
+      "projected_content_sha256": "cffebeb2224e7a5d059649d4f202d5f0202d710fe363e01698d02de9dca9a1bf",
+      "file_sha256": "764c4da900a7a93f20d246e8d3518512afdce8974c45fe9c5f1e5033712726a8",
+      "bytes": 52844,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "65b46e60b841c8b434235757e6cb956b31302048a93b0e6fb8c11b0512dced3f",
+      "projected_content_sha256": "65b46e60b841c8b434235757e6cb956b31302048a93b0e6fb8c11b0512dced3f",
+      "file_sha256": "65b46e60b841c8b434235757e6cb956b31302048a93b0e6fb8c11b0512dced3f",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "d3121804b97bc0c098f218c14713a9918907d95b404832a4b95fa1e7248591c2",
+      "projected_content_sha256": "d3121804b97bc0c098f218c14713a9918907d95b404832a4b95fa1e7248591c2",
+      "file_sha256": "0fafd07ef2518fa20585fe308d78230d5b22e551a2854d2d181fd73fd34a220e",
+      "bytes": 52829,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "f9f250c956414b24f30e65e43ccb8e478e64f2cccc673cefb5eef21c57707294",
+      "projected_content_sha256": "f9f250c956414b24f30e65e43ccb8e478e64f2cccc673cefb5eef21c57707294",
+      "file_sha256": "f9f250c956414b24f30e65e43ccb8e478e64f2cccc673cefb5eef21c57707294",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "7ad57259d82da3026998f26690fd3368327b4c5a2b2ee848e474271877e511dd",
+      "projected_content_sha256": "7ad57259d82da3026998f26690fd3368327b4c5a2b2ee848e474271877e511dd",
+      "file_sha256": "6a9d488913b4c837154682b836db958d97e2fe33dac041741796419d2a085055",
+      "bytes": 52850,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "19d3f54b2d8cf5c379512a9fab837bd04b634cd192f7cb449625792207dfbd8f",
+      "projected_content_sha256": "19d3f54b2d8cf5c379512a9fab837bd04b634cd192f7cb449625792207dfbd8f",
+      "file_sha256": "19d3f54b2d8cf5c379512a9fab837bd04b634cd192f7cb449625792207dfbd8f",
+      "bytes": 2955,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "46ab8670ad90c1ce93beeb4d97332acac33eb23eb1b85a29e407dfd528921e50",
+      "projected_content_sha256": "46ab8670ad90c1ce93beeb4d97332acac33eb23eb1b85a29e407dfd528921e50",
+      "file_sha256": "43301361f48080bbf5cc70ad1f52953824d0999b55e73c9aa7ba79531f971ac3",
+      "bytes": 52823,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC101_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "cbf05385430cdf18389a66eede8a390220253b630072f85d2b1ef1afb5a861cd",
+      "projected_content_sha256": "cbf05385430cdf18389a66eede8a390220253b630072f85d2b1ef1afb5a861cd",
+      "file_sha256": "cbf05385430cdf18389a66eede8a390220253b630072f85d2b1ef1afb5a861cd",
+      "bytes": 2960,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC111_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "51bf0b3e96118fb6c146a596ea3d96907aa7a3ffa631bf8cb3a532cc13d764aa",
+      "projected_content_sha256": "51bf0b3e96118fb6c146a596ea3d96907aa7a3ffa631bf8cb3a532cc13d764aa",
+      "file_sha256": "37bc437a8033d11ec71d589acae7c4662b17075f2af9515608f39012265213ee",
+      "bytes": 52835,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/ABC111_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "e2a35f915f52f8c921a14fad8f59542ee67126347fa252a04e2632143aa37d5c",
+      "projected_content_sha256": "e2a35f915f52f8c921a14fad8f59542ee67126347fa252a04e2632143aa37d5c",
+      "file_sha256": "e2a35f915f52f8c921a14fad8f59542ee67126347fa252a04e2632143aa37d5c",
+      "bytes": 2952,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC000_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "60db13d2c33b52d3057ab92f079ee0670f2b7de5593385b2fcff0884b483c277",
+      "projected_content_sha256": "60db13d2c33b52d3057ab92f079ee0670f2b7de5593385b2fcff0884b483c277",
+      "file_sha256": "a1932b1405167fb95e8bcc3fa52f5aef1871615ba37bf301c479921e66906dae",
+      "bytes": 89328,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "fa93e5e38d6e5f0199ae83bc9cc6f4662accaf09d36518c575d563ff5aed1b0f",
+      "projected_content_sha256": "fa93e5e38d6e5f0199ae83bc9cc6f4662accaf09d36518c575d563ff5aed1b0f",
+      "file_sha256": "7337f2d319ce3216497760e5cb3d76347bd3a5dc5a6e37536d3ab315b363069f",
+      "bytes": 89365,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "9edeb1512aef627af394bd916736c482fafe12ed261e517642ea8bc40eb7bca6",
+      "projected_content_sha256": "9edeb1512aef627af394bd916736c482fafe12ed261e517642ea8bc40eb7bca6",
+      "file_sha256": "7feaad397f49a64d038b97d65732847ac0d441f3e0f87f9140d842751f4be25e",
+      "bytes": 89376,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "8046525027996ef3e4071498e5a2365741e5868784114e1640efc01996e5970d",
+      "projected_content_sha256": "8046525027996ef3e4071498e5a2365741e5868784114e1640efc01996e5970d",
+      "file_sha256": "78a9270fb8b96ace72a4d0015d7e1438d6da31ab7190e4f89d892f55aeec8f92",
+      "bytes": 89382,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "65f54c6e68bb514e5f6c703da8ccbcad3180e456f7eea541495d0a147a61998b",
+      "projected_content_sha256": "65f54c6e68bb514e5f6c703da8ccbcad3180e456f7eea541495d0a147a61998b",
+      "file_sha256": "2f64251e2795a76b03b74d0eb8440681b516af8b17b1db79c0348b0398577665",
+      "bytes": 89286,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "2c5d88f3d02e9ffd71eefcdd319c4a3c31e0b2a93b5f26b9a740c74c1e43a1ce",
+      "projected_content_sha256": "2c5d88f3d02e9ffd71eefcdd319c4a3c31e0b2a93b5f26b9a740c74c1e43a1ce",
+      "file_sha256": "4bf36a2768e2c33f072adfbcc25256a2c862568499554405ee5b11993f507f60",
+      "bytes": 89372,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC001_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "1595b5434770774fbad179d45ccfcdfb5dbb53cab6f3f05d72516c24fb1d3c3d",
+      "projected_content_sha256": "1595b5434770774fbad179d45ccfcdfb5dbb53cab6f3f05d72516c24fb1d3c3d",
+      "file_sha256": "65815859aa789932ed2193a41ddb466ab646ac6ce3036d285e0c8f7756572c1f",
+      "bytes": 89311,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T0_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "19fac9fc53a61403dc358aaac893b22e6c68870515670297336a743e40ad5af4",
+      "projected_content_sha256": "19fac9fc53a61403dc358aaac893b22e6c68870515670297336a743e40ad5af4",
+      "file_sha256": "1e0f6c618012a440742eb10f35a0e5957eeb1383343d099d65fc524e67fca088",
+      "bytes": 89672,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "4495371ee9dc24a48a28865bf43f26e55986bf7e3dc5005fbf7ab5009b070414",
+      "projected_content_sha256": "4495371ee9dc24a48a28865bf43f26e55986bf7e3dc5005fbf7ab5009b070414",
+      "file_sha256": "a91d712a66bc5ab163c53d1c42ade2c2d2137fad929403255e95b793f5024875",
+      "bytes": 89313,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "b0754d18e678c8ff8a9993555958f90ecd5bac2b083435d7c9327a1302bf98f0",
+      "projected_content_sha256": "b0754d18e678c8ff8a9993555958f90ecd5bac2b083435d7c9327a1302bf98f0",
+      "file_sha256": "2f898945ff077a314d838ced71d52fd707d06be133c92883c07f501317650602",
+      "bytes": 89328,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "83d113a3470886f866521d2436725261ac96975fc4af1901a0bddf8059da8dc0",
+      "projected_content_sha256": "83d113a3470886f866521d2436725261ac96975fc4af1901a0bddf8059da8dc0",
+      "file_sha256": "7f5b5f4bd126a0ef9d83ca1f3e01103149b45671e3a18ec50f19b2e5de388195",
+      "bytes": 89344,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "40f282cfae222249a00d4839027761000b58148032640e420f48ec680ee8e60c",
+      "projected_content_sha256": "40f282cfae222249a00d4839027761000b58148032640e420f48ec680ee8e60c",
+      "file_sha256": "25ad975a75b05b693a5bc9928ea20b3654e7e545d5b5ea8f3c46f4c266508adf",
+      "bytes": 89313,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "aa3dcf6ad2dfa29b9448306a7359cb1145c02fe16200ae698881f26d470a3a5c",
+      "projected_content_sha256": "aa3dcf6ad2dfa29b9448306a7359cb1145c02fe16200ae698881f26d470a3a5c",
+      "file_sha256": "c0efddce810e8d41d99377207bdf4a23bf9f71d506d20c906dc3f156e8f288d3",
+      "bytes": 89345,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC101_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "66c49a504037104c9e6f2d31e5a15cb0fce5f0ab41cd69bf0503ffaefdeb0576",
+      "projected_content_sha256": "66c49a504037104c9e6f2d31e5a15cb0fce5f0ab41cd69bf0503ffaefdeb0576",
+      "file_sha256": "a5d4a411c9dfbf98f9e5627bfe5a9186633f4c79c5e21078a5ef60f134e1f551",
+      "bytes": 89321,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/ABC111_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "32cfdce9647468e4b73dc5a0f03ad3cf438937fabaefda5436532d42550f7bd9",
+      "projected_content_sha256": "32cfdce9647468e4b73dc5a0f03ad3cf438937fabaefda5436532d42550f7bd9",
+      "file_sha256": "534f5b3b6c157b1a2ed22ce223c0c2c47898dc10e1299b4456ed0bf63a70d052",
+      "bytes": 89357,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/internal_check/manifest.json.gz": {
+      "original_sha256": "4b16d99ae0ddaa79e4c3b7359e05b51d9be0b77e7874013a0ff690bb98b00c4a",
+      "projected_content_sha256": "4b16d99ae0ddaa79e4c3b7359e05b51d9be0b77e7874013a0ff690bb98b00c4a",
+      "file_sha256": "179e25d37e6fbb6b9dc7d78287e5c1e92a19e520dced1b97325869dcb6963f5a",
+      "bytes": 47070,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/manifest.json.gz": {
+      "original_sha256": "b65201c73f425e953c1eec14d1211122efb09110bf8bd5fccfa59dd0cdc717c9",
+      "projected_content_sha256": "b65201c73f425e953c1eec14d1211122efb09110bf8bd5fccfa59dd0cdc717c9",
+      "file_sha256": "2b3732962d0970d330ec63f229bc36584718018126947ab70aacd282294dd08f",
+      "bytes": 46735,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "d863697d25186eff030e56c374656646325c95a7d9aadb661c15811fa820dadd",
+      "projected_content_sha256": "d863697d25186eff030e56c374656646325c95a7d9aadb661c15811fa820dadd",
+      "file_sha256": "8f7ff3ebd27882cb68c91d6c83cb752edc48c63e3730d2e302957c73930c2a91",
+      "bytes": 53045,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/selected_control/ABC101_T0_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "3259ae529ebe22f2de0b65f7771d937627c3e11ffa04bf777c4821c0a64cdfd7",
+      "projected_content_sha256": "3259ae529ebe22f2de0b65f7771d937627c3e11ffa04bf777c4821c0a64cdfd7",
+      "file_sha256": "3259ae529ebe22f2de0b65f7771d937627c3e11ffa04bf777c4821c0a64cdfd7",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_1/selected_control/manifest.json.gz": {
+      "original_sha256": "e5fc3f35db7a617fc45b06c9120f5fd8acdf023ab20c8bdd538a0d3b8f95a03f",
+      "projected_content_sha256": "e5fc3f35db7a617fc45b06c9120f5fd8acdf023ab20c8bdd538a0d3b8f95a03f",
+      "file_sha256": "041cf535ddd21babd79e7d974b82fa60fdf83366ed0efa884403c944e673c2ce",
+      "bytes": 43371,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC000_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "94cfd4c3eb8215ecb52163e814a52b2af2dc2b3948a622cc67e6f593fce6774c",
+      "projected_content_sha256": "94cfd4c3eb8215ecb52163e814a52b2af2dc2b3948a622cc67e6f593fce6774c",
+      "file_sha256": "8830b03a85aed036a8ede6fe5d2d8db9f9474b77194661873676c3dd43272fc5",
+      "bytes": 52812,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC000_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "26861fc3afe53f76c9b68929556388d132b2a3653eacbe069b6c06a0829831b0",
+      "projected_content_sha256": "26861fc3afe53f76c9b68929556388d132b2a3653eacbe069b6c06a0829831b0",
+      "file_sha256": "26861fc3afe53f76c9b68929556388d132b2a3653eacbe069b6c06a0829831b0",
+      "bytes": 2955,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "c4454d1178d457aa2baff2d74e8aed4342b899cb437ce03a2bda5590f6cadf18",
+      "projected_content_sha256": "c4454d1178d457aa2baff2d74e8aed4342b899cb437ce03a2bda5590f6cadf18",
+      "file_sha256": "ced87bfcc7f2fa90a46aa8089e4b8aba29152c1c8aa1fa279112f4de089744c3",
+      "bytes": 52862,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "ec1c942a281caa3509533146b19c61a6556539d415133fb8eca5c2c2b1baf385",
+      "projected_content_sha256": "ec1c942a281caa3509533146b19c61a6556539d415133fb8eca5c2c2b1baf385",
+      "file_sha256": "ec1c942a281caa3509533146b19c61a6556539d415133fb8eca5c2c2b1baf385",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "ce65f2fba8fbf64034e43b5956fb1d1faab5b1055ba1ddd4ab9c851060b0a657",
+      "projected_content_sha256": "ce65f2fba8fbf64034e43b5956fb1d1faab5b1055ba1ddd4ab9c851060b0a657",
+      "file_sha256": "7fd4c9dc50c5e106921d0b532127bf01d006c4e0fafc6bbe4fe3413a9172411a",
+      "bytes": 52849,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "dd460a1665c78454bfe08bb0a061e7b8a989b1655363beb3f81ce5ed006d698a",
+      "projected_content_sha256": "dd460a1665c78454bfe08bb0a061e7b8a989b1655363beb3f81ce5ed006d698a",
+      "file_sha256": "dd460a1665c78454bfe08bb0a061e7b8a989b1655363beb3f81ce5ed006d698a",
+      "bytes": 2954,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "06b3df77ed3e16c673a5149439574ee18c82259b45aa65f65c3bc6466fc9fdf3",
+      "projected_content_sha256": "06b3df77ed3e16c673a5149439574ee18c82259b45aa65f65c3bc6466fc9fdf3",
+      "file_sha256": "65be231ccf7714264c4dbdd5f20299864421c616f11fcf629694f25b218fd499",
+      "bytes": 52865,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "04b51088b41191419b23552977430f32603d08cab750b55590f89370f3ba596c",
+      "projected_content_sha256": "04b51088b41191419b23552977430f32603d08cab750b55590f89370f3ba596c",
+      "file_sha256": "04b51088b41191419b23552977430f32603d08cab750b55590f89370f3ba596c",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "e3784dd4a5b1b3942a15cf312e2f50204cad3eb400c52ed04c84a1a84cdfebeb",
+      "projected_content_sha256": "e3784dd4a5b1b3942a15cf312e2f50204cad3eb400c52ed04c84a1a84cdfebeb",
+      "file_sha256": "27b12768fab484d2a82235c845267d57f8af9308bbf64a4c8e8a75ef3b8a5b21",
+      "bytes": 52816,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "63009fb9badca2c44af0a0f36ea722024932fa8d5e78b4eba1b4d594ae946f7b",
+      "projected_content_sha256": "63009fb9badca2c44af0a0f36ea722024932fa8d5e78b4eba1b4d594ae946f7b",
+      "file_sha256": "63009fb9badca2c44af0a0f36ea722024932fa8d5e78b4eba1b4d594ae946f7b",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "5a14a10cf11b9102ea9b851acabe5f076ef9dc1343966427611e321b1fa86a59",
+      "projected_content_sha256": "5a14a10cf11b9102ea9b851acabe5f076ef9dc1343966427611e321b1fa86a59",
+      "file_sha256": "3969ccd07fe0d375d9793aaf4c4527ae8f9eab6036a584f2afb2e527f766c864",
+      "bytes": 52832,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "782c1a3ce0e59da4dc7cfdc525d70f6fe3d9ab6abe65b5997bd3689f4057c876",
+      "projected_content_sha256": "782c1a3ce0e59da4dc7cfdc525d70f6fe3d9ab6abe65b5997bd3689f4057c876",
+      "file_sha256": "782c1a3ce0e59da4dc7cfdc525d70f6fe3d9ab6abe65b5997bd3689f4057c876",
+      "bytes": 2950,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "11e8633a19b1d6f1110acc862c37ddd6b3cb4c764b1d0df4da1a8555141f773b",
+      "projected_content_sha256": "11e8633a19b1d6f1110acc862c37ddd6b3cb4c764b1d0df4da1a8555141f773b",
+      "file_sha256": "661a16f9b74b6bbdf733f16cf114b66b3650976f01bc29f9a062f043a6a05b90",
+      "bytes": 52802,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC001_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "96c398201f7e5ab27645dc5af6b4b313819871566b12303d7904d93e41f31433",
+      "projected_content_sha256": "96c398201f7e5ab27645dc5af6b4b313819871566b12303d7904d93e41f31433",
+      "file_sha256": "96c398201f7e5ab27645dc5af6b4b313819871566b12303d7904d93e41f31433",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rbounded_Tokbounded/development.json.gz": {
+      "original_sha256": "42e116a99738926a7636d669fb243c34d998dbc89f22c90744bd6610000a4a77",
+      "projected_content_sha256": "42e116a99738926a7636d669fb243c34d998dbc89f22c90744bd6610000a4a77",
+      "file_sha256": "2d15c1732482e7e026cac8ee9e906ddd680b396a0b05333833b6d13f6a2c6e5a",
+      "bytes": 52831,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rbounded_Tokbounded/training_progress.json": {
+      "original_sha256": "fae0a3e5f480bd63b105fba915cd6443c942c6517e3cff90bce0de2aca5dd664",
+      "projected_content_sha256": "fae0a3e5f480bd63b105fba915cd6443c942c6517e3cff90bce0de2aca5dd664",
+      "file_sha256": "fae0a3e5f480bd63b105fba915cd6443c942c6517e3cff90bce0de2aca5dd664",
+      "bytes": 2951,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rbounded_Tokoriginal/development.json.gz": {
+      "original_sha256": "4d93fc086bfa6589badad475f4204ba9995eddb9428c7182ecc5c5f54cb51126",
+      "projected_content_sha256": "4d93fc086bfa6589badad475f4204ba9995eddb9428c7182ecc5c5f54cb51126",
+      "file_sha256": "52de328ceada150c1143a0ede4721d3996ef57a71b43770c9572c2c28f3546ec",
+      "bytes": 52808,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rbounded_Tokoriginal/training_progress.json": {
+      "original_sha256": "c7dcdf0187a9f960d65a88f6738380049bbe575be214fbbe184261a7606f593e",
+      "projected_content_sha256": "c7dcdf0187a9f960d65a88f6738380049bbe575be214fbbe184261a7606f593e",
+      "file_sha256": "c7dcdf0187a9f960d65a88f6738380049bbe575be214fbbe184261a7606f593e",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rconstant_Tokbounded/development.json.gz": {
+      "original_sha256": "b56c64ce7c1c0c0058dd8b0ad356e18e18da18a3a583f1410ae7b8b2373611d8",
+      "projected_content_sha256": "b56c64ce7c1c0c0058dd8b0ad356e18e18da18a3a583f1410ae7b8b2373611d8",
+      "file_sha256": "3e947a940ab44462b685aba4f3cc80df2e3e9c80202fbe8d5c7b594d87f76920",
+      "bytes": 52850,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rconstant_Tokbounded/training_progress.json": {
+      "original_sha256": "ccff330d084aab0bebdddf1a7e9e71992cf038ce98b5ccec4e2ef7d68be49128",
+      "projected_content_sha256": "ccff330d084aab0bebdddf1a7e9e71992cf038ce98b5ccec4e2ef7d68be49128",
+      "file_sha256": "ccff330d084aab0bebdddf1a7e9e71992cf038ce98b5ccec4e2ef7d68be49128",
+      "bytes": 2959,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "b098155eb79e648e8a43c24c11e2b810226191136cc69b5276bd72905a18b106",
+      "projected_content_sha256": "b098155eb79e648e8a43c24c11e2b810226191136cc69b5276bd72905a18b106",
+      "file_sha256": "9106370636d7298d6aa9be5bf375a907a5e03dfac6d5a1c836c3fc035d1ef5bd",
+      "bytes": 52818,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "974b25576d2665e68b79b6a04c3d424873137b80916961934e7b4def0d946fbc",
+      "projected_content_sha256": "974b25576d2665e68b79b6a04c3d424873137b80916961934e7b4def0d946fbc",
+      "file_sha256": "974b25576d2665e68b79b6a04c3d424873137b80916961934e7b4def0d946fbc",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Roriginal_Tokbounded/development.json.gz": {
+      "original_sha256": "398e652ebc75cdbbcf7c1d1946822076b9290282cd23e17dfd9b066ceadf309f",
+      "projected_content_sha256": "398e652ebc75cdbbcf7c1d1946822076b9290282cd23e17dfd9b066ceadf309f",
+      "file_sha256": "dd3e6ea15e9fc9dd445731bcfab563c3a44cd4f790e7a3f66e199d92f934493d",
+      "bytes": 52825,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Roriginal_Tokbounded/training_progress.json": {
+      "original_sha256": "5da2ef0f249c07be324c600e11ad593a8bb58eec647fc817c343345b23313826",
+      "projected_content_sha256": "5da2ef0f249c07be324c600e11ad593a8bb58eec647fc817c343345b23313826",
+      "file_sha256": "5da2ef0f249c07be324c600e11ad593a8bb58eec647fc817c343345b23313826",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "4eb5a03042dd2c7c14ec42ddd89e151033294d10419de104b19b211d3e1f6462",
+      "projected_content_sha256": "4eb5a03042dd2c7c14ec42ddd89e151033294d10419de104b19b211d3e1f6462",
+      "file_sha256": "78c2222ffbad2c2d85b8fb2a6d4dd01c924e78395e7c1563447c62038f4e7662",
+      "bytes": 52812,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC101_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "67c2ff1328c90b1bf70c2d9174955fda6afe4879ce55aced1f6ef55db67c23eb",
+      "projected_content_sha256": "67c2ff1328c90b1bf70c2d9174955fda6afe4879ce55aced1f6ef55db67c23eb",
+      "file_sha256": "67c2ff1328c90b1bf70c2d9174955fda6afe4879ce55aced1f6ef55db67c23eb",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC111_T1_Roriginal_Tokoriginal/development.json.gz": {
+      "original_sha256": "a33feaae5a4af7273777c92dc163b909c1b6b6c0187946a5a7479281b2f0fc86",
+      "projected_content_sha256": "a33feaae5a4af7273777c92dc163b909c1b6b6c0187946a5a7479281b2f0fc86",
+      "file_sha256": "0d0133afcf77a376c5dc861dbca28acc07e079199cc272c14b90165f8f6b3170",
+      "bytes": 52840,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/ABC111_T1_Roriginal_Tokoriginal/training_progress.json": {
+      "original_sha256": "18ecb153b16f7b01357aa90f460c98910e84a8c6c3330632cc7cb9e0cf106b5d",
+      "projected_content_sha256": "18ecb153b16f7b01357aa90f460c98910e84a8c6c3330632cc7cb9e0cf106b5d",
+      "file_sha256": "18ecb153b16f7b01357aa90f460c98910e84a8c6c3330632cc7cb9e0cf106b5d",
+      "bytes": 2948,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC000_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "f5c2b3994aed11b60759ff8352af00eb707dfe3964213517abc6b96f61b56901",
+      "projected_content_sha256": "f5c2b3994aed11b60759ff8352af00eb707dfe3964213517abc6b96f61b56901",
+      "file_sha256": "11e5031080f8dbc55b55e2dd78295a38b01c38e408dbbefb5f027acfde1b2ac7",
+      "bytes": 89286,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "ff884aa4a58ba4e21efa9eacf4802169b32eacc04061c0e30f3a7da5d4f4ec46",
+      "projected_content_sha256": "ff884aa4a58ba4e21efa9eacf4802169b32eacc04061c0e30f3a7da5d4f4ec46",
+      "file_sha256": "e5dd8a11729dfa68af092f4faf965edb7b3e5b695ceb69ccce2e1e815a422953",
+      "bytes": 89384,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "dd776d037dbca23e53afc21947403fa68e29288d31769e2dd0e90841eb136f9a",
+      "projected_content_sha256": "dd776d037dbca23e53afc21947403fa68e29288d31769e2dd0e90841eb136f9a",
+      "file_sha256": "f215827951975c76dba065020fc81d7e8397c5554739a088e43a8d2b2f66ca74",
+      "bytes": 89311,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "d67d8289b2f168dbd67837b3a18ea594ee35edbb6da8f41350cee11e1ddf6064",
+      "projected_content_sha256": "d67d8289b2f168dbd67837b3a18ea594ee35edbb6da8f41350cee11e1ddf6064",
+      "file_sha256": "58c60c00762f64495cfad61fbecf858855e8bb093c4f08d6c1928b35bb34dc39",
+      "bytes": 89378,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "042dea151392fab018d338d023c914d1e4a4cf1e028d21fee3d323395e14f3c2",
+      "projected_content_sha256": "042dea151392fab018d338d023c914d1e4a4cf1e028d21fee3d323395e14f3c2",
+      "file_sha256": "4532e69315b2353af390dd14fd884f90b337140e3da4ef63427cd7a76c12a204",
+      "bytes": 89292,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "c90d33015a9eb2776f6cc2748fe48c996453ffad1446239125ce6548a8080b3a",
+      "projected_content_sha256": "c90d33015a9eb2776f6cc2748fe48c996453ffad1446239125ce6548a8080b3a",
+      "file_sha256": "81a8de57bc79380effcfb2648d31803ab49433b73e05f42bf7cd38b858cf26ba",
+      "bytes": 89338,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC001_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "ab981218cdaeaa0daae1e58f81d70d4e483bc2f128d25eeeab8bc750c8df2cb0",
+      "projected_content_sha256": "ab981218cdaeaa0daae1e58f81d70d4e483bc2f128d25eeeab8bc750c8df2cb0",
+      "file_sha256": "bc2a69d0cb281ce75fa7ecf71245c72113927bf97d601f6ae47efdfa8f396201",
+      "bytes": 89277,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T0_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "6308f0de7f392bcb616098dd0aa09d0665ad7959df0f76b5123a2b79730db1d7",
+      "projected_content_sha256": "6308f0de7f392bcb616098dd0aa09d0665ad7959df0f76b5123a2b79730db1d7",
+      "file_sha256": "e727c90127237a16d9645e54933fd0d10ddd04e3c9d457d33d5a1f44b2da1d22",
+      "bytes": 89686,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Rbounded_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "abc3ad5ebd19765af473b0ad4490334af20a5592f5244352ef4aa9c41d35b697",
+      "projected_content_sha256": "abc3ad5ebd19765af473b0ad4490334af20a5592f5244352ef4aa9c41d35b697",
+      "file_sha256": "c472dd54a2f11ff537449d4649c8bd475b9aefc0c0eeee29685165505925acff",
+      "bytes": 89345,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Rbounded_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "d4dc4dd81f909a669e3956015f76083970ecdf8a889a5dfac64ffdbb26914c58",
+      "projected_content_sha256": "d4dc4dd81f909a669e3956015f76083970ecdf8a889a5dfac64ffdbb26914c58",
+      "file_sha256": "600ab6c372282ba35ecd2c57571e570253cb5aa30231a5a1e530a049118bf7cd",
+      "bytes": 89295,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Rconstant_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "08e12bb169d316bbdea896db232eb622112ae6c278a560ba181c9bedf70fbc4d",
+      "projected_content_sha256": "08e12bb169d316bbdea896db232eb622112ae6c278a560ba181c9bedf70fbc4d",
+      "file_sha256": "523dc9ff1403ef0a3519a863e99df547eaddf6d62490d711dcbdde4be7c459bf",
+      "bytes": 89346,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Rconstant_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "b2ae47f101a2f00a16598eb4ac7bbca3a971121c82081f0901887ec3d2f2d045",
+      "projected_content_sha256": "b2ae47f101a2f00a16598eb4ac7bbca3a971121c82081f0901887ec3d2f2d045",
+      "file_sha256": "c810d637ca145b5c1b52c94bf7f86f15b5b45e0663002f8d68bf8033dfe5fbba",
+      "bytes": 89296,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Roriginal_Tokbounded/internal_check.json.gz": {
+      "original_sha256": "a924f41ccca430be689c2fd2b1f7ef176f56df9fbfad0eb191e0eb5d4de4cbeb",
+      "projected_content_sha256": "a924f41ccca430be689c2fd2b1f7ef176f56df9fbfad0eb191e0eb5d4de4cbeb",
+      "file_sha256": "2347d5c3bd67db36535bcd35fd202db96961d82671f3243755346a5ae9c6e6f1",
+      "bytes": 89340,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC101_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "f70fbcfc25960858967dcbd008f81efea5c6f1b2db934c00e3fc1a8457ea4d38",
+      "projected_content_sha256": "f70fbcfc25960858967dcbd008f81efea5c6f1b2db934c00e3fc1a8457ea4d38",
+      "file_sha256": "f9b1bdb02be858c38884f9598b6e3a50e68fda886c67541ee728b8497d4cdf27",
+      "bytes": 89287,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/ABC111_T1_Roriginal_Tokoriginal/internal_check.json.gz": {
+      "original_sha256": "2ca1d0dc58e357af65069c95ab364a01aed49ffe465d7a1f3ea615e7759629f7",
+      "projected_content_sha256": "2ca1d0dc58e357af65069c95ab364a01aed49ffe465d7a1f3ea615e7759629f7",
+      "file_sha256": "8837916f266b043c6e1513990df7f8f3300442818bd478c08f40f64943660892",
+      "bytes": 89343,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/internal_check/manifest.json.gz": {
+      "original_sha256": "7eb540fd84ef986a8618d1dc2d3a60e1ece82c4c19f10cb624843d66ac762807",
+      "projected_content_sha256": "7eb540fd84ef986a8618d1dc2d3a60e1ece82c4c19f10cb624843d66ac762807",
+      "file_sha256": "dad16e5eb63ec8556d925de953540f0adc22c0e43de30b9d76b820ef1ce90c6e",
+      "bytes": 47057,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/manifest.json.gz": {
+      "original_sha256": "87193eda7ca91d99cc7cfd392c4ec14490391c93568c20dd95b2f89fbc537180",
+      "projected_content_sha256": "87193eda7ca91d99cc7cfd392c4ec14490391c93568c20dd95b2f89fbc537180",
+      "file_sha256": "967fb5f0146bcd911f7a9f39481d82448e90b66e743f7f9e20d81de96edf01f2",
+      "bytes": 46713,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/selected_control/ABC101_T0_Rconstant_Tokoriginal/development.json.gz": {
+      "original_sha256": "de932a9ae51f3ae6a451a05a0a3033458992863e606c492cb8b55ed20f1e6c83",
+      "projected_content_sha256": "de932a9ae51f3ae6a451a05a0a3033458992863e606c492cb8b55ed20f1e6c83",
+      "file_sha256": "e1c0df6ec8de50ea7b87374b3319480ef983c5d6ceb1bd4ad5284eae0d2d4626",
+      "bytes": 53006,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/selected_control/ABC101_T0_Rconstant_Tokoriginal/training_progress.json": {
+      "original_sha256": "04faaacfcbaac1209fdf0528968997196a7f0a40b07c7b270795eadfb3521bdd",
+      "projected_content_sha256": "04faaacfcbaac1209fdf0528968997196a7f0a40b07c7b270795eadfb3521bdd",
+      "file_sha256": "04faaacfcbaac1209fdf0528968997196a7f0a40b07c7b270795eadfb3521bdd",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/results/seed_2/selected_control/manifest.json.gz": {
+      "original_sha256": "0b10c236298246c5ecf9eb843ac2b15ee0f52b8d54f910ac3f54c11c7b4cb6b8",
+      "projected_content_sha256": "0b10c236298246c5ecf9eb843ac2b15ee0f52b8d54f910ac3f54c11c7b4cb6b8",
+      "file_sha256": "8c59fe368047e83fde7f6aeaa9a99674197ff9326228a662f2ec8bc9fa1dd27b",
+      "bytes": 43375,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/analysis/development_45/all_runs.csv": {
+      "original_sha256": "04ca43931d872149e86d956fcf9e2ff31437200d1a8f491556e5e9f064b71e49",
+      "projected_content_sha256": "04ca43931d872149e86d956fcf9e2ff31437200d1a8f491556e5e9f064b71e49",
+      "file_sha256": "04ca43931d872149e86d956fcf9e2ff31437200d1a8f491556e5e9f064b71e49",
+      "bytes": 6487,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/development_45/analysis.json": {
+      "original_sha256": "3053c10a75fa86ad281958ca9d8eacd94dde3311197abb203523965595843783",
+      "projected_content_sha256": "3053c10a75fa86ad281958ca9d8eacd94dde3311197abb203523965595843783",
+      "file_sha256": "3053c10a75fa86ad281958ca9d8eacd94dde3311197abb203523965595843783",
+      "bytes": 74127,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/analysis/development_45/configuration_summary.csv": {
+      "original_sha256": "788b5d41dd2a5d6fd8a158806d15f0d59e2393fef659a47eedee509f4770f195",
+      "projected_content_sha256": "788b5d41dd2a5d6fd8a158806d15f0d59e2393fef659a47eedee509f4770f195",
+      "file_sha256": "788b5d41dd2a5d6fd8a158806d15f0d59e2393fef659a47eedee509f4770f195",
+      "bytes": 3413,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/development_45/contrast_summary.csv": {
+      "original_sha256": "4dba6aea4b049c2077ba8ac0c486d967b834802e2c3b17c507497364b3d0149c",
+      "projected_content_sha256": "4dba6aea4b049c2077ba8ac0c486d967b834802e2c3b17c507497364b3d0149c",
+      "file_sha256": "4dba6aea4b049c2077ba8ac0c486d967b834802e2c3b17c507497364b3d0149c",
+      "bytes": 31780,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/development_45/paired_contrasts.csv": {
+      "original_sha256": "d5976b363d6264f4755d4d5b479aeb44c98c5fbc4d6c6dc0ee7163c389190d30",
+      "projected_content_sha256": "d5976b363d6264f4755d4d5b479aeb44c98c5fbc4d6c6dc0ee7163c389190d30",
+      "file_sha256": "d5976b363d6264f4755d4d5b479aeb44c98c5fbc4d6c6dc0ee7163c389190d30",
+      "bytes": 49162,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/internal_check_45/all_runs.csv": {
+      "original_sha256": "649bf1dd0700db4a8c873da30b5522fffd42b1c872781d7938a9f81558fe2241",
+      "projected_content_sha256": "649bf1dd0700db4a8c873da30b5522fffd42b1c872781d7938a9f81558fe2241",
+      "file_sha256": "649bf1dd0700db4a8c873da30b5522fffd42b1c872781d7938a9f81558fe2241",
+      "bytes": 6464,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/internal_check_45/analysis.json": {
+      "original_sha256": "2ddc5a8910e487b749facb951b31629cb85455a908675004f43c7de27a1bc490",
+      "projected_content_sha256": "2ddc5a8910e487b749facb951b31629cb85455a908675004f43c7de27a1bc490",
+      "file_sha256": "2ddc5a8910e487b749facb951b31629cb85455a908675004f43c7de27a1bc490",
+      "bytes": 74984,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/analysis/internal_check_45/configuration_summary.csv": {
+      "original_sha256": "ea5524e8cf8ad46bec90b1586e402d6f3824b70e63eb416395b42e46081fb642",
+      "projected_content_sha256": "ea5524e8cf8ad46bec90b1586e402d6f3824b70e63eb416395b42e46081fb642",
+      "file_sha256": "ea5524e8cf8ad46bec90b1586e402d6f3824b70e63eb416395b42e46081fb642",
+      "bytes": 3418,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/internal_check_45/contrast_summary.csv": {
+      "original_sha256": "8f6ab47518289627f30e60e7e31ae307e649381fee2cffbf802ff82d9f4cb725",
+      "projected_content_sha256": "8f6ab47518289627f30e60e7e31ae307e649381fee2cffbf802ff82d9f4cb725",
+      "file_sha256": "8f6ab47518289627f30e60e7e31ae307e649381fee2cffbf802ff82d9f4cb725",
+      "bytes": 31869,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/analysis/internal_check_45/paired_contrasts.csv": {
+      "original_sha256": "e84ce83028ffa07978a18940b9e87a5ee89221956116478a1f9320a690a4214c",
+      "projected_content_sha256": "e84ce83028ffa07978a18940b9e87a5ee89221956116478a1f9320a690a4214c",
+      "file_sha256": "e84ce83028ffa07978a18940b9e87a5ee89221956116478a1f9320a690a4214c",
+      "bytes": 49328,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/constant_probe/probe/manifest.json.gz": {
+      "original_sha256": "1fb438938def8def3222fce54df9aea536241186e799cb6a5e0c7f7e37f2b7ae",
+      "projected_content_sha256": "1fb438938def8def3222fce54df9aea536241186e799cb6a5e0c7f7e37f2b7ae",
+      "file_sha256": "bd7f6da8bd63f24b6ca96c0d62ded457d927bb90fc131e128bdb45e45c084cb3",
+      "bytes": 39643,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC000_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "eaf8c6d80c1fc829e45b4db600bf4b7fd2fb1db942365eb12e1d7642d7a2bdd7",
+      "projected_content_sha256": "eaf8c6d80c1fc829e45b4db600bf4b7fd2fb1db942365eb12e1d7642d7a2bdd7",
+      "file_sha256": "a954d2e5e54f6e3fe97cdeecf78f005544f40ee15486da1dc46d134b1a6eb179",
+      "bytes": 55068,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "54406449ba1193deff40c26c47c43c6fefb31af21ae35684afee5755010140b4",
+      "projected_content_sha256": "54406449ba1193deff40c26c47c43c6fefb31af21ae35684afee5755010140b4",
+      "file_sha256": "2b5401283468066d10eda2805ba8fde22273c20831e637b27965f57e01585825",
+      "bytes": 55019,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "c4a0a3c5c23cf0ab2e4850eb6a8e55f478377ce881e5ededf212e7d7df40daff",
+      "projected_content_sha256": "c4a0a3c5c23cf0ab2e4850eb6a8e55f478377ce881e5ededf212e7d7df40daff",
+      "file_sha256": "9dd8a4c7be8732edcde39336b648307cdc561e82a12068639f3f879f9bcfeb87",
+      "bytes": 55047,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "3be418472979f502d2770fe293a2cb85ce64b4a71c572f6e4055d217121bad6b",
+      "projected_content_sha256": "3be418472979f502d2770fe293a2cb85ce64b4a71c572f6e4055d217121bad6b",
+      "file_sha256": "7f27dd08f265765a1720516abd6ea5c8d48dd94c9b69c0310510223d286a832e",
+      "bytes": 55049,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "45a1d152e8f24f82d46a9962b70a0e3d3744ae93a3c32ed44333baf0db732081",
+      "projected_content_sha256": "45a1d152e8f24f82d46a9962b70a0e3d3744ae93a3c32ed44333baf0db732081",
+      "file_sha256": "836c18170e8e9ee380c3690ed81d8a1f68d76bfb17c4eefd8241bb49a8057669",
+      "bytes": 55050,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "770bf707a8a84a949a276b596217472c4ce94f5109952f69b07bf59206f824ee",
+      "projected_content_sha256": "770bf707a8a84a949a276b596217472c4ce94f5109952f69b07bf59206f824ee",
+      "file_sha256": "c3b48e34e9140629be2783ac1f3e45808b33ab214cd7373bb0a4816c29b7b001",
+      "bytes": 55188,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC001_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "c0a578cb8e7df0ba7e5680f98bbd36b5e7ade9dea20a53f13d429e0aaba14eca",
+      "projected_content_sha256": "c0a578cb8e7df0ba7e5680f98bbd36b5e7ade9dea20a53f13d429e0aaba14eca",
+      "file_sha256": "f2ccb723ec8baed657e1479f25954ed83911f3481ba41494e388de11ae08f792",
+      "bytes": 55049,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "da7549d368fd1278e2220d2f2c06cbaa9c048c36c15c5b6b22b049d4432e8eba",
+      "projected_content_sha256": "da7549d368fd1278e2220d2f2c06cbaa9c048c36c15c5b6b22b049d4432e8eba",
+      "file_sha256": "9c7cf99408be8bf30ab9f10e940feb832f95627615cee1d5c448963e90def4de",
+      "bytes": 53763,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "b3bd6de026e37dd40e4b2109d439f915bc9055280355df8948b6955a75ad09b6",
+      "projected_content_sha256": "b3bd6de026e37dd40e4b2109d439f915bc9055280355df8948b6955a75ad09b6",
+      "file_sha256": "f84e176ed7360c672f0637973de9592bfb797b5a22782b3d27cb695c42a314ac",
+      "bytes": 55242,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "ff37bcf7fa089573e22096a738716aa0677b8c81ef2701d8de31054e7e36feaf",
+      "projected_content_sha256": "ff37bcf7fa089573e22096a738716aa0677b8c81ef2701d8de31054e7e36feaf",
+      "file_sha256": "7dc79b208163d4654d8fef182c0faa17c782485c7ce323027f3cb77e6ca39fb5",
+      "bytes": 53760,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "05bfba2fd68160a9ff177feaeece24f22094a8560f453189c6fdf8f557e1f169",
+      "projected_content_sha256": "05bfba2fd68160a9ff177feaeece24f22094a8560f453189c6fdf8f557e1f169",
+      "file_sha256": "8c2acded987a12c6c27e77123812ee6d0063ecc497a7c303f694b5950d3d6597",
+      "bytes": 55198,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "253af70c2b60a92d29e5f1f26dccbcb4c23dae39ba5646557224b3e53961652f",
+      "projected_content_sha256": "253af70c2b60a92d29e5f1f26dccbcb4c23dae39ba5646557224b3e53961652f",
+      "file_sha256": "311178fb46febebcfd43101162fe74bbcce4a5d099b13fea553c844436909ec8",
+      "bytes": 53729,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC101_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "ab8609f7e0237b8ce773073f51b7d2f0bbdbeba43f1772055b252181dd68a197",
+      "projected_content_sha256": "ab8609f7e0237b8ce773073f51b7d2f0bbdbeba43f1772055b252181dd68a197",
+      "file_sha256": "1f2de9f00b8564b9d3369a12ef88ab7881b37f75ecafab2d6057676242cd23e7",
+      "bytes": 55065,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_0/ABC111_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "7d695ef7eb6300cc3ebfaf6c73036852c82272baf8f70953d71078ec2d8d7096",
+      "projected_content_sha256": "7d695ef7eb6300cc3ebfaf6c73036852c82272baf8f70953d71078ec2d8d7096",
+      "file_sha256": "802a407f35ac025b26217784c69f86799b0f6ad6fafaf7270ece5af71d7a1691",
+      "bytes": 55138,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC000_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "31688bccd9e1cf7df7f4761dba47c2c7d8b70be273398932468574e0d55ba40f",
+      "projected_content_sha256": "31688bccd9e1cf7df7f4761dba47c2c7d8b70be273398932468574e0d55ba40f",
+      "file_sha256": "4de5f51658010decef7671ecc27cdb45cde575da59d604371c2b753e8aa1749a",
+      "bytes": 53731,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "b6e646b8d6a07948589e237bcffdcbc6767b92a4e876584832b08d1740261161",
+      "projected_content_sha256": "b6e646b8d6a07948589e237bcffdcbc6767b92a4e876584832b08d1740261161",
+      "file_sha256": "d497a79eef4a92f85c123a07c94d8c8963b76f058525b6deac4627eba6440ce5",
+      "bytes": 55201,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "7e9abe3195b8db13bcb52af65998eb48b2a146d86b21d195265eefd0e2667037",
+      "projected_content_sha256": "7e9abe3195b8db13bcb52af65998eb48b2a146d86b21d195265eefd0e2667037",
+      "file_sha256": "885c6705d90aa97c730224babfa92297174b4b58652d34a589e6623ca7780929",
+      "bytes": 55293,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "e6be63230f7857f373de72782a342e99f926227e1840a34a4cf4562c31255c81",
+      "projected_content_sha256": "e6be63230f7857f373de72782a342e99f926227e1840a34a4cf4562c31255c81",
+      "file_sha256": "4b54e51735cbcf2032fa9adea4f54ff2e7bc5bce26993ee162c8739c6fe8a0d0",
+      "bytes": 55244,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "625646194b05ab1a655e8da2b07f541824014204000552ffaf74bc46f71a9b15",
+      "projected_content_sha256": "625646194b05ab1a655e8da2b07f541824014204000552ffaf74bc46f71a9b15",
+      "file_sha256": "b1b692358526943836f20857edc02111d88e340c805d6f227fc1047175e8ccf5",
+      "bytes": 55063,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "149a15901b54b0992f9eb321d9bcf4075d46265fed72f2f0870d2491174bf13b",
+      "projected_content_sha256": "149a15901b54b0992f9eb321d9bcf4075d46265fed72f2f0870d2491174bf13b",
+      "file_sha256": "ea271047eb843d2e83648823a7cb92e07e39c1f5d85d9c2cd950e6ae980e15c8",
+      "bytes": 53745,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC001_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "95e9dd9a2eb2f76c32d25ea29f76aa1288edbe37edd3f4b2157ecf29fefc426d",
+      "projected_content_sha256": "95e9dd9a2eb2f76c32d25ea29f76aa1288edbe37edd3f4b2157ecf29fefc426d",
+      "file_sha256": "df9f9625befbdb71a6589fd7bca7bfd92a78c80aba6f01f232f6f74323a3af24",
+      "bytes": 53729,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "12f77b1d0439f08e7990b3bc027627127f1037055055e5a94013bcbb6c8da3c3",
+      "projected_content_sha256": "12f77b1d0439f08e7990b3bc027627127f1037055055e5a94013bcbb6c8da3c3",
+      "file_sha256": "e869edc04356fb658cf72befbe273580ea39a364c8942df4e41f8eda04c379b6",
+      "bytes": 53742,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "88c357a08d907623f2437cbeaa06c897e19331579e4a522a6a746a2317876582",
+      "projected_content_sha256": "88c357a08d907623f2437cbeaa06c897e19331579e4a522a6a746a2317876582",
+      "file_sha256": "2ee947416ce7307f2888ae63d0abfd197fbec3e943b49a1c3b8e3da906703972",
+      "bytes": 53717,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "6aceaedf034263dd6086cd6557fb155cabb8db2ff4404cbea14a7a7db5b2eefa",
+      "projected_content_sha256": "6aceaedf034263dd6086cd6557fb155cabb8db2ff4404cbea14a7a7db5b2eefa",
+      "file_sha256": "f9f2b1a273c20335b4147c6ebfe2806d58ed5c5d732083dcdc47a32b6fd6da03",
+      "bytes": 53756,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "d76d209db34c9cd3d4fe0ff8655380310450f47d319093fe302455f3a1b1461e",
+      "projected_content_sha256": "d76d209db34c9cd3d4fe0ff8655380310450f47d319093fe302455f3a1b1461e",
+      "file_sha256": "2adde202bf9ee425e6ed246d3dde97052099bc57d848efe37df23a9381b7db2e",
+      "bytes": 53717,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "868e2cd34842aa660ddb8ed8087beba9d7c5f7552ce77ddc8fb0682ee8fc4e9c",
+      "projected_content_sha256": "868e2cd34842aa660ddb8ed8087beba9d7c5f7552ce77ddc8fb0682ee8fc4e9c",
+      "file_sha256": "d66b6642ccacc00b698f66cae20ccc352de711af556dcb24c5ec99f4c222102c",
+      "bytes": 53767,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC101_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "c669cc1a8b8db1690e170b22266b6fdddec66eedddb61a177b0c9de89e0d3c98",
+      "projected_content_sha256": "c669cc1a8b8db1690e170b22266b6fdddec66eedddb61a177b0c9de89e0d3c98",
+      "file_sha256": "7eb6e78193c85d8bc443dafac7f045fb6aaa504e21615c3d1b4622c87e79d205",
+      "bytes": 53735,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_1/ABC111_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "665f5623740e335e608be12b8adebc7c35a0ce740c92a0618b1d0aaf43bbc67f",
+      "projected_content_sha256": "665f5623740e335e608be12b8adebc7c35a0ce740c92a0618b1d0aaf43bbc67f",
+      "file_sha256": "365392b889e2e3b61b4e21e105927b1d05d718c1bbdcee50a25cbef6936626f4",
+      "bytes": 53751,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC000_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "e592f0ad43c7409da1d7b28bca4189886c9938ff1abdbb58664e0aa8c18c3259",
+      "projected_content_sha256": "e592f0ad43c7409da1d7b28bca4189886c9938ff1abdbb58664e0aa8c18c3259",
+      "file_sha256": "4381b90621e4852c28079d93c2ab34e651fae5df5b34732ac298e0d8716e85b1",
+      "bytes": 55057,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "724df668254edf20b38a0e34d8777b11c218718e29eec2797e7d686800346a78",
+      "projected_content_sha256": "724df668254edf20b38a0e34d8777b11c218718e29eec2797e7d686800346a78",
+      "file_sha256": "08b81f49fd4cdf5858f48b082999db08fd9b5cbf24bdb18c4bbb152e351dd7be",
+      "bytes": 53770,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "69db8fad3106a464acf825564ab1cc2011d0a49bee454a76fc8303ef53248f17",
+      "projected_content_sha256": "69db8fad3106a464acf825564ab1cc2011d0a49bee454a76fc8303ef53248f17",
+      "file_sha256": "9951a55b531c46c37f0947d94618cd7f1b6f7a65d6b416fc74d93c7220cb3c00",
+      "bytes": 55102,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "cb2ab30f6beb7cfecadf6e416a1812b4ab246aa673783fa8bb082c5d336d9b8f",
+      "projected_content_sha256": "cb2ab30f6beb7cfecadf6e416a1812b4ab246aa673783fa8bb082c5d336d9b8f",
+      "file_sha256": "61547419c65617ee33bd97fccec958661c67c8f34576f5f24571f37d7fb25a18",
+      "bytes": 53775,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "e886018b73d4bd0d1c0ee20b316ecfbf633339a35c44fb08b01306806d0f29b5",
+      "projected_content_sha256": "e886018b73d4bd0d1c0ee20b316ecfbf633339a35c44fb08b01306806d0f29b5",
+      "file_sha256": "b10f9d72344552afcbea7748fb7e726ff298c4134236806abbd109341a41db85",
+      "bytes": 55063,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "254b0a1e10b2c8f05101c6fa41e3aeef736117de0550cd583c8433e3865559c0",
+      "projected_content_sha256": "254b0a1e10b2c8f05101c6fa41e3aeef736117de0550cd583c8433e3865559c0",
+      "file_sha256": "3aaf3653b6faa4e61ef26fc9cfb6ae10845fe50aee9a440f218c90411d0f2b97",
+      "bytes": 55172,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC001_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "73d8a79c8ef3885cdfa02da41a267ce3c3605637d114c3c3252259b0c18860ff",
+      "projected_content_sha256": "73d8a79c8ef3885cdfa02da41a267ce3c3605637d114c3c3252259b0c18860ff",
+      "file_sha256": "648b0765c131150b04382bb8e38b88a0aac2718e9ecfc60308532a50847abb5a",
+      "bytes": 55071,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Rbounded_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "fdaed93c8c03ef16fdcb4510e0e1a17e5a2c493904038c9b795417ef15ca93bb",
+      "projected_content_sha256": "fdaed93c8c03ef16fdcb4510e0e1a17e5a2c493904038c9b795417ef15ca93bb",
+      "file_sha256": "3f1551615155ced3c05e0436aff6a4ec4a7ab42f35f5dd5d17b3245682b1b906",
+      "bytes": 53734,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Rbounded_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "8a05ebaf18adf59a2755a6f62b0ce677b1cdf8ff2ff2f7c35fda847f6c21fd51",
+      "projected_content_sha256": "8a05ebaf18adf59a2755a6f62b0ce677b1cdf8ff2ff2f7c35fda847f6c21fd51",
+      "file_sha256": "a148902a0e68958dd92a0a01df34a4c605bf1cefe10ddf6c63f8884b0ba773fd",
+      "bytes": 55198,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Rconstant_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "647cf5c27f93bd7d26c052bb5e0792c692039ce7f0b8987a45e06b6185141749",
+      "projected_content_sha256": "647cf5c27f93bd7d26c052bb5e0792c692039ce7f0b8987a45e06b6185141749",
+      "file_sha256": "a711645e1a61ee9e8a6a2186c54854df4bf043eb09b1643f5138099fc1f5d5d4",
+      "bytes": 53745,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Rconstant_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "9affa548fe3d7145fc44b4fa99f821dcfa814ed76bd07ce61e0eb48e48593056",
+      "projected_content_sha256": "9affa548fe3d7145fc44b4fa99f821dcfa814ed76bd07ce61e0eb48e48593056",
+      "file_sha256": "ce02f33b4a23c5da1ac0c2b167ff9f9931e34aa617f3e0826f84b8a0acf0fa3f",
+      "bytes": 55196,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Roriginal_Tokbounded/constant_trainmean_pi.json.gz": {
+      "original_sha256": "84c5e599e15253b15304e5172ccc64ee204bc507acf7359a6ba319f2e810db8d",
+      "projected_content_sha256": "84c5e599e15253b15304e5172ccc64ee204bc507acf7359a6ba319f2e810db8d",
+      "file_sha256": "2e66c20e178baf5ced8641ede7e5ddf51f33a46a960fdaa5e527ed057a2dbadb",
+      "bytes": 53728,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC101_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "9afa2f0837435d8ebc22e9903f800a50fe71c5ce1b9361dbceea8e6d854a2c89",
+      "projected_content_sha256": "9afa2f0837435d8ebc22e9903f800a50fe71c5ce1b9361dbceea8e6d854a2c89",
+      "file_sha256": "87805215916ca85ecc31d005a0bd7f83785db36ed1571760d97725d5760c34fc",
+      "bytes": 55175,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/probe/seed_2/ABC111_T1_Roriginal_Tokoriginal/constant_trainmean_pi.json.gz": {
+      "original_sha256": "1ccbbfc9af5e11875348be76760cc13063d386303ab50a21c154d8cbb6b2eb43",
+      "projected_content_sha256": "1ccbbfc9af5e11875348be76760cc13063d386303ab50a21c154d8cbb6b2eb43",
+      "file_sha256": "37e18cc3d2e62cd53f02c4da434427eabd14b39399e40ee88666b0d3f9bbda30",
+      "bytes": 55156,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/records/protocol.json": {
+      "original_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "projected_content_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "file_sha256": "ad4339e9d1d2a1e67f989747160bf318c2f1fe6c9a062ad7eee5a0419c83974f",
+      "bytes": 41783,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/records/PROBE_SOURCE_FROZEN.json": {
+      "original_sha256": "f759abc7030588eb6d534fb7d893cb5e06d26127d24331f7da0e638565e4f301",
+      "projected_content_sha256": "f759abc7030588eb6d534fb7d893cb5e06d26127d24331f7da0e638565e4f301",
+      "file_sha256": "f759abc7030588eb6d534fb7d893cb5e06d26127d24331f7da0e638565e4f301",
+      "bytes": 1100,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "gate_reliability/constant_probe/records/run_constant_token_probe.py": {
+      "original_sha256": "cda4ad3c15fb637df9a14d759a0719ff162da18eb78ff0b2ea6f1109d0f3ae4b",
+      "projected_content_sha256": "cda4ad3c15fb637df9a14d759a0719ff162da18eb78ff0b2ea6f1109d0f3ae4b",
+      "file_sha256": "cda4ad3c15fb637df9a14d759a0719ff162da18eb78ff0b2ea6f1109d0f3ae4b",
+      "bytes": 16612,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/constant_probe/records/verify_constant_probe_outputs.py": {
+      "original_sha256": "c07a401bf19380dcda41fefa12b015e401fcc324cceb3921fc1af850dd4ac851",
+      "projected_content_sha256": "c07a401bf19380dcda41fefa12b015e401fcc324cceb3921fc1af850dd4ac851",
+      "file_sha256": "c07a401bf19380dcda41fefa12b015e401fcc324cceb3921fc1af850dd4ac851",
+      "bytes": 10451,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/code/reference_kernels.py": {
+      "original_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "projected_content_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "file_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "bytes": 4220,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/code/repair_head.py": {
+      "original_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "projected_content_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "file_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "bytes": 9399,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/scripts/launch_repair_stage.py": {
+      "original_sha256": "a82c8408ada22d82e5f24880861511e5fabb516f07fd11d10aa9c02e594961ea",
+      "projected_content_sha256": "a82c8408ada22d82e5f24880861511e5fabb516f07fd11d10aa9c02e594961ea",
+      "file_sha256": "a82c8408ada22d82e5f24880861511e5fabb516f07fd11d10aa9c02e594961ea",
+      "bytes": 3367,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/scripts/run_repair.py": {
+      "original_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "projected_content_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "file_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "bytes": 37942,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/artifacts.py": {
+      "original_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "projected_content_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "file_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "bytes": 6456,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/batch_scoring.py": {
+      "original_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "projected_content_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "file_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "bytes": 953,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/bench_efficiency.py": {
+      "original_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "projected_content_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "file_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "bytes": 12183,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/cache_primitives.py": {
+      "original_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "projected_content_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "file_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "bytes": 6550,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/eval_retrieval_baselines.py": {
+      "original_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "projected_content_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "file_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "bytes": 9893,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/eval_retrieval_phys.py": {
+      "original_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "projected_content_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "file_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "bytes": 12965,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/make_ids.py": {
+      "original_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "projected_content_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "file_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "bytes": 3880,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/primitive_controls.py": {
+      "original_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "projected_content_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "file_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "bytes": 1400,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/retrieval_queries.py": {
+      "original_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "projected_content_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "file_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "bytes": 2872,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/runtime.py": {
+      "original_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "projected_content_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "file_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "bytes": 1802,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/saqre_phys.py": {
+      "original_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "projected_content_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "file_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "bytes": 19556,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/sweep_hparams.py": {
+      "original_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "projected_content_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "file_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "bytes": 12641,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/base_code/train_saqre.py": {
+      "original_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "projected_content_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "file_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "bytes": 7903,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/reference/factorial_head.py": {
+      "original_sha256": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+      "projected_content_sha256": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+      "file_sha256": "09daca82cab541bcc75e372361784c74eece287b492671c71b221f71432ba1e1",
+      "bytes": 3819,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "gate_reliability/measured_source/analyze_results.py": {
+      "original_sha256": "f0fe8250c027c9748a77cbe51f8ffc7185f3ebac64b7be906d29865e6078f5a5",
+      "projected_content_sha256": "f0fe8250c027c9748a77cbe51f8ffc7185f3ebac64b7be906d29865e6078f5a5",
+      "file_sha256": "f0fe8250c027c9748a77cbe51f8ffc7185f3ebac64b7be906d29865e6078f5a5",
+      "bytes": 6422,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/protocol.json": {
+      "original_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+      "projected_content_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+      "file_sha256": "217545b95394076aa4dd11c17988c6637bf2869fc24ad100867af2d94feae80f",
+      "bytes": 8011,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/INPUTS_FROZEN.json": {
+      "original_sha256": "77128b08d6758bb00a52b16bdea3a9287173882c6c74b16a3a39cdba972aaa80",
+      "projected_content_sha256": "e78fec238ec836da326ebb9869b8c2575336a086bc536cf71bc8b17be88b8384",
+      "file_sha256": "e78fec238ec836da326ebb9869b8c2575336a086bc536cf71bc8b17be88b8384",
+      "bytes": 10185,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/CONTEXT_SOURCE_FROZEN.json": {
+      "original_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29",
+      "projected_content_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29",
+      "file_sha256": "8a72c99eb2927f71cb710f60e31b9ac66ef2397014c2103672f3c754a1724d29",
+      "bytes": 2985,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/REFERENCE_SOURCE_PROVENANCE.json": {
+      "original_sha256": "744708140726edacd2722fcfa4f1792fa55d80d4a19ea506100c58f644657d8a",
+      "projected_content_sha256": "744708140726edacd2722fcfa4f1792fa55d80d4a19ea506100c58f644657d8a",
+      "file_sha256": "744708140726edacd2722fcfa4f1792fa55d80d4a19ea506100c58f644657d8a",
+      "bytes": 3751,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/TRAINING_COMPLETE_LOCK.json": {
+      "original_sha256": "3dfa59e2269007eece348328e5f56d12ae9f6737fdc7832465ce21bddba11e66",
+      "projected_content_sha256": "5806fab28f9f40ea624b89409c58a37d9b5acc14e19df5d3fb607615b73777de",
+      "file_sha256": "5806fab28f9f40ea624b89409c58a37d9b5acc14e19df5d3fb607615b73777de",
+      "bytes": 4653,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A0T1/development.json.gz": {
+      "original_sha256": "c83103e81783b91b1a0db5e57fe2490a2854f7ce0ec9d8edce011f64bc750d38",
+      "projected_content_sha256": "c83103e81783b91b1a0db5e57fe2490a2854f7ce0ec9d8edce011f64bc750d38",
+      "file_sha256": "c903e11c2242fb15cd00becc930d1b37d7e5dba812e200df0a390204e0d27055",
+      "bytes": 52910,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A0T1/parent_A0_anchor.json": {
+      "original_sha256": "5256796a2eb73dc3907b709e54cf52d29002e702a86c4686fb3f8f97082c812f",
+      "projected_content_sha256": "5256796a2eb73dc3907b709e54cf52d29002e702a86c4686fb3f8f97082c812f",
+      "file_sha256": "5256796a2eb73dc3907b709e54cf52d29002e702a86c4686fb3f8f97082c812f",
+      "bytes": 280,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A0T1/training_progress.json": {
+      "original_sha256": "eefee7d22ba5d9b59939c9b282e5c25f7711b7a93c61965a14de11fa15ab5ca6",
+      "projected_content_sha256": "eefee7d22ba5d9b59939c9b282e5c25f7711b7a93c61965a14de11fa15ab5ca6",
+      "file_sha256": "eefee7d22ba5d9b59939c9b282e5c25f7711b7a93c61965a14de11fa15ab5ca6",
+      "bytes": 2955,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A1T0/development.json.gz": {
+      "original_sha256": "b6013582912dd35c4a049dde0769fd9ccd8e6e64d513168692de6bef81b3289c",
+      "projected_content_sha256": "b6013582912dd35c4a049dde0769fd9ccd8e6e64d513168692de6bef81b3289c",
+      "file_sha256": "9411d7f5f828f9631b58a4e26a55a43283e7d4df25b749800587f250520dcaaf",
+      "bytes": 53095,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A1T0/training_progress.json": {
+      "original_sha256": "05d78b4831274c8ac3a7b212aef6a70a4439c27bef47f365d4c55f6866e053b2",
+      "projected_content_sha256": "05d78b4831274c8ac3a7b212aef6a70a4439c27bef47f365d4c55f6866e053b2",
+      "file_sha256": "05d78b4831274c8ac3a7b212aef6a70a4439c27bef47f365d4c55f6866e053b2",
+      "bytes": 2949,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A1T1/development.json.gz": {
+      "original_sha256": "0d2d705e8615f8ab7cdaac0c8efa4a0aa6be4a2680bb245c3669b7f168b74070",
+      "projected_content_sha256": "0d2d705e8615f8ab7cdaac0c8efa4a0aa6be4a2680bb245c3669b7f168b74070",
+      "file_sha256": "812bcd47ff07837da9c1f1fbd162d9557de26b40355d55a8729d056cf62f0892",
+      "bytes": 52932,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/context48_A1T1/training_progress.json": {
+      "original_sha256": "0c547a821bd26b7620c0e96796a826ea0e99e29b1cffc0f5f9ac036a3b6f8840",
+      "projected_content_sha256": "0c547a821bd26b7620c0e96796a826ea0e99e29b1cffc0f5f9ac036a3b6f8840",
+      "file_sha256": "0c547a821bd26b7620c0e96796a826ea0e99e29b1cffc0f5f9ac036a3b6f8840",
+      "bytes": 2956,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/internal_check/context48_A0T1/internal_check.json.gz": {
+      "original_sha256": "8f6fbdd09997b7d1b41fb226512162308d2fe14230f92083f9b7b3b46217bf26",
+      "projected_content_sha256": "8f6fbdd09997b7d1b41fb226512162308d2fe14230f92083f9b7b3b46217bf26",
+      "file_sha256": "e9ca72c5ee8cf27bf1e4c556539f20bd5e289f79ffd3e0310689968ed49b5c44",
+      "bytes": 89402,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/internal_check/context48_A1T0/internal_check.json.gz": {
+      "original_sha256": "6d974acd264c590ea913dc4306de82ad42d49a73330f734e9d5bbfdcfab9c9d5",
+      "projected_content_sha256": "6d974acd264c590ea913dc4306de82ad42d49a73330f734e9d5bbfdcfab9c9d5",
+      "file_sha256": "6bcea5cbaec4d92fcfbda621e29c84bb1259bb3d85c34ff0e8d5e9dca09e4a04",
+      "bytes": 89741,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/internal_check/context48_A1T1/internal_check.json.gz": {
+      "original_sha256": "3d9b7ddf9118787a9a555a25f865ad052de9e21aa8b06129c59456b4bb7055c7",
+      "projected_content_sha256": "3d9b7ddf9118787a9a555a25f865ad052de9e21aa8b06129c59456b4bb7055c7",
+      "file_sha256": "71d83d9195e45caebfb426a3130c1a329d5612f0d1e0a4364e1bc5db2e4dfd86",
+      "bytes": 89403,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/internal_check/manifest.json.gz": {
+      "original_sha256": "5fe910104af559661eed299a7fea87059c5afcd15e70f9ecd9c0981b5788081d",
+      "projected_content_sha256": "5fe910104af559661eed299a7fea87059c5afcd15e70f9ecd9c0981b5788081d",
+      "file_sha256": "37eaa89d62025e2e5295eb917debc122380fad8e6cafee61811905768e80397a",
+      "bytes": 40868,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_0/manifest.json.gz": {
+      "original_sha256": "df509cdeee5be5ddef719f2ff38fd89b1b838ba987179b3c5a61c9d58ef7d263",
+      "projected_content_sha256": "df509cdeee5be5ddef719f2ff38fd89b1b838ba987179b3c5a61c9d58ef7d263",
+      "file_sha256": "135eb02b99081bd5c5ac82d7e2d7afb98c48c70f594889142d5612672104dfe0",
+      "bytes": 41371,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A0T1/development.json.gz": {
+      "original_sha256": "36719f0eb82abc52068b7c20fcab82429dbbf90f48dbb15875600e23d2154a4f",
+      "projected_content_sha256": "36719f0eb82abc52068b7c20fcab82429dbbf90f48dbb15875600e23d2154a4f",
+      "file_sha256": "ef0c37fede0be6599303d4f95a8f5f18f1beac3eb5ba8c7d80d00d7f939f2408",
+      "bytes": 52920,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A0T1/parent_A0_anchor.json": {
+      "original_sha256": "f6fd70d799d439fc67af698107039b7803f4666b9921ffba12f78187ad7d8916",
+      "projected_content_sha256": "f6fd70d799d439fc67af698107039b7803f4666b9921ffba12f78187ad7d8916",
+      "file_sha256": "f6fd70d799d439fc67af698107039b7803f4666b9921ffba12f78187ad7d8916",
+      "bytes": 280,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A0T1/training_progress.json": {
+      "original_sha256": "cf1a1e48c863279c8928053c11cbd16b33b5cc20e2efaf426f91495c8b4e570d",
+      "projected_content_sha256": "cf1a1e48c863279c8928053c11cbd16b33b5cc20e2efaf426f91495c8b4e570d",
+      "file_sha256": "cf1a1e48c863279c8928053c11cbd16b33b5cc20e2efaf426f91495c8b4e570d",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A1T0/development.json.gz": {
+      "original_sha256": "22f30452449931f77bebbeb4ef55c4c3b893d73ecf1c9c512aed3be9c661172d",
+      "projected_content_sha256": "22f30452449931f77bebbeb4ef55c4c3b893d73ecf1c9c512aed3be9c661172d",
+      "file_sha256": "ff6e311f02d8c5fbb10710c89a17a85bb57fea5aa348266c74b3e356e5c24d1d",
+      "bytes": 53089,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A1T0/training_progress.json": {
+      "original_sha256": "4f5f113e8eb0b0c4fa829432e9377dd39d3dbbfa93efd78a797b3dd9c2fd53e5",
+      "projected_content_sha256": "4f5f113e8eb0b0c4fa829432e9377dd39d3dbbfa93efd78a797b3dd9c2fd53e5",
+      "file_sha256": "4f5f113e8eb0b0c4fa829432e9377dd39d3dbbfa93efd78a797b3dd9c2fd53e5",
+      "bytes": 2958,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A1T1/development.json.gz": {
+      "original_sha256": "d7174d822b42bc24df1577bd5f1d7a74018591e811cb7ea81d9d6fcd45a609bf",
+      "projected_content_sha256": "d7174d822b42bc24df1577bd5f1d7a74018591e811cb7ea81d9d6fcd45a609bf",
+      "file_sha256": "56720ab14be33582a1522735a9f56a41d28d7962cc91ee47307d924fdf043e93",
+      "bytes": 52918,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/context48_A1T1/training_progress.json": {
+      "original_sha256": "1795ca9d34983be28bfc086514ffcd52e98bdc8f1c6e43f77e4c1e0bf16e2eee",
+      "projected_content_sha256": "1795ca9d34983be28bfc086514ffcd52e98bdc8f1c6e43f77e4c1e0bf16e2eee",
+      "file_sha256": "1795ca9d34983be28bfc086514ffcd52e98bdc8f1c6e43f77e4c1e0bf16e2eee",
+      "bytes": 2959,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/internal_check/context48_A0T1/internal_check.json.gz": {
+      "original_sha256": "6454a0a5888b62b335c67e7c4ce31d3e39b4e4ac52d9ed339eb92dad89b83817",
+      "projected_content_sha256": "6454a0a5888b62b335c67e7c4ce31d3e39b4e4ac52d9ed339eb92dad89b83817",
+      "file_sha256": "af2bbfe2e2b56e915f7cb18a205690c4e679067fc4f7a598853c249355e1e6a4",
+      "bytes": 89385,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/internal_check/context48_A1T0/internal_check.json.gz": {
+      "original_sha256": "3c5cf179695ee32f27af53ad156d26bd3648fa4a3f4c37f83ed93aeb40916033",
+      "projected_content_sha256": "3c5cf179695ee32f27af53ad156d26bd3648fa4a3f4c37f83ed93aeb40916033",
+      "file_sha256": "e822e92c6b164cc9591b18610c9b73c9635eea9c09a469ddcd742f539a90037c",
+      "bytes": 89748,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/internal_check/context48_A1T1/internal_check.json.gz": {
+      "original_sha256": "362d9086469985e9924a2d3cceacf2754da8b51e013259f3aee89f9c1f7ab946",
+      "projected_content_sha256": "362d9086469985e9924a2d3cceacf2754da8b51e013259f3aee89f9c1f7ab946",
+      "file_sha256": "d80745661f2e4604cc499c88a767f287ba7252cca5b9ae80473f7852feddca36",
+      "bytes": 89394,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/internal_check/manifest.json.gz": {
+      "original_sha256": "5f5a9b3a99270bbe0b8e01200214b6faa4c27962e20a9e2efed3dfaf92c599c2",
+      "projected_content_sha256": "5f5a9b3a99270bbe0b8e01200214b6faa4c27962e20a9e2efed3dfaf92c599c2",
+      "file_sha256": "de460cf94a96e4e80d7695418d665aad6b44bb998ba960bd187bb5b7d4295303",
+      "bytes": 40864,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_1/manifest.json.gz": {
+      "original_sha256": "6b91f67b9e069ed225b305d67763e2a653d41c2e83526c5aeb9e5242deb339d3",
+      "projected_content_sha256": "6b91f67b9e069ed225b305d67763e2a653d41c2e83526c5aeb9e5242deb339d3",
+      "file_sha256": "f3b3b6150c0b53e8e551408a978ab8a1779e21b431d102ae42508844ed47cfce",
+      "bytes": 41382,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A0T1/development.json.gz": {
+      "original_sha256": "37dbcf925afb41af0e679dd7d943e7843925037a5dbdb5f90d9cc3fb57b436d8",
+      "projected_content_sha256": "37dbcf925afb41af0e679dd7d943e7843925037a5dbdb5f90d9cc3fb57b436d8",
+      "file_sha256": "d06e6ed03908bc71e1a6eee6a920c738a9ff373c0504feb6b09fde575ccb333d",
+      "bytes": 52915,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A0T1/parent_A0_anchor.json": {
+      "original_sha256": "73e8e6f9bdc009cd2ddecd1df25be15b55352d2aae0a40e25a07293111553c79",
+      "projected_content_sha256": "73e8e6f9bdc009cd2ddecd1df25be15b55352d2aae0a40e25a07293111553c79",
+      "file_sha256": "73e8e6f9bdc009cd2ddecd1df25be15b55352d2aae0a40e25a07293111553c79",
+      "bytes": 280,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A0T1/training_progress.json": {
+      "original_sha256": "4f225e58d77695b59d7186dfe01067aeb9dd1780d14e042870ea93c54074e44f",
+      "projected_content_sha256": "4f225e58d77695b59d7186dfe01067aeb9dd1780d14e042870ea93c54074e44f",
+      "file_sha256": "4f225e58d77695b59d7186dfe01067aeb9dd1780d14e042870ea93c54074e44f",
+      "bytes": 2959,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A1T0/development.json.gz": {
+      "original_sha256": "eddf9b7c0f5281a6d8b3dd78f442ff732c4b42e170f88058958d6cfe7b21a20a",
+      "projected_content_sha256": "eddf9b7c0f5281a6d8b3dd78f442ff732c4b42e170f88058958d6cfe7b21a20a",
+      "file_sha256": "b2a29ac827b04acba68e0b19ec588d3752f7cd1d8d440733b8ebebff962bed8d",
+      "bytes": 53107,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A1T0/training_progress.json": {
+      "original_sha256": "1d99699c798ca7bbdfd4a0d146472cf09bb71103d42817b6de25b49ffccf6dd5",
+      "projected_content_sha256": "1d99699c798ca7bbdfd4a0d146472cf09bb71103d42817b6de25b49ffccf6dd5",
+      "file_sha256": "1d99699c798ca7bbdfd4a0d146472cf09bb71103d42817b6de25b49ffccf6dd5",
+      "bytes": 2951,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A1T1/development.json.gz": {
+      "original_sha256": "309257bb7a806ecf1b4c7b193aed90e08665193b2f098efe816ba76c5c127352",
+      "projected_content_sha256": "309257bb7a806ecf1b4c7b193aed90e08665193b2f098efe816ba76c5c127352",
+      "file_sha256": "19205120fcc446024ac9fb2f903fd77e918719f8ce32eef41cd387868aa4156c",
+      "bytes": 52906,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/context48_A1T1/training_progress.json": {
+      "original_sha256": "ae738344728f9756c9249eca6c4fd2b989ba433e15533cddbe288e478b0186f1",
+      "projected_content_sha256": "ae738344728f9756c9249eca6c4fd2b989ba433e15533cddbe288e478b0186f1",
+      "file_sha256": "ae738344728f9756c9249eca6c4fd2b989ba433e15533cddbe288e478b0186f1",
+      "bytes": 2957,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/internal_check/context48_A0T1/internal_check.json.gz": {
+      "original_sha256": "665f158673a57d739c95cd52cbfd253f3735b5e64347db1371d29be74c4a4699",
+      "projected_content_sha256": "665f158673a57d739c95cd52cbfd253f3735b5e64347db1371d29be74c4a4699",
+      "file_sha256": "a7905d68134b8a48cb7eb2c7781fa14d8237a76c3fc0cc7a07104fd586a52e4a",
+      "bytes": 89390,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/internal_check/context48_A1T0/internal_check.json.gz": {
+      "original_sha256": "99a28ca74c5dcf3742d0642348e81a3839985775e1a567ef256706fc02b2e9c0",
+      "projected_content_sha256": "99a28ca74c5dcf3742d0642348e81a3839985775e1a567ef256706fc02b2e9c0",
+      "file_sha256": "5dc2200cdd27aa048ce8a16c8f4ace0d22b6c15e387f68dfba9f97e9379bdd4b",
+      "bytes": 89734,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/internal_check/context48_A1T1/internal_check.json.gz": {
+      "original_sha256": "fa37c814a91f0846319bfb4932a6f816ed79421397a1a590c257a25eb4a93cb2",
+      "projected_content_sha256": "fa37c814a91f0846319bfb4932a6f816ed79421397a1a590c257a25eb4a93cb2",
+      "file_sha256": "adbe893e17397fa5b59b5e78a6298f979e48df3f0816aa1b404deec708145bf6",
+      "bytes": 89414,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/internal_check/manifest.json.gz": {
+      "original_sha256": "764fe15ba9294168e4310c23208a62190b550bbccb769eb39ae6bcd352e13749",
+      "projected_content_sha256": "764fe15ba9294168e4310c23208a62190b550bbccb769eb39ae6bcd352e13749",
+      "file_sha256": "e00108175043a228029f5ef46ed9e8830f0d97244111ca939edb1ec8babc4cd7",
+      "bytes": 40883,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/results/seed_2/manifest.json.gz": {
+      "original_sha256": "927cc3ea440f74ed20ada4d7089f25f80f3e45723bafe7402b6f2f7c211724da",
+      "projected_content_sha256": "927cc3ea440f74ed20ada4d7089f25f80f3e45723bafe7402b6f2f7c211724da",
+      "file_sha256": "61a51aba0e2b7bda5f2a17f54862e5ab88719921a1acb2e5bacfd0a376c575f9",
+      "bytes": 41362,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/measured_source/code/fine_context.py": {
+      "original_sha256": "62552ab73e2345d013d7121f0b5c3fc758c88c593c2e2776b4cac1956be9ab21",
+      "projected_content_sha256": "62552ab73e2345d013d7121f0b5c3fc758c88c593c2e2776b4cac1956be9ab21",
+      "file_sha256": "62552ab73e2345d013d7121f0b5c3fc758c88c593c2e2776b4cac1956be9ab21",
+      "bytes": 6639,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/code/reference_kernels.py": {
+      "original_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "projected_content_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "file_sha256": "15bce753e109d801a8f402f80790ff8d0e550cbad07a961ee66c19a69ebc2282",
+      "bytes": 4220,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/code/repair_head.py": {
+      "original_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "projected_content_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "file_sha256": "f22a8848983c84dd157be251252db246d9555ff8ba9ef397647659af8112d0bd",
+      "bytes": 9399,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/scripts/build_fine_overlay.py": {
+      "original_sha256": "1474c7d277eb7e05190b8c7b12021c0ed4b504a6b9d9010f278ee504ed3512f5",
+      "projected_content_sha256": "1474c7d277eb7e05190b8c7b12021c0ed4b504a6b9d9010f278ee504ed3512f5",
+      "file_sha256": "1474c7d277eb7e05190b8c7b12021c0ed4b504a6b9d9010f278ee504ed3512f5",
+      "bytes": 14206,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/scripts/launch_context.py": {
+      "original_sha256": "b12fffced1a91d10ddecd76a56fa877fdc5b5c7361a4c8a618fbab545999653e",
+      "projected_content_sha256": "b12fffced1a91d10ddecd76a56fa877fdc5b5c7361a4c8a618fbab545999653e",
+      "file_sha256": "b12fffced1a91d10ddecd76a56fa877fdc5b5c7361a4c8a618fbab545999653e",
+      "bytes": 2374,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/scripts/run_context.py": {
+      "original_sha256": "51a68f8baa3f744104eb5c0de82c0bfe2950f01e62da65f5160d766c45fd45a0",
+      "projected_content_sha256": "51a68f8baa3f744104eb5c0de82c0bfe2950f01e62da65f5160d766c45fd45a0",
+      "file_sha256": "51a68f8baa3f744104eb5c0de82c0bfe2950f01e62da65f5160d766c45fd45a0",
+      "bytes": 18970,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/artifacts.py": {
+      "original_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "projected_content_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "file_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "bytes": 6456,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/batch_scoring.py": {
+      "original_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "projected_content_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "file_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "bytes": 953,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/bench_efficiency.py": {
+      "original_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "projected_content_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "file_sha256": "77372cc1c8ac31b5ca874d5694aef4211706a0f952ed37ff96a6af9ca4c9baf3",
+      "bytes": 12183,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/cache_primitives.py": {
+      "original_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "projected_content_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "file_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "bytes": 6550,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/eval_retrieval_baselines.py": {
+      "original_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "projected_content_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "file_sha256": "d551264b7cf70fd9d1cba80ea7132bc3df143d3348a18cda5954845dbc85bd95",
+      "bytes": 9893,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/eval_retrieval_phys.py": {
+      "original_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "projected_content_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "file_sha256": "13646412a7e6a4c3bcd9355ccaecdc47b4ed8a83a08a165504a58ffdcf477915",
+      "bytes": 12965,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/make_ids.py": {
+      "original_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "projected_content_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "file_sha256": "e0a897d9630b7eddbcd2462cfff944110e481665a1519060c03251b23a75a4e2",
+      "bytes": 3880,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/primitive_controls.py": {
+      "original_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "projected_content_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "file_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "bytes": 1400,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/retrieval_queries.py": {
+      "original_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "projected_content_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "file_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "bytes": 2872,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/runtime.py": {
+      "original_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "projected_content_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "file_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "bytes": 1802,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/saqre_phys.py": {
+      "original_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "projected_content_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "file_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "bytes": 19556,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/sweep_hparams.py": {
+      "original_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "projected_content_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "file_sha256": "465ec0423c210bdc175b13410d07cd2f40189389841ad67beadbdd7adb136350",
+      "bytes": 12641,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/base_code/train_saqre.py": {
+      "original_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "projected_content_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "file_sha256": "68b9e15498f2831a97c425e4e4742e00a85202036188397d593029bba9fae12b",
+      "bytes": 7903,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/measured_source/reference/run_repair_phase1.py": {
+      "original_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "projected_content_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "file_sha256": "700af1e5cdcbb9e724c1e4e9addde61192add7fed5fa6231c0d61410ae9245d0",
+      "bytes": 37942,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/DEPLOYMENT_VERIFICATION.json": {
+      "original_sha256": "6b1b85d8c59bae06650c679ef249d7aba42d88bc9b7e478579117fba45ba642a",
+      "projected_content_sha256": "aedb9db33ccd84f9894e762a595639a90c594de9c9ad4dd1c6ea85f51f2a85ae",
+      "file_sha256": "aedb9db33ccd84f9894e762a595639a90c594de9c9ad4dd1c6ea85f51f2a85ae",
+      "bytes": 1921,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/analysis/IMPLEMENTATION_READY.json": {
+      "original_sha256": "619172f86c68971f8a229e11b54fad37cbcd451c168662d4b37cba7ce82eeffa",
+      "projected_content_sha256": "619172f86c68971f8a229e11b54fad37cbcd451c168662d4b37cba7ce82eeffa",
+      "file_sha256": "619172f86c68971f8a229e11b54fad37cbcd451c168662d4b37cba7ce82eeffa",
+      "bytes": 875,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/analysis/analysis_execution.json": {
+      "original_sha256": "accf39b507ed9e31b60fde86694d1e605eacc481273736a151443017b438357e",
+      "projected_content_sha256": "01fe1c2e90a63b3d81c15c1540b4221ecd980354324a9e00e64a201cb5590cbe",
+      "file_sha256": "01fe1c2e90a63b3d81c15c1540b4221ecd980354324a9e00e64a201cb5590cbe",
+      "bytes": 1683,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/analysis/analyze_context48.py": {
+      "original_sha256": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+      "projected_content_sha256": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+      "file_sha256": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+      "bytes": 25785,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/final_verified/all_runs.csv": {
+      "original_sha256": "2dbcf9180f67a49f2a8ce7569ddbb80c5d28baa6be8c805095222bfd864e8b22",
+      "projected_content_sha256": "2dbcf9180f67a49f2a8ce7569ddbb80c5d28baa6be8c805095222bfd864e8b22",
+      "file_sha256": "2dbcf9180f67a49f2a8ce7569ddbb80c5d28baa6be8c805095222bfd864e8b22",
+      "bytes": 5170,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/final_verified/analysis.json": {
+      "original_sha256": "a6a40d8a99c8f4c8b79009efdb77f6227ae3fcf46f8e93d92b5e8a90d39096f5",
+      "projected_content_sha256": "02bc167583fbb280b19b6a7c6cfa31999330644293685346fccd85e89f403111",
+      "file_sha256": "02bc167583fbb280b19b6a7c6cfa31999330644293685346fccd85e89f403111",
+      "bytes": 56536,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/analysis/final_verified/configuration_summaries.csv": {
+      "original_sha256": "c7b8fae5dc08b0e6e8910b59d432800aa86ca8de763ee3ac24629c6ddf65d635",
+      "projected_content_sha256": "c7b8fae5dc08b0e6e8910b59d432800aa86ca8de763ee3ac24629c6ddf65d635",
+      "file_sha256": "c7b8fae5dc08b0e6e8910b59d432800aa86ca8de763ee3ac24629c6ddf65d635",
+      "bytes": 3025,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/final_verified/contrast_summaries.csv": {
+      "original_sha256": "2f27679fa6dd7c75d609b94ee4ed996c26dd05170bbff63c61d53e056a03d681",
+      "projected_content_sha256": "2f27679fa6dd7c75d609b94ee4ed996c26dd05170bbff63c61d53e056a03d681",
+      "file_sha256": "2f27679fa6dd7c75d609b94ee4ed996c26dd05170bbff63c61d53e056a03d681",
+      "bytes": 8272,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/final_verified/manifest.json": {
+      "original_sha256": "16ad281d851c20a8d49433c10fd275e487a9aa3a34c251890499d33022f3245c",
+      "projected_content_sha256": "2e4ef925babb175e52715ab3ac306bcd0631a13e22af75a9e8901b459e75aaa2",
+      "file_sha256": "2e4ef925babb175e52715ab3ac306bcd0631a13e22af75a9e8901b459e75aaa2",
+      "bytes": 11294,
+      "projection": "Only machine-path string prefixes normalized; numeric values, identities, ranks and outcomes unchanged."
+    },
+    "context48/analysis/final_verified/paired_contrasts.csv": {
+      "original_sha256": "c0fc1e6da074e96b0762ce7f1738c852916fddc14e2d1bbb47852f5166447570",
+      "projected_content_sha256": "c0fc1e6da074e96b0762ce7f1738c852916fddc14e2d1bbb47852f5166447570",
+      "file_sha256": "c0fc1e6da074e96b0762ce7f1738c852916fddc14e2d1bbb47852f5166447570",
+      "bytes": 4476,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    },
+    "context48/analysis/test_analyze_context48.py": {
+      "original_sha256": "c993144da492446f84b5b6d86f5557474df33583aa36e592a5b0b7cc6164f57a",
+      "projected_content_sha256": "c993144da492446f84b5b6d86f5557474df33583aa36e592a5b0b7cc6164f57a",
+      "file_sha256": "c993144da492446f84b5b6d86f5557474df33583aa36e592a5b0b7cc6164f57a",
+      "bytes": 6571,
+      "projection": "Original source bytes; machine paths, if any, are historical provenance."
+    }
+  }
+}

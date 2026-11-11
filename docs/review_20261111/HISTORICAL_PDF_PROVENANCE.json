@@ -1,9 +1,21 @@
 {
-  "artifact_role": "immutable pre-review historical supplement; not current submission supplement",
-  "source_file_name": "Supplementary_Diagnostics.pdf",
-  "archived_file_name": "Historical_Supplement_20261110.pdf",
-  "sha256": "839e7f894a08f173c34ba71c2ce8c864018c4b87f471784a39daa4638e78246e",
-  "byte_size": 184230,
-  "copied_without_changes": true,
-  "experimental_release": "b174e52fa987085f09b2c75ca173fa0ca042c484"
+  "source_commit": "7dbccb0a6390719171b278346913b4da9d009cc2",
+  "source_path": "docs/review_20261111/Historical_Supplement_20261110.pdf",
+  "source_pdf_sha256": "839e7f894a08f173c34ba71c2ce8c864018c4b87f471784a39daa4638e78246e",
+  "technical_record_pdf_sha256": "3a9145b6ace36d7ae5e3e7dfbc1612f5fae0328f2635ce3df8ea7c57d75eda29",
+  "changes": [
+    "Replaced manuscript-like title with Historical Technical Record / SAR Text-to-Image Retrieval Experiments",
+    "Removed author line and manuscript identifier from title area",
+    "Retained experiment date and all numerical/scientific content"
+  ],
+  "pages": 24,
+  "normalized_body_text_equal": true,
+  "changed_rendered_pages": [
+    1,
+    2,
+    3
+  ],
+  "changed_pages_visually_checked": true,
+  "other_21_rendered_pages_pixel_identical": true,
+  "history_policy": "Original remains in git history; no history rewrite. Current reading entry is this technical record, read with ERRATA.md."
 }

@@ -1,0 +1,203 @@
+{
+  "historical_S9": [
+    {
+      "split": "development",
+      "contrast": "conditional_minus_constant_descriptor",
+      "seed_0_to_4_differences_pp": [
+        -0.10893246187363559,
+        -0.435729847494553,
+        -0.21786492374727473,
+        -0.6535947712418313,
+        -0.10893246187363914
+      ],
+      "mean_pp": -0.30501089324618674,
+      "sample_sd_pp": 0.2361599497677439,
+      "ordinary_95_t_interval": [
+        -0.5982422006904042,
+        -0.011779585801969195
+      ]
+    },
+    {
+      "split": "development",
+      "contrast": "conditional_minus_token_off",
+      "seed_0_to_4_differences_pp": [
+        12.52723311546841,
+        13.0718954248366,
+        10.675381263616558,
+        11.328976034858387,
+        14.270152505446623
+      ],
+      "mean_pp": 12.374727668845315,
+      "sample_sd_pp": 1.4215581932688295,
+      "ordinary_95_t_interval": [
+        10.609630038911817,
+        14.139825298778813
+      ]
+    },
+    {
+      "split": "internal_check",
+      "contrast": "conditional_minus_constant_descriptor",
+      "seed_0_to_4_differences_pp": [
+        1.0889292196007254,
+        -0.3024803387779791,
+        -0.12099213551119092,
+        -0.12099213551119448,
+        0.5444646098003609
+      ],
+      "mean_pp": 0.21778584392014438,
+      "sample_sd_pp": 0.5843431647207862,
+      "ordinary_95_t_interval": [
+        -0.5077720263101091,
+        0.943343714150398
+      ]
+    },
+    {
+      "split": "internal_check",
+      "contrast": "conditional_minus_token_off",
+      "seed_0_to_4_differences_pp": [
+        9.921355111917723,
+        10.647307924984876,
+        8.95341802782819,
+        11.191772534785237,
+        12.280701754385964
+      ],
+      "mean_pp": 10.598911070780398,
+      "sample_sd_pp": 1.2598587526242537,
+      "ordinary_95_t_interval": [
+        9.034589814824956,
+        12.163232326735839
+      ]
+    }
+  ],
+  "historical_S27_omitted_contrast": [
+    {
+      "backbone": "vitb32",
+      "contrast": "PARE-F minus CFAR-strict",
+      "differences_pp": {
+        "R@1": -0.32537960954446854,
+        "R@5": -0.7049891540130151,
+        "R@10": -0.379609544468547,
+        "MRR@10": -0.407176428054953
+      }
+    },
+    {
+      "backbone": "vitb16",
+      "contrast": "PARE-F minus CFAR-strict",
+      "differences_pp": {
+        "R@1": -0.10845986984815625,
+        "R@5": -0.8405639913232106,
+        "R@10": -1.084598698481562,
+        "MRR@10": -0.48918844471989775
+      }
+    },
+    {
+      "backbone": "remoteclip",
+      "contrast": "PARE-F minus CFAR-strict",
+      "differences_pp": {
+        "R@1": -0.29826464208242953,
+        "R@5": -0.29826464208242953,
+        "R@10": -1.0303687635574836,
+        "MRR@10": -0.44340503735839976
+      }
+    },
+    {
+      "backbone": "siglip",
+      "contrast": "PARE-F minus CFAR-strict",
+      "differences_pp": {
+        "R@1": -0.2982646420824293,
+        "R@5": -0.542299349240781,
+        "R@10": -1.2201735357917567,
+        "MRR@10": -0.49719381606583335
+      }
+    },
+    {
+      "backbone": "georsclip",
+      "contrast": "PARE-F minus CFAR-strict",
+      "differences_pp": {
+        "R@1": -0.4880694143167028,
+        "R@5": -1.0574837310195235,
+        "R@10": -2.304772234273319,
+        "MRR@10": -0.7547644871397585
+      }
+    }
+  ],
+  "historical_S4_omitted_row": {
+    "missing_row": "Unavailable",
+    "n": 2502,
+    "France": 0,
+    "Japan": 0,
+    "USA": 0,
+    "other_prefix_counts": {
+      "GF2": 287,
+      "P": 467,
+      "SV": 782,
+      "SN6": 966
+    },
+    "scope": "Literal filename-prefix complement of the tagged France/Japan/USA population, not GSD inferred from filenames."
+  },
+  "GeoRSCLIP_stats_off_scene": {
+    "stats_off_metrics": {
+      "R@1": 0.32537960954446854,
+      "R@5": 1.3557483731019522,
+      "R@10": 2.901301518438178,
+      "MRR@10": 0.8725639568915058
+    },
+    "scene_metrics": {
+      "R@1": 0.32537960954446854,
+      "R@5": 1.3557483731019522,
+      "R@10": 2.901301518438178,
+      "MRR@10": 0.8725639568915058
+    },
+    "rank_difference_count": 14,
+    "top10_membership_difference_count": 0,
+    "n_queries": 3688,
+    "interpretation": "Equal rounded or exact aggregate metrics do not imply equality of every rank or an implementation error."
+  },
+  "source_sha256": {
+    "results/seed_0/conditional/development.json": "1125990bb72e3953df6e27d2113fed52efeb4b9696ecbc6e50a675fbb8f9be47",
+    "results/seed_0/constant_descriptor/development.json": "625d22fb252db160bc3f4fde76bb2f84130dd343e04b7408d22b497b56c1693f",
+    "results/seed_1/conditional/development.json": "dd19bd599bc6444bebde89e259adb11fb3dcbacbc0f3fb727ca13e51e3be3b24",
+    "results/seed_1/constant_descriptor/development.json": "05bee20a798c1b9d7992c30294258a57dd5ce5d6b1f6b280461fcbf6e08eb3bb",
+    "results/seed_2/conditional/development.json": "4226bc015304b9d9bf8e7ac345c657aadc92bcbf4da5270e54dc20dcbce8bb9b",
+    "results/seed_2/constant_descriptor/development.json": "4489db8798c1689d0b67976ef13e2c61254ea30f2bf102d9f42a845bfff7c5fa",
+    "results/seed_3/conditional/development.json": "c712ce81682ca1ff171379fa2c96670d037f133f681190b70f72b52ed6ff651f",
+    "results/seed_3/constant_descriptor/development.json": "dcb992fe04f7dbb82635b0685ff8fe1dc9e6a319dfa941bac1410cb38844cc35",
+    "results/seed_4/conditional/development.json": "7c4aae05f16a44a45ffa8265488acfaea3449577d2ae047073aadbd5c2aa3c81",
+    "results/seed_4/constant_descriptor/development.json": "64d91b9ef438fc6f6066bf39de77731b97c2f81fb59d7ac3ae4fa36cf6d7779d",
+    "results/seed_0/token_off/development.json": "077c58851f2b9dc797f25d12799bdac98ce06f78359a45568c370f715a67d6cd",
+    "results/seed_1/token_off/development.json": "e5e20daff291be3a1eb21dbb17ae420d29a973875ced8e332dce51ee068cd5af",
+    "results/seed_2/token_off/development.json": "dc351ba20562e8ed98a385fcad38acd1be8bc81a8619b88928efaef2e93c522f",
+    "results/seed_3/token_off/development.json": "7a3b0bafb9a517655aa19a3d2c6bfa48e9d757a86694050b9e04ad98e92c7c32",
+    "results/seed_4/token_off/development.json": "65e6119efbf2c41c3a5355b429363f0e0609d3c46e528bc7a2694ad834fc03cc",
+    "results/seed_0/conditional/internal_check.json": "e509448b40c72dcc19b5264e07eac664639bc9156b567dc52c2be170b3781bed",
+    "results/seed_0/constant_descriptor/internal_check.json": "05b486ef57dee5f313cf17270b33511b52278a340882e4787822f498ad7145e4",
+    "results/seed_1/conditional/internal_check.json": "64cb62ea0a8ca724d22a7ccdebb5a5c1c9ed1814d51c85c06f6134c66268abfa",
+    "results/seed_1/constant_descriptor/internal_check.json": "63796a56ad8805dd30899fb66d8c413a8ac125a2cc56ac41041789142d95cec4",
+    "results/seed_2/conditional/internal_check.json": "7796f0a5c0b30a8cc5ad3ffc3a70aa23dc2a0edce73cc728886c2ed748887a29",
+    "results/seed_2/constant_descriptor/internal_check.json": "01ce68439cd640221dda137c123c0c7d13b0f5eafa7b62c3ad053bdf96578734",
+    "results/seed_3/conditional/internal_check.json": "73f8b281031cfff721a9b9e602d4e183dd155b5cffbbc29d7a1f7bda691e2f74",
+    "results/seed_3/constant_descriptor/internal_check.json": "5be6f31b1921b36e4137ea013f8acf0d8dc3519d468b39ab6f816ad8d9227a5c",
+    "results/seed_4/conditional/internal_check.json": "53a4f90f2b6f33e8489fceb09ab91c8c0bf058c1a03e1ce62cfb99f399cf1db7",
+    "results/seed_4/constant_descriptor/internal_check.json": "b7104926d5f9b151177ccf6ea3d97a826101cc09d3195cf8526a7b0f251bb5ea",
+    "results/seed_0/token_off/internal_check.json": "f952c0475315d65acd7adb301d644ff3a496b20e2579aadfc8ec81fbb9a3e455",
+    "results/seed_1/token_off/internal_check.json": "e7e70123773909c856e5ef7888b19c004197446d731409807a60357400b29c89",
+    "results/seed_2/token_off/internal_check.json": "6774948c31022c1704ade2e03c71de0ae93fba597cd0151df845f44bbd2716fc",
+    "results/seed_3/token_off/internal_check.json": "dca916c63d33bdf63da3cac94192d77c54d249f96f94b750be8bea28a8090a43",
+    "results/seed_4/token_off/internal_check.json": "17f11d703b09a677bbd009aed232c189a9219994a04a0b4413da3c75251061cf",
+    "benchmarks/revision_20261103/vitb32/eval_full_k3688.json.gz": "d44d171104760ef6386f948935ca87671f535b5a089c85320f8bfdf21217da7d",
+    "benchmarks/revision_20261103/vitb32/eval_cfar_strict_k3688.json.gz": "d5198496668b093c40b348800c5f21eecc7231cac262c05a66eac26ee0fad91d",
+    "benchmarks/revision_20261103/vitb32/eval_stats_off_k3688.json.gz": "47100e32081dbebae1c42ba9e6f445a154f089ee7a9ae72ddadb84a6af4d9e56",
+    "benchmarks/revision_20261103/vitb16/eval_full_k3688.json.gz": "2931a9e97281ff1f110952229834fb70dd366eb8a7fa1944850007d8906f1050",
+    "benchmarks/revision_20261103/vitb16/eval_cfar_strict_k3688.json.gz": "a62f9bfb639a31ba51cbf0de548ddd9df934c8a62499cc60736194aee44497f5",
+    "benchmarks/revision_20261103/vitb16/eval_stats_off_k3688.json.gz": "81132a7a9f05cf804096702bd78ba11f4dfa9ded3b4083f3046202419b375bd0",
+    "benchmarks/revision_20261103/remoteclip/eval_full_k3688.json.gz": "90d4f13720e99a379de056f0231f6f1f0115ce06563bb434e8870766b89cfb49",
+    "benchmarks/revision_20261103/remoteclip/eval_cfar_strict_k3688.json.gz": "8c2cd060ae0fe21e8dd1cbdf0fd7e9a7fe1cfa75d30b0c081c3b25994c6f3b55",
+    "benchmarks/revision_20261103/remoteclip/eval_stats_off_k3688.json.gz": "85ec97115f14a0f50678ad17dc7532b09ec23fe3bac810f0b34bd4057a478b9e",
+    "benchmarks/revision_20261103/siglip/eval_full_k3688.json.gz": "c086c6d8b2f800e60ed9f5e5561d968a0e5153a9db9642fb857a7b18e65558a6",
+    "benchmarks/revision_20261103/siglip/eval_cfar_strict_k3688.json.gz": "7b6c2573a5bf8bbbabb4f2ed82f0ea635d88fb7278a4f464a6fdf11618004d1f",
+    "benchmarks/revision_20261103/siglip/eval_stats_off_k3688.json.gz": "ea81efc284c34ebb413421d2957eb9aa33f4399674f2f616a14628c935332f49",
+    "benchmarks/revision_20261103/georsclip/eval_full_k3688.json.gz": "8f16f8530abe4b679285ee3459d7d3d9b8cc4a7d2ffef303cc0c3c5e09cf53c6",
+    "benchmarks/revision_20261103/georsclip/eval_cfar_strict_k3688.json.gz": "6020b49f0ff9f5d5ced03bf90175c492806bbbec4025ebc918a374eabc6a000f",
+    "benchmarks/revision_20261103/georsclip/eval_stats_off_k3688.json.gz": "f2f8a86552afcaf847843c0160026dd6a4bec9cc5e39027a95ab722e38e5a6b8"
+  }
+}

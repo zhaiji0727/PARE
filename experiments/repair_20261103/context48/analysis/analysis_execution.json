@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-03T05:56:10.448760+00:00",
+  "argv": [
+    "<PARE_WORKSPACE>/.venv/bin/python",
+    "<PARE_WORKSPACE>/context48_analysis_20261103/analyze_context48.py",
+    "--workspace",
+    "<PARE_WORKSPACE>/repair_context48_20261103_v1",
+    "--parent",
+    "<PARE_WORKSPACE>/repair_experiments_20261103_v1",
+    "--audit",
+    "<PARE_WORKSPACE>/repair_context48_20261103_v1/audit/completed_verification.json",
+    "--parent-audit",
+    "<PARE_WORKSPACE>/repair_experiments_20261103_v1/audit/completed_verification.json",
+    "--audit-script",
+    "<PARE_WORKSPACE>/repair_context48_20261103_v1/audit/verify_completed_context48.py",
+    "--parent-audit-script",
+    "<PARE_WORKSPACE>/repair_experiments_20261103_v1/audit/verify_completed_repair.py",
+    "--out",
+    "<PARE_WORKSPACE>/context48_analysis_20261103/final_verified"
+  ],
+  "verified_input_sha256": {
+    "<PARE_WORKSPACE>/context48_analysis_20261103/analyze_context48.py": "164a44aae6419a370b25565a9b4a03580e855b68562d0bbf35a9d38aa884ac3b",
+    "<PARE_WORKSPACE>/repair_context48_20261103_v1/audit/completed_verification.json": "1e68b92d7f8b4ad5916bb58ea1647db6347f46ed47b9c52939ffb45dc199aba1",
+    "<PARE_WORKSPACE>/repair_context48_20261103_v1/audit/verify_completed_context48.py": "cd06a9e299e2c2632ffb425e09bb314b2571f4620c754d9841f8d9f9d36182c8"
+  },
+  "official_test_accessed": false,
+  "new_training_performed": false,
+  "returncode": 0,
+  "finished_utc": "2026-11-03T05:56:11.318120+00:00",
+  "log_sha256": "7e37a5f272bfc5db45af146a6cb50a8fa60a149ab595dbc6939b166f4f121705",
+  "output_manifest_sha256": "16ad281d851c20a8d49433c10fd275e487a9aa3a34c251890499d33022f3245c"
+}

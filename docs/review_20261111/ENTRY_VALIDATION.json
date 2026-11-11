@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-11T01:18:40.144860+00:00",
+  "checks": [
+    {
+      "label": "current_plan",
+      "returncode": 1,
+      "source_commit": "7dbccb0a6390719171b278346913b4da9d009cc2",
+      "diagnostic": "Traceback (most recent call last):\n  File \"<WORKSPACE>/second_review_20261111_publication/experiments/simplified_20261109/portable/run.py\", line 157, in <module>\n    main()\n  File \"<WORKSPACE>/second_review_20261111_publication/experiments/simplified_20261109/portable/run.py\", line 91, in main\n    bindings = validate_repo(a.repo)\n  File \"<WORKSPACE>/second_review_20261111_publication/experiments/simplified_20261109/portable/run.py\", line 75, in validate_repo\n    raise ValueError('Required repository code differs: ' + relative)\nValueError: Required repository code differs: code/bench_efficiency.py\n"
+    },
+    {
+      "label": "frozen_plan",
+      "returncode": 0,
+      "source_commit": "b174e52fa987085f09b2c75ca173fa0ca042c484",
+      "diagnostic": "plan generated"
+    },
+    {
+      "label": "frozen_preflight",
+      "returncode": 0,
+      "source_commit": "b174e52fa987085f09b2c75ca173fa0ca042c484",
+      "diagnostic": "Dataset identities and offline tokenizer loading passed. No training performed.\n<WORKSPACE>/.venv/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers\n  warnings.warn(f\"Importing from {__name__} is deprecated, please import via timm.layers\", FutureWarning)\n"
+    }
+  ],
+  "pinned_wrapper": {
+    "returncode": 0,
+    "experimental_commit": "b174e52fa987085f09b2c75ca173fa0ca042c484",
+    "launcher_sha256": "39fba75ace8b0cb362f085568d4db82e935e2fee17cccd3415cd6da1138bd4a2",
+    "scope": "Actual retained-ID/caption-byte and offline-tokenizer preflight; not retraining."
+  }
+}
