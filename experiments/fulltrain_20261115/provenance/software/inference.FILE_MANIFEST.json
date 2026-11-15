@@ -1,0 +1,27 @@
+{
+  "schema": "pare.portable-preparation-manifest.v1",
+  "status": "synthetic_validated_real_development_parity_pending",
+  "files": {
+    "CLI_SYNTHETIC_VALIDATION.json": "1b0f9972aeddab89889f9231210fb4527c0653f72d818c3506f189a1697d56ea",
+    "CURRENT_STATUS.txt": "76945959f57703f8b7bbd6f60ef4e322db9bfc22b011150cae05c7eff1b22ce3",
+    "README.md": "2a9ae79929a358304ae1bb2f5e9cb394d802d1b3f1d879111c16970cc8aaa7ec",
+    "REVIEW_RECORD.json": "746d6d2407bb25cb3e52fb795304d0bb6b220b977582932a0b2eaf2d3e8d88a6",
+    "SOURCE_PROVENANCE.json": "05f697fee88d5a1f4b1a88c5ff17b3c0021c7cf8e692c6cb6c1ec1a2b9a0d97d",
+    "SYNTHETIC_VALIDATION.json": "99608da919edd7b63a5078cc4d620e1c5a216363a7cd4f9fd2e87fdbcc321581",
+    "UNBOUND_INPUT_CONTRACT.example.json": "0ab61870585abb91ec18cca372f0de694a5ce93d2101002c3bd39b02fb521404",
+    "pare_portable/__init__.py": "332de69de854a8aa62d570735c39bd7df65e3503ab9e3537c12cf7f7d3bc3531",
+    "pare_portable/__main__.py": "09ad0ac31b9af9a09f63038ddbcfe52e6cf07ad80a4c1be53b6cdfd04c05c2ec",
+    "pare_portable/adapter.py": "e713c84e7c12ffc4bdb92766053b04ce71052e2fe0c6129548d06868403ed7c2",
+    "pare_portable/api.py": "e71d759329d44dcc773499034c47a28940b871db0873adb6a5fa3f693a140fc5",
+    "pare_portable/controls.py": "2f66d1f3bc1701627b3ec3ec78e3e1709460645ee33f7eadcaeaa21bcd1f8e91",
+    "pare_portable/head.py": "fb4363726a98de78d1151197789ec0fd44740edc8247fed567b19af6ff4f1b4a",
+    "pare_portable/io.py": "a4e5d16d9fb8d2e08a321cd9e2600a6c03226499a08268122a40181cc9378cca",
+    "pare_portable/joint_model.py": "f5cfafa97de154934dbc40307ede95397886e4a366b5330a7a7dea52c961da47",
+    "pare_portable/paths.py": "1a03ce1620042385dc0bbb83293a8ca3518905e2de1c81a1297da2736eac231a",
+    "pare_portable/scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "pare_portable/spec.py": "9777c809e89e306402f3dcb3d72b313baba92c0e84f07536c6bf9f239a7f1028",
+    "requirements.txt": "72cabbf383d3b033df0eb37be00bb7079f51b0d08d793f0ac9d7eec4709dffbb",
+    "test_cli_synthetic.py": "fcd3089579ebbc5ae92e2c85620ffb169580c80b96ae3d70422c7d49d292fa26",
+    "test_synthetic_equivalence.py": "a924a9c98d6253291a39960d6479279db8922f9c308ccd15926c1328630a8628"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "pare.public-rank-tables-source-lock.v1",
+  "files": {
+    "table_contract.py": "03f5156bb079cf5fa1964cafaaf5f1ac28f15c7bc602f3ae36ad119b9dae35cd",
+    "recompute_tables.py": "922c09631a24880a1bd24f996ccfede138be3a017c6f60aff2829bfcb85b2636",
+    "test_public_tables.py": "c85f6e89b182a1afcae536e94988d5ca7360434b3a9cefd07aa5489d00498c62",
+    "prepare_package.py": "157b7e1c8e5f450f97dbb266194a1cff74da3bbcf6dca7b1f6e986f1b7e41a81",
+    "README.md": "3b629b92d780e652df32387f9dba482ade9fe7189a518430391494690b1f2b99",
+    "SOURCE_PROVENANCE.json": "c6ef2b48a094a2bb1098d50efaf8760ed25eb61c7754303c30c5095ac64a5ef8",
+    "runtime/audit_scores.py": "a3e23e99c4bd19a80b18fa17779c9c2a891a0defd978a26cfe01435d7c3e0687",
+    "runtime/bind_results.py": "6552666ac323f36fb2af8d92289e729c3f3fb65297fff0f319c99816571febde",
+    "runtime/independent_core.py": "dba8e172dccd65d1c9e8bc5903306ec0c62dabeadb018453b51ae6a3006ce6b3",
+    "runtime/summary_tables.py": "b204f8db1f463de188933478ac8d2139606190040aa1ef9742d82497be922704",
+    "metadata/FIXED_QUERY_PROTOCOL.json": "15a73a3905172454aba992de449ab81bddeedfdc2175f51978e8e932ab74591b",
+    "metadata/GSD_GROUPS.json": "4036ca83a223d751031d7c42b91b4e823a0bb1cf91390407d19c2846247f3b6a",
+    "metadata/RESULT_SLOTS.json": "72d9ca8727e478bf567c034e7f29824dbafae233efb5b96d54464d26f8c5bb8a"
+  },
+  "scope": "Saved-rank reconstruction only; no score/checkpoint/model reads."
+}

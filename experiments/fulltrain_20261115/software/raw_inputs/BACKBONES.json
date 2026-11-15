@@ -1,0 +1,45 @@
+{
+  "schema": "pare.portable-input-backbones.v1",
+  "backbones": {
+    "vitb32": {
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "expected_pretrained_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+      "expected_external_sha256": null,
+      "dimension": 512,
+      "pretrained_manifest_tag": "vitb32"
+    },
+    "vitb16": {
+      "model": "ViT-B-16",
+      "pretrained": "laion2b_s34b_b88k",
+      "expected_pretrained_sha256": "1f16b1274ca25493b1f36225efe81d05f66a3f33c487acd1a07c5ba87920de6f",
+      "expected_external_sha256": null,
+      "dimension": 512,
+      "pretrained_manifest_tag": "vitb16"
+    },
+    "remoteclip": {
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "expected_pretrained_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+      "expected_external_sha256": "60014e395d930a3f2963d1d89c8522bf4ad56775571e4356e866864789af85c4",
+      "dimension": 512,
+      "pretrained_manifest_tag": "vitb32"
+    },
+    "siglip": {
+      "model": "ViT-B-16-SigLIP",
+      "pretrained": "webli",
+      "expected_pretrained_sha256": "a604948f7bb8788e4652f6ec7b7bd792dd63f55f849fa3e5fbf8b462353b9934",
+      "expected_external_sha256": null,
+      "dimension": 768,
+      "pretrained_manifest_tag": "siglip"
+    },
+    "georsclip": {
+      "model": "ViT-B-32",
+      "pretrained": "openai",
+      "expected_pretrained_sha256": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+      "expected_external_sha256": "129bafaa6a097b8be52e2babf27d24f0a934dae919201e538dc698611bd1ea01",
+      "dimension": 512,
+      "pretrained_manifest_tag": "georsclip_base"
+    }
+  }
+}

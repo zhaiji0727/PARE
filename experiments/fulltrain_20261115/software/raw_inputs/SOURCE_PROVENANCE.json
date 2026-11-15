@@ -1,0 +1,88 @@
+{
+  "schema": "pare.portable-input-source-provenance.v1",
+  "files": [
+    {
+      "destination": "runtime/saqre_phys.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/code/saqre_phys.py",
+      "source_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/primitive_controls.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/code/primitive_controls.py",
+      "source_sha256": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/cache_primitives.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/code/cache_primitives.py",
+      "source_sha256": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/runtime.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/code/runtime.py",
+      "source_sha256": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/artifacts.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/code/artifacts.py",
+      "source_sha256": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "reference_scripts/prepare_data.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/scripts/prepare_data.py",
+      "source_sha256": "b792260d230b8e7f430b6358bb404a63d5139d48211a93a8d168fbf7d77c4521",
+      "adaptation": "none; reference only, not invoked by entry point"
+    },
+    {
+      "destination": "reference_scripts/prepare_models.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/scripts/prepare_models.py",
+      "source_sha256": "715d383c673419d266f6e8e7c6baaeb5870ca7be31f492ffea2bb53b10caf896",
+      "adaptation": "none; reference only, not invoked by entry point"
+    },
+    {
+      "destination": "reference_scripts/prepare_content_disjoint_split.py",
+      "source": "work/pare_simplified_delivery_20261109/published_repository/scripts/prepare_content_disjoint_split.py",
+      "source_sha256": "9077c624e8031c6bc62c871274dd4959a4c179680346f537cd9ae74c31c84204",
+      "adaptation": "none; reference only, not invoked by entry point"
+    },
+    {
+      "destination": "runtime/v9_helpers.py",
+      "source": "work/pare_legacy_inputs_20261115_v9_draft/v2_builder_reference.py",
+      "source_sha256": "2e90db40c9408ac3d3b5f505726a7f80ed6b6e22b81b8d0caf8702820675a8b4",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/data_contract.py",
+      "source": "work/pare_portable_training_20261115/runtime/data_contract.py",
+      "source_sha256": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/reference/old_retrieval_queries.py",
+      "source": "work/pare_portable_training_20261115/runtime/reference/old_retrieval_queries.py",
+      "source_sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/text_helpers.py",
+      "functions": [
+        {
+          "source": "work/pare_simplified_confirm_20261109/scripts/run_study.py",
+          "source_sha256": "7caccd6140b53c6306455c26e3924bf17408ee27d7d537a7d66f7c650721b824",
+          "function": "shared_text.<locals>.encode",
+          "adaptation": "renamed encode_text; explicit captured model/tokenizer/device; .cuda() -> .to(device)"
+        },
+        {
+          "source": "work/pare_portable_training_20261115/runtime/train_backend.py",
+          "source_sha256": "85ad3d7443a9892661bdb24ed36f545a5517f8a918f85541c534f76169d84961",
+          "function": "state_sha",
+          "adaptation": "none; function source identical"
+        }
+      ]
+    }
+  ]
+}

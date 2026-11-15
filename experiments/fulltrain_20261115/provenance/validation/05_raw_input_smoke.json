@@ -1,0 +1,32 @@
+{
+  "schema": "pare.portable-raw-input-build.v1",
+  "status": "completed",
+  "population": "train",
+  "smoke": true,
+  "source_lock_sha256": "34fbf5644deaa7227cff8cd1b38305858546a8f285ba7a0b044af2b2c2cae5da",
+  "packages": {
+    "torch": "2.9.1+cu128",
+    "open_clip_torch": "2.26.1",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0",
+    "scipy": "1.13.1",
+    "timm": "1.0.15",
+    "transformers": "4.45.2",
+    "tokenizers": "0.20.3"
+  },
+  "torch_device": "cpu",
+  "gpu_name": null,
+  "input_image_count": 2,
+  "new_reproduction_not_archived_bytes": true,
+  "reference_tensor_alignment_tested": false,
+  "training_performed": false,
+  "retrieval_scores_computed": false,
+  "artifacts": {
+    "train_ids.json": "4f432c65c0093ce3e6aacb11969cdcee6d63925279da3ddc6ac330d70a86fef9",
+    "Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "IMAGE_RECORDS.json": "f1203fcd67823d4bf89832e4e072363411b01db7ccf499d804d95906b00b9120",
+    "PLAN.json": "665617f22d3c181794312452e0e5bb2576fc7c8da098172bd431a9323b468032",
+    "cache_legacy_raster.pt": "c8162db91dfd129dd0ff9a326614708a16dfaf9b0bec926039e48cad7ec80ffc",
+    "training_text.pt": "377b80611315556b680e804fc8255dfb3f1a8bc743f4fa8e7a71e5e9359d737b"
+  }
+}

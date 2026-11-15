@@ -1,0 +1,31 @@
+{
+  "schema": "pare.raw-gpu-smoke-preflight-diagnostic.v1",
+  "status": "failed_before_any_encoder_launched",
+  "original_pid": 274105,
+  "original_pid_confirmed_absent": true,
+  "original_actual_directory_existed": false,
+  "original_launch": {
+    "path": "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115/ROOT_LAUNCH.json",
+    "sha256": "2b6ec29f025664b3f34d7e69ccaaf9f0bb4eb358b0e1df150bd04eca00881b65"
+  },
+  "original_stdout": {
+    "path": "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115/LAUNCH_STDOUT.log",
+    "sha256": "22380e8b459b0c22efbf0f5ed9873252a907b46e102fbbf5bac146833ec9f699"
+  },
+  "failure": "GPU process list is not empty: GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+  "diagnosis": "The previous all-process-empty guard rejected the existing root Xorg display process, not a compute job. The original attempt launched no encoder.",
+  "v2_change": "Allow only the explicitly verified root Xorg PID/starttime/boot identity and exact NVIDIA G type/path; reject all compute and other processes. Numerical criteria unchanged.",
+  "verified_display_identity": {
+    "pid": 6035,
+    "uids": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "comm": "Xorg",
+    "process_name": "/usr/lib/xorg/Xorg",
+    "starttime_ticks": "6267",
+    "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+  }
+}

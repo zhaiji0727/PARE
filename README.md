@@ -1,8 +1,52 @@
 # PARE: Physics-Aware Region Encoding for SAR Text-to-Image Retrieval
 
-Research implementation accompanying *Physics-Aware Region Encoding for SAR
-Text-to-Image Retrieval*. The main head is named `SAQREHead` in the source for
-historical compatibility; it implements the PARE architecture.
+Research implementation and experiment records accompanying *Physics-Aware
+Region Encoding for SAR Text-to-Image Retrieval*. The current full-training
+experiment and earlier studies have separate, hash-bound implementations.
+
+## 15 November 2026: complete full-training study
+
+Use [the self-contained full-training package](experiments/fulltrain_20261115/README.md)
+for the current study. It contains fresh training on 9,181 retained images and
+31,945 caption–image pairs, 145 complete 50-epoch trajectories, 290 saved heads,
+and 315 audited retrieval evaluations against the full 3,688-image gallery.
+The fixed candidate is `path_100__full`: shared scene/region feature adaptation
+with fine attention retained, fine regions excluded from the fusion-gate
+summary, and the fourth coarse descriptor coordinate set to zero.
+
+The primary seeds 1–4, equally averaged over five backbones, give first-caption
+R@10 of 16.37% for this candidate versus 15.25% for scene-only adaptation.
+All five backbone means improve; 17 of 20 paired differences are positive.
+All-caption means are 16.49% versus 15.55%. These are measurements on a
+historically inspected benchmark, not a blinded transfer test or a claim of
+statistical significance. The combined model's gain does not establish an
+independent gain from its physics-inspired statistics or fine attention.
+Pathway 000 retains 16.32% first-caption mean R@10, and some component controls
+match or exceed the candidate. B/32 fixed-checkpoint resampling also exposes
+greater scale sensitivity than scene-only adaptation. All outcomes remain in
+the published records.
+
+Download the code/results and projected-head archives from
+[release `fulltrain-20261115`](https://github.com/zhaiji0727/PARE/releases/tag/fulltrain-20261115).
+Weights are Release assets rather than Git blobs. Both archives unpack into
+the same **new** directory; existing user datasets need not be downloaded or
+unpacked again. The package README documents fresh raw-input preparation,
+training, evaluation, and rank-to-table verification. Its manifest SHA-256 is
+`160525ef4a0777ffbdb55568e6f3f653b2b9d848748069859637e38528b256fe`.
+The manifest's `published: false` records its pre-publication export state;
+the Git tag and Release identify the subsequently published immutable export.
+
+Independent checks reconstructed all 17,232 recorded measurements from the
+315 per-query rank files. Two full-training replays and two-image raw-input
+smokes cover B/32 and SigLIP in the recorded environment; they do not prove
+bitwise portability of every complete pipeline or reconstruct the separate
+scale-transformed caches. See the package's explicit verification limits.
+
+## Historical studies below
+
+The following entries and the top-level `code/` retain earlier measured
+implementations for provenance. Their PARE-S/PARE-F labels, budgets, protocols,
+and numerical results should not be substituted for the full-training study.
 
 ## Exact source for the matched study
 

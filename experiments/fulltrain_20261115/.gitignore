@@ -1,0 +1,4 @@
+*.pt
+*.tar.gz
+__pycache__/
+reader_runs/

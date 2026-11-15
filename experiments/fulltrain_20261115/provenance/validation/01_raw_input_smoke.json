@@ -1,0 +1,691 @@
+{
+  "schema": "pare.raw-gpu-smoke-completion.v1",
+  "status": "both_fixed_gpu_cache_smokes_exact",
+  "cases": [
+    {
+      "backbone": "vitb32",
+      "gpu_before": {
+        "all_gpu_process_lists_empty": false,
+        "all_gpu_compute_and_unexpected_processes_absent": true,
+        "verified_display_identity": {
+          "pid": 6035,
+          "uids": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "comm": "Xorg",
+          "starttime_ticks": "6267",
+          "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+        },
+        "gpus": [
+          {
+            "uuid": "GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-00d7ffd5-bb91-02fe-443a-a9675c36997c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-838b774b-f568-96c9-a232-6d14080154a1",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7e9d30c7-9785-a305-147f-429632c315ee",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7f0a9e6f-f6e0-7151-c0be-19c6b56c1f31",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-5356448b-2034-f208-ff78-8d1971b8e251",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-242e358a-613d-49f0-b2e0-2d06aa8e9f8f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-022712aa-13c1-df91-de17-508aaefb323c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "compute_apps_stdout": ""
+      },
+      "gpu_after": {
+        "all_gpu_process_lists_empty": false,
+        "all_gpu_compute_and_unexpected_processes_absent": true,
+        "verified_display_identity": {
+          "pid": 6035,
+          "uids": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "comm": "Xorg",
+          "starttime_ticks": "6267",
+          "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+        },
+        "gpus": [
+          {
+            "uuid": "GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-00d7ffd5-bb91-02fe-443a-a9675c36997c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-838b774b-f568-96c9-a232-6d14080154a1",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7e9d30c7-9785-a305-147f-429632c315ee",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7f0a9e6f-f6e0-7151-c0be-19c6b56c1f31",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-5356448b-2034-f208-ff78-8d1971b8e251",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-242e358a-613d-49f0-b2e0-2d06aa8e9f8f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-022712aa-13c1-df91-de17-508aaefb323c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "compute_apps_stdout": ""
+      },
+      "build_receipt_sha256": "5eb722374833ae73cd95e31582cdb63088dd7a14c781812be1ee958e6ecdc80b",
+      "manifest_sha256": "8b18fc8dfdec2045e45f1edc1b32470c25a8040c233ef4242dfd1e5934b7b707",
+      "image_records_equal_cpu": true,
+      "text_identity_equal_cpu": true,
+      "text_vector_parity_not_tested": true,
+      "comparison_sha256": "fbae7a107f28ee3c90ec25cbd62bf9a663be4a9f0b681a3df886240355d84236",
+      "all_cache_tensor_fields_exact": true
+    },
+    {
+      "backbone": "siglip",
+      "gpu_before": {
+        "all_gpu_process_lists_empty": false,
+        "all_gpu_compute_and_unexpected_processes_absent": true,
+        "verified_display_identity": {
+          "pid": 6035,
+          "uids": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "comm": "Xorg",
+          "starttime_ticks": "6267",
+          "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+        },
+        "gpus": [
+          {
+            "uuid": "GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-00d7ffd5-bb91-02fe-443a-a9675c36997c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-838b774b-f568-96c9-a232-6d14080154a1",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7e9d30c7-9785-a305-147f-429632c315ee",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7f0a9e6f-f6e0-7151-c0be-19c6b56c1f31",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-5356448b-2034-f208-ff78-8d1971b8e251",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-242e358a-613d-49f0-b2e0-2d06aa8e9f8f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-022712aa-13c1-df91-de17-508aaefb323c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "compute_apps_stdout": ""
+      },
+      "gpu_after": {
+        "all_gpu_process_lists_empty": false,
+        "all_gpu_compute_and_unexpected_processes_absent": true,
+        "verified_display_identity": {
+          "pid": 6035,
+          "uids": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "comm": "Xorg",
+          "starttime_ticks": "6267",
+          "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+        },
+        "gpus": [
+          {
+            "uuid": "GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-00d7ffd5-bb91-02fe-443a-a9675c36997c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-838b774b-f568-96c9-a232-6d14080154a1",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7e9d30c7-9785-a305-147f-429632c315ee",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-7f0a9e6f-f6e0-7151-c0be-19c6b56c1f31",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-5356448b-2034-f208-ff78-8d1971b8e251",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-242e358a-613d-49f0-b2e0-2d06aa8e9f8f",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "uuid": "GPU-022712aa-13c1-df91-de17-508aaefb323c",
+            "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "permitted_display_processes": [
+              {
+                "pid": 6035,
+                "type": "G",
+                "process_name": "/usr/lib/xorg/Xorg"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "compute_apps_stdout": ""
+      },
+      "build_receipt_sha256": "c3f5a2a717a3a638394535785d08cbb3d406a6661ccfb47389d9ec5d1d356a53",
+      "manifest_sha256": "8d8e449de85ef51dcee8006472a252cea761b87f17fa7f30e7077a4dc7dee59a",
+      "image_records_equal_cpu": true,
+      "text_identity_equal_cpu": true,
+      "text_vector_parity_not_tested": true,
+      "comparison_sha256": "3755ce971376e17c6ae44dda6a2dd8571f3aca5e06e96ffc4f6823a0db913db8",
+      "all_cache_tensor_fields_exact": true
+    }
+  ],
+  "source_and_input_sha256": {
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/SMOKE_PLAN.json": "6e8bc3aa544672844ffbcba85d58d2cb6d5b9c2d6bbabab915e6e02bfb78b224",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/SOURCE_LOCK.json": "c15e3351c8dce7943688fbabac8b4be2bfa1046e3496f18dbcf00353cd7b03f7",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/run_smoke.py": "ff9aab42343abe38b97b006a80f2c97307f7f0899b4830b68afdb032c13a8a4b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/smoke_contract.py": "b08d89bed4545199a5760443b86cebaa33e28eb8fb216517a9e8dce2c7cc8110",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/test_smoke.py": "9ae628f31733e46e70361e81de6c51b43786bb1e604ea088c26e8566bb5f03ee",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/prepare_package.py": "8c25e67671dc65d11a2ec922621d0552197a4e03806ddcddb66f3652a43d0870",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/README.md": "58e2675111ea1fdd191bb93efedb9ab4328b64a562010c5fa96c3f880dc7a43b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/SUPERVISOR_CONFIG.draft.json": "d0b1e9b501c5b6456a4f77e8c8ad017c128d09280482e212cb552c7383843a79",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/ROOT_LAUNCH.json": "f3cc84f0d303b39150f4bb808e6b3c4259d93bb5bc0a2973082e71f27a82584b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/actual/complete.json": "11a300f1dde5a45a2f754f1eec920eb6f098b2bcc9c0bfc3700db7a45058bd94",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/actual/STATUS.json": "84918bc10e93f529130d3530f3359fbce1d7295c71671957e02340d553dca343",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_scores_20261115/SCORE_SCHEDULE_RESULT.json": "ba3fa520f38e68219047f67f7f1f60eaebb022dc55d230ede12a363c17f45659",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/actual/formal_score_audit/AUDIT.json": "05fcbb15b067687d72809d092d16b47d4daf22d8f2ec41a3d8321388184a268b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_score_supervisor_20261115/actual/READINESS.json": "0065bef5259ebbff8585eef76178aafa61154d423213560d10cfe91237ee7d28",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_training_audit_20261115_draft/final_actual_20261115/FINAL_PROCESS_CHECK.json": "635b5641ab04bba5b54e39d3153d59c717edf35e360208ec87da133b09356f93",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_replay_20261115/execution/complete.json": "d0a9b4d04ed97fbfea73fa5d13a2eb3c3f0787def1d1d33a486ed38ebb442d8f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_replay_20261115/execution/vitb32.comparison.exit.json": "d2ec53138e1c19a70297fa6712130b556580a00ff3ddb79c48741862cb0fb67b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_replay_20261115/execution/siglip.comparison.exit.json": "9920f8eae0cf0e5b57c547b2ae4ea8006a18dd15e9a262b0641a28b62fb39c92",
+    "/usr/bin/python3.10": "a2f33a6e006989270f4340528eb61f8f97366e00a5d1b602ac8672ea44fc56ae",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/compare_smoke.py": "b8ca20bacaf11c6f64e107ec76bb1492b1a24c6788dae360d864280be33b4ccb",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/SOURCE_LOCK.json": "34fbf5644deaa7227cff8cd1b38305858546a8f285ba7a0b044af2b2c2cae5da",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/input_contract.py": "6d2664f659f8e6f35d04e139c5fbed07c9a533a5640a822c772a1088b534fbc4",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/prepare_inputs.py": "d477d78dd74c8571598e354946f058d698ac780e94906b33a8e6c441f564d128",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/prepare_package.py": "098f54337d07acc74f9b0656073f63baa2b92e5fa52940627ed5b73e670f42b9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/raw_builder.py": "c1f682f874432cf2c1a5ed9cef431297cb3dddd41858b487fdff3f054fba146a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/test_portable_inputs.py": "1cfeba65ea34bb31017dbf744f14b48c3cf0687f005da485556e8683ecf46112",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/data_contract.py": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/reference/old_retrieval_queries.py": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/text_helpers.py": "015a29d9a8b31dfb937efbb97aadc98a91d5036125118a0b15ae2d1f278ae906",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/runtime/v9_helpers.py": "2e90db40c9408ac3d3b5f505726a7f80ed6b6e22b81b8d0caf8702820675a8b4",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/BACKBONES.json": "088a781e4117bc51ea3afe253d3072545c41034cb29e1e7a991fee90a1575c5d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/SOURCE_PROVENANCE.json": "6164171d5138cd9e14b1a1c53320800b84dc3c58b696f4ae44d48f8d4fbdb35b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32/PLAN.json": "665617f22d3c181794312452e0e5bb2576fc7c8da098172bd431a9323b468032",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32/BUILD_RECEIPT.json": "ea8e07c898f4a199e0eb6e72eb8ea5b9f2fe2dd1e945f1fd68c7608384f629a8",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32/SMOKE_INPUTS.json": "81bb28bb267442060d8189e89a4a05a195ee188a91cf9e8ba1885fd113fac4c7",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32/IMAGE_RECORDS.json": "f1203fcd67823d4bf89832e4e072363411b01db7ccf499d804d95906b00b9120",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32.execution.json": "80f900aecb086080482504f77c6f2c1e0fa82877031380e3fb51c2a3b5e8830b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/vitb32.COMPARE_REFERENCE_GPU.json": "7791d1741f8e27592800c9abb6e053511fbafe895c718ab1d9192f3a1192cf7f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/reports/models_manifest.json": "0971f623c2cd3a1705915956f15346fba2c33ddd24a54e0d09c115f50e193e90",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/SARimages_pre/GF2_AddisAbaba_9.0314_38.7359.png": "121bd5db4003bc81e8937b23de189f28061327b64ae13e466329bad7d597754a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/SARimages_pre/GF2_AddisAbaba_9.0314_38.7392.png": "b06063d6e1c3ac4578d27c7a536a65067c6ec4a3694f05dd997363d7fabd285f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/models/models--laion--CLIP-ViT-B-32-laion2B-s34B-b79K/blobs/1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_legacy_raster_train_9181.pt": "d08d097ed5a10115da77ca245194dfb209e86f50c40697c09726f4da32aa669f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip/PLAN.json": "bca49d1c99a7a2d49cb97398945c9b5d5dceac06ec3854636837f7461394356b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip/BUILD_RECEIPT.json": "d171d24ec9197aa712b035d3cc2fe270956d5b5987ea26c731d00549f1b852f3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip/SMOKE_INPUTS.json": "b4b8ad91688ad47faa65a1e3fdb4f0e3d0b8b992510b9df3a1b6b813769daa70",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip/IMAGE_RECORDS.json": "f1203fcd67823d4bf89832e4e072363411b01db7ccf499d804d95906b00b9120",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip.execution.json": "4ad6e6370f4de54377ba4bca3fcbb551d3dc9da87ce9335f67cb8af70c835a87",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/portable_inputs_20261115/cpu_actual_smokes/siglip.COMPARE_REFERENCE_GPU.json": "f0ae6fb9ad5387dcc22e506043b3e065e1aa509b28254482e32b20c1b49ac470",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/models/models--timm--ViT-B-16-SigLIP/blobs/a604948f7bb8788e4652f6ec7b7bd792dd63f55f849fa3e5fbf8b462353b9934": "a604948f7bb8788e4652f6ec7b7bd792dd63f55f849fa3e5fbf8b462353b9934",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/legacy_inputs_20261115_v9/full/siglip_train/cache_legacy_raster.pt": "d969c170fcc019b38945e42d65c977273f0a3089060e87bc5a2cde9606064ccc",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/BUILD_RECEIPT.json": "5eb722374833ae73cd95e31582cdb63088dd7a14c781812be1ee958e6ecdc80b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/SMOKE_INPUTS.json": "8b18fc8dfdec2045e45f1edc1b32470c25a8040c233ef4242dfd1e5934b7b707",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/train_ids.json": "4f432c65c0093ce3e6aacb11969cdcee6d63925279da3ddc6ac330d70a86fef9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/IMAGE_RECORDS.json": "f1203fcd67823d4bf89832e4e072363411b01db7ccf499d804d95906b00b9120",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/PLAN.json": "665617f22d3c181794312452e0e5bb2576fc7c8da098172bd431a9323b468032",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/cache_legacy_raster.pt": "13ed3659c752d0919fb855a8073fc4aba5ff0b9fd1fd6abd9cc37412db66fa01",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/training_text.pt": "1779237d76aa25386fbdabfd2a850c89b248dfd87dcf334ed7d72220ce4eae3c",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32.COMPARISON.json": "fbae7a107f28ee3c90ec25cbd62bf9a663be4a9f0b681a3df886240355d84236",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/BUILD_RECEIPT.json": "c3f5a2a717a3a638394535785d08cbb3d406a6661ccfb47389d9ec5d1d356a53",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/SMOKE_INPUTS.json": "8d8e449de85ef51dcee8006472a252cea761b87f17fa7f30e7077a4dc7dee59a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/train_ids.json": "4f432c65c0093ce3e6aacb11969cdcee6d63925279da3ddc6ac330d70a86fef9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/IMAGE_RECORDS.json": "f1203fcd67823d4bf89832e4e072363411b01db7ccf499d804d95906b00b9120",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/PLAN.json": "bca49d1c99a7a2d49cb97398945c9b5d5dceac06ec3854636837f7461394356b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/cache_legacy_raster.pt": "7e9b03900645573c0e7c338ad4aff77be445a20d71f963f26417fef6f3d2cd4b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip/training_text.pt": "8efffd45d5c4d36fd6b5ed1db8352073727991404a5dbb80014365c9511bc318",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/siglip.COMPARISON.json": "3755ce971376e17c6ae44dda6a2dd8571f3aca5e06e96ffc4f6823a0db913db8"
+  },
+  "gpu_release": {
+    "all_gpu_process_lists_empty": false,
+    "all_gpu_compute_and_unexpected_processes_absent": true,
+    "verified_display_identity": {
+      "pid": 6035,
+      "uids": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "comm": "Xorg",
+      "starttime_ticks": "6267",
+      "boot_id": "b20f0d7d-ba69-49d5-afe1-b3a875b3f06f"
+    },
+    "gpus": [
+      {
+        "uuid": "GPU-242be313-fc87-4239-f5ce-d8b70b8ab29f",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-00d7ffd5-bb91-02fe-443a-a9675c36997c",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-838b774b-f568-96c9-a232-6d14080154a1",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-7e9d30c7-9785-a305-147f-429632c315ee",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-7f0a9e6f-f6e0-7151-c0be-19c6b56c1f31",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-5356448b-2034-f208-ff78-8d1971b8e251",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-242e358a-613d-49f0-b2e0-2d06aa8e9f8f",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      },
+      {
+        "uuid": "GPU-022712aa-13c1-df91-de17-508aaefb323c",
+        "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "permitted_display_processes": [
+          {
+            "pid": 6035,
+            "type": "G",
+            "process_name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "unexpected_processes": []
+      }
+    ],
+    "compute_apps_stdout": ""
+  },
+  "manager_pid": 604051,
+  "child_pids_confirmed_absent": [
+    623393,
+    656989,
+    668537,
+    697900
+  ],
+  "training_performed": false,
+  "retrieval_performed": false,
+  "text_vector_reference_parity_tested": false,
+  "scope": "Two existing training images per backbone only; no full reconstruction or performance claim.",
+  "ended_utc": "2026-11-15T15:52:40.480399+00:00"
+}

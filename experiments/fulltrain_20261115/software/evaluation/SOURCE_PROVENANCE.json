@@ -1,0 +1,107 @@
+{
+  "schema": "pare.portable-evaluation-source-provenance.v1",
+  "files": [
+    {
+      "destination": "runtime/pare_portable/controls.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/controls.py",
+      "sha256": "2f66d1f3bc1701627b3ec3ec78e3e1709460645ee33f7eadcaeaa21bcd1f8e91",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/paths.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/paths.py",
+      "sha256": "1a03ce1620042385dc0bbb83293a8ca3518905e2de1c81a1297da2736eac231a",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/adapter.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/adapter.py",
+      "sha256": "e713c84e7c12ffc4bdb92766053b04ce71052e2fe0c6129548d06868403ed7c2",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/scoring.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/scoring.py",
+      "sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/io.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/io.py",
+      "sha256": "a4e5d16d9fb8d2e08a321cd9e2600a6c03226499a08268122a40181cc9378cca",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/__init__.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/__init__.py",
+      "sha256": "332de69de854a8aa62d570735c39bd7df65e3503ab9e3537c12cf7f7d3bc3531",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/spec.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/spec.py",
+      "sha256": "9777c809e89e306402f3dcb3d72b313baba92c0e84f07536c6bf9f239a7f1028",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/joint_model.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/joint_model.py",
+      "sha256": "f5cfafa97de154934dbc40307ede95397886e4a366b5330a7a7dea52c961da47",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/api.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/api.py",
+      "sha256": "e71d759329d44dcc773499034c47a28940b871db0873adb6a5fa3f693a140fc5",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/head.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/head.py",
+      "sha256": "fb4363726a98de78d1151197789ec0fd44740edc8247fed567b19af6ff4f1b4a",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/pare_portable/__main__.py",
+      "source": "work/pare_portable_inference_20261115/pare_portable/__main__.py",
+      "sha256": "09ad0ac31b9af9a09f63038ddbcfe52e6cf07ad80a4c1be53b6cdfd04c05c2ec",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/evaluate_core.py",
+      "source": "work/pare_final_evaluation_backend_20261115/evaluate_core.py",
+      "sha256": "009221221af5795fb6265ce5d7933279b057b5a2af8c3747e52239d28b62e298",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/scoring_contract.py",
+      "source": "work/pare_final_evaluation_backend_20261115/runtime/scoring_contract.py",
+      "sha256": "3961b41f84475afe7954dac853e642d6b8e10f004253f29aa1c727d3e7392cd0",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/data_contract.py",
+      "source": "work/pare_portable_training_20261115/runtime/data_contract.py",
+      "sha256": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/reference/old_retrieval_queries.py",
+      "source": "work/pare_portable_training_20261115/runtime/reference/old_retrieval_queries.py",
+      "sha256": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "runtime/text_helpers.py",
+      "source": "work/pare_portable_inputs_20261115/runtime/text_helpers.py",
+      "sha256": "015a29d9a8b31dfb937efbb97aadc98a91d5036125118a0b15ae2d1f278ae906",
+      "adaptation": "none; byte-identical"
+    },
+    {
+      "destination": "REFERENCE_TRAINING_PROTOCOL.json",
+      "source": "work/pare_portable_training_20261115/PROTOCOL.json",
+      "sha256": "8630b076cea7ce8c9641257f6b2158e7d93cc522def6f50cf51fd84feeff38b9",
+      "adaptation": "none; byte-identical"
+    }
+  ]
+}

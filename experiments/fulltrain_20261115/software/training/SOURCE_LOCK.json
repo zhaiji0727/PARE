@@ -1,0 +1,26 @@
+{
+  "files": {
+    "train_replay.py": "31dd6d17b54ba8090267cc369fe78f95d10c939667c9849eedca147118e990bd",
+    "runtime/run_final.py": "9d46cd1a82e52409bb32df4941c0bca5ec7db06d1b0270b3f2347f24502b9e48",
+    "runtime/protocol_gate.py": "c432f83838eaabccb2e7a01db4b2875dc2a9a3cef9c0a1f2bc1656e004873bc0",
+    "runtime/data_contract.py": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+    "runtime/train_backend.py": "85ad3d7443a9892661bdb24ed36f545a5517f8a918f85541c534f76169d84961",
+    "runtime/training_caches.py": "2b0a23f50b13bcfb8ca1b053d74ef27ae1948b49186ffd39ba5801a8e20120c3",
+    "runtime/cache_common.py": "5ba1b6b1e7ae85f74c8e028a1b9ef045a3049f727a2185c18dbe24587aeda7ac",
+    "runtime/v9_train_cache.py": "d0d1065ad18fe7be30f6fc7543e88382f81814a9dfae7ef4f2a3de31f8739c5c",
+    "runtime/joint_model.py": "3fa643703187705c67892d7fb906842627b09d22822db2d6f94a5c430654cff6",
+    "runtime/model_factory.py": "4584cd5973628f3456d47547cd20bfdd66fe42d6e75c975a02cd6820e3ff5378",
+    "runtime/model_spec.py": "330e3386b743bc0dd9c8eae8e25c4680dde908ba858f48206394b708edefdc34",
+    "runtime/matched_model_factory.py": "7e1f4fcff42ca031336f9b498508ffd1bcdc5e0444ee0d79e3bc538d55f6798b",
+    "runtime/path_control_factory.py": "b42f85398313045dd0a1af0b3af5516a33971bb7337c6457fefa2ee41c14db6a",
+    "runtime/path_isolation.py": "ce94388dcef399257e24e79f2a2ef9b71085fb0b04f255585780247814daa73b",
+    "runtime/resume_state.py": "ed47ce84f6ed7ee70120ada66e442b1d195c7537e245f4ccf49718125323d667",
+    "runtime/saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+    "runtime/scene_adapter.py": "3037b56765caa13ad038b561fa70c5df4021393f98f0cb7a1597d779c59565d9",
+    "runtime/batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "runtime/reference/v2_source.py": "dfc96d6e0e4cf7eb36f1ba399790349b2feb24ed64d086a4563ffdb9891a2f3b",
+    "runtime/reference/old_retrieval_queries.py": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+    "prepare_reference_inputs.py": "78235dfbe4ea4e15a8c13017b38176a37d3070910990352482c5f6dffc682dfe"
+  },
+  "status": "PORTABLE_TRAINING_SOURCE_FROZEN_FOR_REVIEW"
+}

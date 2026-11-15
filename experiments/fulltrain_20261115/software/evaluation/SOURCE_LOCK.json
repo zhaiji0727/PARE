@@ -1,0 +1,27 @@
+{
+  "schema": "pare.portable-evaluation-source-lock.v1",
+  "files": {
+    "FIXED_QUERY_PROTOCOL.json": "15a73a3905172454aba992de449ab81bddeedfdc2175f51978e8e932ab74591b",
+    "REFERENCE_TRAINING_PROTOCOL.json": "8630b076cea7ce8c9641257f6b2158e7d93cc522def6f50cf51fd84feeff38b9",
+    "SOURCE_PROVENANCE.json": "7356e5554990351bcee77cd1e18d5d7ddbfcd644ab140e21ede5d566668923ae",
+    "evaluate.py": "b0aff9a2fabfb1912f71bd35800fd2bfb947991109d347f349c09bac1c687b35",
+    "evaluation_inputs.py": "721df4df719d035162e611843829e9cd9f0eb6b1962260fc8da92340c865c295",
+    "runtime/data_contract.py": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+    "runtime/evaluate_core.py": "009221221af5795fb6265ce5d7933279b057b5a2af8c3747e52239d28b62e298",
+    "runtime/pare_portable/__init__.py": "332de69de854a8aa62d570735c39bd7df65e3503ab9e3537c12cf7f7d3bc3531",
+    "runtime/pare_portable/__main__.py": "09ad0ac31b9af9a09f63038ddbcfe52e6cf07ad80a4c1be53b6cdfd04c05c2ec",
+    "runtime/pare_portable/adapter.py": "e713c84e7c12ffc4bdb92766053b04ce71052e2fe0c6129548d06868403ed7c2",
+    "runtime/pare_portable/api.py": "e71d759329d44dcc773499034c47a28940b871db0873adb6a5fa3f693a140fc5",
+    "runtime/pare_portable/controls.py": "2f66d1f3bc1701627b3ec3ec78e3e1709460645ee33f7eadcaeaa21bcd1f8e91",
+    "runtime/pare_portable/head.py": "fb4363726a98de78d1151197789ec0fd44740edc8247fed567b19af6ff4f1b4a",
+    "runtime/pare_portable/io.py": "a4e5d16d9fb8d2e08a321cd9e2600a6c03226499a08268122a40181cc9378cca",
+    "runtime/pare_portable/joint_model.py": "f5cfafa97de154934dbc40307ede95397886e4a366b5330a7a7dea52c961da47",
+    "runtime/pare_portable/paths.py": "1a03ce1620042385dc0bbb83293a8ca3518905e2de1c81a1297da2736eac231a",
+    "runtime/pare_portable/scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "runtime/pare_portable/spec.py": "9777c809e89e306402f3dcb3d72b313baba92c0e84f07536c6bf9f239a7f1028",
+    "runtime/reference/old_retrieval_queries.py": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+    "runtime/scoring_contract.py": "3961b41f84475afe7954dac853e642d6b8e10f004253f29aa1c727d3e7392cd0",
+    "runtime/text_helpers.py": "015a29d9a8b31dfb937efbb97aadc98a91d5036125118a0b15ae2d1f278ae906",
+    "test_reader.py": "784e72b010f132d8e3e60fad2d45287520d9a95005fa399140e167c406d3d18f"
+  }
+}

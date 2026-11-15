@@ -1,0 +1,36 @@
+{
+  "schema": "pare.real-raw-cpu-smoke-summary.v1",
+  "status": "cpu_input_execution_completed_not_gpu_parity",
+  "checked_utc": "2026-11-15T14:44:54.864590+00:00",
+  "source_lock_sha256": "34fbf5644deaa7227cff8cd1b38305858546a8f285ba7a0b044af2b2c2cae5da",
+  "cases": [
+    {
+      "backbone": "vitb32",
+      "dimension": 512,
+      "images": 2,
+      "statistics_and_counts_exact": true,
+      "neural_features_exact": false,
+      "max_neural_feature_difference": 3.337860107421875e-06,
+      "execution_sha256": "80f900aecb086080482504f77c6f2c1e0fa82877031380e3fb51c2a3b5e8830b",
+      "build_receipt_sha256": "ea8e07c898f4a199e0eb6e72eb8ea5b9f2fe2dd1e945f1fd68c7608384f629a8",
+      "comparison_sha256": "7791d1741f8e27592800c9abb6e053511fbafe895c718ab1d9192f3a1192cf7f"
+    },
+    {
+      "backbone": "siglip",
+      "dimension": 768,
+      "images": 2,
+      "statistics_and_counts_exact": true,
+      "neural_features_exact": false,
+      "max_neural_feature_difference": 9.5367431640625e-07,
+      "execution_sha256": "4ad6e6370f4de54377ba4bca3fcbb551d3dc9da87ce9335f67cb8af70c835a87",
+      "build_receipt_sha256": "d171d24ec9197aa712b035d3cc2fe270956d5b5987ea26c731d00549f1b852f3",
+      "comparison_sha256": "f0ae6fb9ad5387dcc22e506043b3e065e1aa509b28254482e32b20c1b49ac470"
+    }
+  ],
+  "limits": [
+    "Two training images per backbone only",
+    "CPU execution compared with archived GPU features; not exact equality of neural embeddings",
+    "No full raw reconstruction, retrieval experiment, or training performed",
+    "Real GPU raw-input parity remains pending"
+  ]
+}

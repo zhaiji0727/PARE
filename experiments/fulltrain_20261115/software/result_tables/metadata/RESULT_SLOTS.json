@@ -1,0 +1,6498 @@
+{
+  "schema": "pare.manuscript-result-slots.v1",
+  "status": "all_formal_results_pending",
+  "candidate": "path_100__full",
+  "seed_groups": {
+    "primary_n4": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "secondary_n5": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "frozen": []
+  },
+  "measurement_keys": [
+    "backbone",
+    "model_id",
+    "epoch",
+    "factor",
+    "query_mode",
+    "metric",
+    "seed_group",
+    "stat",
+    "subgroup"
+  ],
+  "paired_delta_direction": "left model/epoch/factor minus explicit comparator model/epoch/factor, paired on seed; never absolute value",
+  "protocol_sha256": {
+    "main": "49e182e8381b28aed80a7d00cd22d180a5edb315d0aa1a33ad31772a6741cf65",
+    "b32_diagnostics": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926"
+  },
+  "latex_binding": "source/result_values.tex; \\expandafter\\def\\csname result@SLOT_ID\\endcsname{FORMATTED_VALUE}",
+  "binding_policy": [
+    "Only values derived from an independently passed formal-score audit may fill measurement slots.",
+    "Match every measurement key, including query_mode/factor/epoch/subgroup; do not infer from display labels.",
+    "Do not use development scores, old ten-epoch results or historical candidate-pool results.",
+    "Missing measures remain TBD; frozen_scene has no sample SD or artificial seed replication.",
+    "Manual-text slots cannot be automatically populated as numeric metrics."
+  ],
+  "slots": [
+    {
+      "slot_id": "budget/georsclip/adapter/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/adapter/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/adapter/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/adapter/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/joint_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "joint_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/joint_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/joint_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/joint_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/original_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/original_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/original_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/original_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/path_000__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_000__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/path_000__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/path_000__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/path_000__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/path_100__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/path_100__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/georsclip/path_100__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/georsclip/path_100__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/adapter/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/adapter/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/adapter/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/adapter/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/joint_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "joint_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/joint_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/joint_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/joint_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/original_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/original_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/original_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/original_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_000__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_000__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_000__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_000__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_000__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_100__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_100__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_100__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/remoteclip/path_100__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/adapter/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/adapter/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/adapter/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/adapter/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/joint_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "joint_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/joint_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/joint_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/joint_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/original_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/original_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/original_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/original_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/path_000__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_000__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/path_000__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/path_000__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/path_000__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/path_100__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/path_100__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/siglip/path_100__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/siglip/path_100__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/adapter/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/adapter/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/adapter/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/adapter/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/joint_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "joint_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/joint_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/joint_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/joint_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/original_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/original_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/original_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/original_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/path_000__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_000__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/path_000__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/path_000__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/path_000__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/path_100__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/path_100__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb16/path_100__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb16/path_100__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/adapter/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/adapter/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/adapter/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/adapter/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "adapter",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/joint_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "joint_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/joint_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/joint_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/joint_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "joint_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/original_full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/original_full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/original_full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/original_full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "original_full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/path_000__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_000__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/path_000__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/path_000__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/path_000__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/path_100__full/20/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 20,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/path_100__full/50/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "budget/vitb32/path_100__full/delta/mrr10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "budget/vitb32/path_100__full/delta/r10",
+      "source_files": [
+        "source/tables/budget.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__full",
+      "comparator_epoch": 20,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "components/constant/candidate_minus_control/r10",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__constant",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "components/constant/r10/mean",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__constant",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/constant/r10/sd",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__constant",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/full/r10/mean",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/full/r10/sd",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/no_token/candidate_minus_control/r10",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__no_token",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "components/no_token/r10/mean",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__no_token",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/no_token/r10/sd",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__no_token",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/stats_off/candidate_minus_control/r10",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__stats_off",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "components/stats_off/r10/mean",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__stats_off",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/stats_off/r10/sd",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__stats_off",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/uniform/candidate_minus_control/r10",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_100__uniform",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "components/uniform/r10/mean",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__uniform",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "components/uniform/r10/sd",
+      "source_files": [
+        "source/tables/components.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__uniform",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "compute/scoring_time",
+      "source_files": [
+        "source/supplement.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    },
+    {
+      "slot_id": "compute/timing",
+      "source_files": [
+        "source/body.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    },
+    {
+      "slot_id": "compute/training_time",
+      "source_files": [
+        "source/supplement.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    },
+    {
+      "slot_id": "gsd/vitb32/high/adapter/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "ge_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/high/original_full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "ge_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/high/path_100__full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "ge_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/low/adapter/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "lt_0.30",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/low/original_full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "lt_0.30",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/low/path_100__full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "lt_0.30",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/mid/adapter/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "0.30_to_lt_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/mid/original_full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "0.30_to_lt_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/mid/path_100__full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "0.30_to_lt_0.45",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/unknown/adapter/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "unavailable",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/unknown/original_full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "unavailable",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "gsd/vitb32/unknown/path_100__full/r10",
+      "source_files": [
+        "source/tables/gsd.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": "unavailable",
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/adapter/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/frozen/all_r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/frozen/mrr10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/frozen/r1",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/frozen/r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/frozen/r5",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/original_full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/georsclip/path_100__full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/adapter/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/frozen/all_r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/frozen/mrr10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/frozen/r1",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/frozen/r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/frozen/r5",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/original_full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/remoteclip/path_100__full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/adapter/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/frozen/all_r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/frozen/mrr10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/frozen/r1",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/frozen/r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/frozen/r5",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/original_full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/siglip/path_100__full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/adapter/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/frozen/all_r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/frozen/mrr10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/frozen/r1",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/frozen/r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/frozen/r5",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/original_full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb16/path_100__full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/adapter/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/frozen/all_r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/frozen/mrr10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/frozen/r1",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/frozen/r10",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/frozen/r5",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "frozen_scene",
+      "epoch": null,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "frozen",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/original_full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "original_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/all_r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/all_r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "all-captions",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/mrr10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/mrr10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "MRR@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r1/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r1/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@1",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r10/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r10/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r5/mean",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "main/vitb32/path_100__full/r5/sd",
+      "source_files": [
+        "source/tables/main.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@5",
+      "seed_group": "primary_n4",
+      "stat": "sample_sd",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/georsclip/000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/georsclip/100/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/georsclip/100_minus_000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "paths/georsclip/111/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "georsclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/remoteclip/000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/remoteclip/100/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/remoteclip/100_minus_000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "paths/remoteclip/111/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "remoteclip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/siglip/000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/siglip/100/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/siglip/100_minus_000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "paths/siglip/111/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "siglip",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb16/000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb16/100/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb16/100_minus_000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "paths/vitb16/111/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb16",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb32/000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_000__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb32/100/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "paths/vitb32/100_minus_000/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "paired_mean_delta",
+      "subgroup": null,
+      "format": "+.2f",
+      "units": "percentage_points",
+      "comparator_model_id": "path_000__full",
+      "comparator_epoch": 50,
+      "comparator_factor": "1"
+    },
+    {
+      "slot_id": "paths/vitb32/111/r10",
+      "source_files": [
+        "source/tables/paths.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "joint_full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "release/identifier",
+      "source_files": [
+        "source/body.tex",
+        "source/supplement.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    },
+    {
+      "slot_id": "scale/vitb32/1.5/adapter/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1.5",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "scale/vitb32/1.5/path_100__full/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1.5",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "scale/vitb32/1/adapter/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "scale/vitb32/1/path_100__full/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "1",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "scale/vitb32/2/adapter/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "adapter",
+      "epoch": 50,
+      "factor": "2",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "scale/vitb32/2/path_100__full/r10",
+      "source_files": [
+        "source/tables/scale.tex"
+      ],
+      "value": null,
+      "kind": "measurement",
+      "backbone": "vitb32",
+      "model_id": "path_100__full",
+      "epoch": 50,
+      "factor": "2",
+      "query_mode": "first-caption",
+      "metric": "R@10",
+      "seed_group": "primary_n4",
+      "stat": "mean",
+      "subgroup": null,
+      "format": ".2f",
+      "units": "percent"
+    },
+    {
+      "slot_id": "summary/candidate/paired_comparisons",
+      "source_files": [
+        "source/body.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    },
+    {
+      "slot_id": "summary/candidate/rten/range",
+      "source_files": [
+        "source/body.tex"
+      ],
+      "value": null,
+      "kind": "manual_text",
+      "automatic_numeric_binding_allowed": false,
+      "note": "Must be written from audited evidence after author review; not a numeric summary key."
+    }
+  ]
+}

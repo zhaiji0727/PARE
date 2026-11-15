@@ -1,0 +1,52 @@
+{
+  "schema": "pare.published-checkpoint-binding.v1",
+  "status": "projected_from_audited_checkpoint",
+  "checkpoint_sha256": "eee3229a9f417403fa5972d4cda9fc237f391fcbe0ce854934d5b33523f31efe",
+  "source_checkpoint_sha256": "29cb220fedbd0b475c692e2a388972b00fbd355f90bcb7c5847ed15819541f51",
+  "state_dict_sha256": "1ea48377f02316720a0b94b79ddcfaeb4a8737f95dc7e0157ae56276d7c89b4c",
+  "backbone": "siglip",
+  "variant": "original_full",
+  "seed": 3,
+  "epoch": 20,
+  "training_protocol_sha256": "49e182e8381b28aed80a7d00cd22d180a5edb315d0aa1a33ad31772a6741cf65",
+  "source_training_audit_sha256": "eab3ec5e6eed4236a27e5c84348b928a5a554869356cdfc2cbd7b7a68bde4d3f",
+  "source_score_audit_sha256": "05fcbb15b067687d72809d092d16b47d4daf22d8f2ec41a3d8321388184a268b",
+  "encoder_signature": {
+    "schema_version": 2,
+    "model": "ViT-B-16-SigLIP",
+    "pretrained": "webli",
+    "pretrained_weight_sha256": "a604948f7bb8788e4652f6ec7b7bd792dd63f55f849fa3e5fbf8b462353b9934",
+    "external_checkpoint_sha256": null,
+    "primitive_mode": "physics",
+    "max_regions": 6,
+    "max_sc": 8,
+    "source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+    },
+    "packages": {
+      "torch": "2.9.1+cu128",
+      "open_clip_torch": "2.26.1",
+      "numpy": "1.26.4",
+      "Pillow": "10.4.0",
+      "scipy": "1.13.1"
+    }
+  },
+  "training_population": {
+    "images": 9181,
+    "pairs": 31945,
+    "texts": 18461
+  },
+  "training_audit": {
+    "path": "../results/training/main.AUDIT.json",
+    "sha256": "f2fb30afcc5d0781c514d3fda157e919f2f61d5a0a50e5818a00a753e0256ac4"
+  },
+  "original_metadata": {
+    "path": "../provenance/metadata/main__siglip__original_full__s3__e20.original.json",
+    "sha256": "4099e366c011d426983a1d44a78fb7acf5dfc522348a2fccbb16991822ea41ab"
+  },
+  "projection": "Original state tensors unchanged; selected original metadata. File SHA differs from source checkpoint."
+}

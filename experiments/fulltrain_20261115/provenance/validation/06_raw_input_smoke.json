@@ -1,0 +1,93 @@
+{
+  "all_tensor_fields_exact": true,
+  "fields": {
+    "scene": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "agg": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "nu": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "L": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_star": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_emb": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_mu": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_t": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_tf": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "c_n": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "f_emb": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "f_mu": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "f_t": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "f_tf": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    },
+    "f_n": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "unequal_elements": 0
+    }
+  },
+  "schema": "pare.portable-raw-smoke-alignment.v1",
+  "input_sha256": {
+    "/home/coder/my_workspace/rs_paper/pare_workspace/raw_gpu_smoke_20261115_v2/actual/vitb32/cache_legacy_raster.pt": "13ed3659c752d0919fb855a8073fc4aba5ff0b9fd1fd6abd9cc37412db66fa01",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_legacy_raster_train_9181.pt": "d08d097ed5a10115da77ca245194dfb209e86f50c40697c09726f4da32aa669f"
+  },
+  "image_ids": [
+    "GF2_AddisAbaba_9.0314_38.7359.png",
+    "GF2_AddisAbaba_9.0314_38.7392.png"
+  ],
+  "dimension": 512,
+  "inference_performed": false,
+  "gpu_used": false,
+  "scope": "Cache tensors only. A tiny sample does not verify full raw reconstruction or text alignment."
+}

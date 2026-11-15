@@ -1,0 +1,18 @@
+{
+  "schema": "pare.public-inference-source-lock.v1",
+  "files": {
+    "pare_portable/__init__.py": "332de69de854a8aa62d570735c39bd7df65e3503ab9e3537c12cf7f7d3bc3531",
+    "pare_portable/__main__.py": "09ad0ac31b9af9a09f63038ddbcfe52e6cf07ad80a4c1be53b6cdfd04c05c2ec",
+    "pare_portable/adapter.py": "e713c84e7c12ffc4bdb92766053b04ce71052e2fe0c6129548d06868403ed7c2",
+    "pare_portable/api.py": "e71d759329d44dcc773499034c47a28940b871db0873adb6a5fa3f693a140fc5",
+    "pare_portable/controls.py": "2f66d1f3bc1701627b3ec3ec78e3e1709460645ee33f7eadcaeaa21bcd1f8e91",
+    "pare_portable/head.py": "fb4363726a98de78d1151197789ec0fd44740edc8247fed567b19af6ff4f1b4a",
+    "pare_portable/io.py": "a4e5d16d9fb8d2e08a321cd9e2600a6c03226499a08268122a40181cc9378cca",
+    "pare_portable/joint_model.py": "f5cfafa97de154934dbc40307ede95397886e4a366b5330a7a7dea52c961da47",
+    "pare_portable/paths.py": "1a03ce1620042385dc0bbb83293a8ca3518905e2de1c81a1297da2736eac231a",
+    "pare_portable/scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "pare_portable/spec.py": "9777c809e89e306402f3dcb3d72b313baba92c0e84f07536c6bf9f239a7f1028",
+    "requirements.txt": "72cabbf383d3b033df0eb37be00bb7079f51b0d08d793f0ac9d7eec4709dffbb"
+  },
+  "origin_manifest_sha256": "712b4ccc6aeabd29201ac3ef4bc25713d4a033d87f7d0eeb95e949d3698346bb"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "pare.fixed-reader-query-protocol.v1",
+  "gallery_images": 3688,
+  "counts": {
+    "first": 3688,
+    "extra": 2502,
+    "all": 6190
+  },
+  "digests": {
+    "first_text_sha256": "4bb38a6f3afb5aa422c0b9bb8696f4b8306b9c905fb090a6f196aca325e1ecdf",
+    "extra_text_sha256": "d89e01f675e4749ab77a878c3b8d4d6e8d42eaaa7f19a29fb6f91af547fc3b2f",
+    "all_text_sha256": "0a2d601045006460617a2b525c1842963506d80c83cedcaeeab05a51db08000e",
+    "first_query_ids_sha256": "509174924372ebf8789b9d167c297f2cb4f5eeaa4577f33e36da0660e64d5a71",
+    "all_query_ids_sha256": "140c6c1107a648e4ab599e89876ea60fa63e9547ddbb7151e416bf24f6145320",
+    "all_caption_row_map_sha256": "c965ebe3b652cd35393be675c2be2f80089690626778af5e27b73cfd9c5422f4",
+    "extra_query_ids_sha256": "9fa77259c7f7e035a52d46d1f402d032c0a6610c51c09483ed3061fcbc0401e1"
+  },
+  "source_sha256": {
+    "FINAL_EVALUATION_INPUT_CATALOG.json": "8fe1fd3c4395ef4de7df7090b4982a692c3b32c36b372e14a7b0230d595cf742",
+    "preflight/vitb32": "404ba4788dbde614cd6a601f385285609dff03f1cbef57b7d17e8b5d8b1d4fdf",
+    "preflight/vitb16": "fa87b4635689eca675d54820366b02d2ed4158a1472c64dbb1bbe28ea00ca9e2",
+    "preflight/remoteclip": "116188a0cf7a6c4151e40bebca6ed94af65fceaa32554be3e0d3aed63e2f7bc7",
+    "preflight/siglip": "4fb60a400bfa6b794f2ee103bba1d866077fdc8e3be53143972d752eef13338c",
+    "preflight/georsclip": "64850c901ca0e45964081746dbba44a72176d357c7a527bfb852c751699bb7e3",
+    "fresh_extra_verification": "c325fea2956c7f2bc2a394dcea3f3bdcc650f41d5547d00e2fc45028a777109d"
+  },
+  "scope": "Fixed text and query identities, independent of encoded vector values. All five actual input preflights agree; extra query identities also agree with the fresh verification report."
+}

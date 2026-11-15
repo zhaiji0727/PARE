@@ -1,0 +1,73 @@
+{
+  "status": "inference_package_preparation_only",
+  "final_configuration_bound": false,
+  "real_development_score_equivalence_verified": false,
+  "sources": [
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_simplified_confirm_20261109/base_code/saqre_phys.py",
+      "source_sha256": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "source_lines": [
+        268,
+        462
+      ],
+      "portable_file": "pare_portable/head.py",
+      "portable_sha256": "fb4363726a98de78d1151197789ec0fd44740edc8247fed567b19af6ff4f1b4a",
+      "adaptation": "verbatim_class_extraction"
+    },
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_second_review_20261111/science/scene_adapter.py",
+      "source_sha256": "3037b56765caa13ad038b561fa70c5df4021393f98f0cb7a1597d779c59565d9",
+      "source_lines": [
+        10,
+        23
+      ],
+      "portable_file": "pare_portable/adapter.py",
+      "portable_sha256": "e713c84e7c12ffc4bdb92766053b04ce71052e2fe0c6129548d06868403ed7c2",
+      "adaptation": "verbatim_class_extraction"
+    },
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_simplified_confirm_20261109/base_code/batch_scoring.py",
+      "source_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "source_lines": [
+        1,
+        22
+      ],
+      "portable_file": "pare_portable/scoring.py",
+      "portable_sha256": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+      "adaptation": "byte_identical_copy"
+    },
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_path100_controls_20261115/joint_model.py",
+      "source_sha256": "3fa643703187705c67892d7fb906842627b09d22822db2d6f94a5c430654cff6",
+      "source_lines": [
+        1,
+        67
+      ],
+      "portable_file": "pare_portable/joint_model.py",
+      "portable_sha256": "f5cfafa97de154934dbc40307ede95397886e4a366b5330a7a7dea52c961da47",
+      "adaptation": "copy_with_relative_imports"
+    },
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_path100_controls_20261115/path_isolation.py",
+      "source_sha256": "ce94388dcef399257e24e79f2a2ef9b71085fb0b04f255585780247814daa73b",
+      "source_lines": [
+        1,
+        38
+      ],
+      "portable_file": "pare_portable/paths.py",
+      "portable_sha256": "1a03ce1620042385dc0bbb83293a8ca3518905e2de1c81a1297da2736eac231a",
+      "adaptation": "copy_with_relative_imports"
+    },
+    {
+      "source_path": "/Users/haoquanzhai/Documents/Codex/2026-10-07/yue-d/work/pare_path100_controls_20261115/path_control_factory.py",
+      "source_sha256": "b42f85398313045dd0a1af0b3af5516a33971bb7337c6457fefa2ee41c14db6a",
+      "source_lines": [
+        1,
+        32
+      ],
+      "portable_file": "pare_portable/controls.py",
+      "portable_sha256": "2f66d1f3bc1701627b3ec3ec78e3e1709460645ee33f7eadcaeaa21bcd1f8e91",
+      "adaptation": "copy_with_relative_imports"
+    }
+  ]
+}

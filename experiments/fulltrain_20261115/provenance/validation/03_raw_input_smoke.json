@@ -1,0 +1,14 @@
+{
+  "schema": "pare.raw-gpu-smoke-v2-change.v1",
+  "unchanged_numerical_and_input_plan": true,
+  "changed_scope": [
+    "GPU display-process guard",
+    "isolated package/output roots",
+    "guard tests/documentation"
+  ],
+  "original_plan_sha256": "858a5ee9fb7952691af98bdfbeed1beb744c3942129530a7f4217d9c2752b302",
+  "v2_plan_sha256": "6e8bc3aa544672844ffbcba85d58d2cb6d5b9c2d6bbabab915e6e02bfb78b224",
+  "original_source_lock_sha256": "145099db0fd268fb7d73f942ffd854ea09a7e28b0ff246798713c5702827ded0",
+  "v2_source_lock_sha256": "c15e3351c8dce7943688fbabac8b4be2bfa1046e3496f18dbcf00353cd7b03f7",
+  "numerical_raw_package_modified": false
+}

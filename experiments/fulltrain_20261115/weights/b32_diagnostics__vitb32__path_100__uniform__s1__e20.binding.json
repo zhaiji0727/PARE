@@ -1,0 +1,52 @@
+{
+  "schema": "pare.published-checkpoint-binding.v1",
+  "status": "projected_from_audited_checkpoint",
+  "checkpoint_sha256": "0d1458d123c7f049c3cb691393496e290a2ab45546d2a2a1ee431a449cf4a23c",
+  "source_checkpoint_sha256": "14dcbe21a3d5af7200aa8c0c554efeda602b077be5ff58b10f17e3f29c4bbf33",
+  "state_dict_sha256": "9068971d3fa11223762c3418ee514c6ea576429061714f3af759b0df09adc988",
+  "backbone": "vitb32",
+  "variant": "path_100__uniform",
+  "seed": 1,
+  "epoch": 20,
+  "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+  "source_training_audit_sha256": "1b1311e3bff28d387291f3e4411e94f7ba58bc91de41d64e0a7b9e7fae596e53",
+  "source_score_audit_sha256": "05fcbb15b067687d72809d092d16b47d4daf22d8f2ec41a3d8321388184a268b",
+  "encoder_signature": {
+    "schema_version": 2,
+    "model": "ViT-B-32",
+    "pretrained": "laion2b_s34b_b79k",
+    "pretrained_weight_sha256": "1bd3c7172de5b207ceac554f5ab5266166f3b9baccc9af5989bc801016d080ad",
+    "external_checkpoint_sha256": null,
+    "primitive_mode": "physics",
+    "max_regions": 6,
+    "max_sc": 8,
+    "source_sha256": {
+      "saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+      "primitive_controls.py": "eb42d95ed4c94f39cd04e0bf249e965144e42c7c7d2365fb998cdbe1fbf1c232",
+      "cache_primitives.py": "23c5fa80749639362cdbc5eb980cb8436623bceaecd26b1a8a6c93474e630ecd",
+      "runtime.py": "3c8bbced7261644c458d00d50e21561ead4c96dca9d30095489920e1dac41968",
+      "artifacts.py": "a9e2e2ce9b6fc17211e96893ad5c54a6589ba14f0e6f1e7285df6dbb185531cf"
+    },
+    "packages": {
+      "torch": "2.9.1+cu128",
+      "open_clip_torch": "2.26.1",
+      "numpy": "1.26.4",
+      "Pillow": "10.4.0",
+      "scipy": "1.13.1"
+    }
+  },
+  "training_population": {
+    "images": 9181,
+    "pairs": 31945,
+    "texts": 18461
+  },
+  "training_audit": {
+    "path": "../results/training/b32_diagnostics.AUDIT.json",
+    "sha256": "66540da777d406f78d862e897e10b9ae941268d85f99806fc7b80936092f0fec"
+  },
+  "original_metadata": {
+    "path": "../provenance/metadata/b32_diagnostics__vitb32__path_100__uniform__s1__e20.original.json",
+    "sha256": "5aef73d1582e95f03ec5b0da9f4c2c8a2296f34f8a087eb81b6a14c659f34345"
+  },
+  "projection": "Original state tensors unchanged; selected original metadata. File SHA differs from source checkpoint."
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "pare.portable-full-training-protocol.v1",
+  "source_lock_sha256": "028517524c4f0f9908773f765107e198d944323ddafb991e677f667124fabee0",
+  "backbones": [
+    "vitb32",
+    "vitb16",
+    "remoteclip",
+    "siglip",
+    "georsclip"
+  ],
+  "models_by_backbone": {
+    "vitb32": [
+      "adapter",
+      "original_full",
+      "path_000__full",
+      "joint_full",
+      "path_100__full",
+      "path_100__constant",
+      "path_100__no_token",
+      "path_100__uniform",
+      "path_100__stats_off"
+    ],
+    "vitb16": [
+      "adapter",
+      "original_full",
+      "path_000__full",
+      "joint_full",
+      "path_100__full"
+    ],
+    "remoteclip": [
+      "adapter",
+      "original_full",
+      "path_000__full",
+      "joint_full",
+      "path_100__full"
+    ],
+    "siglip": [
+      "adapter",
+      "original_full",
+      "path_000__full",
+      "joint_full",
+      "path_100__full"
+    ],
+    "georsclip": [
+      "adapter",
+      "original_full",
+      "path_000__full",
+      "joint_full",
+      "path_100__full"
+    ]
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 50,
+  "checkpoint_epochs": [
+    20,
+    50
+  ],
+  "batch_size": 64,
+  "weight_decay": 0.0001,
+  "hyperparameters": {
+    "vitb32": {
+      "learning_rate": 0.002,
+      "kappa": 0.03
+    },
+    "vitb16": {
+      "learning_rate": 0.002,
+      "kappa": 0.05
+    },
+    "remoteclip": {
+      "learning_rate": 0.002,
+      "kappa": 0.05
+    },
+    "siglip": {
+      "learning_rate": 0.002,
+      "kappa": 0.07
+    },
+    "georsclip": {
+      "learning_rate": 0.002,
+      "kappa": 0.05
+    }
+  },
+  "reference_runtime": {
+    "torch": "2.9.1+cu128",
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  },
+  "reference_experiment_protocols": {
+    "main": "49e182e8381b28aed80a7d00cd22d180a5edb315d0aa1a33ad31772a6741cf65",
+    "b32_diagnostics": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926"
+  },
+  "interpretation": "New reproduction executor using unchanged numerical training functions; actual replay validation is pending."
+}

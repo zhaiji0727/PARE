@@ -1,0 +1,47 @@
+{
+  "schema": "pare.portable-training-parity.v1",
+  "status": "parity_passed",
+  "reference": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/main/runs/vitb32/seed_1/path_100__full",
+  "replay": "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_replay_20261115/actual/vitb32",
+  "reference_completion_sha256": "173b0acc6b44b92a70bf707ebc6e09c5f9b42070ccbd200d8509158207639d55",
+  "replay_completion_sha256": "5ea5e2b3dafb4a75127d4b28571a5a1ecf524ab5fd1886527a3a9e4701337e22",
+  "plan_sha256": "615f4a58ed16476de528e5ffe5e0b573f0f2a9aa2a03c28d57b1fba34f29999d",
+  "case": {
+    "backbone": "vitb32",
+    "variant": "path_100__full",
+    "seed": 1,
+    "inputs": {
+      "path": "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_20261115/reference_inputs/vitb32/INPUTS.json",
+      "sha256": "fd3b58da4567fae444209b57ef37d51dd66370f2b9302d187b6f2818c061273a"
+    },
+    "reference": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/main/runs/vitb32/seed_1/path_100__full",
+    "output": "/home/coder/my_workspace/rs_paper/pare_workspace/portable_training_replay_20261115/actual/vitb32"
+  },
+  "comparer_sha256": "7131b660fe3f072d26f1f203291a4300418726b9cf149cfe0301f72c2ccaae23",
+  "epochs": [
+    {
+      "epoch": 20,
+      "exact_numerical_match": true,
+      "reference_sha256": "a456577b2095c698426658a54e99c72618d2bfb55ecbf22945665325c3624fd4",
+      "replay_sha256": "ffdc1d06c1727e62767ad1d1b11d1f2898269e364bd691c7ffaabed22e800f24",
+      "tensors": 84,
+      "tensor_elements": 800016,
+      "scalars": 32720
+    },
+    {
+      "epoch": 50,
+      "exact_numerical_match": true,
+      "reference_sha256": "c780f89b9ad037a3646b54a573bd5eecca5f5444f15acbb2f20206d2b15c92da",
+      "replay_sha256": "78ede15f1550083187665d9fa24e7a622c645ea3720f7220afdf855f443acbb4",
+      "tensors": 84,
+      "tensor_elements": 800016,
+      "scalars": 32840
+    }
+  ],
+  "scope": "Implementation replay parity only; no retrieval claim.",
+  "excluded": [
+    "metadata provenance differences",
+    "wall-clock timings"
+  ],
+  "cuda_initialized": false
+}

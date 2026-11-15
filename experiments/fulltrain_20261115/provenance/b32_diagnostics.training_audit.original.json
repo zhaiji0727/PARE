@@ -1,0 +1,1770 @@
+{
+  "schema": "pare.final-full-training-audit.v1",
+  "status": "audit_passed",
+  "errors": [],
+  "training_images": 9181,
+  "training_pairs": 31945,
+  "training_texts": 18461,
+  "training_protocol": {
+    "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/PROTOCOL.json",
+    "sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926"
+  },
+  "analyzer_sha256": "516aaee5d737b80173a0beb71f8bf205207dd986126d8e8dba197f6d48547909",
+  "started_utc": "2026-11-15T15:32:04.999310+00:00",
+  "scope": "CPU checkpoint/input audit; no forward pass, training or retrieval scoring",
+  "descriptor_mean_tolerance": {
+    "absolute": 2e-06,
+    "relative": 2e-06,
+    "reason": "GPU float32 reduction compared with independently recomputed CPU float64 reduction"
+  },
+  "input_observations": {
+    "vitb32": {
+      "cache": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_legacy_raster_train_9181.pt",
+        "sha256": "d08d097ed5a10115da77ca245194dfb209e86f50c40697c09726f4da32aa669f",
+        "signature_sha256": "f48357e3a36af33ea593a24235f2b8d47e0ed5c7b49ebcbbc489510c3ff21389"
+      },
+      "descriptor_counts": [
+        51290,
+        72727
+      ],
+      "empty_images": [
+        0,
+        13
+      ],
+      "cpu_float32_descriptor_means": [
+        [
+          1.2296251058578491,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.0021656290628015995
+        ],
+        [
+          1.385304570198059,
+          0.9094114303588867,
+          1.317491054534912,
+          0.02249595895409584
+        ]
+      ],
+      "cpu_float64_descriptor_means": [
+        [
+          1.229625173397384,
+          0.8284691907295499,
+          1.085173860741396,
+          0.0021656292554512228
+        ],
+        [
+          1.3853047624741999,
+          0.9094113986113223,
+          1.3174910718236768,
+          0.0224959571917564
+        ]
+      ],
+      "training_text_sha256": "f238f7e887f823eb5b7383698cb064a3b6471d91f4bd1a135a9de7e91b13af12",
+      "training_input_sha256": {
+        "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/NUMERICAL_ACCEPTANCE_REVIEW.json": "9aa01602d7b957861f8843adf3368b4bcb4c39aaae54a304267ada571613e7e5",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/PAIRED_CACHE_AUDIT.json": "baa7c9206e3fd5e336a621b4f8741386ae0ec12487f225ace809513cb198610a",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_legacy_raster_train_9181.pt": "d08d097ed5a10115da77ca245194dfb209e86f50c40697c09726f4da32aa669f",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_spatial_train_9181.pt": "400f8a58a6112d1539d63f5d11182874ffbeeb258a6bf577843d774004285dbf",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/formal_experiments_20261103/results/vitb32/cache_physics_train.pt": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/simplified_confirm_20261109_v1/shared/vitb32/manifest.json": "8aa2ffd37f48004fae7580ea09540f193b5e94fcb8bc0de2378f6faf64fe0aca",
+        "/home/coder/my_workspace/rs_paper/pare_workspace/simplified_confirm_20261109_v1/shared/vitb32/text_embeddings.pt": "b448156ecf1f3dd910f62bbb56485c70ca70edeaa84e50a178f04b9eaf052d14"
+      }
+    }
+  },
+  "population": {
+    "training_pair_order_sha256": "9362527d5f885a0b1c6ce37f5c1f4f242f834019870151ce3baf335678cf9d1d",
+    "fit_pair_order_sha256": "9362527d5f885a0b1c6ce37f5c1f4f242f834019870151ce3baf335678cf9d1d",
+    "training_text_sha256": "f238f7e887f823eb5b7383698cb064a3b6471d91f4bd1a135a9de7e91b13af12",
+    "train_ids_sha256": "aebf2530ab350d94f3a325b514ba872ed1fa0e434ed9d7973c2c209a502b74f5"
+  },
+  "runs": [
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 0,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "6abe13bfd0d689957f831cb6fbbafe539b4749cc69760a62962acf380866abed",
+      "initial_physics_sha256": "c640d79601350e50b5e10d7586e06fbaf24277019026d8265e17fe7033ba2f23",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9f718a8461a7df9b8bd75eb67d99c376b16f98a272ecc6a61dff2b10f85dfc74",
+      "history_sha256": "3ee3d141bad68854fd17343b2500828624be14ef04d5dfe88feadab3607f6802"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 1,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "d98bf2db22ae2b81db1e60b764aec348f337bf59ea25f0e018c88ad9217cef7f",
+      "initial_physics_sha256": "e620559015e8c0011e2324ce27b0644babe9360ba192816c4288adba25d5224b",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "49fa120553d918b3766975d3d40445b2da5b735bd5508e63870ff636cc939208",
+      "history_sha256": "2c4390c56e1816fcecf5ebbbd4926fcf842bf5f6dce095db91662a403302e62a"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 2,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "621f8094b1c77360e4076fee87ca84b04be8cc8737f07859758936bb53b9796d",
+      "initial_physics_sha256": "0dccf8558ed4c2f5dc71601de2057d3bc7377305e214decd86b4fdf5d0e4fc6e",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9e3c2ba9e085e97be64c75e3f3d7ec730310ea345236fd70c97c9c4c6122a9f6",
+      "history_sha256": "830f955af7d62bd14e529d6f54a8d0f031d2ea9bd7081b5b8b037877ac088425"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 3,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "cbe8134300aadc2686d3c363b5011453973dc83e6a134a3a10231606ab616365",
+      "initial_physics_sha256": "c333e97c67be193ff558620aab6f3eeeca84cc0ff0a2d009eaafaa2308e604c8",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "b542bb0fceff0c87aaa3f33d9db03ef796beb8f5fe586f7eff7f485ee84baa7d",
+      "history_sha256": "b9dde2724bd7d7d56c7c0827853a1bc089c25460ef1b5c652a84b4061b296a09"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 4,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "5080b6ab0fba8b6cd91893c22978875dfc0a911438b1efe04fe300ef2338f965",
+      "initial_physics_sha256": "eb8868491b70e6f6c569852569f78ec527b3dd351711b1de21a3c6d99b52fc68",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "427cfabaead5944ee56ba122b4fc822688ce1e30c5055b3f3727af12f546cdfe",
+      "history_sha256": "bf8b68ff1dafefe15f414b76d41c880133d53c51beebcbe3b68c258106bb383d"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 0,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "6abe13bfd0d689957f831cb6fbbafe539b4749cc69760a62962acf380866abed",
+      "initial_physics_sha256": "c640d79601350e50b5e10d7586e06fbaf24277019026d8265e17fe7033ba2f23",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9f718a8461a7df9b8bd75eb67d99c376b16f98a272ecc6a61dff2b10f85dfc74",
+      "history_sha256": "dfcc5607d687383f272d8fdc8ecd95a098f2e468a26380215c0bfd558a63e6e5"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 1,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "d98bf2db22ae2b81db1e60b764aec348f337bf59ea25f0e018c88ad9217cef7f",
+      "initial_physics_sha256": "e620559015e8c0011e2324ce27b0644babe9360ba192816c4288adba25d5224b",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "49fa120553d918b3766975d3d40445b2da5b735bd5508e63870ff636cc939208",
+      "history_sha256": "0bbda0fa9202e97631fbfc27f2824a0064951329f9b2f81038ebd9c6775dd007"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 2,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "621f8094b1c77360e4076fee87ca84b04be8cc8737f07859758936bb53b9796d",
+      "initial_physics_sha256": "0dccf8558ed4c2f5dc71601de2057d3bc7377305e214decd86b4fdf5d0e4fc6e",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9e3c2ba9e085e97be64c75e3f3d7ec730310ea345236fd70c97c9c4c6122a9f6",
+      "history_sha256": "621da73228c236356397744d187488ccd28c2cf14fc6aef3c7623c7b26557e14"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 3,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "cbe8134300aadc2686d3c363b5011453973dc83e6a134a3a10231606ab616365",
+      "initial_physics_sha256": "c333e97c67be193ff558620aab6f3eeeca84cc0ff0a2d009eaafaa2308e604c8",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "b542bb0fceff0c87aaa3f33d9db03ef796beb8f5fe586f7eff7f485ee84baa7d",
+      "history_sha256": "7ddf15faa49c68f442c3f4c0d256e43ea01ddca845a7554f65900fc8f076e873"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 4,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "5080b6ab0fba8b6cd91893c22978875dfc0a911438b1efe04fe300ef2338f965",
+      "initial_physics_sha256": "eb8868491b70e6f6c569852569f78ec527b3dd351711b1de21a3c6d99b52fc68",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "427cfabaead5944ee56ba122b4fc822688ce1e30c5055b3f3727af12f546cdfe",
+      "history_sha256": "bdd985a2829be9067cc02072f5e6380f59adb724b6525fdd0f9f0e4c16eb5481"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 0,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "6abe13bfd0d689957f831cb6fbbafe539b4749cc69760a62962acf380866abed",
+      "initial_physics_sha256": "c640d79601350e50b5e10d7586e06fbaf24277019026d8265e17fe7033ba2f23",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9f718a8461a7df9b8bd75eb67d99c376b16f98a272ecc6a61dff2b10f85dfc74",
+      "history_sha256": "60365d4e0e67d15ae2a73de2524d00ae401539f890d77b7c016be1d9e6054df1"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 1,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "d98bf2db22ae2b81db1e60b764aec348f337bf59ea25f0e018c88ad9217cef7f",
+      "initial_physics_sha256": "e620559015e8c0011e2324ce27b0644babe9360ba192816c4288adba25d5224b",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "49fa120553d918b3766975d3d40445b2da5b735bd5508e63870ff636cc939208",
+      "history_sha256": "2f9b0446e6c5ade713a6284868f93963b548cfab660e0c2ae0fa11c03540de95"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 2,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "621f8094b1c77360e4076fee87ca84b04be8cc8737f07859758936bb53b9796d",
+      "initial_physics_sha256": "0dccf8558ed4c2f5dc71601de2057d3bc7377305e214decd86b4fdf5d0e4fc6e",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9e3c2ba9e085e97be64c75e3f3d7ec730310ea345236fd70c97c9c4c6122a9f6",
+      "history_sha256": "4cfbece2f0d36e766669689706b34479b39c2026fae3457d3d2dbda72a53ffd9"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 3,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "cbe8134300aadc2686d3c363b5011453973dc83e6a134a3a10231606ab616365",
+      "initial_physics_sha256": "c333e97c67be193ff558620aab6f3eeeca84cc0ff0a2d009eaafaa2308e604c8",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "b542bb0fceff0c87aaa3f33d9db03ef796beb8f5fe586f7eff7f485ee84baa7d",
+      "history_sha256": "ff068418e8ac16d1235af1d733e1c533dc26acd8ba803adc196fbf15d7becf3d"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 4,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "5080b6ab0fba8b6cd91893c22978875dfc0a911438b1efe04fe300ef2338f965",
+      "initial_physics_sha256": "eb8868491b70e6f6c569852569f78ec527b3dd351711b1de21a3c6d99b52fc68",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "427cfabaead5944ee56ba122b4fc822688ce1e30c5055b3f3727af12f546cdfe",
+      "history_sha256": "6e9e5a1119b57b8405246072c9153ba891394f64cf81bb9989a08aca87c4a5fd"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 0,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "6abe13bfd0d689957f831cb6fbbafe539b4749cc69760a62962acf380866abed",
+      "initial_physics_sha256": "c640d79601350e50b5e10d7586e06fbaf24277019026d8265e17fe7033ba2f23",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9f718a8461a7df9b8bd75eb67d99c376b16f98a272ecc6a61dff2b10f85dfc74",
+      "history_sha256": "277d12a73ec6af46a5f9d6fe9122ae95d850fe6175644794344727658ed27a80"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 1,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "d98bf2db22ae2b81db1e60b764aec348f337bf59ea25f0e018c88ad9217cef7f",
+      "initial_physics_sha256": "e620559015e8c0011e2324ce27b0644babe9360ba192816c4288adba25d5224b",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "49fa120553d918b3766975d3d40445b2da5b735bd5508e63870ff636cc939208",
+      "history_sha256": "4073f398d78c0979cbce26c05cef616af648878a090ed54b7dbc10f3c531f1da"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 2,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "621f8094b1c77360e4076fee87ca84b04be8cc8737f07859758936bb53b9796d",
+      "initial_physics_sha256": "0dccf8558ed4c2f5dc71601de2057d3bc7377305e214decd86b4fdf5d0e4fc6e",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "9e3c2ba9e085e97be64c75e3f3d7ec730310ea345236fd70c97c9c4c6122a9f6",
+      "history_sha256": "fa47fabd5c013962d3a8434233d4f33c6ecf62fb10614257a2ac278b26412746"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 3,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "cbe8134300aadc2686d3c363b5011453973dc83e6a134a3a10231606ab616365",
+      "initial_physics_sha256": "c333e97c67be193ff558620aab6f3eeeca84cc0ff0a2d009eaafaa2308e604c8",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "b542bb0fceff0c87aaa3f33d9db03ef796beb8f5fe586f7eff7f485ee84baa7d",
+      "history_sha256": "4b9d13225a25a0f67afb58e56de2fcca3a6331ba802fc35bb3ebe3571e56f15a"
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 4,
+      "epochs": 50,
+      "full_mean_absolute_errors_vs_cpu64": [
+        [
+          5.1669754697059034e-08,
+          3.351061683698475e-08,
+          1.5450258405991235e-08,
+          4.018102040329041e-11
+        ],
+        [
+          4.6142438314689116e-08,
+          9.135220924161302e-08,
+          1.7288764642131582e-08,
+          1.0030570818386764e-10
+        ]
+      ],
+      "initial_adapter_sha256": "5080b6ab0fba8b6cd91893c22978875dfc0a911438b1efe04fe300ef2338f965",
+      "initial_physics_sha256": "eb8868491b70e6f6c569852569f78ec527b3dd351711b1de21a3c6d99b52fc68",
+      "full_means": [
+        [
+          1.2296252250671387,
+          0.8284691572189331,
+          1.0851738452911377,
+          0.002165629295632243
+        ],
+        [
+          1.3853048086166382,
+          0.9094114899635315,
+          1.317491054534912,
+          0.02249595709145069
+        ]
+      ],
+      "cuda_rng_sha256": "427cfabaead5944ee56ba122b4fc822688ce1e30c5055b3f3727af12f546cdfe",
+      "history_sha256": "2953a9c334621d4c4747df22e1bfc5c0332540cbd49bd72a9a8d1209e9251def"
+    }
+  ],
+  "checkpoints": [
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 0,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/epoch_20.pt",
+        "sha256": "f52302acabfcf1b092a75eea88dc20d24ae619429278b61ff44a534ab3cc1c3e"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/run.json",
+        "sha256": "7e0fb21e68b29495265a00137e3e4c160a0c6c4b8b780cd969ecba3b5d0c4a4b"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/complete.json",
+        "sha256": "2b97af5556e5a30eccde3b1d093656cfb007dc966682c0bcf3668028f44aa399"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 0,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/epoch_50.pt",
+        "sha256": "eea19759a8753e7383984e1ecb75f7ccc76a5a182c10805c3c34ff2110272f8d"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/run.json",
+        "sha256": "7e0fb21e68b29495265a00137e3e4c160a0c6c4b8b780cd969ecba3b5d0c4a4b"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/complete.json",
+        "sha256": "2b97af5556e5a30eccde3b1d093656cfb007dc966682c0bcf3668028f44aa399"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 1,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/epoch_20.pt",
+        "sha256": "f9ae1675d73a118ba416443da9f12eb26ea8b9f6a2c684717a3dcbfe60c2dcf7"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/run.json",
+        "sha256": "e20496cc5f1126f5df6ab866efb3f3fed987029d2fc053b42bbd9a57b9e7f7da"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/complete.json",
+        "sha256": "85f4ad169b589804bd491c1cd1a056888ec4311858b7678c39dfb2f30184aeee"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 1,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/epoch_50.pt",
+        "sha256": "a73733ad5464de91ef261cfca13c53a2589710a0ec80024d4e00422eb505e64d"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/run.json",
+        "sha256": "e20496cc5f1126f5df6ab866efb3f3fed987029d2fc053b42bbd9a57b9e7f7da"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/complete.json",
+        "sha256": "85f4ad169b589804bd491c1cd1a056888ec4311858b7678c39dfb2f30184aeee"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 2,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/epoch_20.pt",
+        "sha256": "980d0548dc0b15031d18e486f78a173f437733de4ceb3ecd2511a7153fb24ca8"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/run.json",
+        "sha256": "690ed4075d80b13a220801b543a959ae21248a3b3ecd28aea56e2c7fe1df9ddc"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/complete.json",
+        "sha256": "e734d628f8d182c41583a40d77a8e6ee69a89da008432f1163c1dc055a14dc83"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 2,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/epoch_50.pt",
+        "sha256": "8bbcfaa555a4f2d5fb018008494174fdc08bb4bfeae1f85a50c4f0c9f0fe70ce"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/run.json",
+        "sha256": "690ed4075d80b13a220801b543a959ae21248a3b3ecd28aea56e2c7fe1df9ddc"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/complete.json",
+        "sha256": "e734d628f8d182c41583a40d77a8e6ee69a89da008432f1163c1dc055a14dc83"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 3,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/epoch_20.pt",
+        "sha256": "d1c705fac3b3039f27898650349637f655679e31856ac05a222f9e8f3ec286e7"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/run.json",
+        "sha256": "018420f25425dc2069d24df9218f174b43ede4246a681b374db45fdf72d19de1"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/complete.json",
+        "sha256": "7a137f9bad8baca6d2582155a67e294bca191c99ee370004bb1d9120a473d79d"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 3,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/epoch_50.pt",
+        "sha256": "581f123049672c3be3b897e531a8552b3c2a2b9859ac33210c0b0271db400762"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/run.json",
+        "sha256": "018420f25425dc2069d24df9218f174b43ede4246a681b374db45fdf72d19de1"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/complete.json",
+        "sha256": "7a137f9bad8baca6d2582155a67e294bca191c99ee370004bb1d9120a473d79d"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 4,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/epoch_20.pt",
+        "sha256": "e47db9caa3c0be1d8f6186f34b2dc410a9d1f43d982b3af204b0749cd914ebd3"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/run.json",
+        "sha256": "be2d2ed7e0c4b322b3af29a7eac3b6e16f715640722c3b997b5a8772697a6125"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/complete.json",
+        "sha256": "2188dc2ee586dc6023c3239426233cbdfd3bfdea9c33a9c210008f418fd958ae"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__constant",
+      "seed": 4,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/epoch_50.pt",
+        "sha256": "10369e9ec9bb4116d1c87d8dbc7be198695b5d1dc1ca82561890b0af1b9ceb95"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/run.json",
+        "sha256": "be2d2ed7e0c4b322b3af29a7eac3b6e16f715640722c3b997b5a8772697a6125"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/complete.json",
+        "sha256": "2188dc2ee586dc6023c3239426233cbdfd3bfdea9c33a9c210008f418fd958ae"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 0,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/epoch_20.pt",
+        "sha256": "6fd1b19b203739a9fcde3affbb3eccaeeb4df4a3be354b2312c7b7b88b413706"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/run.json",
+        "sha256": "52115acf49a0d83264b0c955dbdfa2a821cc001de4badb2a1dbfa6907154bd15"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/complete.json",
+        "sha256": "b9cfe9af1d5d8f0e3fee14de9bc45e4a158ee1863ec15a574f367da955ed69d2"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 0,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/epoch_50.pt",
+        "sha256": "22bd3188c647fd8860b72bbd697d0f21fd322cacc7b10b7167ddd908d0ef4118"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/run.json",
+        "sha256": "52115acf49a0d83264b0c955dbdfa2a821cc001de4badb2a1dbfa6907154bd15"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/complete.json",
+        "sha256": "b9cfe9af1d5d8f0e3fee14de9bc45e4a158ee1863ec15a574f367da955ed69d2"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 1,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/epoch_20.pt",
+        "sha256": "804018afc4936e528404f5750b0f4ff6be40c8c4f635e7deb913d51c1a01cd3a"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/run.json",
+        "sha256": "1f398ee32e7d5ac69407633c19c198682e158d31252201161de26f4d1ae4014b"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/complete.json",
+        "sha256": "d87f23a4cf8738087bd60a6610d6a7efe05ebb49bf2760db60af5724185ac6ff"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 1,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/epoch_50.pt",
+        "sha256": "a97810575dee90a6ba1a71fab818a499a6ada64acdaacb71c1eaec18cf1c7dd3"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/run.json",
+        "sha256": "1f398ee32e7d5ac69407633c19c198682e158d31252201161de26f4d1ae4014b"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/complete.json",
+        "sha256": "d87f23a4cf8738087bd60a6610d6a7efe05ebb49bf2760db60af5724185ac6ff"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 2,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/epoch_20.pt",
+        "sha256": "a3716e6ee8bc3fb2358bd0e1bae2520644951151e736cbad40cedcb58241b570"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/run.json",
+        "sha256": "219c5ac429d9e41cfbca7ee8df8f570e36f6d4f55c3517a13a2a9a19471f8df1"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/complete.json",
+        "sha256": "52d0393499fa3d05c85bb624f146420472bf9c83b9186378c88a3e68f4ee5899"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 2,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/epoch_50.pt",
+        "sha256": "1d046b672ab9cc174ba099df9eb071cb895bddbfb17e45879dc30cf357ae3878"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/run.json",
+        "sha256": "219c5ac429d9e41cfbca7ee8df8f570e36f6d4f55c3517a13a2a9a19471f8df1"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/complete.json",
+        "sha256": "52d0393499fa3d05c85bb624f146420472bf9c83b9186378c88a3e68f4ee5899"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 3,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/epoch_20.pt",
+        "sha256": "a5e88c7c60dca5f8bfc3be76bb6c5c4bed57ed5f0e84d54075a81c844b1157ed"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/run.json",
+        "sha256": "72ccfd416134a7f2af9778f857acf2976c898cf4ffc8d38ad7fecb3eb628e418"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/complete.json",
+        "sha256": "fb4c3dac33142587e404e692c7adc229d6e92b5286fe7278d3a5b82a14dff8e9"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 3,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/epoch_50.pt",
+        "sha256": "ff3ffc98e21619d006c0c2679202fd54776768a64e2bd5d42556a479961aa0fa"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/run.json",
+        "sha256": "72ccfd416134a7f2af9778f857acf2976c898cf4ffc8d38ad7fecb3eb628e418"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/complete.json",
+        "sha256": "fb4c3dac33142587e404e692c7adc229d6e92b5286fe7278d3a5b82a14dff8e9"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 4,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/epoch_20.pt",
+        "sha256": "27e66c50c9228403e6220fe58e399d31b46bd8fd6c588d501b56fec69a8a162f"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/run.json",
+        "sha256": "fb565e2f357cd4f7bb1efa0ca27538a439bf487b7aa97bf9b8d6530247dbabf3"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/complete.json",
+        "sha256": "9b3a9d2bc13d3b2fed0e7b3867d870b8626c7db18d18c8d142aa4cd45df27921"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__no_token",
+      "seed": 4,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/epoch_50.pt",
+        "sha256": "628d4a599d37b09afa4b0f02cc54ea1db86a2d659fb63278eb508ba9a9276b09"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/run.json",
+        "sha256": "fb565e2f357cd4f7bb1efa0ca27538a439bf487b7aa97bf9b8d6530247dbabf3"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/complete.json",
+        "sha256": "9b3a9d2bc13d3b2fed0e7b3867d870b8626c7db18d18c8d142aa4cd45df27921"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 0,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/epoch_20.pt",
+        "sha256": "af00133d9909ebb5aece8691b35dcb7a555f2289a645133427eaabeb8d7e8e7a"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/run.json",
+        "sha256": "0603bbdfb199b38699a02064a84016f092bc40230a50c489a69b36804747635a"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/complete.json",
+        "sha256": "0a44784b75cea7b1c2d77273772eaeac92c52be7d4a10615fae063d7772b35fc"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 0,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/epoch_50.pt",
+        "sha256": "6844958f4a989940ab0acbdfd34818a048db9745f0e1ec43b3741875555284cd"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/run.json",
+        "sha256": "0603bbdfb199b38699a02064a84016f092bc40230a50c489a69b36804747635a"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/complete.json",
+        "sha256": "0a44784b75cea7b1c2d77273772eaeac92c52be7d4a10615fae063d7772b35fc"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 1,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/epoch_20.pt",
+        "sha256": "14dcbe21a3d5af7200aa8c0c554efeda602b077be5ff58b10f17e3f29c4bbf33"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/run.json",
+        "sha256": "5aef73d1582e95f03ec5b0da9f4c2c8a2296f34f8a087eb81b6a14c659f34345"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/complete.json",
+        "sha256": "d05028e731e64a2aa8777fcc19c23610d4b36fa5ab7ca66d52b2ade1417d7ce8"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 1,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/epoch_50.pt",
+        "sha256": "c293fa7f89cf8885300d1a59c99ac3110d15386079e22c728dca41900d3c5f5f"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/run.json",
+        "sha256": "5aef73d1582e95f03ec5b0da9f4c2c8a2296f34f8a087eb81b6a14c659f34345"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/complete.json",
+        "sha256": "d05028e731e64a2aa8777fcc19c23610d4b36fa5ab7ca66d52b2ade1417d7ce8"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 2,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/epoch_20.pt",
+        "sha256": "a2ef5ec0e69edc49cb3806359ccd9537ab5d807f08435ac06748f363a7375109"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/run.json",
+        "sha256": "a4aae6356f86bab6d6b32d1a3624859b179d92cf9e7c9611eeb2914ce04549d8"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/complete.json",
+        "sha256": "f0cc924b18380a1f8d40e60299f18ee373b3a6d75090a76f1b07a9461bfde531"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 2,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/epoch_50.pt",
+        "sha256": "ab57745f47ba8d52e6bd2cf5b22e07783b5605c00c19ab81658d1b8fabd801ab"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/run.json",
+        "sha256": "a4aae6356f86bab6d6b32d1a3624859b179d92cf9e7c9611eeb2914ce04549d8"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/complete.json",
+        "sha256": "f0cc924b18380a1f8d40e60299f18ee373b3a6d75090a76f1b07a9461bfde531"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 3,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/epoch_20.pt",
+        "sha256": "fe497026cd7f4b3c54f3cf5650b0a3cd9709acadea3f9e657fb1e41cb60dda1a"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/run.json",
+        "sha256": "94669d0c260566b991998c3f5f4ecacd30f55799b52d96cb86dc1dc939e004d3"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/complete.json",
+        "sha256": "f1ee1d6fd22a1f407ddeffa740d1177e7cdf355c00944a27bae5adf5bb6a32f4"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 3,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/epoch_50.pt",
+        "sha256": "07f52691037cffeab4b49159ee45d771a38e36b16989f7a84374c76faec61967"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/run.json",
+        "sha256": "94669d0c260566b991998c3f5f4ecacd30f55799b52d96cb86dc1dc939e004d3"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/complete.json",
+        "sha256": "f1ee1d6fd22a1f407ddeffa740d1177e7cdf355c00944a27bae5adf5bb6a32f4"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 4,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/epoch_20.pt",
+        "sha256": "6d6b251d2221325a37d249defb11c82929d3f30aea8d2be0cc207bd1bc9a9295"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/run.json",
+        "sha256": "2a250555624242757ce85224aab13e22827173e1fcbfb3f66a65608cf7765c57"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/complete.json",
+        "sha256": "00c044bb11ec2d20a94f643a37a47d03cc012ac3193bbb47f55ea5f2f06bc2ca"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__uniform",
+      "seed": 4,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/epoch_50.pt",
+        "sha256": "d83c4b6f09f8263fd3f37fb203881ebe674f1eb95805837bd0d709b042695d2e"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/run.json",
+        "sha256": "2a250555624242757ce85224aab13e22827173e1fcbfb3f66a65608cf7765c57"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/complete.json",
+        "sha256": "00c044bb11ec2d20a94f643a37a47d03cc012ac3193bbb47f55ea5f2f06bc2ca"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 0,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/epoch_20.pt",
+        "sha256": "be05c98d1996e980de340e9e674001b0f599d286dbf8dfa85984f1e6715405b2"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/run.json",
+        "sha256": "567b0886d9e234c9dc6c020aecec8b174e439b5fb28573b22d72d28305a49b50"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/complete.json",
+        "sha256": "3a2667689c50af335b735dd2496446422e8e248361744caec757c218f4906aff"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 0,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/epoch_50.pt",
+        "sha256": "6e4a6f3f851502db9f17d7c4721e82b66399026f4e467cc93a920fcd42031b5a"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/run.json",
+        "sha256": "567b0886d9e234c9dc6c020aecec8b174e439b5fb28573b22d72d28305a49b50"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/complete.json",
+        "sha256": "3a2667689c50af335b735dd2496446422e8e248361744caec757c218f4906aff"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 1,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/epoch_20.pt",
+        "sha256": "ad35dffbc83d9e3ff5cce212a567352cd5c2254bc1f5cf3ef67a709ac7c1a409"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/run.json",
+        "sha256": "77989539c1361035564e6c1cd281044b3e6f9eb161c3fc253052e1498ac8016c"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/complete.json",
+        "sha256": "a81c76b0b12651d4e43a94ca70f23139bb150f8e86e5897d29b2d3a9dc0a6b7b"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 1,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/epoch_50.pt",
+        "sha256": "0a65d919a06212c7d8a6d88ca3a20f3138a17c87cb084151b106be1b905db121"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/run.json",
+        "sha256": "77989539c1361035564e6c1cd281044b3e6f9eb161c3fc253052e1498ac8016c"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/complete.json",
+        "sha256": "a81c76b0b12651d4e43a94ca70f23139bb150f8e86e5897d29b2d3a9dc0a6b7b"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 2,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/epoch_20.pt",
+        "sha256": "81dd9f13003c8b6088c5b416efed787058b6eb7388b9965f5387e4bde0638141"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/run.json",
+        "sha256": "fe08ba4cc54c32f8ee064ea992ece8a10c8878a0c99977e17afdd893710a473c"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/complete.json",
+        "sha256": "52e018b51235b564ae0a44f4653b1f0ccd0f00994526e0efc25c7134b32b9c73"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 2,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/epoch_50.pt",
+        "sha256": "95d1e3d0637912bf7b4f46a76cb8384bccb6d2112185756d13a497424e500c55"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/run.json",
+        "sha256": "fe08ba4cc54c32f8ee064ea992ece8a10c8878a0c99977e17afdd893710a473c"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/complete.json",
+        "sha256": "52e018b51235b564ae0a44f4653b1f0ccd0f00994526e0efc25c7134b32b9c73"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 3,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/epoch_20.pt",
+        "sha256": "4882b7ab69806594402594ff9e6019b6b861ddbf754180a1a4901bdc61b75288"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/run.json",
+        "sha256": "6f0d0026e9b22cc65208a466d42a40b34bd34879750bcfaeb54e4e3eeca7d75a"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/complete.json",
+        "sha256": "019128629c90cd31e72d2d6b3dd374df37205fbfcf6a4fa4ad50145f8e2712b9"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 3,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/epoch_50.pt",
+        "sha256": "10049934ecb28e8a937cc5f60d3e041c1aaf38329e81ecdcfe68f1677e2e37c9"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/run.json",
+        "sha256": "6f0d0026e9b22cc65208a466d42a40b34bd34879750bcfaeb54e4e3eeca7d75a"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/complete.json",
+        "sha256": "019128629c90cd31e72d2d6b3dd374df37205fbfcf6a4fa4ad50145f8e2712b9"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 4,
+      "epoch": 20,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/epoch_20.pt",
+        "sha256": "65d0294dda76dfa746d805b69dac0f6ab4f71235d2ad3d6949bc6e05a52560c8"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/run.json",
+        "sha256": "03bb8bf255c9d2c47405b5b6a431f65ccab91cae8f4c5a8fde7c820054f8cf7f"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/complete.json",
+        "sha256": "89758aaae65ed4a81b7a4ce3a6fecfcaa326be0f200c39e7aa8a8112a17d3ad9"
+      }
+    },
+    {
+      "backbone": "vitb32",
+      "variant": "path_100__stats_off",
+      "seed": 4,
+      "epoch": 50,
+      "checkpoint": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/epoch_50.pt",
+        "sha256": "228094ecb3bd748e288a6b3ba74fab449b1c8993515c654b8a4dd3f1763edb48"
+      },
+      "training_protocol_sha256": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+      "run_json": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/run.json",
+        "sha256": "03bb8bf255c9d2c47405b5b6a431f65ccab91cae8f4c5a8fde7c820054f8cf7f"
+      },
+      "completion": {
+        "path": "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/complete.json",
+        "sha256": "89758aaae65ed4a81b7a4ce3a6fecfcaa326be0f200c39e7aa8a8112a17d3ad9"
+      }
+    }
+  ],
+  "artifact_sha256": {
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_training_audit_20261115_draft/audit_final_training.py": "516aaee5d737b80173a0beb71f8bf205207dd986126d8e8dba197f6d48547909",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_training_audit_20261115_draft/audit_helpers_v8.py": "47fed802077f320f6ee0823104dc4cb051d3c7dee625c664bc9a10ea1abc4438",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/PROTOCOL.json": "739f634ac05ef96a84b1065934f377a5729f8afadebef97b0fcdd2fcd4c25926",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_training_audit_20261115_draft/REVIEWED_TRAINING_SOURCE.json": "5c076e12fb204471fe7a2817298d76b27099f6a1b0e04fe72c57f56e1f21d23b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/SOURCE_LOCK.json": "9c6fd1b66e8e909a180ac4df75734e3c7f729d5f150a7bf045bb65e4ba8c128f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/run_final.py": "9d46cd1a82e52409bb32df4941c0bca5ec7db06d1b0270b3f2347f24502b9e48",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/protocol_gate.py": "c432f83838eaabccb2e7a01db4b2875dc2a9a3cef9c0a1f2bc1656e004873bc0",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/data_contract.py": "1d05d8e3471d22bc973de4e674c63bb58e7c2c09ee62ef7ac225a453bf7807ce",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/train_backend.py": "85ad3d7443a9892661bdb24ed36f545a5517f8a918f85541c534f76169d84961",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/training_caches.py": "2b0a23f50b13bcfb8ca1b053d74ef27ae1948b49186ffd39ba5801a8e20120c3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/cache_common.py": "5ba1b6b1e7ae85f74c8e028a1b9ef045a3049f727a2185c18dbe24587aeda7ac",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/v9_train_cache.py": "d0d1065ad18fe7be30f6fc7543e88382f81814a9dfae7ef4f2a3de31f8739c5c",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/joint_model.py": "3fa643703187705c67892d7fb906842627b09d22822db2d6f94a5c430654cff6",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/model_factory.py": "4584cd5973628f3456d47547cd20bfdd66fe42d6e75c975a02cd6820e3ff5378",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/model_spec.py": "330e3386b743bc0dd9c8eae8e25c4680dde908ba858f48206394b708edefdc34",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/matched_model_factory.py": "7e1f4fcff42ca031336f9b498508ffd1bcdc5e0444ee0d79e3bc538d55f6798b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/path_control_factory.py": "b42f85398313045dd0a1af0b3af5516a33971bb7337c6457fefa2ee41c14db6a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/path_isolation.py": "ce94388dcef399257e24e79f2a2ef9b71085fb0b04f255585780247814daa73b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/resume_state.py": "ed47ce84f6ed7ee70120ada66e442b1d195c7537e245f4ccf49718125323d667",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/saqre_phys.py": "52dfaf933a270e6f5462309e2948e448b712c2973d9f9a40c956d1f32020d7c6",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/scene_adapter.py": "3037b56765caa13ad038b561fa70c5df4021393f98f0cb7a1597d779c59565d9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/batch_scoring.py": "80661378e01809b17a46f9ec7844eed0e0940d7e208979eca2dcd81d0547a18c",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/reference/v2_source.py": "dfc96d6e0e4cf7eb36f1ba399790349b2feb24ed64d086a4563ffdb9891a2f3b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/reference/old_retrieval_queries.py": "597b14439a0495c1629dcf11beeb57aafa9afdf28986e606812c1382252fc458",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/DECISION.json": "433f065a20c7862790e1e933a5a6026562ef4a9080954e5e90881a1fd1e61cac",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/TRAIN_INPUT_CATALOG.json": "2d86b379a95786d4cc47be043449cee4c250f4109d2e437bebcfcd480d6ae6a5",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/train_ids.json": "fd2c63dd53ef181be236da89fe59307bfcb413c87cbd369649b1aaa37007a557",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/fit_ids.json": "90432c9660f73bf00df1b2b786b5de4421a44cf170079612bb2f4ba96ac2adb9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/val_ids.json": "5ee7176ccc1adb2ae00fc2e4d9daff1f499aeedf6bcaac58d2b34544defcbeed",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/data/ret_clean_20261007/Caption_train.csv": "1c8c524eabb0e7f5e246cc0bb0f0ec774692c233428674acb57af28d1e10589d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/PAIRED_CACHE_AUDIT.json": "baa7c9206e3fd5e336a621b4f8741386ae0ec12487f225ace809513cb198610a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/formal_experiments_20261103/results/vitb32/cache_physics_train.pt": "d04278829bad17a6de28e3ae39ad5f59a81feebb480ef9ed2190d028bfa8aa83",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_legacy_raster_train_9181.pt": "d08d097ed5a10115da77ca245194dfb209e86f50c40697c09726f4da32aa669f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/NUMERICAL_ACCEPTANCE_REVIEW.json": "9aa01602d7b957861f8843adf3368b4bcb4c39aaae54a304267ada571613e7e5",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/claim_recovery_ties_20261115_v2/paired_cache/cache_fine_spatial_train_9181.pt": "400f8a58a6112d1539d63f5d11182874ffbeeb258a6bf577843d774004285dbf",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/simplified_confirm_20261109_v1/shared/vitb32/manifest.json": "8aa2ffd37f48004fae7580ea09540f193b5e94fcb8bc0de2378f6faf64fe0aca",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/simplified_confirm_20261109_v1/shared/vitb32/text_embeddings.pt": "b448156ecf1f3dd910f62bbb56485c70ca70edeaa84e50a178f04b9eaf052d14",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/complete.json": "2b97af5556e5a30eccde3b1d093656cfb007dc966682c0bcf3668028f44aa399",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/epoch_20.pt": "f52302acabfcf1b092a75eea88dc20d24ae619429278b61ff44a534ab3cc1c3e",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/run.json": "7e0fb21e68b29495265a00137e3e4c160a0c6c4b8b780cd969ecba3b5d0c4a4b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/progress.json": "3ee3d141bad68854fd17343b2500828624be14ef04d5dfe88feadab3607f6802",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__constant/epoch_50.pt": "eea19759a8753e7383984e1ecb75f7ccc76a5a182c10805c3c34ff2110272f8d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/complete.json": "85f4ad169b589804bd491c1cd1a056888ec4311858b7678c39dfb2f30184aeee",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/epoch_20.pt": "f9ae1675d73a118ba416443da9f12eb26ea8b9f6a2c684717a3dcbfe60c2dcf7",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/run.json": "e20496cc5f1126f5df6ab866efb3f3fed987029d2fc053b42bbd9a57b9e7f7da",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/progress.json": "2c4390c56e1816fcecf5ebbbd4926fcf842bf5f6dce095db91662a403302e62a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__constant/epoch_50.pt": "a73733ad5464de91ef261cfca13c53a2589710a0ec80024d4e00422eb505e64d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/complete.json": "e734d628f8d182c41583a40d77a8e6ee69a89da008432f1163c1dc055a14dc83",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/epoch_20.pt": "980d0548dc0b15031d18e486f78a173f437733de4ceb3ecd2511a7153fb24ca8",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/run.json": "690ed4075d80b13a220801b543a959ae21248a3b3ecd28aea56e2c7fe1df9ddc",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/progress.json": "830f955af7d62bd14e529d6f54a8d0f031d2ea9bd7081b5b8b037877ac088425",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__constant/epoch_50.pt": "8bbcfaa555a4f2d5fb018008494174fdc08bb4bfeae1f85a50c4f0c9f0fe70ce",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/complete.json": "7a137f9bad8baca6d2582155a67e294bca191c99ee370004bb1d9120a473d79d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/epoch_20.pt": "d1c705fac3b3039f27898650349637f655679e31856ac05a222f9e8f3ec286e7",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/run.json": "018420f25425dc2069d24df9218f174b43ede4246a681b374db45fdf72d19de1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/progress.json": "b9dde2724bd7d7d56c7c0827853a1bc089c25460ef1b5c652a84b4061b296a09",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__constant/epoch_50.pt": "581f123049672c3be3b897e531a8552b3c2a2b9859ac33210c0b0271db400762",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/complete.json": "2188dc2ee586dc6023c3239426233cbdfd3bfdea9c33a9c210008f418fd958ae",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/epoch_20.pt": "e47db9caa3c0be1d8f6186f34b2dc410a9d1f43d982b3af204b0749cd914ebd3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/run.json": "be2d2ed7e0c4b322b3af29a7eac3b6e16f715640722c3b997b5a8772697a6125",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/progress.json": "bf8b68ff1dafefe15f414b76d41c880133d53c51beebcbe3b68c258106bb383d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__constant/epoch_50.pt": "10369e9ec9bb4116d1c87d8dbc7be198695b5d1dc1ca82561890b0af1b9ceb95",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/complete.json": "b9cfe9af1d5d8f0e3fee14de9bc45e4a158ee1863ec15a574f367da955ed69d2",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/epoch_20.pt": "6fd1b19b203739a9fcde3affbb3eccaeeb4df4a3be354b2312c7b7b88b413706",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/run.json": "52115acf49a0d83264b0c955dbdfa2a821cc001de4badb2a1dbfa6907154bd15",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/progress.json": "dfcc5607d687383f272d8fdc8ecd95a098f2e468a26380215c0bfd558a63e6e5",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__no_token/epoch_50.pt": "22bd3188c647fd8860b72bbd697d0f21fd322cacc7b10b7167ddd908d0ef4118",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/complete.json": "d87f23a4cf8738087bd60a6610d6a7efe05ebb49bf2760db60af5724185ac6ff",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/epoch_20.pt": "804018afc4936e528404f5750b0f4ff6be40c8c4f635e7deb913d51c1a01cd3a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/run.json": "1f398ee32e7d5ac69407633c19c198682e158d31252201161de26f4d1ae4014b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/progress.json": "0bbda0fa9202e97631fbfc27f2824a0064951329f9b2f81038ebd9c6775dd007",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__no_token/epoch_50.pt": "a97810575dee90a6ba1a71fab818a499a6ada64acdaacb71c1eaec18cf1c7dd3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/complete.json": "52d0393499fa3d05c85bb624f146420472bf9c83b9186378c88a3e68f4ee5899",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/epoch_20.pt": "a3716e6ee8bc3fb2358bd0e1bae2520644951151e736cbad40cedcb58241b570",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/run.json": "219c5ac429d9e41cfbca7ee8df8f570e36f6d4f55c3517a13a2a9a19471f8df1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/progress.json": "621da73228c236356397744d187488ccd28c2cf14fc6aef3c7623c7b26557e14",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__no_token/epoch_50.pt": "1d046b672ab9cc174ba099df9eb071cb895bddbfb17e45879dc30cf357ae3878",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/complete.json": "fb4c3dac33142587e404e692c7adc229d6e92b5286fe7278d3a5b82a14dff8e9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/epoch_20.pt": "a5e88c7c60dca5f8bfc3be76bb6c5c4bed57ed5f0e84d54075a81c844b1157ed",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/run.json": "72ccfd416134a7f2af9778f857acf2976c898cf4ffc8d38ad7fecb3eb628e418",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/progress.json": "7ddf15faa49c68f442c3f4c0d256e43ea01ddca845a7554f65900fc8f076e873",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__no_token/epoch_50.pt": "ff3ffc98e21619d006c0c2679202fd54776768a64e2bd5d42556a479961aa0fa",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/complete.json": "9b3a9d2bc13d3b2fed0e7b3867d870b8626c7db18d18c8d142aa4cd45df27921",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/epoch_20.pt": "27e66c50c9228403e6220fe58e399d31b46bd8fd6c588d501b56fec69a8a162f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/run.json": "fb565e2f357cd4f7bb1efa0ca27538a439bf487b7aa97bf9b8d6530247dbabf3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/progress.json": "bdd985a2829be9067cc02072f5e6380f59adb724b6525fdd0f9f0e4c16eb5481",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__no_token/epoch_50.pt": "628d4a599d37b09afa4b0f02cc54ea1db86a2d659fb63278eb508ba9a9276b09",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/complete.json": "0a44784b75cea7b1c2d77273772eaeac92c52be7d4a10615fae063d7772b35fc",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/epoch_20.pt": "af00133d9909ebb5aece8691b35dcb7a555f2289a645133427eaabeb8d7e8e7a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/run.json": "0603bbdfb199b38699a02064a84016f092bc40230a50c489a69b36804747635a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/progress.json": "60365d4e0e67d15ae2a73de2524d00ae401539f890d77b7c016be1d9e6054df1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__uniform/epoch_50.pt": "6844958f4a989940ab0acbdfd34818a048db9745f0e1ec43b3741875555284cd",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/complete.json": "d05028e731e64a2aa8777fcc19c23610d4b36fa5ab7ca66d52b2ade1417d7ce8",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/epoch_20.pt": "14dcbe21a3d5af7200aa8c0c554efeda602b077be5ff58b10f17e3f29c4bbf33",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/run.json": "5aef73d1582e95f03ec5b0da9f4c2c8a2296f34f8a087eb81b6a14c659f34345",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/progress.json": "2f9b0446e6c5ade713a6284868f93963b548cfab660e0c2ae0fa11c03540de95",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__uniform/epoch_50.pt": "c293fa7f89cf8885300d1a59c99ac3110d15386079e22c728dca41900d3c5f5f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/complete.json": "f0cc924b18380a1f8d40e60299f18ee373b3a6d75090a76f1b07a9461bfde531",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/epoch_20.pt": "a2ef5ec0e69edc49cb3806359ccd9537ab5d807f08435ac06748f363a7375109",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/run.json": "a4aae6356f86bab6d6b32d1a3624859b179d92cf9e7c9611eeb2914ce04549d8",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/progress.json": "4cfbece2f0d36e766669689706b34479b39c2026fae3457d3d2dbda72a53ffd9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__uniform/epoch_50.pt": "ab57745f47ba8d52e6bd2cf5b22e07783b5605c00c19ab81658d1b8fabd801ab",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/complete.json": "f1ee1d6fd22a1f407ddeffa740d1177e7cdf355c00944a27bae5adf5bb6a32f4",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/epoch_20.pt": "fe497026cd7f4b3c54f3cf5650b0a3cd9709acadea3f9e657fb1e41cb60dda1a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/run.json": "94669d0c260566b991998c3f5f4ecacd30f55799b52d96cb86dc1dc939e004d3",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/progress.json": "ff068418e8ac16d1235af1d733e1c533dc26acd8ba803adc196fbf15d7becf3d",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__uniform/epoch_50.pt": "07f52691037cffeab4b49159ee45d771a38e36b16989f7a84374c76faec61967",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/complete.json": "00c044bb11ec2d20a94f643a37a47d03cc012ac3193bbb47f55ea5f2f06bc2ca",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/epoch_20.pt": "6d6b251d2221325a37d249defb11c82929d3f30aea8d2be0cc207bd1bc9a9295",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/run.json": "2a250555624242757ce85224aab13e22827173e1fcbfb3f66a65608cf7765c57",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/progress.json": "6e9e5a1119b57b8405246072c9153ba891394f64cf81bb9989a08aca87c4a5fd",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__uniform/epoch_50.pt": "d83c4b6f09f8263fd3f37fb203881ebe674f1eb95805837bd0d709b042695d2e",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/complete.json": "3a2667689c50af335b735dd2496446422e8e248361744caec757c218f4906aff",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/epoch_20.pt": "be05c98d1996e980de340e9e674001b0f599d286dbf8dfa85984f1e6715405b2",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/run.json": "567b0886d9e234c9dc6c020aecec8b174e439b5fb28573b22d72d28305a49b50",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/progress.json": "277d12a73ec6af46a5f9d6fe9122ae95d850fe6175644794344727658ed27a80",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_0/path_100__stats_off/epoch_50.pt": "6e4a6f3f851502db9f17d7c4721e82b66399026f4e467cc93a920fcd42031b5a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/complete.json": "a81c76b0b12651d4e43a94ca70f23139bb150f8e86e5897d29b2d3a9dc0a6b7b",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/epoch_20.pt": "ad35dffbc83d9e3ff5cce212a567352cd5c2254bc1f5cf3ef67a709ac7c1a409",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/run.json": "77989539c1361035564e6c1cd281044b3e6f9eb161c3fc253052e1498ac8016c",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/progress.json": "4073f398d78c0979cbce26c05cef616af648878a090ed54b7dbc10f3c531f1da",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_1/path_100__stats_off/epoch_50.pt": "0a65d919a06212c7d8a6d88ca3a20f3138a17c87cb084151b106be1b905db121",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/complete.json": "52e018b51235b564ae0a44f4653b1f0ccd0f00994526e0efc25c7134b32b9c73",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/epoch_20.pt": "81dd9f13003c8b6088c5b416efed787058b6eb7388b9965f5387e4bde0638141",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/run.json": "fe08ba4cc54c32f8ee064ea992ece8a10c8878a0c99977e17afdd893710a473c",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/progress.json": "fa47fabd5c013962d3a8434233d4f33c6ecf62fb10614257a2ac278b26412746",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_2/path_100__stats_off/epoch_50.pt": "95d1e3d0637912bf7b4f46a76cb8384bccb6d2112185756d13a497424e500c55",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/complete.json": "019128629c90cd31e72d2d6b3dd374df37205fbfcf6a4fa4ad50145f8e2712b9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/epoch_20.pt": "4882b7ab69806594402594ff9e6019b6b861ddbf754180a1a4901bdc61b75288",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/run.json": "6f0d0026e9b22cc65208a466d42a40b34bd34879750bcfaeb54e4e3eeca7d75a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/progress.json": "4b9d13225a25a0f67afb58e56de2fcca3a6331ba802fc35bb3ebe3571e56f15a",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_3/path_100__stats_off/epoch_50.pt": "10049934ecb28e8a937cc5f60d3e041c1aaf38329e81ecdcfe68f1677e2e37c9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/complete.json": "89758aaae65ed4a81b7a4ce3a6fecfcaa326be0f200c39e7aa8a8112a17d3ad9",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/epoch_20.pt": "65d0294dda76dfa746d805b69dac0f6ab4f71235d2ad3d6949bc6e05a52560c8",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/INPUTS_VERIFIED.json": "b188bfbbda324eaab6db3c1a9b344f5618d8022930d1be88022aab75384954f1",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/run.json": "03bb8bf255c9d2c47405b5b6a431f65ccab91cae8f4c5a8fde7c820054f8cf7f",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/progress.json": "2953a9c334621d4c4747df22e1bfc5c0332540cbd49bd72a9a8d1209e9251def",
+    "/home/coder/my_workspace/rs_paper/pare_workspace/final_full_training_20261115/b32_diagnostics/runs/vitb32/seed_4/path_100__stats_off/epoch_50.pt": "228094ecb3bd748e288a6b3ba74fab449b1c8993515c654b8a4dd3f1763edb48"
+  },
+  "ended_utc": "2026-11-15T15:32:09.343612+00:00",
+  "cuda_initialized": false
+}
